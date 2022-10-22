@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1664628279 source:c:\users\federico\onedrive\escritorio\proyecto agenda puestos de trabajo\main.cpp
+	<iostream>
+
+1666391784 source:c:\users\federico\onedrive\escritorio\proyecto agenda puestos de trabajo\data transfer object\personadto.cpp
+	"PersonaDTO.h"
+
+1666391302 c:\users\federico\onedrive\escritorio\proyecto agenda puestos de trabajo\data transfer object\personadto.h
+	"cstring"
+
+1666391810 source:c:\users\federico\onedrive\escritorio\proyecto agenda puestos de trabajo\data access layer\personadal.cpp
+	"PersonaDAL.h"
+
+1666391810 c:\users\federico\onedrive\escritorio\proyecto agenda puestos de trabajo\data access layer\personadal.h
+	<cstdio>
+	"../DATA TRANSFER OBJECT/PersonaDTO.h"
+
+1666390801 source:c:\users\federico\onedrive\escritorio\proyecto agenda puestos de trabajo\comun\fecha.cpp
+	"Fecha.h"
+
+1666390801 c:\users\federico\onedrive\escritorio\proyecto agenda puestos de trabajo\comun\fecha.h
+
+1666389604 source:c:\users\federico\onedrive\escritorio\proyecto agenda puestos de trabajo\src\hora.cpp
+	"Hora.h"
+
+1666390988 c:\users\federico\onedrive\escritorio\proyecto agenda puestos de trabajo\comun\hora.h
+
+1666390988 source:c:\users\federico\onedrive\escritorio\proyecto agenda puestos de trabajo\comun\hora.cpp
+	"Hora.h"
+
+1666392264 source:c:\users\federico\onedrive\escritorio\proyecto agenda puestos de trabajo\data transfer object\empleadodto.cpp
+	"EmpleadoDTO.h"
+
+1666391771 c:\users\federico\onedrive\escritorio\proyecto agenda puestos de trabajo\data transfer object\empleadodto.h
+	<PersonaDTO.h>
+
