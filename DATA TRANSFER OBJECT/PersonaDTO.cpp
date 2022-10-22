@@ -1,4 +1,8 @@
+#include <iostream>
+#include <windows.h>
+using namespace std;
 #include "PersonaDTO.h"
+
 char vacio[50]{"vacio"};
 
 // CONSTRUCTOR:
@@ -83,3 +87,18 @@ void PersonaDTO::Copy(PersonaDTO persona)
     this->telefono=persona.telefono;
 }
 
+void PersonaDTO::Cargar(){
+    cout<<"DNI: ";
+    cin>>dni;
+    cout<<"NOMBRE: ";
+    cin>>nombre;
+    cout<<"APELLIDO: ";
+    cin>>apellido;
+    cout<<"FECHA DE NACIMIENTO: "<<std::endl;
+    Sleep(500);
+    //fechanacimiento.Cargar();
+    cout<<"EMAIL: ";
+    cin>>email;
+    cout<<"TELÉFONO: ";
+    cin>>telefono;
+}

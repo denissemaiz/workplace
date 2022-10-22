@@ -1,3 +1,5 @@
+#include <iostream>
+using namespace std;
 #include "EmpleadoDTO.h"
 
 // CONSTRUCTOR:
@@ -43,4 +45,14 @@ char *EmpleadoDTO::Getsector()
 bool EmpleadoDTO::Getestado()
 {
     return estado;
+}
+
+void EmpleadoDTO::Cargar(){
+    //PersonaDAL::Cargar();;
+    cout<<"LEGAJO: ";
+    cin>>legajo;
+    /**/cout<<"TIPO DE EMPLEADO: ";
+    cin>>tipoempleado;
+    cout<<"SECTOR: ";
+    cin>>sector;
 }
