@@ -38,10 +38,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="COMUN/FUNCIONES.cpp" />
+		<Unit filename="COMUN/FUNCIONES.h" />
 		<Unit filename="COMUN/Fecha.cpp" />
 		<Unit filename="COMUN/Fecha.h" />
 		<Unit filename="COMUN/Hora.cpp" />
 		<Unit filename="COMUN/Hora.h" />
+		<Unit filename="COMUN/rlutil.h" />
 		<Unit filename="DATA ACCESS LAYER/EmpleadoDAL.cpp" />
 		<Unit filename="DATA ACCESS LAYER/EmpleadoDAL.h" />
 		<Unit filename="DATA ACCESS LAYER/PersonaDAL.cpp" />
