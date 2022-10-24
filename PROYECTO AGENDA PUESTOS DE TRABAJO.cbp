@@ -16,6 +16,7 @@
 					<Add directory="DATA TRANSFER OBJECT" />
 					<Add directory="DATA ACCESS LAYER" />
 					<Add directory="COMUN" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -28,6 +29,7 @@
 					<Add directory="DATA TRANSFER OBJECT" />
 					<Add directory="DATA ACCESS LAYER" />
 					<Add directory="COMUN" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -53,7 +55,15 @@
 		<Unit filename="DATA TRANSFER OBJECT/EmpleadoDTO.h" />
 		<Unit filename="DATA TRANSFER OBJECT/PersonaDTO.cpp" />
 		<Unit filename="DATA TRANSFER OBJECT/PersonaDTO.h" />
+		<Unit filename="include/ArchivoEspacioDeTrabajo.h" />
+		<Unit filename="include/ArchivoReservas.h" />
+		<Unit filename="include/EspacioDeTrabajo.h" />
+		<Unit filename="include/Reserva.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/ArchivoEspacioDeTrabajo.cpp" />
+		<Unit filename="src/ArchivoReservas.cpp" />
+		<Unit filename="src/EspacioDeTrabajo.cpp" />
+		<Unit filename="src/Reserva.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
