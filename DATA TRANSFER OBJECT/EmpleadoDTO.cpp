@@ -9,40 +9,40 @@ EmpleadoDTO::EmpleadoDTO()
 }
 
 // SET:
-void EmpleadoDTO::setLegajo(int legajo)
+void EmpleadoDTO::Setlegajo(int legajo)
 {
     this->legajo = legajo;
 }
 
-void EmpleadoDTO::setTipoEmpleado(int tipoEmpleado)
+void EmpleadoDTO::Settipoempleado(int tipoempleado)
 {
-    this->tipoEmpleado = tipoEmpleado;
+    this->tipoempleado = tipoempleado;
 }
 
-void EmpleadoDTO::setSector(char *sector)
+void EmpleadoDTO::Setsector(char *sector)
 {
     strcpy(this->sector,sector);
 }
 
-void EmpleadoDTO::setEstado(bool estao)
+void EmpleadoDTO::Setestado(bool estao)
 {
     this->estado = estado;
 }
 
 // GET:
-int EmpleadoDTO::getLegajo()
+int EmpleadoDTO::Getlegajo()
 {
     return legajo;
 }
-int EmpleadoDTO::getTipoEmpleado()
+int EmpleadoDTO::Gettipoempleado()
 {
-    return tipoEmpleado;
+    return tipoempleado;
 }
-char *EmpleadoDTO::getSector()
+char *EmpleadoDTO::Getsector()
 {
     return sector;
 }
-bool EmpleadoDTO::getEstado()
+bool EmpleadoDTO::Getestado()
 {
     return estado;
 }
@@ -52,7 +52,7 @@ void EmpleadoDTO::Cargar(){
     cout<<"LEGAJO: ";
     cin>>legajo;
     /**/cout<<"TIPO DE EMPLEADO: ";
-    cin>>tipoEmpleado;
+    cin>>tipoempleado;
     cout<<"SECTOR: ";
     cin>>sector;
 }

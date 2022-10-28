@@ -10,7 +10,7 @@ protected:
     int dni;
     char nombre[50];
     char apellido[50];
-    /**/Fecha fechaNacimiento;
+    /**/Fecha fechanacimiento;
     char email[50];
     char domicilio[50];
     int telefono;
@@ -21,19 +21,19 @@ public:
     PersonaDTO();
 
     // SET:
-    void setDni(int dni);
-    void setNombre(char *nombre);
-    void setapellido(char *apellido);
-    /**/void setfechaNacimiento(Fecha fechaNacimiento) { this->fechaNacimiento = fechaNacimiento; }
-    void setemail(char *email);
-    void setdomicilio(char *domicilio);
-    void settelefono(int telefono);
+    void Setdni(int dni);
+    void Setnombre(char *nombre);
+    void Setapellido(char *apellido);
+    /**/void Setfechanacimiento(Fecha fechanacimiento) { this->fechanacimiento = fechanacimiento; }
+    void Setemail(char *email);
+    void Setdomicilio(char *domicilio);
+    void Settelefono(int telefono);
 
     // GET:
     int Getdni();
     char * Getnombre();
     char * Getapellido();
-    /**/Fecha Getfechanacimiento() { return fechaNacimiento; }
+    /**/Fecha Getfechanacimiento() { return fechanacimiento; }
     char * Getemail();
     char * Getdomicilio();
     int Gettelefono();
@@ -44,3 +44,4 @@ public:
 };
 
 #endif // PERSONADTO_H
+
