@@ -1,9 +1,9 @@
-#ifndef RESERVA_H
-#define RESERVA_H
+#ifndef RESERVADTO_H
+#define RESERVADTO_H
 #include "Fecha.h"
 #include "Hora.h"
 
-class Reserva
+class ReservaDTO
 {
    private:
        int _numero_reserva;
@@ -38,4 +38,4 @@ class Reserva
 
 };
 
-#endif // RESERVA_H
+#endif // RESERVADTO_H
