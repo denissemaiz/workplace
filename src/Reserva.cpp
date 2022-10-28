@@ -1,5 +1,4 @@
 #include "Reserva.h"
-
 //sets
 
 void Reserva::Setnumeroreserva(int numero){
@@ -65,7 +64,7 @@ return _fecha;
 }
 Hora Reserva::Gethora_ingreso(){
 
-return hora_ingreso;
+return _hora_ingreso;
 
 }
 Hora Reserva::Gethora_egreso(){

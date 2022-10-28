@@ -1,7 +1,7 @@
 #include "EspacioDeTrabajo.h"
 //constructor
 
-EspacioDeTrabajo::EspacioDeTrabajo(){
+/*EspacioDeTrabajo::EspacioDeTrabajo(){
 
 
  _nombre="";
@@ -64,4 +64,4 @@ bool EspacioDeTrabajo::Getestadoespacio()
 {
 return _estado_espacio:
 
-}
+}*/

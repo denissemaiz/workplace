@@ -12,6 +12,7 @@ using namespace std;
 #include "EmpleadoDAL.h"
 #include "FUNCIONES.h"
 #include "rlutil.h"
+#include "EspacioDeTrabajo.h"
 
 int main()
 {
@@ -48,6 +49,33 @@ system("cls");
 ///PANTALLA SELECCION DE DIA
 
 CuadroSeleccionDia();
+
+Fecha obj;
+int d, m, a;
+
+
+rlutil::  locate (20,10);
+cout <<"Desde: ";
+rlutil::  locate (27,10);
+reservaDesde(obj);
+
+
+rlutil::  locate (40,10);
+cout <<"Hasta: ";
+rlutil::  locate (48,10);
+reservaHasta(obj);
+
+rlutil::  locate (30,15);
+cout <<"Por Favor Ingrese el dia a reservar: ";
+cin >> d;
+
+rlutil::  locate (30,17);
+cout <<"Por Favor Ingrese el mes a reservar: ";
+cin >> m;
+rlutil::  locate (30,19);
+cout <<"Por Favor Ingrese el año a reservar: ";
+cin >> a;
+
 
 _getch();
 system("cls");
