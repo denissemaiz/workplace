@@ -1,41 +1,71 @@
 #include "Fecha.h"
+#include<ctime>
+#include<cstring>
+#include <iostream>
 
-// CONSTRUCTOR:
-Fecha::Fecha()
-{
-    dia=00;
-    mes=00;
-    anio=00;
+using namespace std;
+
+int  Fecha::getDia(){
+    return _dia;
+}
+int  Fecha::getMes(){
+    return _mes;
+}
+int  Fecha::getAnio(){
+    return _anio;
+}
+void Fecha::setDia(int dia){
+    _dia = dia;
+}
+void Fecha::setMes(int mes){
+    _mes = mes;
+}
+void Fecha::setAnio(int anio){
+    _anio = anio;
+}
+Fecha::Fecha(int dia, int mes, int anio){
+    _dia = dia;
+    _mes = mes;
+    _anio = anio;
+}
+Fecha::Fecha(){
+    time_t rawtime;
+    struct tm timeinfo;
+
+    time (&rawtime);
+    timeinfo = *(localtime (&rawtime));
+
+    _dia = timeinfo.tm_mday;
+    _mes = timeinfo.tm_mon + 1;
+    _anio = timeinfo.tm_year + 1900;
 }
 
-// SET:
-
-void Fecha::Setdia(int dia)
-{
-    this->dia = dia;
-}
-void Fecha::Setmes(int mes)
-{
-    this->mes = mes;
-}
-void Fecha::Setanio(int anio)
-{
-    this->anio = anio;
-}
 
 
-// GET:
-int Fecha::Getdia()
-{
-    return dia;
-}
-int Fecha::Getmes()
-{
-    return mes;
-}
-int Fecha::Getanio()
-{
-    return anio;
+void Fecha::Mostrar(){
+
+    if(_mes>=10&&_anio>=10){
+        cout<<getDia()<<"/"<<getMes()<<"/"<<getAnio()<<endl;
+    }
+    else if(_mes<10&&_anio>=10){
+        cout<<getDia()<<"/"<<"0"<<getMes()<<"/"<<getAnio()<<endl;
+    }
+    else if(_mes>=10&&_anio<10){
+        cout<<getDia()<<"/"<<getMes()<<"/"<<"0"<<getAnio()<<endl;
+    }
+    else{
+        cout<<getDia()<<"/"<<"0"<<getMes()<<"/"<<"0"<<getAnio()<<endl;
+    }
 }
 
 
+
+
+
+ /*string Fecha::toString(){
+    string fecha;
+    fecha = to_string(_dia) + "/" + to_string(_mes) + "/" + to_string(_anio);
+    return fecha;
+}
+
+*/

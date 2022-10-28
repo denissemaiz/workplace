@@ -1,6 +1,7 @@
 #ifndef RESERVA_H
 #define RESERVA_H
-
+#include "Fecha.h"
+#include "Hora.h"
 
 class Reserva
 {
