@@ -40,12 +40,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="COMUN/ANULAR_RESERVA.CPP" />
 		<Unit filename="COMUN/FUNCIONES.cpp" />
 		<Unit filename="COMUN/FUNCIONES.h" />
 		<Unit filename="COMUN/Fecha.cpp" />
 		<Unit filename="COMUN/Fecha.h" />
+		<Unit filename="COMUN/HISTORIAL_RESERVAS.CPP" />
 		<Unit filename="COMUN/Hora.cpp" />
 		<Unit filename="COMUN/Hora.h" />
+		<Unit filename="COMUN/INICIO.CPP" />
+		<Unit filename="COMUN/MENU_USER.cpp" />
+		<Unit filename="COMUN/SELECT_ESPACIOS.CPP" />
+		<Unit filename="COMUN/SELECT_FECHA.CPP" />
 		<Unit filename="COMUN/rlutil.h" />
 		<Unit filename="DATA ACCESS LAYER/EmpleadoDAL.cpp" />
 		<Unit filename="DATA ACCESS LAYER/EmpleadoDAL.h" />

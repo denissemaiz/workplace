@@ -24,6 +24,9 @@ system("color 8F");
 
 CuadroIncio();
 
+
+
+
 _getch();
 system("cls");
 
@@ -54,26 +57,30 @@ Fecha obj;
 int d, m, a;
 
 
-rlutil::  locate (20,10);
+rlutil::  locate (25,10);
 cout <<"Desde: ";
-rlutil::  locate (27,10);
+rlutil::  locate (32,10);
 reservaDesde(obj);
 
 
-rlutil::  locate (40,10);
+rlutil::  locate (50,10);
 cout <<"Hasta: ";
-rlutil::  locate (48,10);
+rlutil::  locate (57,10);
 reservaHasta(obj);
 
-rlutil::  locate (30,15);
-cout <<"Por Favor Ingrese el dia a reservar: ";
+rlutil::  locate (23,13);
+cout <<"**POR FAVOR INGRESAR FECHA QUE DESEA RESERVAR** ";
+rlutil::  locate (23,14);
+cout <<"----------------------------------------------- ";
+rlutil::  locate (27,16);
+cout <<"DIA: ";
 cin >> d;
 
-rlutil::  locate (30,17);
-cout <<"Por Favor Ingrese el mes a reservar: ";
+rlutil::  locate (27,17);
+cout <<"MES: ";
 cin >> m;
-rlutil::  locate (30,19);
-cout <<"Por Favor Ingrese el año a reservar: ";
+rlutil::  locate (27,18);
+cout <<"ANIO: ";
 cin >> a;
 
 
@@ -88,7 +95,26 @@ CuadroConfirmacionReserva();
 _getch();
 system("cls");
 
+///PANTALLA ANULACION RESERVA
 
+AnularReserva();
+
+_getch();
+system("cls");
+
+///PANTALLA CONFIRMACION RESERVA
+
+ConfirmacionAnulacion();
+
+_getch();
+system("cls");
+
+///PANTALLA HISTORIAL
+
+HistorialReservas();
+
+_getch();
+system("cls");
 
 
 
