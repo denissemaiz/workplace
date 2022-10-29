@@ -11,5 +11,10 @@ void CuadroSeleccionDia();
 void CuadroConfirmacionReserva();
 void reservaDesde(Fecha obj);
 void reservaHasta(Fecha obj);
+void AnularReserva();
+void ConfirmacionAnulacion();
+void HistorialReservas();
+
+
 
 #endif // FUNCIONES_H_INCLUDED
