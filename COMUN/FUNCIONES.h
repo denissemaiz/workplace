@@ -14,7 +14,7 @@ void reservaHasta(Fecha obj);
 void AnularReserva();
 void ConfirmacionAnulacion();
 void HistorialReservas();
-
+void CargarEmpleados();
 
 
 #endif // FUNCIONES_H_INCLUDED

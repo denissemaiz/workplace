@@ -14,16 +14,22 @@ using namespace std;
 #include "rlutil.h"
 #include "EspacioDeTrabajo.h"
 
+
+
 int main()
 {
 
+
 system("color 8F");
+
+
+
+
 
 ///PANTALLA INICIO
 
-
-CuadroIncio();
-
+CargarEmpleados();
+//CuadroIncio();
 
 
 
@@ -122,6 +128,10 @@ system("cls");
 
 _getch();
 rlutil::  locate (2,30);
+
+
+
+
 
 
     return 0;

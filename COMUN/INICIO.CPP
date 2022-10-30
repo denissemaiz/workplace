@@ -8,6 +8,9 @@ using namespace std;
 #include "rlutil.h"
 #include "FUNCIONES.h"
 #include "Fecha.h"
+#include "PersonaDTO.h"
+#include "PersonaDAL.h"
+
 
 
 void CuadroIncio()
@@ -25,4 +28,33 @@ void CuadroIncio()
     cout <<"INGRESE SU DNI: ";
     rlutil::  locate (47,12);
     cin >>dni;
+    PersonaDAL reg;
+    PersonaDTO aux;
+
+    aux=reg.ObtenerPorDNI(dni);
+
+    if (aux.Getdni() == -1) {
+        cout<<"Su dni no existe en nuestra base de datos, intente nuevamente"<<endl;
+        system("pause");
+        system("cls");
+        CuadroIncio();
+    }
 }
+
+//void DocumentoValido(int dni, int cantidad){
+//
+//PersonaDAL reg;
+//
+//for (int i=0;i<cantidad;i++){
+//
+//    if(reg.Getdni()==dni){
+//
+//        CuadroIncio();
+//    }
+//}
+//
+//
+//
+//
+//
+//}

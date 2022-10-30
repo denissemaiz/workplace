@@ -10,6 +10,10 @@ class PersonaDAL
 public:
 
     // METODOS:
+    void leerEmpleados(PersonaDTO empleado[], int cantidad);
+    void CargarEmpleados(PersonaDTO empleado);
+    void guardar(PersonaDTO empleado);
+    int CantidadEmpleados();
     bool Existe(const char*);
     bool Agregar (PersonaDTO);
     bool Modificar (PersonaDTO);

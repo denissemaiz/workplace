@@ -41,6 +41,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="COMUN/ANULAR_RESERVA.CPP" />
+		<Unit filename="COMUN/CargaEmpleados.cpp" />
 		<Unit filename="COMUN/FUNCIONES.cpp" />
 		<Unit filename="COMUN/FUNCIONES.h" />
 		<Unit filename="COMUN/Fecha.cpp" />
