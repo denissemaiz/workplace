@@ -1,8 +1,8 @@
-#ifndef ARCHIVORESERVAS_H
-#define ARCHIVORESERVAS_H
+#ifndef RESERVASDAL_H
+#define RESERVASDAL_H
 
 
-class ArchivoReservas
+class ReservasDAL
 {
     public:
         void ReservasDiarias();
@@ -13,4 +13,4 @@ class ArchivoReservas
 
 };
 
-#endif // ARCHIVORESERVAS_H
+#endif // RESERVASDAL_H
