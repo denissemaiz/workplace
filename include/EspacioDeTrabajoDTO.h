@@ -1,8 +1,8 @@
-#ifndef ESPACIODETRABAJO_H
-#define ESPACIODETRABAJO_H
+#ifndef ESPACIODETRABAJODTO_H
+#define ESPACIODETRABAJODTO_H
 
 
-class EspacioDeTrabajo
+class EspacioDeTrabajoDTO
 {
    private:
        char _nombre[30];
@@ -12,7 +12,7 @@ class EspacioDeTrabajo
        bool _estado_espacio;
 
    public:
-       EspacioDeTrabajo();
+       EspacioDeTrabajoDTO();
         void Setnombre(char *nombre);
         void Settipodeespacio(int tipoespacio);
         void Setcantidadpuestos(int cantidadpuestos);
@@ -29,4 +29,4 @@ class EspacioDeTrabajo
         void mostrar();
 };
 
-#endif // ESPACIODETRABAJO_H
+#endif // ESPACIODETRABAJODTO_H

@@ -12,7 +12,7 @@ using namespace std;
 #include "EmpleadoDAL.h"
 #include "FUNCIONES.h"
 #include "rlutil.h"
-#include "EspacioDeTrabajo.h"
+#include "EspacioDeTrabajoDTO.h"
 
 int main()
 {
