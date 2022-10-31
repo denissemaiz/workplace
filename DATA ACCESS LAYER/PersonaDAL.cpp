@@ -1,6 +1,68 @@
 #include "PersonaDAL.h"
+using namespace std;
+
 
 // METODOS:
+
+
+void PersonaDAL::leerEmpleados(PersonaDTO empleados[], int cantidad){
+
+FILE* p;
+p= fopen(RUTA_PERSONA,"rb");
+if(p==nullptr){
+
+
+    return;
+}
+
+fread(empleados, sizeof(PersonaDTO),cantidad,p);
+fclose(p);
+}
+
+
+void PersonaDAL::guardar(PersonaDTO empleado){
+
+    FILE* p;
+
+    p = fopen(RUTA_PERSONA,"ab");
+
+    if (p == nullptr){
+
+        cout<<"Error al abrir el archivo" <<endl;
+        exit(1552);
+
+    } else {
+        fwrite(&empleado, sizeof(PersonaDTO), 1, p);
+
+        fclose(p);
+    }
+
+
+}
+int PersonaDAL::CantidadEmpleados(){
+
+FILE *p;
+int cantidad=0;
+PersonaDTO empleado;
+p=fopen(RUTA_PERSONA,"rb");
+
+if (p==nullptr){
+    return 0;
+}
+
+fseek(p,0,SEEK_END);
+cantidad=ftell(p)/sizeof(PersonaDTO);
+
+fclose (p);
+
+
+
+return cantidad;
+
+
+}
+
+
 bool PersonaDAL::Existe (const char* R)
 {
     bool existe = false;
@@ -102,8 +164,7 @@ PersonaDTO PersonaDAL::ObtenerPorDNI (int DNI)
             dto.Setdni(-1);
         }
     }
-    else
-    {
+    else {
         dto.Setdni(-1);
     }
     fclose (p);

@@ -30,7 +30,6 @@ void PersonaDTO::Setapellido(char *apellido)
     strcpy(this->apellido,apellido);
 }
 
-//void Setfechanacimiento(Fecha fechanacimiento) { this->fechanacimiento = fechanacimiento; }
 
 void PersonaDTO::Setemail(char *email)
 {
@@ -61,7 +60,6 @@ char * PersonaDTO::Getapellido()
     return apellido;
 }
 
-//Fecha Getfechanacimiento() { return fechanacimiento; }
 char * PersonaDTO::Getemail()
 {
     return email;
@@ -81,7 +79,6 @@ void PersonaDTO::Copy(PersonaDTO persona)
     this->dni=persona.dni;
     strcpy(this->nombre,persona.nombre);
     strcpy(this->apellido,persona.apellido);
-    //this->fechanacimiento=persona.fechanacimiento;
     strcpy(this->email,persona.email);
     strcpy(this->domicilio,persona.domicilio);
     this->telefono=persona.telefono;
@@ -94,11 +91,19 @@ void PersonaDTO::Cargar(){
     cin>>nombre;
     cout<<"APELLIDO: ";
     cin>>apellido;
-    cout<<"FECHA DE NACIMIENTO: "<<std::endl;
-    Sleep(500);
-    //fechanacimiento.Cargar();
     cout<<"EMAIL: ";
     cin>>email;
     cout<<"TELÉFONO: ";
     cin>>telefono;
+
+}
+
+void PersonaDTO::Mostrar(){
+
+cout<<"Dni"     <<dni<<endl;
+cout<<"Nombre"   <<nombre<<endl;
+cout<<"Apellido" <<apellido<<endl;
+cout<<"Email"    <<email<<endl;
+cout<<"Telefono" <<telefono<<endl;
+
 }
