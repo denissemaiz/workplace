@@ -59,9 +59,6 @@ void Fecha::Mostrar(){
 }
 
 
-
-
-
  /*string Fecha::toString(){
     string fecha;
     fecha = to_string(_dia) + "/" + to_string(_mes) + "/" + to_string(_anio);

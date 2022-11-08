@@ -13,29 +13,22 @@ using namespace std;
 #include "FUNCIONES.h"
 #include "rlutil.h"
 #include "EspacioDeTrabajoDTO.h"
-
+#include "ReservaDTO.h"
 
 
 int main()
 {
-
-
 system("color 8F");
-
-
-
-
 
 ///PANTALLA INICIO
 
-CargarEmpleados();
-//CuadroIncio();
-
-
+CuadroIncio();
 
 _getch();
 system("cls");
 
+
+/*
 ///PANTALLA MENU
 
 
@@ -132,7 +125,7 @@ rlutil::  locate (2,30);
 
 
 
-
+*/
 
     return 0;
 }

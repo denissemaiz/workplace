@@ -2,7 +2,6 @@
 #include <iomanip>
 #include <string>
 
-
 using namespace std;
 
 #include "rlutil.h"
@@ -10,7 +9,6 @@ using namespace std;
 #include "Fecha.h"
 #include "PersonaDTO.h"
 #include "PersonaDAL.h"
-
 
 
 void CuadroIncio()
