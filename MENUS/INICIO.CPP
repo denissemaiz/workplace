@@ -22,20 +22,31 @@ void CuadroIncio()
     mostrar_mensaje ("___________________________", 40, 6);
 
     int dni;
-    rlutil::  locate (30,12);
+    rlutil::  locate (36,12);
     cout <<"INGRESE SU DNI: ";
-    rlutil::  locate (47,12);
+    rlutil::  locate (53,12);
     cin >>dni;
+
     PersonaDAL reg;
     PersonaDTO aux;
 
     aux=reg.ObtenerPorDNI(dni);
 
-    if (aux.Getdni() == -1) {
-        cout<<"Su dni no existe en nuestra base de datos, intente nuevamente"<<endl;
+    if (dni == 0000 ){ ///PONGO UN NUMERO QUE EQUIVALGA A ADMINISTRADOR
+        system("cls");
+        CargarEmpleados();
+    }
+    else if (aux.Getdni() == -1) {
+        rlutil::  locate (28,16);
+        cout<<"EL DNI INGRESADO NO EXISTE EN NUESTRA BASE DE DATOS.";
+        rlutil::  locate (60,21);
         system("pause");
         system("cls");
         CuadroIncio();
+    }
+    else {
+        system("cls");
+        CuadroMenu();
     }
 }
 
