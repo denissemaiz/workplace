@@ -4,21 +4,12 @@
 
 class Hora
 {
-private:
-    int horas;
-    int minutos;
-public:
+    public:
+        Hora();
 
-    // CONSTRUCTOR:
-    Hora();
+    protected:
 
-    // SET:
-    void Sethoras(int horas);
-    void Setminutos(int minutos);
-
-// GET:
-    int Gethoras();
-    int Getminutos();
+    private:
 };
 
 #endif // HORA_H
