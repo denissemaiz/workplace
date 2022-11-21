@@ -1,5 +1,5 @@
 #include "Hora.h"
-
+/*
 // CONSTRUCTOR:
 Hora::Hora()
 {
@@ -26,3 +26,4 @@ int Hora::Getminutos()
 {
     return minutos;
 }
+*/

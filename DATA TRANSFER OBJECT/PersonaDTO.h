@@ -7,12 +7,12 @@
 class PersonaDTO
 {
 protected:
-    int dni;
-    char nombre[50];
-    char apellido[50];
-    char email[50];
-    char domicilio[50];
-    int telefono;
+    int _dni;
+    char _nombre[50];
+    char _apellido[50];
+    char _email[50];
+    char _domicilio[50];
+    int _telefono;
 
 public:
 
@@ -37,7 +37,7 @@ public:
     int Gettelefono();
 
     // METODOS:
-    void Copy(PersonaDTO);
+   // void Copy(PersonaDTO);
     void Cargar();
     void Mostrar();
 };
