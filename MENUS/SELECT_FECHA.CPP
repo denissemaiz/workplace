@@ -26,16 +26,15 @@ void CuadroSeleccionDia()
     obj.setMes(mes);
     obj.setAnio(anio);
 
-    mostrar_mensaje ("FECHA DESDE:", 30, 15);
+    /*mostrar_mensaje ("FECHA DESDE:", 30, 15);
     obj.operator++();
-    obj.Mostrar();
+    obj.Mostrar();*/
 
-    mostrar_mensaje ("FECHA HASTA:", 30, 20);
-    for(int i=1; i<14; i++){
+    mostrar_mensaje ("FECHAS A 15 DIAS:", 30, 20);
+    for(int i=1; i<15; i++){
         obj.operator++();
+        obj.Mostrar();
     }
-    obj.Mostrar();
-
 }
 
 /// RESERVAS
