@@ -6,10 +6,10 @@
 class EmpleadoDTO : public PersonaDTO
 {
 private:
-    int legajo;
-    int tipoempleado;
-    char *sector;
-    bool estado;
+    int _legajo;
+    int _tipoempleado;
+    char *_sector;
+    bool _estado;
 
 public:
 

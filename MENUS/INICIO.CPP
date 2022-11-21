@@ -14,16 +14,17 @@ using namespace std;
 void CuadroIncio()
 {
 
+    rlutil::setColor(rlutil::YELLOW);
     rectangulo (2, 2, 100, 20);
 
-    rlutil::setColor(rlutil::YELLOW);
     mostrar_mensaje ("___________________________", 40, 3);
-    mostrar_mensaje ("**BIENVENIDO A WORKPLACE**" ,40, 5);
+    mostrar_mensaje ("* BIENVENIDO A WORKPLACE *" ,40, 5);
     mostrar_mensaje ("___________________________", 40, 6);
 
     int dni;
     rlutil::  locate (36,12);
     cout <<"INGRESE SU DNI: ";
+    rectangulo (51, 11, 10, 1);
     rlutil::  locate (53,12);
     cin >>dni;
 
@@ -46,7 +47,7 @@ void CuadroIncio()
     }
     else {
         system("cls");
-        CuadroMenu();
+       menuUser();
     }
 }
 

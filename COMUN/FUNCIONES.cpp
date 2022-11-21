@@ -17,8 +17,7 @@ void mostrar_mensaje (string texto, int x, int y)
 }
 
 
-void rectangulo (int posx, int posy, int ancho, int alto)
-{
+void rectangulo (int posx, int posy, int ancho, int alto){
 
 /// ABAJO
 
@@ -60,10 +59,7 @@ void rectangulo (int posx, int posy, int ancho, int alto)
 }
 
 
-
-
-void CuadroConfirmacionReserva()
-{
+void CuadroConfirmacionReserva(){
 
     rectangulo (2, 2, 100, 20);
 
@@ -79,122 +75,25 @@ void CuadroConfirmacionReserva()
 
 }
 
-/// RESERVAS
+///MENU MOVIL
 
 
-void reservaDesde(Fecha obj)
-{
+void showItem (const char* text, int posx, int posy, bool selected){
 
+    if (selected){
+        rlutil::setBackgroundColor(rlutil::CYAN);
+        rlutil::  locate (posx -3,posy);
+        cout <<"==>";
+        }
+    else  {
 
-    int d=obj.getDia();
-    int m=obj.getMes();
-    int a=obj.getAnio();
-
-    if (m==2&&d<=27)
-    {
-        d+=1;
-    }
-    if (m==2&&d>27)
-    {
-        d-=27;
-        m+=1;
-    }
-
-    if((m==4||m==6||m==9||m==11)&&d<=29)
-    {
-        d+=1;
-    }
-    if((m==4||m==6||m==9||m==11)&&d>29)
-    {
-        d-=29;
-        m+=1;
-    }
-
-    if((m==1||m==3||m==5||m==7||m==8||m==10||m==12)&&d<=30)
-    {
-        d+=1;
-    }
-    if((m==1||m==3||m==5||m==7||m==8||m==10)&&d>30)
-    {
-        d-=30;
-        m+=1;
-    }
-
-    if(m==12&&d>30)
-    {
-        d-=30;
-        m=1;
-        a+=1;
-    }
-
-    obj.setDia(d);
-    obj.setMes(m);
-    obj.setAnio(a);
-
-    obj.Mostrar();
-
-
-}
-
-
-void reservaHasta(Fecha obj)
-{
-
-
-    int d=obj.getDia();
-    int m=obj.getMes();
-    int a=obj.getAnio();
-
-
-
-    if (m==2&&d<=13)
-    {
-        d+=15;
-    }
-    if (m==2&&d>13)
-    {
-        d-=15;
-        m+=1;
-    }
-
-    if((m==4||m==6||m==9||m==11)&&d<=15)
-    {
-        d+=15;
-    }
-    if((m==4||m==6||m==9||m==11)&&d>15)
-    {
-        d-=15;
-        m+=1;
-    }
-
-    if((m==1||m==3||m==5||m==7||m==8||m==10||m==12)&&d<=16)
-    {
-        d+=15;
-
+       rlutil::setBackgroundColor(rlutil::DARKGREY);
+        rlutil::  locate (posx -3,posy);
+        cout <<"==>";
+        }
+    rlutil::locate(posx, posy);
+    cout << text <<endl;
+    rlutil::setBackgroundColor(rlutil::DARKGREY);
     }
 
 
-    if((m==1||m==3||m==5||m==7||m==8||m==10)&&d>=16)
-    {
-        d-=16;
-        m+=1;
-
-
-    }
-
-    if(m==12&&d>16)
-    {
-        d-=16;
-        m=1;
-        a+=1;
-    }
-
-    obj.setDia(d);
-    obj.setMes(m);
-    obj.setAnio(a);
-
-    obj.Mostrar();
-
-
-
-}
