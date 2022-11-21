@@ -4,6 +4,9 @@
 #include <iostream>
 
 class Fecha{
+    private:
+        int _dia, _mes, _anio;
+
     public:
         int  getDia();
         int  getMes();
@@ -17,9 +20,7 @@ class Fecha{
         void Mostrar();
         void Cargar();
 
-    private:
-        int _dia, _mes, _anio;
-
+        bool operator++();
 };
 
 

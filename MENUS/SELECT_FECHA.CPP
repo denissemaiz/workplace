@@ -2,7 +2,6 @@
 #include <iomanip>
 #include <string>
 
-
 using namespace std;
 
 #include "rlutil.h"
@@ -11,134 +10,35 @@ using namespace std;
 
 void CuadroSeleccionDia()
 {
-
+    int dia, mes, anio;
+    Fecha obj;
     rectangulo (2, 2, 100, 20);
 
     rlutil::setColor(rlutil::YELLOW);
     mostrar_mensaje (" POR FAVOR SELECCIONE EL DIA A RESERVAR:", 30, 5);
 
+    ///ESTO NO IRÍA, LO HICE PARA PROBAR
+    mostrar_mensaje (" DIA/MES/ANIO:", 30, 10);
+    cin>>dia;
+    cin>>mes;
+    cin>>anio;
+    obj.setDia(dia);
+    obj.setMes(mes);
+    obj.setAnio(anio);
+
+    mostrar_mensaje ("FECHA DESDE:", 30, 15);
+    obj.operator++();
+    obj.Mostrar();
+
+    mostrar_mensaje ("FECHA HASTA:", 30, 20);
+    for(int i=1; i<14; i++){
+        obj.operator++();
+    }
+    obj.Mostrar();
 
 }
 
 /// RESERVAS
-
-
-void reservaDesde(Fecha obj)
-{
-
-
-    int d=obj.getDia();
-    int m=obj.getMes();
-    int a=obj.getAnio();
-
-    if (m==2&&d<=27)
-    {
-        d+=1;
-    }
-    if (m==2&&d>27)
-    {
-        d-=27;
-        m+=1;
-    }
-
-    if((m==4||m==6||m==9||m==11)&&d<=29)
-    {
-        d+=1;
-    }
-    if((m==4||m==6||m==9||m==11)&&d>29)
-    {
-        d-=29;
-        m+=1;
-    }
-
-    if((m==1||m==3||m==5||m==7||m==8||m==10||m==12)&&d<=30)
-    {
-        d+=1;
-    }
-    if((m==1||m==3||m==5||m==7||m==8||m==10)&&d>30)
-    {
-        d-=30;
-        m+=1;
-    }
-
-    if(m==12&&d>30)
-    {
-        d-=30;
-        m=1;
-        a+=1;
-    }
-
-    obj.setDia(d);
-    obj.setMes(m);
-    obj.setAnio(a);
-
-    obj.Mostrar();
-
-
-}
-
-
-void reservaHasta(Fecha obj)
-{
-
-
-    int d=obj.getDia();
-    int m=obj.getMes();
-    int a=obj.getAnio();
-
-
-
-    if (m==2&&d<=13)
-    {
-        d+=15;
-    }
-    if (m==2&&d>13)
-    {
-        d-=15;
-        m+=1;
-    }
-
-    if((m==4||m==6||m==9||m==11)&&d<=15)
-    {
-        d+=15;
-    }
-    if((m==4||m==6||m==9||m==11)&&d>15)
-    {
-        d-=15;
-        m+=1;
-    }
-
-    if((m==1||m==3||m==5||m==7||m==8||m==10||m==12)&&d<=16)
-    {
-        d+=15;
-
-    }
-
-
-    if((m==1||m==3||m==5||m==7||m==8||m==10)&&d>=16)
-    {
-        d-=16;
-        m+=1;
-
-
-    }
-
-    if(m==12&&d>16)
-    {
-        d-=16;
-        m=1;
-        a+=1;
-    }
-
-    obj.setDia(d);
-    obj.setMes(m);
-    obj.setAnio(a);
-
-    obj.Mostrar();
-
-}
-
-
 
 void CuadroConfirmacionFecha(){
          system("cls");
@@ -208,8 +108,6 @@ rectangulo (2, 2, 100, 20);
 
             case 3:
                 op=0;
-
-
             }
 
             break;
@@ -217,11 +115,7 @@ rectangulo (2, 2, 100, 20);
         default:
 
             break;
-
         }
-
-
-
     }
     while(op!=0);
 
@@ -296,18 +190,13 @@ FechaNoDisponible();
 
             case 2:
                 op=0;
-
-
             }
-
             break;
 
         default:
 
             break;
-
         }
-
     }
     while(op!=0);
 
