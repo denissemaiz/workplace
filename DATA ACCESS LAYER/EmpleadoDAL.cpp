@@ -1,7 +1,7 @@
 #include "EmpleadoDAL.h"
 
 // METODOS:
-bool EmpleadoDAL::Existe (const char* R)
+bool EmpleadoDAL::existe (const char* R)
 {
     bool existe = false;
     FILE *p;
@@ -14,44 +14,43 @@ bool EmpleadoDAL::Existe (const char* R)
     return existe;
 }
 
-bool EmpleadoDAL::Agregar (EmpleadoDTO dto)
+bool EmpleadoDAL::agregar (EmpleadoDTO dto)
 {
-    bool Agregar = false;
+    bool agregar = false;
     FILE *p;
     p = fopen(RUTA_EMPLEADO,"ab");
     if (p!=NULL)
     {
         fwrite(&dto, sizeof (EmpleadoDTO),1,p);
         fclose (p);
-        Agregar = true;
+        agregar = true;
     }
-    return Agregar;
+    return agregar;
 }
 
-bool EmpleadoDAL::Modificar(EmpleadoDTO dto)
+bool EmpleadoDAL::modificar(EmpleadoDTO dto)
 {
     EmpleadoDTO aux;
-    bool Modificar = false;
+    bool modificar = false;
     FILE *p;
     p = fopen(RUTA_EMPLEADO,"rb+");
     if (p!=NULL)
     {
         while(fread(&aux, sizeof (EmpleadoDTO),1,p))
         {
-            if(dto.Getlegajo()==aux.Getlegajo())
+            if(dto.getLegajo()==aux.getLegajo())
             {
-                fseek(p,sizeof dto*(dto.Getlegajo()-1),SEEK_SET);
+                fseek(p,sizeof dto*(dto.getLegajo()-1),SEEK_SET);
                 fwrite(&dto, sizeof (EmpleadoDTO),1,p);
                 fclose (p);
-                Modificar = true;
+                modificar = true;
             }
         }
-
     }
-    return Modificar;
+    return modificar;
 }
 
-int EmpleadoDAL::ObtenerTamanio()
+int EmpleadoDAL::obtenerTamanio()
 {
     int Resultado=0;
     int CantBytes=0;
@@ -67,7 +66,7 @@ int EmpleadoDAL::ObtenerTamanio()
     return Resultado;
 }
 
-EmpleadoDTO EmpleadoDAL::BuscarRegistro(int a,int b)
+EmpleadoDTO EmpleadoDAL::buscarRegistro(int a,int b)
 {
     EmpleadoDTO dto;
     FILE *p;
@@ -81,7 +80,7 @@ EmpleadoDTO EmpleadoDAL::BuscarRegistro(int a,int b)
     return dto;
 }
 
-EmpleadoDTO EmpleadoDAL::ObtenerPorDNI (int DNI)
+EmpleadoDTO EmpleadoDAL::obtenerPorDNI (int DNI)
 {
     bool encontro=false;
     EmpleadoDTO dto;
@@ -91,7 +90,7 @@ EmpleadoDTO EmpleadoDAL::ObtenerPorDNI (int DNI)
     {
         while(fread(&dto, sizeof (EmpleadoDTO),1,p))
         {
-            if(dto.Getdni()==DNI)
+            if(dto.getDni()==DNI)
             {
                 encontro=true;
                 break;
@@ -99,35 +98,35 @@ EmpleadoDTO EmpleadoDAL::ObtenerPorDNI (int DNI)
         }
         if(!encontro)
         {
-            dto.Setdni(-1);
+            dto.setDni(-1);
         }
     }
     else
     {
-        dto.Setdni(-1);
+        dto.setDni(-1);
     }
     fclose (p);
     return dto;
 }
 
-bool EmpleadoDAL::Eliminar(EmpleadoDTO dto)
+bool EmpleadoDAL::eliminar(EmpleadoDTO dto)
 {
     EmpleadoDTO aux;
-    bool Eliminar = false;
+    bool eliminar = false;
     FILE *p;
     p = fopen(RUTA_EMPLEADO,"rb+");
     if (p!=NULL)
     {
         while(fread(&dto, sizeof (EmpleadoDTO),1,p))
         {
-            if(dto.Getdni()==aux.Getdni())
+            if(dto.getDni()==aux.getDni())
             {
-                fseek(p,sizeof dto*(dto.Getlegajo()-1),SEEK_SET);
+                fseek(p,sizeof dto*(dto.getLegajo()-1),SEEK_SET);
                 fwrite(&dto, sizeof (EmpleadoDTO),1,p);
                 fclose (p);
-                Eliminar = true;
+                eliminar = true;
             }
         }
     }
-    return Eliminar;
+    return eliminar;
 }

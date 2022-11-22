@@ -7,29 +7,24 @@ class EmpleadoDTO : public PersonaDTO
 {
 private:
     int _legajo;
-    int _tipoempleado;
+    int _tipo_empleado;
     char *_sector;
     bool _estado;
 
 public:
-
-    // CONSTRUCTOR:
     EmpleadoDTO();
 
-    // SET:
-    void Setlegajo(int legajo);
-    void Settipoempleado(int tipoempleado);
-    void Setsector(char *sector);
-    void Setestado(bool estado);
+    void setLegajo(int legajo);
+    void setTipo(int tipo);
+    void setSector(char *sector);
+    void setEstado(bool estado);
 
-    // GET:
-    int Getlegajo();
-    int Gettipoempleado();
-    char *Getsector();
-    bool Getestado();
+    int getLegajo();
+    int getTipo();
+    char *getSector();
+    bool getEstado();
 
-    // METODOS:
-    void Cargar();
+    void cargar();
 };
 
 #endif // EMPLEADODTO_H

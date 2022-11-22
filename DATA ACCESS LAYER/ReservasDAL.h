@@ -5,12 +5,10 @@
 class ReservasDAL
 {
     public:
-        void ReservasDiarias();
-        void ReservasQuincenales();
-        void ListadoPorDptoTrabajo();
-        void ListadoOcupacionPorEmpleado();
-
-
+        void reservasDiarias();
+        void reservasQuincenales();
+        void listadoPorDptoTrabajo();
+        void listadoOcupacionPorEmpleado();
 };
 
 #endif // RESERVASDAL_H

@@ -8,15 +8,14 @@ const char RUTA_EMPLEADO [] = "Empleado.data";
 class EmpleadoDAL
 {
 public:
-
     // METODOS:
-    bool Existe(const char*);
-    bool Agregar (EmpleadoDTO);
-    bool Modificar (EmpleadoDTO);
-    bool Eliminar (EmpleadoDTO);
-    int ObtenerTamanio();
-    EmpleadoDTO BuscarRegistro(int,int);
-    EmpleadoDTO ObtenerPorDNI (int);
+    bool existe(const char*);
+    bool agregar (EmpleadoDTO);
+    bool modificar (EmpleadoDTO);
+    bool eliminar (EmpleadoDTO);
+    int obtenerTamanio();
+    EmpleadoDTO buscarRegistro(int,int);
+    EmpleadoDTO obtenerPorDNI (int);
 };
 
 #endif // EMPLEADODAL_H

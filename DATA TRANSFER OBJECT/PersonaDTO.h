@@ -15,31 +15,25 @@ protected:
     int _telefono;
 
 public:
-
-    // CONSTRUCTOR:
     PersonaDTO();
 
-    // SET:
-    void Setdni(int dni);
-    void Setnombre(char *nombre);
-    void Setapellido(char *apellido);
-    void Setemail(char *email);
-    void Setdomicilio(char *domicilio);
-    void Settelefono(int telefono);
+    void setDni(int dni);
+    void setNombre(char *nombre);
+    void setApellido(char *apellido);
+    void setEmail(char *email);
+    void setDomicilio(char *domicilio);
+    void setTelefono(int telefono);
 
-    // GET:
-    int Getdni();
-    char * Getnombre();
-    char * Getapellido();
+    int getDni();
+    char * getNombre();
+    char * getApellido();
 
-    char * Getemail();
-    char * Getdomicilio();
-    int Gettelefono();
+    char * getEmail();
+    char * getDomicilio();
+    int getTelefono();
 
-    // METODOS:
-   // void Copy(PersonaDTO);
-    void Cargar();
-    void Mostrar();
+    void cargar();
+    void mostrar();
 };
 
 #endif // PERSONADTO_H

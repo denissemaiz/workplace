@@ -11,9 +11,8 @@ using namespace std;
 #include "PersonaDAL.h"
 
 
-void CuadroIncio()
+void cuadroIncio()
 {
-
     rlutil::setColor(rlutil::YELLOW);
     rectangulo (2, 2, 100, 20);
 
@@ -31,19 +30,19 @@ void CuadroIncio()
     PersonaDAL reg;
     PersonaDTO aux;
 
-    aux=reg.ObtenerPorDNI(dni);
+    aux=reg.obtenerPorDNI(dni);
 
     if (dni == 0000 ){ ///PONGO UN NUMERO QUE EQUIVALGA A ADMINISTRADOR
         system("cls");
-        CargarEmpleados();
+        cargarEmpleados();
     }
-    else if (aux.Getdni() == -1) {
+    else if (aux.getDni() == -1) {
         rlutil::  locate (28,16);
         cout<<"EL DNI INGRESADO NO EXISTE EN NUESTRA BASE DE DATOS.";
         rlutil::  locate (60,21);
         system("pause");
         system("cls");
-        CuadroIncio();
+        cuadroIncio();
     }
     else {
         system("cls");
@@ -62,9 +61,4 @@ void CuadroIncio()
 //        CuadroIncio();
 //    }
 //}
-//
-//
-//
-//
-//
 //}
