@@ -8,7 +8,7 @@ using namespace std;
 #include "FUNCIONES.h"
 #include "Fecha.h"
 
-void CuadroSeleccionDia()
+void cuadroSeleccionDia()
 {
     int dia, mes, anio;
     Fecha obj;
@@ -17,21 +17,19 @@ void CuadroSeleccionDia()
     rlutil::setColor(rlutil::YELLOW);
     mostrar_mensaje (" POR FAVOR SELECCIONE EL DIA A RESERVAR:", 30, 5);
 
-    ///ESTO NO IRÍA, LO HICE PARA PROBAR
-    mostrar_mensaje (" DIA/MES/ANIO:", 30, 10);
+    ///PRUEBAS
+    /*mostrar_mensaje (" DIA/MES/ANIO:", 30, 10);
     cin>>dia;
     cin>>mes;
     cin>>anio;
     obj.setDia(dia);
     obj.setMes(mes);
-    obj.setAnio(anio);
+    obj.setAnio(anio);*/
 
-    /*mostrar_mensaje ("FECHA DESDE:", 30, 15);
-    obj.operator++();
-    obj.Mostrar();*/
-
+    Fecha();
     mostrar_mensaje ("FECHAS A 15 DIAS:", 30, 20);
-    for(int i=1; i<15; i++){
+    for(int i=1; i<15; i++)
+    {
         obj.operator++();
         obj.Mostrar();
     }
@@ -39,9 +37,10 @@ void CuadroSeleccionDia()
 
 /// RESERVAS
 
-void CuadroConfirmacionFecha(){
-         system("cls");
-rectangulo (2, 2, 100, 20);
+void cuadroConfirmacionFecha()
+{
+    system("cls");
+    rectangulo (2, 2, 100, 20);
 
     mostrar_mensaje ("ESTAS POR RESERVAR UN ESPACIO EN: ", 49, 4);
     mostrar_mensaje ("DIA DE LA RESERVA: ", 49, 5);
@@ -55,11 +54,10 @@ rectangulo (2, 2, 100, 20);
 
     rlutil::hidecursor();
 
-    do{
-
+    do
+    {
         rlutil::saveDefaultColor();
         rlutil::setColor(rlutil::YELLOW);
-
 
         showItem (opciones[0],10,12,y==0);
         showItem (opciones[1],10,13,y==1);
@@ -70,10 +68,8 @@ rectangulo (2, 2, 100, 20);
         rlutil::locate(6,12+y);
         cout <<"==> " <<endl;
 
-
         switch(rlutil::getkey())
         {
-
         case 14: //UP
             rlutil::locate(6,12+y);
             cout <<"   " <<endl;
@@ -82,8 +78,8 @@ rectangulo (2, 2, 100, 20);
             {
                 y=0;
             }
-
             break;
+
         case 15: //DOWN
             rlutil::locate(6,12+y);
             cout <<"   " <<endl;
@@ -93,37 +89,32 @@ rectangulo (2, 2, 100, 20);
             {
                 y=4;
             }
-
             break;
 
         case 1: //ENTER
-
-        ReciboConfirmacionReserva();
-
+            reciboConfirmacionReserva();
             break;
 
             switch(y)
             {
-
             case 3:
                 op=0;
             }
-
             break;
 
         default:
-
             break;
         }
     }
-    while(op!=0);
 
+    while(op!=0);
     system("pause>nul");
 }
 
-void ReciboConfirmacionReserva(){
-         system("cls");
-rectangulo (2, 2, 100, 20);
+void reciboConfirmacionReserva()
+{
+    system("cls");
+    rectangulo (2, 2, 100, 20);
 
     mostrar_mensaje ("USTED RESERVO:  ", 40, 4);
 
@@ -134,18 +125,16 @@ rectangulo (2, 2, 100, 20);
     mostrar_mensaje ("HASTA LAS: ", 20, 11);
 
     mostrar_mensaje ("CONFIRMA LA RESERVA: ", 40, 18);
-    int n=2;
-    const char *opciones[] = {"SI","NO"};
 
-  int op=1, y=0;
+    int n=2, op=1, y=0;
+    const char *opciones[] = {"SI","NO"};
 
     rlutil::hidecursor();
 
-    do{
-
+    do
+    {
         rlutil::saveDefaultColor();
         rlutil::setColor(rlutil::YELLOW);
-
 
         showItem (opciones[0],46,19,y==0);
         showItem (opciones[1],46,20,y==1);
@@ -153,20 +142,19 @@ rectangulo (2, 2, 100, 20);
         rlutil::locate(42,19+y);
         cout <<"==> " <<endl;
 
-
         switch(rlutil::getkey())
         {
-
         case 14: //UP
             rlutil::locate(42,19+y);
             cout <<"    " <<endl;
             y--;
+
             if (y<0)
             {
                 y=0;
             }
-
             break;
+
         case 15: //DOWN
             rlutil::locate(42,19+y);
             cout <<"    " <<endl;
@@ -176,51 +164,45 @@ rectangulo (2, 2, 100, 20);
             {
                 y=1;
             }
-
             break;
 
         case 1: //ENTER
-
-FechaNoDisponible();
+            fechaNoDisponible();
             break;
 
             switch(y)
             {
-
             case 2:
                 op=0;
             }
             break;
 
         default:
-
             break;
         }
     }
-    while(op!=0);
 
+    while(op!=0);
     system("pause>nul");
 }
 
-void FechaNoDisponible(){
-system("cls");
-rectangulo (2, 2, 100, 20);
+void fechaNoDisponible()
+{
+    system("cls");
+    rectangulo (2, 2, 100, 20);
 
-     rlutil::setColor(rlutil::RED);
+    rlutil::setColor(rlutil::RED);
     mostrar_mensaje ("* LO SENTIMOS NO HAY MAS DISPONIBILIDAD PARA LA FECHA SELECCIONADA *  ", 19, 6);
 
-      int n=2;
+    int n=2, op=1, y=0;;
     const char *opciones[] = {"VOLVER A CALENDARIO","VOLVER AL MENU PRINCIPAL"};
-
-  int op=1, y=0;
 
     rlutil::hidecursor();
 
-    do{
-
+    do
+    {
         rlutil::saveDefaultColor();
         rlutil::setColor(rlutil::YELLOW);
-
 
         showItem (opciones[0],35,10,y==0);
         showItem (opciones[1],35,11,y==1);
@@ -228,20 +210,19 @@ rectangulo (2, 2, 100, 20);
         rlutil::locate(31,10+y);
         cout <<"==> " <<endl;
 
-
         switch(rlutil::getkey())
         {
-
         case 14: //UP
             rlutil::locate(31,10+y);
             cout <<"    " <<endl;
             y--;
+
             if (y<0)
             {
                 y=0;
             }
-
             break;
+
         case 15: //DOWN
             rlutil::locate(31,10+y);
             cout <<"    " <<endl;
@@ -251,35 +232,24 @@ rectangulo (2, 2, 100, 20);
             {
                 y=1;
             }
-
             break;
 
         case 1: //ENTER
-
-ConfirmacionAnulacion();
+            confirmacionAnulacion();
             break;
 
             switch(y)
             {
-
             case 2:
                 op=0;
-
-
             }
-
             break;
 
         default:
-
             break;
-
         }
-
     }
+
     while(op!=0);
-
     system("pause>nul");
-
-
 }

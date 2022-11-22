@@ -4,19 +4,17 @@
 
 void mostrar_mensaje(string texto, int x, int y);
 void rectangulo(int posx, int posy, int ancho, int alto);
-void CuadroIncio();
-void CuadroReservaEspacio();
-void CuadroSeleccionDia();
-void CuadroConfirmacionFecha();
-void CuadroConfirmacionReserva();
-void ReciboConfirmacionReserva();
-void FechaNoDisponible();
-void reservaDesde(Fecha obj);
-void reservaHasta(Fecha obj);
-void AnularReserva();
-void ConfirmacionAnulacion();
-void HistorialReservas();
-void CargarEmpleados();
+void cuadroIncio();
+void cuadroReservaEspacio();
+void cuadroSeleccionDia();
+void cuadroConfirmacionFecha();
+void cuadroConfirmacionReserva();
+void reciboConfirmacionReserva();
+void fechaNoDisponible();
+void anularReserva();
+void confirmacionAnulacion();
+void historialReservas();
+void cargarEmpleados();
 void showItem (const char* text, int posx, int posy, bool selected);
 void menuUser();
 

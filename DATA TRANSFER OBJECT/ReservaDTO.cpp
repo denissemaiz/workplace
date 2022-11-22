@@ -1,86 +1,79 @@
 #include "ReservaDTO.h"
 //sets
 
-void ReservaDTO::Setnumeroreserva(int numero){
-
-_numero_reserva=numero;
-
-}
-void ReservaDTO::Setlegajo(int legajo){
-
-_legajo=legajo;
+void ReservaDTO::setNumero(int numero)
+{
+    _numero=numero;
 }
 
-void ReservaDTO::Setespaciodetrabajo(int espaciodetrabajo){
-
-_espacio_trabajo=espaciodetrabajo;
-
+void ReservaDTO::setLegajo(int legajo)
+{
+    _legajo=legajo;
 }
 
-void ReservaDTO::Setfecha(Fecha fecha){
-
-_fecha=fecha;
-
-}
-void ReservaDTO::Sethora_ingreso(Hora horaingreso){
-
-
-_hora_ingreso=horaingreso;
-
-}
-void ReservaDTO::Sethora_egreso(Hora horaegreso){
-
-_hora_egreso=horaegreso;
+void ReservaDTO::setEspacioTrabajo(int espaciodetrabajo)
+{
+    _espacio_trabajo=espaciodetrabajo;
 }
 
-void ReservaDTO::Setestado_turno(bool estadoturno){
-
-_estado_turno=estadoturno;
-
+void ReservaDTO::setFecha(Fecha fecha)
+{
+    _fecha=fecha;
 }
 
-//gets
-
-int ReservaDTO::Getnumeroreserva(){
-
-return _numero_reserva;
-
-}
-int ReservaDTO::Getlegajo(){
-
-return _legajo;
-
+void ReservaDTO::setHoraIngreso(Hora horaingreso)
+{
+    _hora_ingreso=horaingreso;
 }
 
-int ReservaDTO::Getespaciodetrabajo(){
-
-return _espacio_trabajo;
-
-}
-Fecha ReservaDTO::Getfecha(){
-
-return _fecha;
-
-}
-Hora ReservaDTO::Gethora_ingreso(){
-
-return _hora_ingreso;
-
-}
-Hora ReservaDTO::Gethora_egreso(){
-
-return _hora_ingreso;
-
-}
-bool ReservaDTO::Getestado_turno(){
-
-return _estado_turno;
+void ReservaDTO::setHoraEgreso(Hora horaegreso)
+{
+    _hora_egreso=horaegreso;
 }
 
-void ReservaDTO::turno(){
+void ReservaDTO::setEstado(bool estadoturno)
+{
+    _estado=estadoturno;
+}
 
 
+int ReservaDTO::getNumero()
+{
+    return _numero;
+}
+
+int ReservaDTO::getLegajo()
+{
+    return _legajo;
+}
+
+int ReservaDTO::getEspacioTrabajo()
+{
+    return _espacio_trabajo;
+}
+
+Fecha ReservaDTO::getFecha()
+{
+    return _fecha;
+}
+
+Hora ReservaDTO::getHoraIngreso()
+{
+    return _hora_ingreso;
+}
+
+Hora ReservaDTO::getHoraEgreso()
+{
+    return _hora_ingreso;
+}
+
+bool ReservaDTO::getEstado()
+{
+    return _estado;
+}
 
 
+void ReservaDTO::turno()
+{
 
 }

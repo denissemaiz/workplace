@@ -22,11 +22,12 @@ system("color 8F");
 
 ///PANTALLA INICIO
 
-CuadroIncio();
+//CuadroIncio();
+
+cuadroSeleccionDia();
 
 _getch();
 system("cls");
-
 
 
     return 0;

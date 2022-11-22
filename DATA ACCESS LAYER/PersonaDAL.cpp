@@ -2,72 +2,65 @@
 using namespace std;
 
 
-// METODOS:
-
-
-void PersonaDAL::leerEmpleados(PersonaDTO empleados[], int cantidad){
-
-FILE* p;
-p= fopen(RUTA_PERSONA,"rb");
-if(p==nullptr){
-
-
-    return;
-}
-
-fread(empleados, sizeof(PersonaDTO),cantidad,p);
-fclose(p);
-}
-
-
-void PersonaDAL::guardar(PersonaDTO empleado){
-
+void PersonaDAL::leerEmpleados(PersonaDTO empleados[], int cantidad)
+{
     FILE* p;
+    p= fopen(RUTA_PERSONA,"rb");
 
-    p = fopen(RUTA_PERSONA,"ab");
-
-    if (p == nullptr){
-
-        cout<<"Error al abrir el archivo" <<endl;
-        exit(1552);
-
-    } else {
-        fwrite(&empleado, sizeof(PersonaDTO), 1, p);
-
-        fclose(p);
+    if(p==nullptr)
+    {
+        return;
     }
 
-
-}
-int PersonaDAL::CantidadEmpleados(){
-
-FILE *p;
-int cantidad=0;
-PersonaDTO empleado;
-p=fopen(RUTA_PERSONA,"rb");
-
-if (p==nullptr){
-    return 0;
-}
-
-fseek(p,0,SEEK_END);
-cantidad=ftell(p)/sizeof(PersonaDTO);
-
-fclose (p);
-
-
-
-return cantidad;
-
-
+    fread(empleados, sizeof(PersonaDTO),cantidad,p);
+    fclose(p);
 }
 
 
-bool PersonaDAL::Existe (const char* R)
+void PersonaDAL::guardar(PersonaDTO empleado)
+{
+    FILE* p;
+    p = fopen(RUTA_PERSONA,"ab");
+
+    if (p == nullptr)
+    {
+        cout<<"Error al abrir el archivo" <<endl;
+        exit(1552);
+    }
+    else
+    {
+        fwrite(&empleado, sizeof(PersonaDTO), 1, p);
+        fclose(p);
+    }
+}
+
+
+int PersonaDAL::cantidadEmpleados()
+{
+    FILE *p;
+    int cantidad=0;
+    PersonaDTO empleado;
+    p=fopen(RUTA_PERSONA,"rb");
+
+    if (p==nullptr)
+    {
+        return 0;
+    }
+
+    fseek(p,0,SEEK_END);
+    cantidad=ftell(p)/sizeof(PersonaDTO);
+    fclose (p);
+
+    return cantidad;
+}
+
+
+bool PersonaDAL::existe (const char* R)
 {
     bool existe = false;
     FILE *p;
     p = fopen(R,"rb");
+
     if (p!=NULL)
     {
         fclose (p);
@@ -76,44 +69,44 @@ bool PersonaDAL::Existe (const char* R)
     return existe;
 }
 
-bool PersonaDAL::Agregar (PersonaDTO dto)
+bool PersonaDAL::agregar (PersonaDTO dto)
 {
-    bool Agregar = false;
+    bool agregar = false;
     FILE *p;
     p = fopen(RUTA_PERSONA,"ab");
+
     if (p!=NULL)
     {
         fwrite(&dto, sizeof (PersonaDTO),1,p);
         fclose (p);
-        Agregar = true;
+        agregar = true;
     }
-    return Agregar;
+    return agregar;
 }
 
-bool PersonaDAL::Modificar(PersonaDTO dto)
+bool PersonaDAL::modificar(PersonaDTO dto)
 {
     PersonaDTO aux;
-    bool Modificar = false;
+    bool modificar = false;
     FILE *p;
     p = fopen(RUTA_PERSONA,"rb+");
     if (p!=NULL)
     {
         while(fread(&dto, sizeof (PersonaDTO),1,p))
         {
-            if(dto.Getdni()==aux.Getdni())
+            if(dto.getDni()==aux.getDni())
             {
                 fseek(p,sizeof dto*(-1),SEEK_CUR);
                 fwrite(&dto, sizeof (PersonaDTO),1,p);
                 fclose (p);
-                Modificar = true;
+                modificar = true;
             }
         }
-
     }
-    return Modificar;
+    return modificar;
 }
 
-int PersonaDAL::ObtenerTamanio()
+int PersonaDAL::obtenerTamanio()
 {
     int Resultado=0;
     int CantBytes=0;
@@ -129,7 +122,7 @@ int PersonaDAL::ObtenerTamanio()
     return Resultado;
 }
 
-PersonaDTO PersonaDAL::BuscarRegistro(int a,int b)
+PersonaDTO PersonaDAL::buscarRegistro(int a,int b)
 {
     PersonaDTO dto;
     FILE *p;
@@ -143,7 +136,7 @@ PersonaDTO PersonaDAL::BuscarRegistro(int a,int b)
     return dto;
 }
 
-PersonaDTO PersonaDAL::ObtenerPorDNI (int DNI)
+PersonaDTO PersonaDAL::obtenerPorDNI (int DNI)
 {
     bool encontro=false;
     PersonaDTO dto;
@@ -153,7 +146,7 @@ PersonaDTO PersonaDAL::ObtenerPorDNI (int DNI)
     {
         while(fread(&dto, sizeof (PersonaDTO),1,p))
         {
-            if(dto.Getdni()==DNI)
+            if(dto.getDni()==DNI)
             {
                 encontro=true;
                 break;
@@ -161,35 +154,37 @@ PersonaDTO PersonaDAL::ObtenerPorDNI (int DNI)
         }
         if(!encontro)
         {
-            dto.Setdni(-1);
+            dto.setDni(-1);
         }
     }
-    else {
-        dto.Setdni(-1);
+    else
+    {
+        dto.setDni(-1);
     }
     fclose (p);
+
     return dto;
 }
 
-bool PersonaDAL::Eliminar(PersonaDTO dto)
+bool PersonaDAL::eliminar(PersonaDTO dto)
 {
     PersonaDTO aux;
-    bool Eliminar = false;
+    bool eliminar = false;
     FILE *p;
     p = fopen(RUTA_PERSONA,"rb+");
     if (p!=NULL)
     {
         while(fread(&dto, sizeof (PersonaDTO),1,p))
         {
-            if(dto.Getdni()==aux.Getdni())
+            if(dto.getDni()==aux.getDni())
             {
                 fseek(p,sizeof dto*(-1),SEEK_CUR);
                 fwrite(&dto, sizeof (PersonaDTO),1,p);
                 fclose (p);
-                Eliminar = true;
+                eliminar = true;
             }
         }
     }
-    return Eliminar;
+    return eliminar;
 }
 

@@ -2,7 +2,6 @@
 #include <iomanip>
 #include <string>
 
-
 using namespace std;
 
 #include "rlutil.h"
@@ -11,19 +10,17 @@ using namespace std;
 
 void mostrar_mensaje (string texto, int x, int y)
 {
-
     rlutil::  locate (x,y);
     cout <<texto;
 }
 
 
-void rectangulo (int posx, int posy, int ancho, int alto){
+void rectangulo (int posx, int posy, int ancho, int alto)
+{
 
 /// ABAJO
-
     for (int x= 1; x <=ancho; x++)
     {
-
         rlutil::locate( x+ posx, posy);
         cout << (char)205;
 
@@ -32,7 +29,6 @@ void rectangulo (int posx, int posy, int ancho, int alto){
     }
 
 ///ANCHO
-
     for (int y= 1; y <=alto; y++)
     {
         rlutil::locate( posx,  posy+y);
@@ -42,8 +38,8 @@ void rectangulo (int posx, int posy, int ancho, int alto){
         cout << (char)186;
 
     }
-///ESQUINAS
 
+///ESQUINAS
     rlutil::locate( posx, posy);
     cout << (char)201;
 
@@ -55,12 +51,11 @@ void rectangulo (int posx, int posy, int ancho, int alto){
 
     rlutil::locate( posx +ancho +1, posy+ alto +1);
     cout << (char)188;
-
 }
 
 
-void CuadroConfirmacionReserva(){
-
+void cuadroConfirmacionReserva()
+{
     rectangulo (2, 2, 100, 20);
 
     rlutil::setColor(rlutil::YELLOW);
@@ -72,28 +67,24 @@ void CuadroConfirmacionReserva(){
     mostrar_mensaje (" HORARIO DE EGRESO:", 10, 14);
     mostrar_mensaje (" PISO/SECTOR DONDE SE REALIZO LA RESERVA:", 10, 16);
     mostrar_mensaje (" ¿CONFIRMA LA RESERVA? :", 10, 18);
-
 }
 
 ///MENU MOVIL
-
-
-void showItem (const char* text, int posx, int posy, bool selected){
-
-    if (selected){
+void showItem (const char* text, int posx, int posy, bool selected)
+{
+    if (selected)
+    {
         rlutil::setBackgroundColor(rlutil::CYAN);
         rlutil::  locate (posx -3,posy);
         cout <<"==>";
-        }
-    else  {
-
-       rlutil::setBackgroundColor(rlutil::DARKGREY);
+    }
+    else
+    {
+        rlutil::setBackgroundColor(rlutil::DARKGREY);
         rlutil::  locate (posx -3,posy);
         cout <<"==>";
-        }
+    }
     rlutil::locate(posx, posy);
     cout << text <<endl;
     rlutil::setBackgroundColor(rlutil::DARKGREY);
-    }
-
-
+}
