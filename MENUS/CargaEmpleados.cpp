@@ -18,7 +18,7 @@ void cargarEmpleados()
         rectangulo (2, 2, 100, 26);
 
         rlutil::setColor(rlutil::YELLOW);
-        mostrar_mensaje (" ¿QUE DESEAS HACER?", 40, 5);
+        mostrar_mensaje (" Â¿QUE DESEAS HACER?", 40, 5);
         mostrar_mensaje ("_____________________", 40, 6);
 
         mostrar_mensaje ("1-CARGAR EMPLEADO", 10, 8);
@@ -54,7 +54,7 @@ void cargarEmpleados()
         case 2:
         {
             system("cls");
-
+            
             rlutil::setColor(rlutil::YELLOW);
             mostrar_mensaje (" LISTADO DE EMPLEADOS", 40, 5);
             mostrar_mensaje ("------------------------------", 39, 6);
@@ -71,6 +71,7 @@ void cargarEmpleados()
             }
             delete[] empleados;
         }
+
         break;
 
         case 0:

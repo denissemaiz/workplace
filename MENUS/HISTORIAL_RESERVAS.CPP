@@ -12,6 +12,7 @@ using namespace std;
 void historialReservas()
 {
     system("cls");
+
     rlutil::setColor(rlutil::YELLOW);
     rectangulo (2, 2, 100, 20);
 

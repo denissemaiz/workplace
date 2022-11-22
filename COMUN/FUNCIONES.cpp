@@ -15,8 +15,7 @@ void mostrar_mensaje (string texto, int x, int y)
 }
 
 
-void rectangulo (int posx, int posy, int ancho, int alto)
-{
+void rectangulo (int posx, int posy, int ancho, int alto){
 
 /// ABAJO
     for (int x= 1; x <=ancho; x++)
@@ -66,8 +65,9 @@ void cuadroConfirmacionReserva()
     mostrar_mensaje (" HORARIO DE INGRESO:", 10, 12);
     mostrar_mensaje (" HORARIO DE EGRESO:", 10, 14);
     mostrar_mensaje (" PISO/SECTOR DONDE SE REALIZO LA RESERVA:", 10, 16);
-    mostrar_mensaje (" ¿CONFIRMA LA RESERVA? :", 10, 18);
+    mostrar_mensaje (" Â¿CONFIRMA LA RESERVA? :", 10, 18);
 }
+
 
 ///MENU MOVIL
 void showItem (const char* text, int posx, int posy, bool selected)

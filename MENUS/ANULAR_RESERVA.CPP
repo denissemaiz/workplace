@@ -22,6 +22,7 @@ void anularReserva()
     mostrar_mensaje (" CONFIRMAS LA ANULACION (S/N): ", 10, 15);
 }
 
+
 void confirmacionAnulacion()
 {
     system("cls");
@@ -43,6 +44,7 @@ void confirmacionAnulacion()
     {
         rlutil::saveDefaultColor();
         rlutil::setColor(rlutil::YELLOW);
+
         showItem (opciones[0],20,15,y==0);
         showItem (opciones[1],20,16,y==1);
 

@@ -24,11 +24,10 @@ system("color 8F");
 
 //CuadroIncio();
 
-cuadroSeleccionDia();
+//cuadroSeleccionDia();
 
 _getch();
 system("cls");
-
 
     return 0;
 }

@@ -13,6 +13,7 @@ void cuadroReservaEspacio()
 {
     system("cls");
     rectangulo (2, 2, 100, 20);
+
     int n=4;
     const char *opciones[] = {"DESK","SALA DE REUNIONES", "ESTACIONAMIENTO", "COMEDOR"};
 

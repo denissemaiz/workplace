@@ -4,6 +4,7 @@
 
 void mostrar_mensaje(string texto, int x, int y);
 void rectangulo(int posx, int posy, int ancho, int alto);
+
 void cuadroIncio();
 void cuadroReservaEspacio();
 void cuadroSeleccionDia();
@@ -15,6 +16,7 @@ void anularReserva();
 void confirmacionAnulacion();
 void historialReservas();
 void cargarEmpleados();
+
 void showItem (const char* text, int posx, int posy, bool selected);
 void menuUser();
 

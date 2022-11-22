@@ -1,6 +1,8 @@
 #include <iostream>
 #include <windows.h>
+
 using namespace std;
+
 #include "PersonaDTO.h"
 #include "rlutil.h"
 
@@ -90,7 +92,9 @@ void PersonaDTO::Copy(PersonaDTO persona)
     telefono=persona.telefono;
 }*/
 
-void PersonaDTO::cargar(){
+
+void PersonaDTO::cargar()
+{
     rlutil::setColor(rlutil::YELLOW);
     rlutil::  locate (20,8);
     cout<<"DNI: ";
@@ -109,19 +113,18 @@ void PersonaDTO::cargar(){
       rlutil::  locate (28,11);
     cin>>_email;
       rlutil::  locate (20,12);
-    cout<<"TELÉFONO: ";
+    cout<<"TELÃ‰FONO: ";
       rlutil::  locate (30,12);
     cin>>_telefono;
 
- system("cls");
+    system("cls");
 }
 
-void PersonaDTO::mostrar(){
-
-cout<<"Dni"     <<_dni<<endl;
-cout<<"Nombre"   <<_nombre<<endl;
-cout<<"Apellido" <<_apellido<<endl;
-cout<<"Email"    <<_email<<endl;
-cout<<"Telefono" <<_telefono<<endl;
-
+void PersonaDTO::mostrar()
+{
+    cout<<"Dni"     <<_dni<<endl;
+    cout<<"Nombre"   <<_nombre<<endl;
+    cout<<"Apellido" <<_apellido<<endl;
+    cout<<"Email"    <<_email<<endl;
+    cout<<"Telefono" <<_telefono<<endl;
 }
