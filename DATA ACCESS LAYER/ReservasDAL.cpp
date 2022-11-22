@@ -1,19 +1,21 @@
 #include "ReservasDAL.h"
 
-void ReservasDAL::ReservasDiarias(){
-
-
-
-}
-void ReservasDAL::ReservasQuincenales(){
+void ReservasDAL::reservasDiarias()
+{
 
 }
 
-void ReservasDAL::ListadoPorDptoTrabajo(){
+void ReservasDAL::reservasQuincenales()
+{
 
 }
 
-void ReservasDAL::ListadoOcupacionPorEmpleado(){
+void ReservasDAL::listadoPorDptoTrabajo()
+{
 
+}
+
+void ReservasDAL::listadoOcupacionPorEmpleado()
+{
 
 }

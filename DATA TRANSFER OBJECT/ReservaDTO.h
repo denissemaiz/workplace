@@ -6,36 +6,34 @@
 class ReservaDTO
 {
    private:
-       int _numero_reserva;
+       int _numero;
        int _legajo;
        int _espacio_trabajo;
        Fecha _fecha;
        Hora _hora_ingreso;
        Hora _hora_egreso;
-       bool _estado_turno;
+       bool _estado;
 
    public:
-    void Setnumeroreserva (int numero);
-    void Setlegajo (int legajo);
-    void Setespaciodetrabajo(int espaciodetrabajo);
-    void Setfecha(Fecha fecha);
-    void Sethora_ingreso(Hora horaingreso);
-    void Sethora_egreso(Hora horaegreso);
-    void Setestado_turno(bool estadoturno);
+    void setNumero (int numero);
+    void setLegajo (int legajo);
+    void setEspacioTrabajo(int espaciotrabajo);
+    void setFecha(Fecha fecha);
+    void setHoraIngreso(Hora horaingreso);
+    void setHoraEgreso(Hora horaegreso);
+    void setEstado(bool estado);
 
-
-    int Getnumeroreserva();
-    int Getlegajo();
-    int Getespaciodetrabajo();
-    Fecha Getfecha();
-    Hora Gethora_ingreso();
-    Hora Gethora_egreso();
-    bool Getestado_turno();
+    int getNumero();
+    int getLegajo();
+    int getEspacioTrabajo();
+    Fecha getFecha();
+    Hora getHoraIngreso();
+    Hora getHoraEgreso();
+    bool getEstado();
 
     void turno();
     void cargar();
     void mostrar();
-
 };
 
 #endif // RESERVADTO_H

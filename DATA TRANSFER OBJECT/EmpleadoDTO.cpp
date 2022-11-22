@@ -2,57 +2,61 @@
 using namespace std;
 #include "EmpleadoDTO.h"
 
-// CONSTRUCTOR:
+
 EmpleadoDTO::EmpleadoDTO()
 {
     //ctor
 }
 
-// SET:
-void EmpleadoDTO::Setlegajo(int legajo)
+
+void EmpleadoDTO::setLegajo(int legajo)
 {
     _legajo = legajo;
 }
 
-void EmpleadoDTO::Settipoempleado(int tipoempleado)
+void EmpleadoDTO::setTipo(int tipoempleado)
 {
-    _tipoempleado = tipoempleado;
+    _tipo_empleado = tipoempleado;
 }
 
-void EmpleadoDTO::Setsector(char *sector)
+void EmpleadoDTO::setSector(char *sector)
 {
     strcpy(_sector,sector);
 }
 
-void EmpleadoDTO::Setestado(bool estado)
+void EmpleadoDTO::setEstado(bool estado)
 {
     _estado = estado;
 }
 
-// GET:
-int EmpleadoDTO::Getlegajo()
+
+int EmpleadoDTO::getLegajo()
 {
     return _legajo;
 }
-int EmpleadoDTO::Gettipoempleado()
+
+int EmpleadoDTO::getTipo()
 {
-    return _tipoempleado;
+    return _tipo_empleado;
 }
-char *EmpleadoDTO::Getsector()
+
+char *EmpleadoDTO::getSector()
 {
     return _sector;
 }
-bool EmpleadoDTO::Getestado()
+
+bool EmpleadoDTO::getEstado()
 {
     return _estado;
 }
 
-void EmpleadoDTO::Cargar(){
-    //PersonaDAL::Cargar();;
+
+void EmpleadoDTO::cargar(){
+    //PersonaDAL::Cargar();
     cout<<"LEGAJO: ";
     cin>>_legajo;
     /**/cout<<"TIPO DE EMPLEADO: ";
-    cin>>_tipoempleado;
+    cin>>_tipo_empleado;
     cout<<"SECTOR: ";
     cin>>_sector;
 }

@@ -5,10 +5,8 @@
 class EspacioDeTrabajoDAL
 {
     public:
-
         void PorcentajeOcupacionDiaria();
         void CantidadReservasMensualesPorDepto();
-
 };
 
 #endif // ESPACIODETRABAJODTO_H

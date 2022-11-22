@@ -1,11 +1,14 @@
 #include <iostream>
 #include <windows.h>
+
 using namespace std;
+
 #include "PersonaDTO.h"
 #include "rlutil.h"
+
 char vacio[50]{"vacio"};
 
-// CONSTRUCTOR:
+
 PersonaDTO::PersonaDTO()
 {
     _dni=0;
@@ -16,65 +19,69 @@ PersonaDTO::PersonaDTO()
     _telefono=0;
 }
 
-// SET:
-void PersonaDTO::Setdni(int val)
+
+void PersonaDTO::setDni(int val)
 {
     _dni = val;
 }
-void PersonaDTO::Setnombre(char *nombre)
+
+void PersonaDTO::setNombre(char *nombre)
 {
     strcpy(_nombre,nombre);
 }
-void PersonaDTO::Setapellido(char *apellido)
+
+void PersonaDTO::setApellido(char *apellido)
 {
     strcpy(_apellido,apellido);
 }
 
-
-void PersonaDTO::Setemail(char *email)
+void PersonaDTO::setEmail(char *email)
 {
     strcpy(_email,email);
 }
-void PersonaDTO::Setdomicilio(char *domicilio)
+
+void PersonaDTO::setDomicilio(char *domicilio)
 {
     strcpy(_domicilio,domicilio);
 }
-void PersonaDTO::Settelefono(int telefono)
+
+void PersonaDTO::setTelefono(int telefono)
 {
     _telefono = telefono;
 }
 
-// GET:
-int PersonaDTO::Getdni()
+
+int PersonaDTO::getDni()
 {
     return _dni;
 }
 
-char * PersonaDTO::Getnombre()
+char * PersonaDTO::getNombre()
 {
     return _nombre;
 }
 
-char * PersonaDTO::Getapellido()
+char * PersonaDTO::getApellido()
 {
     return _apellido;
 }
 
-char * PersonaDTO::Getemail()
+char * PersonaDTO::getEmail()
 {
     return _email;
 }
-char * PersonaDTO::Getdomicilio()
+
+char * PersonaDTO::getDomicilio()
 {
     return _domicilio;
 }
-int PersonaDTO::Gettelefono()
+
+int PersonaDTO::getTelefono()
 {
     return _telefono;
 }
 
 /*
-// METODOS:
 void PersonaDTO::Copy(PersonaDTO persona)
 {
     dni=persona.dni;
@@ -85,7 +92,9 @@ void PersonaDTO::Copy(PersonaDTO persona)
     telefono=persona.telefono;
 }*/
 
-void PersonaDTO::Cargar(){
+
+void PersonaDTO::cargar()
+{
     rlutil::setColor(rlutil::YELLOW);
     rlutil::  locate (20,8);
     cout<<"DNI: ";
@@ -104,19 +113,18 @@ void PersonaDTO::Cargar(){
       rlutil::  locate (28,11);
     cin>>_email;
       rlutil::  locate (20,12);
-    cout<<"TELÉFONO: ";
+    cout<<"TELÃ‰FONO: ";
       rlutil::  locate (30,12);
     cin>>_telefono;
 
- system("cls");
+    system("cls");
 }
 
-void PersonaDTO::Mostrar(){
-
-cout<<"Dni"     <<_dni<<endl;
-cout<<"Nombre"   <<_nombre<<endl;
-cout<<"Apellido" <<_apellido<<endl;
-cout<<"Email"    <<_email<<endl;
-cout<<"Telefono" <<_telefono<<endl;
-
+void PersonaDTO::mostrar()
+{
+    cout<<"Dni"     <<_dni<<endl;
+    cout<<"Nombre"   <<_nombre<<endl;
+    cout<<"Apellido" <<_apellido<<endl;
+    cout<<"Email"    <<_email<<endl;
+    cout<<"Telefono" <<_telefono<<endl;
 }
