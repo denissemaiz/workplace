@@ -5,13 +5,14 @@
 using namespace std;
 
 #include "rlutil.h"
-#include "FUNCIONES.h"
+#include "FUNCIONES_FRONT.h"
+#include "MENUS.h"
 #include "Fecha.h"
 #include "PersonaDTO.h"
 #include "PersonaDAL.h"
 
 
-void cuadroIncio()
+void menuIncio()
 {
     rlutil::setColor(rlutil::YELLOW);
     rectangulo (2, 2, 100, 20);
@@ -32,9 +33,9 @@ void cuadroIncio()
 
     aux=reg.obtenerPorDNI(dni);
 
-    if (dni == 0000 ){ ///PONGO UN NUMERO QUE EQUIVALGA A ADMINISTRADOR
+    if (dni == 0000){ ///PONGO UN NUMERO QUE EQUIVALGA A ADMINISTRADOR
         system("cls");
-        cargarEmpleados();
+        menuAdmin();
     }
     else if (aux.getDni() == -1) {
         rlutil::  locate (28,16);
@@ -42,7 +43,7 @@ void cuadroIncio()
         rlutil::  locate (60,21);
         system("pause");
         system("cls");
-        cuadroIncio();
+        menuIncio();
     }
     else {
         system("cls");

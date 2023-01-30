@@ -5,7 +5,7 @@
 using namespace std;
 
 #include "rlutil.h"
-#include "FUNCIONES.h"
+#include "FUNCIONES_FRONT.h"
 #include "Fecha.h"
 
 void mostrar_mensaje (string texto, int x, int y)
@@ -13,7 +13,6 @@ void mostrar_mensaje (string texto, int x, int y)
     rlutil::  locate (x,y);
     cout <<texto;
 }
-
 
 void rectangulo (int posx, int posy, int ancho, int alto){
 
@@ -52,23 +51,6 @@ void rectangulo (int posx, int posy, int ancho, int alto){
     cout << (char)188;
 }
 
-
-void cuadroConfirmacionReserva()
-{
-    rectangulo (2, 2, 100, 20);
-
-    rlutil::setColor(rlutil::YELLOW);
-    mostrar_mensaje (" USTED ESTA RESERVANDO EL DIA:", 30, 5);
-
-    mostrar_mensaje (" ESPACIO:", 10, 8);
-    mostrar_mensaje (" DIA:", 10, 10);
-    mostrar_mensaje (" HORARIO DE INGRESO:", 10, 12);
-    mostrar_mensaje (" HORARIO DE EGRESO:", 10, 14);
-    mostrar_mensaje (" PISO/SECTOR DONDE SE REALIZO LA RESERVA:", 10, 16);
-    mostrar_mensaje (" ¿CONFIRMA LA RESERVA? :", 10, 18);
-}
-
-
 ///MENU MOVIL
 void showItem (const char* text, int posx, int posy, bool selected)
 {
@@ -88,3 +70,6 @@ void showItem (const char* text, int posx, int posy, bool selected)
     cout << text <<endl;
     rlutil::setBackgroundColor(rlutil::DARKGREY);
 }
+
+
+

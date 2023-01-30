@@ -4,10 +4,10 @@
 using namespace std;
 
 #include "rlutil.h"
-#include "FUNCIONES.h"
+#include "FUNCIONES_FRONT.h"
 
 
-void cargarEmpleados()
+void menuAdmin()
 {
     PersonaDAL reg;
     int op, i;
@@ -31,33 +31,32 @@ void cargarEmpleados()
         mostrar_mensaje ("8-IMFORMES", 10, 15);
         mostrar_mensaje ("9-RESPALDOS", 10, 16);
         mostrar_mensaje ("0-SALIR", 10, 17);
+
         mostrar_mensaje ("SELECCIONE UNA OPCION:", 20, 20);
         rlutil::  locate (43,20);
 
         cin>>op;
+        system("cls");
 
         switch(op)
         {
         case 1:
         {
-            system("cls");
             rectangulo (2, 2, 100, 26);
             rlutil::setColor(rlutil::YELLOW);
-            mostrar_mensaje (" CARGAR UN EMPLEADO", 40, 5);
+            mostrar_mensaje ("CARGAR UN EMPLEADO", 40, 5);
 
             PersonaDTO empleado;
             empleado.cargar();
             reg.guardar(empleado);
+            break;
         }
-        break;
-
         case 2:
         {
-            system("cls");
-
+            rectangulo (2, 2, 100, 26);
             rlutil::setColor(rlutil::YELLOW);
             mostrar_mensaje (" LISTADO DE EMPLEADOS", 40, 5);
-            mostrar_mensaje ("------------------------------", 39, 6);
+            mostrar_mensaje ("------------------------------", 40, 6);
 
             int cantidad=reg.cantidadEmpleados();
             PersonaDTO* empleados= new PersonaDTO[cantidad];
@@ -66,14 +65,11 @@ void cargarEmpleados()
 
             for( int i=0; i<cantidad; i++)
             {
-
                 empleados[i].mostrar();
             }
             delete[] empleados;
+            break;
         }
-
-        break;
-
         case 0:
             cout<<"SALIR";
             break;

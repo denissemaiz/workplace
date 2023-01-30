@@ -10,7 +10,8 @@ using namespace std;
 #include "PersonaDAL.h"
 #include "EmpleadoDTO.h"
 #include "EmpleadoDAL.h"
-#include "FUNCIONES.h"
+#include "FUNCIONES_FRONT.h"
+#include "MENUS/MENUS.h"
 #include "rlutil.h"
 #include "EspacioDeTrabajoDTO.h"
 #include "ReservaDTO.h"
@@ -22,7 +23,7 @@ system("color 8F");
 
 ///PANTALLA INICIO
 
-//CuadroIncio();
+menuIncio();
 
 //cuadroSeleccionDia();
 
