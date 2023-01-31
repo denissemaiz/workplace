@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="PROYECTO AGENDA PUESTOS DE TRABAJO" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/PROYECTO AGENDA PUESTOS DE TRABAJO" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="DATA TRANSFER OBJECT" />
+					<Add directory="DATA ACCESS LAYER" />
+					<Add directory="COMUN" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/PROYECTO AGENDA PUESTOS DE TRABAJO" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="DATA TRANSFER OBJECT" />
+					<Add directory="DATA ACCESS LAYER" />
+					<Add directory="COMUN" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="COMUN/FUNCIONES_ADMIN.cpp" />
+		<Unit filename="COMUN/FUNCIONES_ADMIN.h" />
+		<Unit filename="COMUN/FUNCIONES_FRONT.cpp" />
+		<Unit filename="COMUN/FUNCIONES_FRONT.h" />
+		<Unit filename="COMUN/FUNCIONES_USER.cpp" />
+		<Unit filename="COMUN/FUNCIONES_USER.h" />
+		<Unit filename="COMUN/Fecha.cpp" />
+		<Unit filename="COMUN/Fecha.h" />
+		<Unit filename="COMUN/Hora.cpp" />
+		<Unit filename="COMUN/Hora.h" />
+		<Unit filename="COMUN/rlutil.h" />
+		<Unit filename="DATA ACCESS LAYER/EmpleadoDAL.cpp" />
+		<Unit filename="DATA ACCESS LAYER/EmpleadoDAL.h" />
+		<Unit filename="DATA ACCESS LAYER/EspacioDeTrabajoDAL.cpp" />
+		<Unit filename="DATA ACCESS LAYER/EspacioDeTrabajoDAL.h" />
+		<Unit filename="DATA ACCESS LAYER/PersonaDAL.cpp" />
+		<Unit filename="DATA ACCESS LAYER/PersonaDAL.h" />
+		<Unit filename="DATA ACCESS LAYER/ReservasDAL.cpp" />
+		<Unit filename="DATA ACCESS LAYER/ReservasDAL.h" />
+		<Unit filename="DATA TRANSFER OBJECT/EmpleadoDTO.cpp" />
+		<Unit filename="DATA TRANSFER OBJECT/EmpleadoDTO.h" />
+		<Unit filename="DATA TRANSFER OBJECT/EspacioDeTrabajoDTO.cpp" />
+		<Unit filename="DATA TRANSFER OBJECT/EspacioDeTrabajoDTO.h" />
+		<Unit filename="DATA TRANSFER OBJECT/PersonaDTO.cpp" />
+		<Unit filename="DATA TRANSFER OBJECT/PersonaDTO.h" />
+		<Unit filename="DATA TRANSFER OBJECT/ReservaDTO.cpp" />
+		<Unit filename="DATA TRANSFER OBJECT/ReservaDTO.h" />
+		<Unit filename="MENUS/ANULAR_RESERVA.CPP" />
+		<Unit filename="MENUS/HISTORIAL_RESERVAS.CPP" />
+		<Unit filename="MENUS/MENUS.h" />
+		<Unit filename="MENUS/MENU_ADMIN.cpp" />
+		<Unit filename="MENUS/MENU_INICIO.CPP" />
+		<Unit filename="MENUS/MENU_USER.cpp" />
+		<Unit filename="MENUS/SELECT_ESPACIOS.CPP" />
+		<Unit filename="MENUS/SELECT_FECHA.CPP" />
+		<Unit filename="main.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

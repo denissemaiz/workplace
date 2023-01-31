@@ -1,0 +1,272 @@
+# depslib dependency file v1.0
+1667163503 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\anular_reserva.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES.h"
+	"Fecha.h"
+
+1666984656 c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1669158033 c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\funciones.h
+	"Fecha.h"
+
+1669064596 c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\fecha.h
+	<cstring>
+	<iostream>
+
+1667241986 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\cargaempleados.cpp
+	"PersonaDAL.h"
+	"PersonaDTO.h"
+
+1669156527 c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\data access layer\personadal.h
+	<cstdio>
+	"../DATA TRANSFER OBJECT/PersonaDTO.h"
+
+1669158033 c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\data transfer object\personadto.h
+	"cstring"
+	"Fecha.h"
+
+1669150301 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\fecha.cpp
+	"Fecha.h"
+	<ctime>
+	<cstring>
+	<iostream>
+
+1669158033 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\funciones.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES.h"
+	"Fecha.h"
+
+1667163503 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\historial_reservas.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES.h"
+	"Fecha.h"
+
+1669059902 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\hora.cpp
+	"Hora.h"
+
+1666984656 c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\hora.h
+
+1667241986 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\inicio.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES.h"
+	"Fecha.h"
+	"PersonaDTO.h"
+	"PersonaDAL.h"
+
+1667163503 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\menu_user.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES.h"
+	"Fecha.h"
+
+1667163503 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\select_espacios.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES.h"
+	"Fecha.h"
+
+1667163503 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\select_fecha.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES.h"
+	"Fecha.h"
+
+1669153590 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\data access layer\empleadodal.cpp
+	"EmpleadoDAL.h"
+
+1669150270 c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\data access layer\empleadodal.h
+	<cstdio>
+	"../DATA TRANSFER OBJECT/EmpleadoDTO.h"
+
+1669154208 c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\data transfer object\empleadodto.h
+	"PersonaDTO.h"
+
+1669155172 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\data access layer\personadal.cpp
+	"PersonaDAL.h"
+
+1669154205 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\data transfer object\empleadodto.cpp
+	<iostream>
+	"EmpleadoDTO.h"
+
+1669158033 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\data transfer object\personadto.cpp
+	<iostream>
+	<windows.h>
+	"PersonaDTO.h"
+	"rlutil.h"
+
+1675038021 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<windows.h>
+	<conio.h>
+	"PersonaDTO.h"
+	"PersonaDAL.h"
+	"EmpleadoDTO.h"
+	"EmpleadoDAL.h"
+	"FUNCIONES_FRONT.h"
+	"MENUS/MENUS.h"
+	"rlutil.h"
+	"EspacioDeTrabajoDTO.h"
+	"ReservaDTO.h"
+
+1666989692 c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\include\espaciodetrabajodto.h
+
+1669154267 c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\data transfer object\espaciodetrabajodto.h
+
+1666989418 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\data access layer\espaciodetrabajodal.cpp
+	"EspacioDeTrabajoDAL.h"
+
+1669156242 c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\data access layer\espaciodetrabajodal.h
+
+1669156509 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\data access layer\reservasdal.cpp
+	"ReservasDAL.h"
+
+1669156322 c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\data access layer\reservasdal.h
+
+1669056500 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\data transfer object\espaciodetrabajodto.cpp
+	"EspacioDeTrabajoDTO.h"
+
+1669154638 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\data transfer object\reservadto.cpp
+	"ReservaDTO.h"
+
+1669154557 c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\data transfer object\reservadto.h
+	"Fecha.h"
+	"Hora.h"
+
+1669158033 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\menus\anular_reserva.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES.h"
+	"Fecha.h"
+
+1669158033 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\menus\cargaempleados.cpp
+	"PersonaDAL.h"
+	"PersonaDTO.h"
+	"rlutil.h"
+	"FUNCIONES.h"
+
+1669158033 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\menus\historial_reservas.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES.h"
+	"Fecha.h"
+
+1675037543 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\menus\menu_user.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_USER.h"
+	"Fecha.h"
+
+1669158033 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\menus\select_espacios.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES.h"
+	"Fecha.h"
+
+1669160163 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\menus\select_fecha.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES.h"
+	"Fecha.h"
+
+1675031601 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\menus\inicio.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES.h"
+	"Fecha.h"
+	"PersonaDTO.h"
+	"PersonaDAL.h"
+
+1675037992 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\menus\menu_admin.cpp
+	"PersonaDAL.h"
+	"PersonaDTO.h"
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+
+1675036993 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\funciones_admin.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+
+1675033857 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\funciones_front.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+
+1675037283 c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\funciones_front.h
+
+1675034100 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\funciones_user.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+
+1675034101 c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\funciones_user.h
+
+1675037716 c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\menus\menus.h
+
+1675038036 source:c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\menus\menu_inicio.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"MENUS.h"
+	"Fecha.h"
+	"PersonaDTO.h"
+	"PersonaDAL.h"
+
