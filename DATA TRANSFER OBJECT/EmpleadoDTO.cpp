@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 #include "EmpleadoDTO.h"
+#include "FUNCIONES_FRONT.h"
+#include "rlutil.h"
 
 
 EmpleadoDTO::EmpleadoDTO()
@@ -52,11 +54,17 @@ bool EmpleadoDTO::getEstado()
 
 
 void EmpleadoDTO::cargar(){
-    //PersonaDAL::Cargar();
+    rlutil::  locate (20,13);
     cout<<"LEGAJO: ";
+    rlutil::  locate (28,13);
     cin>>_legajo;
+    rlutil::  locate (20,14);
     /**/cout<<"TIPO DE EMPLEADO: ";
+    rlutil::  locate (38,14);
     cin>>_tipo_empleado;
-    cout<<"SECTOR: ";
-    cin>>_sector;
+    rlutil::  locate (20,15);
+    ///SECTOR ESTÁ FALLANDO
+    /*cout<<"SECTOR: ";
+    rlutil::  locate (28,15);
+    cin>>_sector;*/
 }

@@ -32,7 +32,7 @@ public:
     char * getDomicilio();
     int getTelefono();
 
-    void cargar();
+    void cargar(int dni);
     void mostrar();
 };
 

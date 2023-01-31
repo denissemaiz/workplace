@@ -5,22 +5,20 @@ using namespace std;
 
 #include "rlutil.h"
 #include "FUNCIONES_FRONT.h"
+#include "FUNCIONES_ADMIN.h"
 
 
 void menuAdmin()
 {
-    PersonaDAL reg;
-    int op, i;
-    system("cls");
-
-    do
+    int op;
+    while(true)
     {
+        system("cls");
         rectangulo (2, 2, 100, 26);
-
         rlutil::setColor(rlutil::YELLOW);
+
         mostrar_mensaje (" ¿QUE DESEAS HACER?", 40, 5);
         mostrar_mensaje ("_____________________", 40, 6);
-
         mostrar_mensaje ("1-CARGAR EMPLEADO", 10, 8);
         mostrar_mensaje ("2-DAR DE BAJA A UN EMPLEADO", 10, 9);
         mostrar_mensaje ("3-REALIZAR UNA RESERVA", 10, 10);
@@ -41,16 +39,21 @@ void menuAdmin()
         switch(op)
         {
         case 1:
-        {
             rectangulo (2, 2, 100, 26);
             rlutil::setColor(rlutil::YELLOW);
             mostrar_mensaje ("CARGAR UN EMPLEADO", 40, 5);
-
-            PersonaDTO empleado;
-            empleado.cargar();
-            reg.guardar(empleado);
+            /**/
+            if (agregarEmpleado()==1)
+            {
+                rlutil::  locate (20,17);
+                cout<<"REGISTRO AGREGADO";   ///NO SE VE ESTE CARTEL
+            }
+            else
+            {
+                rlutil::  locate (20,17);
+                cout<<"NO SE PUDO AGREGAR EL REGISTRO";
+            }
             break;
-        }
         case 2:
         {
             rectangulo (2, 2, 100, 26);
@@ -58,6 +61,7 @@ void menuAdmin()
             mostrar_mensaje (" LISTADO DE EMPLEADOS", 40, 5);
             mostrar_mensaje ("------------------------------", 40, 6);
 
+            PersonaDAL reg;
             int cantidad=reg.cantidadEmpleados();
             PersonaDTO* empleados= new PersonaDTO[cantidad];
 
@@ -71,14 +75,16 @@ void menuAdmin()
             break;
         }
         case 0:
-            cout<<"SALIR";
+            return;
             break;
 
         default:
             cout<<"OPCION INVALIDA"<<endl;
             break;
         }
+        cout <<endl;
+        rlutil::  locate (20,18);
+        system("pause");
     }
-
-    while(op!=0);
+    return;
 }

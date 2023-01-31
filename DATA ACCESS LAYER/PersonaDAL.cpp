@@ -136,7 +136,7 @@ PersonaDTO PersonaDAL::buscarRegistro(int a,int b)
     return dto;
 }
 
-PersonaDTO PersonaDAL::obtenerPorDNI (int DNI)
+PersonaDTO PersonaDAL::buscarPorDNI (int DNI)
 {
     bool encontro=false;
     PersonaDTO dto;
@@ -164,6 +164,30 @@ PersonaDTO PersonaDAL::obtenerPorDNI (int DNI)
     fclose (p);
 
     return dto;
+}
+
+bool PersonaDAL::existeDNI (int DNI)
+{
+    bool encontro=false;
+    PersonaDTO dto;
+    FILE *p;
+    p = fopen(RUTA_PERSONA,"rb");
+    if (p!=NULL)
+    {
+        while(fread(&dto, sizeof (PersonaDTO),1,p))
+        {
+            if(dto.getDni()==DNI)
+            {
+                encontro=true;
+            }
+        }
+        if(!encontro)
+        {
+            encontro=false;
+        }
+    }
+    fclose (p);
+    return encontro;
 }
 
 bool PersonaDAL::eliminar(PersonaDTO dto)

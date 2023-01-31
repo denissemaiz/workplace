@@ -93,31 +93,34 @@ void PersonaDTO::Copy(PersonaDTO persona)
 }*/
 
 
-void PersonaDTO::cargar()
+void PersonaDTO::cargar(int dni=0)
 {
     rlutil::setColor(rlutil::YELLOW);
-    rlutil::  locate (20,8);
-    cout<<"DNI: ";
-    rlutil::  locate (25,8);
-    cin>>_dni;
+    if(dni!=0)
+    {
+        _dni=dni;
+    } else {
+        rlutil::  locate (20,8);
+        cout<<"DNI: ";         ///FALTA CHEQUEAR QUE DNI NO TENGA MAS DE 8 NROS
+        rlutil::  locate (25,8);
+        cin>>_dni;
+    }
       rlutil::  locate (20,9);
     cout<<"NOMBRE: ";
-      rlutil::  locate (29,9);
+      rlutil::  locate (28,9);
     cin>>_nombre;
       rlutil::  locate (20,10);
     cout<<"APELLIDO: ";
-      rlutil::  locate (29,10);
+      rlutil::  locate (30,10);
     cin>>_apellido;
       rlutil::  locate (20,11);
     cout<<"EMAIL: ";
-      rlutil::  locate (28,11);
+      rlutil::  locate (27,11);
     cin>>_email;
       rlutil::  locate (20,12);
     cout<<"TELÉFONO: ";
-      rlutil::  locate (30,12);
+      rlutil::  locate (31,12);
     cin>>_telefono;
-
-    system("cls");
 }
 
 void PersonaDTO::mostrar()
