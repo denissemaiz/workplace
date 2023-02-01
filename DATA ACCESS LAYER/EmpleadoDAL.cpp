@@ -66,7 +66,7 @@ int EmpleadoDAL::obtenerTamanio()
     return Resultado;
 }
 
-EmpleadoDTO EmpleadoDAL::buscarRegistro(int a,int b)
+EmpleadoDTO EmpleadoDAL::buscarRegistro(int a,int b) /*?*/
 {
     EmpleadoDTO dto;
     FILE *p;
@@ -129,4 +129,16 @@ bool EmpleadoDAL::eliminar(EmpleadoDTO dto)
         }
     }
     return eliminar;
+}
+
+int EmpleadoDAL::leerDeDisco(int pos)
+{
+    FILE *p;
+    int leyo=0;
+    p=fopen(RUTA_EMPLEADO, "rb");
+    if(p==NULL)return -1;
+    fseek(p, sizeof(EmpleadoDAL)*pos, 0);
+    leyo=fread(this, sizeof(EmpleadoDAL),1, p);
+    fclose(p);
+    return leyo;
 }

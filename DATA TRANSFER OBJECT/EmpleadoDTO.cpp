@@ -56,7 +56,7 @@ bool EmpleadoDTO::getEstado()
 
 
 void EmpleadoDTO::cargar(){
-    estado=true;
+    _estado=true;
     rlutil::  locate (20,13);
     cout<<"LEGAJO: ";
     rlutil::  locate (28,13);
@@ -85,7 +85,7 @@ void EmpleadoDTO::cargar(){
 
 void EmpleadoDTO::mostrar()
 {
-    if(estado==true)
+    if(_estado==true)
     {
         rlutil::  locate (20,13);
         cout<<"LEGAJO: ";

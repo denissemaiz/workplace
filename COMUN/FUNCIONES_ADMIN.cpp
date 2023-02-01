@@ -39,3 +39,17 @@ int agregarEmpleado()
     return 0;
 }
 
+bool listarEmpleados()
+{
+    EmpleadoDAL reg;
+    EmpleadoDTO obj;
+    int leyo=false, pos=0;
+    while(reg.leerDeDisco(pos)==1)
+    {
+        obj.mostrar();
+        leyo=true;
+        pos++;
+        cout<<endl;
+    }
+    return leyo;
+}

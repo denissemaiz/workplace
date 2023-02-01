@@ -16,6 +16,7 @@ public:
     int obtenerTamanio();
     EmpleadoDTO buscarRegistro(int,int);
     EmpleadoDTO obtenerPorDNI (int);
+    int leerDeDisco(int pos);
 };
 
 #endif // EMPLEADODAL_H

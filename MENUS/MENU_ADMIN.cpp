@@ -45,7 +45,7 @@ void menuAdmin()
             if (agregarEmpleado()==-1)
             {
                 rlutil::  locate (20,17);
-                cout<<"REGISTRO AGREGADO.";   ///NO SE VE ESTE CARTEL
+                cout<<"REGISTRO AGREGADO.";
             }
             else
             {
@@ -59,8 +59,9 @@ void menuAdmin()
         {
             rectangulo (2, 2, 100, 26);
             rlutil::setColor(rlutil::YELLOW);
-            mostrar_mensaje (" LISTADO DE EMPLEADOS", 40, 5);
-            mostrar_mensaje ("------------------------------", 40, 6);
+            mostrar_mensaje ("DAR DE BAJA A UN EMPLEADO", 40, 5);
+            mostrar_mensaje ("LISTADO DE EMPLEADOS", 40, 7);
+            mostrar_mensaje ("------------------------------", 40, 8);
 
             PersonaDAL reg;
             int cantidad=reg.cantidadEmpleados();
@@ -75,6 +76,12 @@ void menuAdmin()
             delete[] empleados;
             break;
         }
+        case 5:
+            /*rectangulo (2, 2, 100, 26);
+            rlutil::setColor(rlutil::YELLOW);
+            mostrar_mensaje ("LISTAR EMPLEADOS", 40, 5);
+            listarEmpleados();*/
+            break;
         case 0:
             return;
             break;

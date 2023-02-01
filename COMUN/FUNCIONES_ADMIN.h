@@ -3,7 +3,7 @@
 
 ///#include<windows.h>
 
-int agregarEmpleado(); //CARGAMOS PERSONA, FALTA CARGAR EMPLEADO
-int buscarEmpleadoDNI(char dni[], int tam, bool borrado=false);
+int agregarEmpleado();
+bool listarEmpleados();
 
 #endif // FUNCIONES_ADMIN_H_INCLUDED
