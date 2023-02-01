@@ -18,7 +18,7 @@ public:
     bool eliminar (PersonaDTO);
     int obtenerTamanio();
     PersonaDTO buscarRegistro(int, int);
-    PersonaDTO buscarPorDNI (int);
+    PersonaDTO obtenerPorDNI (int);
     bool existeDNI(int);
 };
 

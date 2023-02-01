@@ -136,7 +136,7 @@ PersonaDTO PersonaDAL::buscarRegistro(int a,int b)
     return dto;
 }
 
-PersonaDTO PersonaDAL::buscarPorDNI (int DNI)
+PersonaDTO PersonaDAL::obtenerPorDNI (int DNI)
 {
     bool encontro=false;
     PersonaDTO dto;
