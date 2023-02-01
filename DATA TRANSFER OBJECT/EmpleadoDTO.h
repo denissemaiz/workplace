@@ -25,6 +25,7 @@ public:
     bool getEstado();
 
     void cargar();
+    void mostrar();
 };
 
 #endif // EMPLEADODTO_H
