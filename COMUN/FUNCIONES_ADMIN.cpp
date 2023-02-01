@@ -18,7 +18,7 @@ int agregarEmpleado()
     EmpleadoDTO empleado;
     PersonaDAL obj;
     int dni;
-    bool agrego;
+    bool agrego = false;
     rlutil::  locate (20,8);
     cout<<"DNI: ";
     rlutil::  locate (25,8);
@@ -27,14 +27,15 @@ int agregarEmpleado()
     if (encontro) {
         rlutil::  locate (20,10);
         cout<<"EL DNI YA EXISTE!";
+        system("pause>null");
         return 0;
     }
     empleado.PersonaDTO::cargar(dni);
-    rlutil::  locate (20,17);
     empleado.cargar();
-    rlutil::  locate (20,18);
-    agrego = reg.agregar(empleado);
-    if (agrego){ return 1; }
+    if(empleado.getSector() != 0){
+        agrego = reg.agregar(empleado);
+    }
+    if (agrego){ return -1; }
     return 0;
 }
 

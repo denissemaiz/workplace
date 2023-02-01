@@ -42,8 +42,7 @@ void menuAdmin()
             rectangulo (2, 2, 100, 26);
             rlutil::setColor(rlutil::YELLOW);
             mostrar_mensaje ("CARGAR UN EMPLEADO", 40, 5);
-            /**/
-            if (agregarEmpleado()==1)
+            if (agregarEmpleado()==-1)
             {
                 rlutil::  locate (20,17);
                 cout<<"REGISTRO AGREGADO.";   ///NO SE VE ESTE CARTEL
@@ -53,7 +52,7 @@ void menuAdmin()
                 system("cls");
                 rectangulo (2, 2, 100, 26);
                 rlutil::setColor(rlutil::YELLOW);
-                mostrar_mensaje ("NO SE PUDO AGREGAR EL REGISTRO.", 40, 15);
+                mostrar_mensaje ("NO SE PUDO AGREGAR EL REGISTRO.", 38, 14);
             }
             break;
         case 2:
