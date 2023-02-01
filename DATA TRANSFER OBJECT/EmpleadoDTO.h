@@ -8,7 +8,7 @@ class EmpleadoDTO : public PersonaDTO
 private:
     int _legajo;
     int _tipo_empleado;
-    char *_sector;
+    int _sector;
     bool _estado;
 
 public:
@@ -16,12 +16,12 @@ public:
 
     void setLegajo(int legajo);
     void setTipo(int tipo);
-    void setSector(char *sector);
+    void setSector(int sector);
     void setEstado(bool estado);
 
     int getLegajo();
     int getTipo();
-    char *getSector();
+    int getSector();
     bool getEstado();
 
     void cargar();

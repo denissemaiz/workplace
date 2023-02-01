@@ -31,7 +31,7 @@ void menuIncio()
     PersonaDAL reg;
     PersonaDTO aux;
 
-    aux=reg.buscarPorDNI(dni);
+    aux=reg.obtenerPorDNI(dni);
 
     if (dni == 0000){ ///PONGO UN NUMERO QUE EQUIVALGA A ADMINISTRADOR
         system("cls");

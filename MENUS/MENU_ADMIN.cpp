@@ -46,12 +46,14 @@ void menuAdmin()
             if (agregarEmpleado()==1)
             {
                 rlutil::  locate (20,17);
-                cout<<"REGISTRO AGREGADO";   ///NO SE VE ESTE CARTEL
+                cout<<"REGISTRO AGREGADO.";   ///NO SE VE ESTE CARTEL
             }
             else
             {
-                rlutil::  locate (20,17);
-                cout<<"NO SE PUDO AGREGAR EL REGISTRO";
+                system("cls");
+                rectangulo (2, 2, 100, 26);
+                rlutil::setColor(rlutil::YELLOW);
+                mostrar_mensaje ("NO SE PUDO AGREGAR EL REGISTRO.", 40, 15);
             }
             break;
         case 2:
@@ -83,7 +85,7 @@ void menuAdmin()
             break;
         }
         cout <<endl;
-        rlutil::  locate (20,18);
+        rlutil::  locate (10,25);
         system("pause");
     }
     return;

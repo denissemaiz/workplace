@@ -25,7 +25,8 @@ int agregarEmpleado()
     cin>>dni;
     bool encontro = obj.existeDNI(dni);
     if (encontro) {
-        cout<<"EL DNI YA EXISTE.";
+        rlutil::  locate (20,10);
+        cout<<"EL DNI YA EXISTE!";
         return 0;
     }
     empleado.PersonaDTO::cargar(dni);
