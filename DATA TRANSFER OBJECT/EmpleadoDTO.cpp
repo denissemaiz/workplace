@@ -7,7 +7,10 @@ using namespace std;
 
 EmpleadoDTO::EmpleadoDTO()
 {
-    //ctor
+    _legajo=0;
+    _tipo_empleado=0;
+    _sector=0;
+    ///_estado=false;
 }
 
 
