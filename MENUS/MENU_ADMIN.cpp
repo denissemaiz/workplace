@@ -81,8 +81,10 @@ void menuAdmin()
             rlutil::setColor(rlutil::YELLOW);
             mostrar_mensaje ("LISTAR EMPLEADOS", 40, 5);
             if(listarEmpleados()){
-                rlutil::  locate (20,23);
-                cout<<"FIN DEL LISTADO.";
+                system("cls");
+                rectangulo (2, 2, 100, 26);
+                rlutil::setColor(rlutil::YELLOW);
+                mostrar_mensaje ("FIN DEL LISTADO.", 45, 14);
             } else {
                 rlutil::  locate (20,23);
                 cout<<"NO EXISTEN REGISTROS DE EMPLEADOS.";

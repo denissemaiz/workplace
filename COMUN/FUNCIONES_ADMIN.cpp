@@ -50,9 +50,11 @@ bool listarEmpleados()
         hayRegistros = true;
         regEmpleado.leerEmpleados(vecEmpleados, cantidad);
         for( int i=0; i<cantidad; i++)
-            {
-                vecEmpleados[i].mostrar();
-            }
+        {
+            vecEmpleados[i].mostrar();
+            rlutil::  locate (10,25);
+            system("pause");
+        }
     }
     return hayRegistros;
 }
