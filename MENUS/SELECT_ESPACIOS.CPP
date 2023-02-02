@@ -23,6 +23,7 @@ void cuadroReservaEspacio()
     mostrar_mensaje ("__________________________", 40, 6);
 
     int op=1, y=0;
+    int espacio;
 
     rlutil::hidecursor();
 
@@ -64,9 +65,9 @@ void cuadroReservaEspacio()
             break;
 
         case 1: //ENTER
-            cuadroConfirmacionFecha();
+            cuadroConfirmacionFecha(y);
             break;
-
+            ///esto esta raro....... /**/
             switch(y)
             {
             case 3:

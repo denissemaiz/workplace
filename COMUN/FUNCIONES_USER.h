@@ -3,7 +3,7 @@
 
 void cuadroReservaEspacio();
 void cuadroSeleccionDia();
-void cuadroConfirmacionFecha();
+void cuadroConfirmacionFecha(int espacio);
 
 void cuadroConfirmacionReserva();
 

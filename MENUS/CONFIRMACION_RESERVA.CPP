@@ -37,7 +37,7 @@ void cuadroSeleccionDia()
 }
 
 
-void cuadroConfirmacionFecha()
+void cuadroConfirmacionFecha(int espacio)
 {
     system("cls");
     rectangulo (2, 2, 100, 20);
