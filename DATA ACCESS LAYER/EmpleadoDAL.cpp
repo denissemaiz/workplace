@@ -142,3 +142,30 @@ int EmpleadoDAL::leerDeDisco(int pos)
     fclose(p);
     return leyo;
 }
+
+bool EmpleadoDAL::existeDNI (int DNI)
+{
+    bool encontro=false;
+    PersonaDTO dto;
+    FILE *p;
+    p = fopen(RUTA_EMPLEADO,"rb");
+    if (p!=NULL)
+    {
+        while(fread(&dto, sizeof (PersonaDTO),1,p))
+        {
+            if(dto.getDni()==DNI)
+            {
+                encontro=true;
+            }
+        }
+        if(!encontro)
+        {
+            encontro=false;
+        }
+    }
+    fclose (p);
+    return encontro;
+}
+
+
+

@@ -24,7 +24,7 @@ public:
     int getSector();
     bool getEstado();
 
-    void cargar();
+    void cargar(int);
     void mostrar();
 };
 

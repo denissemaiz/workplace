@@ -44,7 +44,7 @@ void menuAdmin()
             mostrar_mensaje ("CARGAR UN EMPLEADO", 40, 5);
             if (agregarEmpleado()==-1)
             {
-                rlutil::  locate (20,17);
+                rlutil::  locate (20,23);
                 cout<<"REGISTRO AGREGADO.";
             }
             else
@@ -77,10 +77,16 @@ void menuAdmin()
             break;
         }
         case 5:
-            /*rectangulo (2, 2, 100, 26);
+            rectangulo (2, 2, 100, 26);
             rlutil::setColor(rlutil::YELLOW);
             mostrar_mensaje ("LISTAR EMPLEADOS", 40, 5);
-            listarEmpleados();*/
+            if(listarEmpleados()){
+                rlutil::  locate (20,23);
+                cout<<"FIN DEL LISTADO.";
+            } else {
+                rlutil::  locate (20,23);
+                cout<<"NO EXISTEN REGISTROS DE EMPLEADOS.";
+            }
             break;
         case 0:
             return;

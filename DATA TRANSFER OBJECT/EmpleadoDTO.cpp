@@ -55,21 +55,23 @@ bool EmpleadoDTO::getEstado()
 }
 
 
-void EmpleadoDTO::cargar(){
+void EmpleadoDTO::cargar(int dni){
     _estado=true;
+    PersonaDTO::cargar(dni);
     rlutil::  locate (20,13);
     cout<<"LEGAJO: ";
     rlutil::  locate (28,13);
     cin>>_legajo;
     rlutil::  locate (20,14);
-    /**/cout<<"TIPO DE EMPLEADO: ";
+    /**////SACAR
+    cout<<"TIPO DE EMPLEADO: ";
     rlutil::  locate (20,15);
     cout<<"1-";
     rlutil::  locate (20,16);
     cout<<"2-";
     rlutil::  locate (20,17);
     cout<<"3-";
-    rlutil::  locate (38,15);
+    rlutil::  locate (38,14);
     cin>>_tipo_empleado;
     rlutil::  locate (20,18);
     cout<<"SECTOR: ";
@@ -85,8 +87,8 @@ void EmpleadoDTO::cargar(){
 
 void EmpleadoDTO::mostrar()
 {
-    if(_estado==true)
-    {
+    /*if(_estado==true)
+    {*/
         rlutil::  locate (20,13);
         cout<<"LEGAJO: ";
         rlutil::  locate (28,13);
@@ -122,5 +124,5 @@ void EmpleadoDTO::mostrar()
             cout<<"XXXXX";
             break;
         }
-    }
+    /*}*/
 }

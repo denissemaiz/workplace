@@ -5,7 +5,8 @@
 using namespace std;
 
 #include "rlutil.h"
-#include "FUNCIONES.h"
+#include "FUNCIONES_FRONT.h"
+#include "FUNCIONES_USER.h"
 #include "Fecha.h"
 
 

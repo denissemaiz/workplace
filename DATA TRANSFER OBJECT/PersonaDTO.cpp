@@ -100,8 +100,9 @@ void PersonaDTO::cargar(int dni=0)
     {
         _dni=dni;
     } else {
+        /**/
         rlutil::  locate (20,8);
-        cout<<"DNI: ";         ///FALTA CHEQUEAR QUE DNI NO TENGA MAS DE 8 NROS
+        cout<<"DNI: ";
         rlutil::  locate (25,8);
         cin>>_dni;
     }

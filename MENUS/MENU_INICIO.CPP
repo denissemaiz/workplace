@@ -10,6 +10,8 @@ using namespace std;
 #include "Fecha.h"
 #include "PersonaDTO.h"
 #include "PersonaDAL.h"
+#include "EmpleadoDAL.h"
+#include "EmpleadoDTO.h"
 
 
 void menuIncio()
@@ -28,8 +30,8 @@ void menuIncio()
     rlutil::  locate (53,12);
     cin >>dni;
 
-    PersonaDAL reg;
-    PersonaDTO aux;
+    EmpleadoDAL reg;
+    EmpleadoDTO aux;
 
     aux=reg.obtenerPorDNI(dni);
 

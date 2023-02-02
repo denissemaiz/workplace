@@ -166,28 +166,17 @@ PersonaDTO PersonaDAL::obtenerPorDNI (int DNI)
     return dto;
 }
 
-bool PersonaDAL::existeDNI (int DNI)
+
+int PersonaDAL::leerDeDisco(int pos)
 {
-    bool encontro=false;
-    PersonaDTO dto;
     FILE *p;
-    p = fopen(RUTA_PERSONA,"rb");
-    if (p!=NULL)
-    {
-        while(fread(&dto, sizeof (PersonaDTO),1,p))
-        {
-            if(dto.getDni()==DNI)
-            {
-                encontro=true;
-            }
-        }
-        if(!encontro)
-        {
-            encontro=false;
-        }
-    }
-    fclose (p);
-    return encontro;
+    int leyo=0;
+    p=fopen(RUTA_PERSONA, "rb");
+    if(p==NULL)return -1;
+    fseek(p, sizeof(PersonaDAL)*pos, 0);
+    leyo=fread(this, sizeof(PersonaDAL),1, p);
+    fclose(p);
+    return leyo;
 }
 
 bool PersonaDAL::eliminar(PersonaDTO dto)

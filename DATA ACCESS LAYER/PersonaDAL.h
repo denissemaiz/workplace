@@ -19,7 +19,7 @@ public:
     int obtenerTamanio();
     PersonaDTO buscarRegistro(int, int);
     PersonaDTO obtenerPorDNI (int);
-    bool existeDNI(int);
+    int leerDeDisco(int pos);
 };
 
 #endif // PERSONADAL_H

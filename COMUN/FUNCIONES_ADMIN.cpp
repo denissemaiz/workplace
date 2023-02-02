@@ -12,28 +12,26 @@ using namespace std;
 #include "PersonaDAL.h"
 
 
-int agregarEmpleado()
+int agregarEmpleado() ///cargar empleado
 {
-    EmpleadoDAL reg;
-    EmpleadoDTO empleado;
-    PersonaDAL obj;
+    EmpleadoDAL regEmpleado;
+    EmpleadoDTO objEmpleado;
     int dni;
     bool agrego = false;
     rlutil::  locate (20,8);
     cout<<"DNI: ";
     rlutil::  locate (25,8);
     cin>>dni;
-    bool encontro = obj.existeDNI(dni);
+    bool encontro = regEmpleado.existeDNI(dni);
     if (encontro) {
         rlutil::  locate (20,10);
         cout<<"EL DNI YA EXISTE!";
         system("pause>null");
         return 0;
     }
-    empleado.PersonaDTO::cargar(dni);
-    empleado.cargar();
-    if(empleado.getSector() != 0){
-        agrego = reg.agregar(empleado);
+    objEmpleado.cargar(dni);
+    if(objEmpleado.getSector() != 0){
+        agrego = regEmpleado.agregar(objEmpleado);
     }
     if (agrego){ return -1; }
     return 0;
@@ -41,15 +39,20 @@ int agregarEmpleado()
 
 bool listarEmpleados()
 {
-    EmpleadoDAL reg;
-    EmpleadoDTO obj;
-    int leyo=false, pos=0;
-    while(reg.leerDeDisco(pos)==1)
-    {
-        obj.mostrar();
-        leyo=true;
+    PersonaDAL regPersona;
+    PersonaDTO objPersona;
+    EmpleadoDAL regEmpleado;
+    EmpleadoDTO objEmpleado;
+    int pos=0;
+    bool leyo = false;
+    /*while(regPersona.leerDeDisco(pos)==1)
+    {*/
+        while(regEmpleado.leerDeDisco(pos)==1){
+        objPersona.mostrar();
+        leyo = true;
         pos++;
         cout<<endl;
-    }
+        }
+    /*}*/
     return leyo;
 }

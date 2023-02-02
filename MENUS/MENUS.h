@@ -5,5 +5,6 @@
 void menuIncio();
 void menuAdmin();
 void menuUser();
+void cuadroSeleccionDia();
 
 #endif // MENUS_H_INCLUDED

@@ -17,6 +17,7 @@ public:
     EmpleadoDTO buscarRegistro(int,int);
     EmpleadoDTO obtenerPorDNI (int);
     int leerDeDisco(int pos);
+    bool existeDNI(int);
 };
 
 #endif // EMPLEADODAL_H
