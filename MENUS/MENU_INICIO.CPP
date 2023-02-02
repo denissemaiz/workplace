@@ -7,11 +7,7 @@ using namespace std;
 #include "rlutil.h"
 #include "FUNCIONES_FRONT.h"
 #include "MENUS.h"
-#include "Fecha.h"
-#include "PersonaDTO.h"
-#include "PersonaDAL.h"
 #include "EmpleadoDAL.h"
-#include "EmpleadoDTO.h"
 
 
 void menuIncio()
@@ -23,23 +19,23 @@ void menuIncio()
     mostrar_mensaje ("* BIENVENIDO A WORKPLACE *" ,40, 5);
     mostrar_mensaje ("___________________________", 40, 6);
 
+    EmpleadoDAL reg;
     int dni;
+
     rlutil::  locate (36,12);
     cout <<"INGRESE SU DNI: ";
     rectangulo (51, 11, 10, 1);
     rlutil::  locate (53,12);
     cin >>dni;
 
-    EmpleadoDAL reg;
-    EmpleadoDTO aux;
-
-    aux=reg.obtenerPorDNI(dni);
-
-    if (dni == 0000){ ///PONGO UN NUMERO QUE EQUIVALGA A ADMINISTRADOR
+    if (dni == 0000){ ///PONGO UN NUMERO QUE EQUIVALGA A ADMINISTRADOR (1234?)
         system("cls");
         menuAdmin();
     }
-    else if (aux.getDni() == -1) {
+    else if (reg.existeDNI(dni)){
+        system("cls");
+        menuUser();
+    } else {
         rlutil::  locate (28,16);
         cout<<"EL DNI INGRESADO NO EXISTE EN NUESTRA BASE DE DATOS.";
         rlutil::  locate (60,21);
@@ -47,21 +43,4 @@ void menuIncio()
         system("cls");
         menuIncio();
     }
-    else {
-        system("cls");
-        menuUser();
-    }
 }
-
-//void DocumentoValido(int dni, int cantidad){
-//
-//PersonaDAL reg;
-//
-//for (int i=0;i<cantidad;i++){
-//
-//    if(reg.Getdni()==dni){
-//
-//        CuadroIncio();
-//    }
-//}
-//}
