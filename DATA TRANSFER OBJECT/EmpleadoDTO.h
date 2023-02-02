@@ -7,7 +7,6 @@ class EmpleadoDTO : public PersonaDTO
 {
 private:
     int _legajo;
-    int _tipo_empleado;
     int _sector;
     bool _estado;
 

@@ -126,9 +126,14 @@ void PersonaDTO::cargar(int dni=0)
 
 void PersonaDTO::mostrar()
 {
-    cout<<"Dni"     <<_dni<<endl;
-    cout<<"Nombre"   <<_nombre<<endl;
-    cout<<"Apellido" <<_apellido<<endl;
-    cout<<"Email"    <<_email<<endl;
-    cout<<"Telefono" <<_telefono<<endl;
+    rlutil::  locate (20,8);
+    cout<<"DNI: "     <<_dni;
+    rlutil::  locate (20,9);
+    cout<<"NOMBRE: "   <<_nombre;
+    rlutil::  locate (20,10);
+    cout<<"APELLIDO: " <<_apellido;
+    rlutil::  locate (20,11);
+    cout<<"EMAIL: "    <<_email;
+    rlutil::  locate (20,12);
+    cout<<"TELÉFONO: " <<_telefono;
 }

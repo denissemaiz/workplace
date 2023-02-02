@@ -1,5 +1,7 @@
 #include "EmpleadoDAL.h"
 
+const char *RUTA_EMPLEADO = "Empleado.data";
+
 // METODOS:
 bool EmpleadoDAL::existe (const char* R)
 {
@@ -167,5 +169,36 @@ bool EmpleadoDAL::existeDNI (int DNI)
     return encontro;
 }
 
+void EmpleadoDAL::leerEmpleados(EmpleadoDTO vecEmpleados[], int cant)
+{
+    FILE* p;
+    p= fopen(RUTA_EMPLEADO,"rb");
 
+    if(p==nullptr)
+    {
+        return;
+    }
+
+    fread(vecEmpleados, sizeof(EmpleadoDTO),cant,p);
+    fclose(p);
+}
+
+int EmpleadoDAL::cantidadEmpleados()
+{
+    FILE *p;
+    int cantidad=0;
+    EmpleadoDTO empleado;
+    p=fopen(RUTA_EMPLEADO,"rb");
+
+    if (p==nullptr)
+    {
+        return 0;
+    }
+
+    fseek(p,0,SEEK_END);
+    cantidad=ftell(p)/sizeof(EmpleadoDTO);
+    fclose (p);
+
+    return cantidad;
+}
 

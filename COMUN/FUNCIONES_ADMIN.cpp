@@ -39,20 +39,20 @@ int agregarEmpleado() ///cargar empleado
 
 bool listarEmpleados()
 {
-    PersonaDAL regPersona;
-    PersonaDTO objPersona;
     EmpleadoDAL regEmpleado;
     EmpleadoDTO objEmpleado;
-    int pos=0;
-    bool leyo = false;
-    /*while(regPersona.leerDeDisco(pos)==1)
-    {*/
-        while(regEmpleado.leerDeDisco(pos)==1){
-        objPersona.mostrar();
-        leyo = true;
-        pos++;
-        cout<<endl;
-        }
-    /*}*/
-    return leyo;
+    //int pos=0;
+    bool hayRegistros = false;
+    int cantidad=regEmpleado.cantidadEmpleados();
+    EmpleadoDTO* vecEmpleados= new EmpleadoDTO[cantidad];
+
+    if (cantidad > 0) {
+        hayRegistros = true;
+        regEmpleado.leerEmpleados(vecEmpleados, cantidad);
+        for( int i=0; i<cantidad; i++)
+            {
+                vecEmpleados[i].mostrar();
+            }
+    }
+    return hayRegistros;
 }

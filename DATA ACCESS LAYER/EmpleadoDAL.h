@@ -3,8 +3,6 @@
 #include <cstdio>
 #include "../DATA TRANSFER OBJECT/EmpleadoDTO.h"
 
-const char RUTA_EMPLEADO [] = "Empleado.data";
-
 class EmpleadoDAL
 {
 public:
@@ -18,6 +16,8 @@ public:
     EmpleadoDTO obtenerPorDNI (int);
     int leerDeDisco(int pos);
     bool existeDNI(int);
+    int cantidadEmpleados();
+    void leerEmpleados(EmpleadoDTO empleados[], int cant);
 };
 
 #endif // EMPLEADODAL_H
