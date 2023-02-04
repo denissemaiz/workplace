@@ -18,9 +18,9 @@ void cuadroReservaEspacio()
     int n=4;
     const char *opciones[] = {"DESK","SALA DE REUNIONES", "ESTACIONAMIENTO", "COMEDOR"};
 
-    mostrar_mensaje ("__________________________", 40, 3);
-    mostrar_mensaje ("* SELECCIONE UNA OPCION *", 40, 5);
-    mostrar_mensaje ("__________________________", 40, 6);
+    mostrar_mensaje ("___________________________________", 40, 3);
+    mostrar_mensaje ("* SELECCIONE UN ESPACIO A RESERVAR *", 40, 5);
+    mostrar_mensaje ("__________________________________", 40, 6);
 
     int op=1, y=0;
     int espacio;
@@ -29,7 +29,7 @@ void cuadroReservaEspacio()
 
     do
     {
-        rlutil::saveDefaultColor();
+         rlutil::saveDefaultColor();
         rlutil::setColor(rlutil::YELLOW);
 
         showItem (opciones[0],30,10,y==0);
@@ -64,19 +64,37 @@ void cuadroReservaEspacio()
             }
             break;
 
-        case 1: //ENTER
-            cuadroConfirmacionFecha(y);
-            break;
-            ///esto esta raro....... /**/
-            switch(y)
-            {
-            case 3:
-                op=0;
-            }
-            break;
 
-        default:
-            break;
+        case 1:   /// OPCIONES AL INGRESAR ENTER (EL ENTER ES LA TECLA 1):
+
+
+          switch(y)
+            {
+                system("cls");
+            case 0:      ///DESK
+
+                 system("cls");
+                cuadroSeleccionDia();
+
+                break;
+            case 1:       ///SALA DE REUNIONES
+
+             system("cls");
+                cuadroSeleccionDia();
+
+                break;
+
+            case 2:       ///ESTACIONAMIENTO
+                 system("cls");
+                cuadroSeleccionDia();
+                break;
+
+            case 3:     ///COMEDOR
+
+                cuadroSeleccionDia();
+                break;
+
+            }
         }
     }
 

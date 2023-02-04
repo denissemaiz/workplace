@@ -24,7 +24,7 @@ system("color 8F");
 ///PANTALLA INICIO
 
 menuIncio();
-///cuadroSeleccionDia();
+
 
 _getch();
 system("cls");
