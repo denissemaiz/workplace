@@ -5,7 +5,9 @@
 using namespace std;
 
 #include "rlutil.h"
-#include "FUNCIONES.h"
+#include "FUNCIONES_ADMIN.h"
+#include "FUNCIONES_FRONT.h"
+#include "FUNCIONES_USER.h"
 #include "Fecha.h"
 
 
@@ -75,19 +77,22 @@ void confirmacionAnulacion()
             }
             break;
 
-        case 1: //ENTER
+        case 1:         /// OPCIONES AL INGRESAR ENTER (EL ENTER ES LA TECLA 1):
             historialReservas();
-            break;
+
 
             switch(y)
             {
-            case 2:
-                op=0;
-            }
-            break;
+                case 0:  /// CANCELAR RESERVA
 
-        default:
-            break;
+                 break;
+
+            case 1:     /// VOLVER AL MENU PRINCIPAL
+
+            //menuUser();
+                 break;
+            }
+
         }
     }
 

@@ -7,30 +7,27 @@ using namespace std;
 #include "rlutil.h"
 #include "FUNCIONES_USER.h"
 #include "FUNCIONES_FRONT.h"
+#include "FUNCIONES_ADMIN.h"
 #include "Fecha.h"
 
 void cuadroSeleccionDia()
 {
+    system("cls");
     int dia, mes, anio;
     Fecha obj;
     rectangulo (2, 2, 100, 20);
 
     rlutil::setColor(rlutil::YELLOW);
     mostrar_mensaje (" POR FAVOR SELECCIONE EL DIA A RESERVAR:", 30, 5);
-
-    ///PRUEBAS
-    /*mostrar_mensaje (" DIA/MES/ANIO:", 30, 10);
-    cin>>dia;
-    cin>>mes;
-    cin>>anio;
-    obj.setDia(dia);
-    obj.setMes(mes);
-    obj.setAnio(anio);*/
-
+    mostrar_mensaje ("----------------------------------------", 30, 6);
     Fecha();
-    mostrar_mensaje ("FECHAS A 15 DIAS:", 30, 20);
+
     for(int i=1; i<15; i++)
     {
+      //  rlutil::locate(25,7+i);
+        //cout <<"==> " <<endl;
+
+        rlutil::locate(30,7+i);
         obj.operator++();
         obj.Mostrar();
     }
@@ -48,8 +45,9 @@ void cuadroConfirmacionFecha(int espacio)
     int n=5;
     const char *opciones[] = {"ADMINISTRACION Y RRHH","VENTAS Y MARKETING", "PRODUCCION", "CONTABILIDAD Y FINANZAS", "DIRECCION"};
 
-    mostrar_mensaje ("SECTOR DONDE QUIERE RESERVAR: ", 8, 9);
-    mostrar_mensaje ("----------------------------", 8, 10);
+    mostrar_mensaje ("-------------------------------------", 8, 8);
+    mostrar_mensaje ("AREA DONDE QUIERE RESERVAR: ", 8, 9);
+    mostrar_mensaje ("-------------------------------------", 8, 10);
     int op=1, y=0;
 
     rlutil::hidecursor();
@@ -92,19 +90,40 @@ void cuadroConfirmacionFecha(int espacio)
             }
             break;
 
-        case 1: //ENTER
-            reciboConfirmacionReserva();
-            break;
+        case 1:     /// OPCIONES AL INGRESAR ENTER (EL ENTER ES LA TECLA 1):
 
-            switch(y)
+          switch(y)
             {
-            case 3:
-                op=0;
-            }
-            break;
+            case 0:         ///ADMINISTRACION Y RRHH
 
-        default:
-            break;
+                reciboConfirmacionReserva();
+
+                break;
+            case 1:         ///VENTAS Y MARKETING
+
+                reciboConfirmacionReserva();
+
+                break;
+
+            case 2:         ///PRODUCCION
+
+               reciboConfirmacionReserva();
+
+                break;
+
+            case 3:         ///CONTABILIDAD Y FINANZAS
+
+                reciboConfirmacionReserva();
+
+                break;
+
+                case 4:        ///DIRECCION
+
+                reciboConfirmacionReserva();
+
+                break;
+            }
+
         }
     }
 
@@ -165,19 +184,22 @@ void reciboConfirmacionReserva()
             }
             break;
 
-        case 1: //ENTER
-            fechaNoDisponible();
-            break;
+        case 1:         /// OPCIONES AL INGRESAR ENTER (EL ENTER ES LA TECLA 1):
+
 
             switch(y)
             {
-            case 2:
-                op=0;
-            }
-            break;
+            case 0:     /// SI CONFIRMA
 
-        default:
-            break;
+
+                break;
+            case 1:      /// NO CONFIRMA
+
+                 confirmacionAnulacion();
+
+                break;
+            }
+
         }
     }
 
@@ -191,7 +213,7 @@ void fechaNoDisponible()
     rectangulo (2, 2, 100, 20);
 
     rlutil::setColor(rlutil::RED);
-    mostrar_mensaje ("* LO SENTIMOS NO HAY MAS DISPONIBILIDAD PARA LA FECHA SELECCIONADA *  ", 19, 6);
+    mostrar_mensaje ("**   LO SENTIMOS NO HAY MAS DISPONIBILIDAD PARA LA FECHA SELECCIONADA  **  ", 19, 6);
 
     int n=2, op=1, y=0;;
     const char *opciones[] = {"VOLVER A CALENDARIO","VOLVER AL MENU PRINCIPAL"};
@@ -233,128 +255,25 @@ void fechaNoDisponible()
             }
             break;
 
-        case 1: //ENTER
-            confirmacionAnulacion();
-            break;
+        case 1:            /// OPCIONES AL INGRESAR ENTER (EL ENTER ES LA TECLA 1)
 
-            switch(y)
+               switch(y)
             {
-            case 2:
-                op=0;
-            }
-            break;
+            case 0:     ///VOLVER A CALENDARIO
 
-        default:
-            break;
+
+                break;
+
+            case 1:     ///MENU PRINCIPAL
+
+              //  menuUser();
+                break;
+
+            }
+
         }
     }
 
     while(op!=0);
     system("pause>nul");
 }
-
-
-/*void reservaDesde(Fecha obj)
-{
-    int d=obj.getDia();
-    int m=obj.getMes();
-    int a=obj.getAnio();
-
-    if (m==2&&d<=27)
-    {
-        d+=1;
-    }
-    if (m==2&&d>27)
-    {
-        d-=27;
-        m+=1;
-    }
-
-    if((m==4||m==6||m==9||m==11)&&d<=29)
-    {
-        d+=1;
-    }
-    if((m==4||m==6||m==9||m==11)&&d>29)
-    {
-        d-=29;
-        m+=1;
-    }
-
-    if((m==1||m==3||m==5||m==7||m==8||m==10||m==12)&&d<=30)
-    {
-        d+=1;
-    }
-    if((m==1||m==3||m==5||m==7||m==8||m==10)&&d>30)
-    {
-        d-=30;
-        m+=1;
-    }
-
-    if(m==12&&d>30)
-    {
-        d-=30;
-        m=1;
-        a+=1;
-    }
-
-    obj.setDia(d);
-    obj.setMes(m);
-    obj.setAnio(a);
-
-    obj.Mostrar();
-
-
-}
-*/
-
-/*void reservaHasta(Fecha obj)
-{
-    int d=obj.getDia();
-    int m=obj.getMes();
-    int a=obj.getAnio();
-
-    if (m==2&&d<=13)
-    {
-        d+=15;
-    }
-    if (m==2&&d>13)
-    {
-        d-=15;
-        m+=1;
-    }
-
-    if((m==4||m==6||m==9||m==11)&&d<=15)
-    {
-        d+=15;
-    }
-    if((m==4||m==6||m==9||m==11)&&d>15)
-    {
-        d-=15;
-        m+=1;
-    }
-
-    if((m==1||m==3||m==5||m==7||m==8||m==10||m==12)&&d<=16)
-    {
-        d+=15;
-    }
-
-    if((m==1||m==3||m==5||m==7||m==8||m==10)&&d>=16)
-    {
-        d-=16;
-        m+=1;
-    }
-
-    if(m==12&&d>16)
-    {
-        d-=16;
-        m=1;
-        a+=1;
-    }
-
-    obj.setDia(d);
-    obj.setMes(m);
-    obj.setAnio(a);
-    obj.Mostrar();
-}
-*/
-

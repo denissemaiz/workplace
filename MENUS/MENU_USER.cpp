@@ -7,11 +7,13 @@ using namespace std;
 #include "rlutil.h"
 #include"FUNCIONES_FRONT.h"
 #include"FUNCIONES_USER.h"
+#include"FUNCIONES_ADMIN.h"
 #include "Fecha.h"
 
 
 ///PANTALLA MENU
-void menuUser() {
+void menuUser()
+{
     rectangulo (2, 2, 100, 20);
     int n=4;
     const char *opciones[] = {"RESERVAR","ANULAR RESERVA", "MI HISTORIAL", "SALIR"};
@@ -24,7 +26,8 @@ void menuUser() {
 
     rlutil::hidecursor();
 
-    do{
+    do
+    {
         rlutil::saveDefaultColor();
         rlutil::setColor(rlutil::YELLOW);
 
@@ -60,22 +63,35 @@ void menuUser() {
             }
             break;
 
-        case 1: //ENTER
-            cuadroReservaEspacio();
-            break;
+        case 1:     /// OPCIONES AL INGRESAR ENTER (EL ENTER ES LA TECLA 1):
 
             switch(y)
             {
-            case 3:
-                op=0;
+            case 0:     /// RESERVAR
+
+                 cuadroReservaEspacio();
+
+                break;
+            case 1:       ///ANULAR RESERVA
+
+                cout <<"anulando reserva";
+                break;
+
+            case 2:     ///MI HISTORIAL
+
+
+
+              break;
+
+            case 3:     ///SALIR
+
+
+
+                 break;
             }
-            break;
 
-        default:
-            break;
-        }
     }
-
+ }
     while(op!=0);
     system("pause>nul");
 }
