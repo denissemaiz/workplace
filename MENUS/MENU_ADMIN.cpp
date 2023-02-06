@@ -28,7 +28,7 @@ void menuAdmin()
         mostrar_mensaje ("7-CONSULTA DE RESERVAS", 10, 14);
         mostrar_mensaje ("8-IMFORMES", 10, 15);
         mostrar_mensaje ("9-RESPALDOS", 10, 16);
-        mostrar_mensaje ("0-SALIR", 10, 17);
+        mostrar_mensaje ("0-SALIR", 10, 17);  ///AGREGAR OPCIÓN "ATRÁS"?
 
         mostrar_mensaje ("SELECCIONE UNA OPCION:", 20, 20);
         rlutil::  locate (43,20);

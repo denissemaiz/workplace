@@ -24,7 +24,7 @@ void cuadroSeleccionDia()
 
     for(int i=1; i<15; i++)
     {
-      //  rlutil::locate(25,7+i);
+        //  rlutil::locate(25,7+i);
         //cout <<"==> " <<endl;
 
         rlutil::locate(30,7+i);
@@ -32,7 +32,6 @@ void cuadroSeleccionDia()
         obj.Mostrar();
     }
 }
-
 
 void cuadroConfirmacionFecha(int espacio)
 {
@@ -92,41 +91,26 @@ void cuadroConfirmacionFecha(int espacio)
 
         case 1:     /// OPCIONES AL INGRESAR ENTER (EL ENTER ES LA TECLA 1):
 
-          switch(y)
+            switch(y)
             {
             case 0:         ///ADMINISTRACION Y RRHH
-
                 reciboConfirmacionReserva();
-
                 break;
             case 1:         ///VENTAS Y MARKETING
-
                 reciboConfirmacionReserva();
-
                 break;
-
             case 2:         ///PRODUCCION
-
-               reciboConfirmacionReserva();
-
+                reciboConfirmacionReserva();
                 break;
-
             case 3:         ///CONTABILIDAD Y FINANZAS
-
                 reciboConfirmacionReserva();
-
                 break;
-
-                case 4:        ///DIRECCION
-
+            case 4:        ///DIRECCION
                 reciboConfirmacionReserva();
-
                 break;
             }
-
         }
     }
-
     while(op!=0);
     system("pause>nul");
 }
@@ -185,24 +169,16 @@ void reciboConfirmacionReserva()
             break;
 
         case 1:         /// OPCIONES AL INGRESAR ENTER (EL ENTER ES LA TECLA 1):
-
-
             switch(y)
             {
             case 0:     /// SI CONFIRMA
-
-
                 break;
             case 1:      /// NO CONFIRMA
-
-                 confirmacionAnulacion();
-
+                confirmacionAnulacion();
                 break;
             }
-
         }
     }
-
     while(op!=0);
     system("pause>nul");
 }
@@ -257,20 +233,14 @@ void fechaNoDisponible()
 
         case 1:            /// OPCIONES AL INGRESAR ENTER (EL ENTER ES LA TECLA 1)
 
-               switch(y)
+            switch(y)
             {
             case 0:     ///VOLVER A CALENDARIO
-
-
                 break;
-
             case 1:     ///MENU PRINCIPAL
-
-              //  menuUser();
+                //  menuUser();
                 break;
-
             }
-
         }
     }
 

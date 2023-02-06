@@ -6,7 +6,7 @@ using namespace std;
 
 #include "rlutil.h"
 #include "FUNCIONES_FRONT.h"
-#include "FUNCIONES_USER.h"
+#include "MENUS.h"
 #include "Fecha.h"
 
 
@@ -29,7 +29,7 @@ void cuadroReservaEspacio()
 
     do
     {
-         rlutil::saveDefaultColor();
+        rlutil::saveDefaultColor();
         rlutil::setColor(rlutil::YELLOW);
 
         showItem (opciones[0],30,10,y==0);
@@ -64,36 +64,23 @@ void cuadroReservaEspacio()
             }
             break;
 
-
         case 1:   /// OPCIONES AL INGRESAR ENTER (EL ENTER ES LA TECLA 1):
+            system("cls");
 
-
-          switch(y)
+            switch(y)
             {
-                system("cls");
             case 0:      ///DESK
-
-                 system("cls");
                 cuadroSeleccionDia();
-
                 break;
             case 1:       ///SALA DE REUNIONES
-
-             system("cls");
                 cuadroSeleccionDia();
-
                 break;
-
             case 2:       ///ESTACIONAMIENTO
-                 system("cls");
                 cuadroSeleccionDia();
                 break;
-
             case 3:     ///COMEDOR
-
                 cuadroSeleccionDia();
                 break;
-
             }
         }
     }
