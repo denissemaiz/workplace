@@ -23,12 +23,16 @@ void cuadroSeleccionDia(int espacio)
 
     for(int i=1; i<15; i++)
     {
-        //  rlutil::locate(25,7+i);
+        //rlutil::locate(25,7+i);
         //cout <<"==> " <<endl;
-        rlutil::locate(30,7+i);
 
-        vecFechas[i-1] = obj.operator++();
-        obj.Mostrar();
+        obj.operator++();
+        vecFechas[i-1] = obj;
+    }
+
+    for(int j=0; j<14; j++){
+        rlutil::locate(30,7+j);
+        vecFechas[j].Mostrar();
     }
 }
 
