@@ -5,9 +5,9 @@
 void menuIncio();
 void menuAdmin();
 void menuUser();
-void cuadroSeleccionDia();
-void cuadroConfirmacionFecha(int espacio);
-void cuadroReservaEspacio();
+void cuadroSeleccionarEspacio();
+void cuadroSeleccionarSector(int espacio);
+void cuadroSeleccionDia(int espacio);
 void cuadroConfirmacionReserva();
 
 #endif // MENUS_H_INCLUDED

@@ -68,7 +68,7 @@ void menuUser()
             switch(y)
             {
             case 0:     /// RESERVAR
-                cuadroReservaEspacio();
+                cuadroSeleccionarEspacio();
                 break;
             case 1:       ///ANULAR RESERVA
                 cout <<"anulando reserva";
