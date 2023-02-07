@@ -68,7 +68,7 @@ void Fecha::Mostrar(){
 }
 */
 
- bool Fecha::operator++(){
+ Fecha Fecha::operator++(){
     int dia=_dia;
     int mes=_mes;
     int anio=_anio;

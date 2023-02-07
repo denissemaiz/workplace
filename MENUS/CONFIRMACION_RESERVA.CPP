@@ -19,6 +19,7 @@ void cuadroSeleccionDia(int espacio)
     mostrar_mensaje ("----------------------------------------", 30, 6);
 
     Fecha obj;
+    Fecha vecFechas[14]={};
 
     for(int i=1; i<15; i++)
     {
@@ -26,7 +27,7 @@ void cuadroSeleccionDia(int espacio)
         //cout <<"==> " <<endl;
         rlutil::locate(30,7+i);
 
-        obj.operator++();
+        vecFechas[i-1] = obj.operator++();
         obj.Mostrar();
     }
 }
