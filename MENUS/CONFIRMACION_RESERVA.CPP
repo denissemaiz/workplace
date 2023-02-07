@@ -7,34 +7,37 @@ using namespace std;
 #include "rlutil.h"
 #include "FUNCIONES_USER.h"
 #include "FUNCIONES_FRONT.h"
-#include "FUNCIONES_ADMIN.h"
+#include "MENUS.h"
 #include "Fecha.h"
 
-void cuadroSeleccionDia()
+void cuadroSeleccionDia(int espacio)
 {
     system("cls");
-    int dia, mes, anio;
-    Fecha obj;
     rectangulo (2, 2, 100, 20);
 
-    rlutil::setColor(rlutil::YELLOW);
     mostrar_mensaje (" POR FAVOR SELECCIONE EL DIA A RESERVAR:", 30, 5);
     mostrar_mensaje ("----------------------------------------", 30, 6);
-    Fecha();
+
+    Fecha obj;
+    Fecha vecFechas[14]={};
 
     for(int i=1; i<15; i++)
     {
-      //  rlutil::locate(25,7+i);
+        //rlutil::locate(25,7+i);
         //cout <<"==> " <<endl;
 
-        rlutil::locate(30,7+i);
         obj.operator++();
-        obj.Mostrar();
+        vecFechas[i-1] = obj;
+    }
+
+    for(int j=0; j<14; j++){
+        rlutil::locate(30,7+j);
+        vecFechas[j].Mostrar();
     }
 }
 
-
-void cuadroConfirmacionFecha(int espacio)
+/**/
+void cuadroSeleccionarSector(int espacio)
 {
     system("cls");
     rectangulo (2, 2, 100, 20);
@@ -92,41 +95,26 @@ void cuadroConfirmacionFecha(int espacio)
 
         case 1:     /// OPCIONES AL INGRESAR ENTER (EL ENTER ES LA TECLA 1):
 
-          switch(y)
+            switch(y)
             {
             case 0:         ///ADMINISTRACION Y RRHH
-
                 reciboConfirmacionReserva();
-
                 break;
             case 1:         ///VENTAS Y MARKETING
-
                 reciboConfirmacionReserva();
-
                 break;
-
             case 2:         ///PRODUCCION
-
-               reciboConfirmacionReserva();
-
+                reciboConfirmacionReserva();
                 break;
-
             case 3:         ///CONTABILIDAD Y FINANZAS
-
                 reciboConfirmacionReserva();
-
                 break;
-
-                case 4:        ///DIRECCION
-
+            case 4:        ///DIRECCION
                 reciboConfirmacionReserva();
-
                 break;
             }
-
         }
     }
-
     while(op!=0);
     system("pause>nul");
 }
@@ -185,24 +173,16 @@ void reciboConfirmacionReserva()
             break;
 
         case 1:         /// OPCIONES AL INGRESAR ENTER (EL ENTER ES LA TECLA 1):
-
-
             switch(y)
             {
             case 0:     /// SI CONFIRMA
-
-
                 break;
             case 1:      /// NO CONFIRMA
-
-                 confirmacionAnulacion();
-
+                confirmacionAnulacion();
                 break;
             }
-
         }
     }
-
     while(op!=0);
     system("pause>nul");
 }
@@ -257,20 +237,14 @@ void fechaNoDisponible()
 
         case 1:            /// OPCIONES AL INGRESAR ENTER (EL ENTER ES LA TECLA 1)
 
-               switch(y)
+            switch(y)
             {
             case 0:     ///VOLVER A CALENDARIO
-
-
                 break;
-
             case 1:     ///MENU PRINCIPAL
-
-              //  menuUser();
+                //  menuUser();
                 break;
-
             }
-
         }
     }
 

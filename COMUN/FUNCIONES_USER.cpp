@@ -23,6 +23,7 @@ void cuadroConfirmacionReserva()
     mostrar_mensaje (" PISO/SECTOR DONDE SE REALIZO LA RESERVA:", 10, 16);
     mostrar_mensaje (" ¿CONFIRMA LA RESERVA? :", 10, 18);
 }
+
 void SalirSistemaUser()
 {
     rectangulo (2, 2, 100, 20);

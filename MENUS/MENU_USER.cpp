@@ -5,8 +5,8 @@
 using namespace std;
 
 #include "rlutil.h"
+#include "MENUS.h"
 #include"FUNCIONES_FRONT.h"
-#include"FUNCIONES_USER.h"
 #include"FUNCIONES_ADMIN.h"
 #include "Fecha.h"
 
@@ -68,30 +68,18 @@ void menuUser()
             switch(y)
             {
             case 0:     /// RESERVAR
-
-                 cuadroReservaEspacio();
-
+                cuadroSeleccionarEspacio();
                 break;
             case 1:       ///ANULAR RESERVA
-
                 cout <<"anulando reserva";
                 break;
-
             case 2:     ///MI HISTORIAL
-
-
-
-              break;
-
+                break;
             case 3:     ///SALIR
-
-
-
-                 break;
+                break;
             }
-
+        }
     }
- }
     while(op!=0);
     system("pause>nul");
 }
