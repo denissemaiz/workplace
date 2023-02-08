@@ -1,67 +1,54 @@
 #include "EspacioDeTrabajoDTO.h"
-//constructor
 
-/*EspacioDeTrabajoDTO::EspacioDeTrabajoDTO(){
+EspacioDeTrabajoDTO::EspacioDeTrabajoDTO(){
 
-
- _nombre="";
- _tipo_espacio="";
- _cantidaddepuestos=0;
- _capacidad=200;
- _estado_espacio=false;
-
+ _tipo_espacio=-1;
+ _cant_puestos=0;
+ _disponibilidad=0;
+ _estado=false;
 
 }
-//sets
 
-void EspacioDeTrabajoDTO::Setnombre(char *nombre)
-{
-_nombre=nombre;
 
-}
-void EspacioDeTrabajoDTO::Settipodeespacio(int tipoespacio)
+void EspacioDeTrabajoDTO::setTipo(int tipoespacio)
 {
 _tipo_espacio=tipoespacio;
 
 }
-void EspacioDeTrabajoDTO::Setcantidadpuestos(int cantidadpuestos)
+
+void EspacioDeTrabajoDTO::setCantPuestos(int cantidadpuestos)
 {
-_cantidaddepuestos=cantidadpuestos;
+_cant_puestos=cantidadpuestos;
 
 }
-void EspacioDeTrabajoDTO::Setcapacidad(int capacidad)
+void EspacioDeTrabajoDTO::setDisponibilidad(int disponibilidad)
 {
-_capacidad=capacidad;
+_disponibilidad=disponibilidad;
 
 }
-void EspacioDeTrabajoDTO::Setestadoespacio(bool estadoespacio)
+
+void EspacioDeTrabajoDTO::setEstado(bool estado)
 {
-_estado_espacio=estadoespacio;
+_estado=estado;
 
 }
-//gets
 
-const char* EspacioDeTrabajoDTO::Getnombre (){
-
-return _nombre;
-}
-int EspacioDeTrabajoDTO::Gettipoespacio()
+int EspacioDeTrabajoDTO::getTipo()
 {
 return _tipo_espacio;
 }
 
-int EspacioDeTrabajoDTO::Getcantidadpuestos()
+int EspacioDeTrabajoDTO::getCantPuestos()
 {
-return _cantidaddepuestos;
+return _cant_puestos;
 }
 
-int EspacioDeTrabajoDTO::Getcapacidad()
+int EspacioDeTrabajoDTO::getDisponibilidad()
 {
-return _capacidad;
+return _disponibilidad;
 }
 
-bool EspacioDeTrabajoDTO::Getestadoespacio()
+bool EspacioDeTrabajoDTO::getEstado()
 {
-return _estado_espacio:
-
-}*/
+return _estado;
+}
