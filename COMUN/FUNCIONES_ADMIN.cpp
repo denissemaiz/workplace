@@ -10,6 +10,9 @@ using namespace std;
 #include "EmpleadoDAL.h"
 #include "EmpleadoDTO.h"
 #include "PersonaDAL.h"
+#include "EspacioDeTrabajoDTO.h"
+#include "EspacioDeTrabajoDAL.h"
+
 
 
 int agregarEmpleado() ///cargar empleado
@@ -57,4 +60,39 @@ bool listarEmpleados()
         }
     }
     return hayRegistros;
+}
+
+bool LimitarEspacios(int y){
+
+    EspacioDeTrabajoDTO objEspacio;
+    EspacioDeTrabajoDAL regEspacio;
+    int Disponibilidad;
+
+
+    int cantidad=regEspacio.cantidadEspacios();
+    EspacioDeTrabajoDTO* vecEspacios= new EspacioDeTrabajoDTO[cantidad];
+
+    regEspacio.LeerEspaciodeTrabajo(vecEspacios,cantidad);
+
+    cout<<"Ingrese la disponibilidad del espacio";
+    cin>>Disponibilidad;
+
+    vecEspacios[y].setDisponibilidad(Disponibilidad);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

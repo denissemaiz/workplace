@@ -1,4 +1,5 @@
 #include "EmpleadoDAL.h"
+#include "EspacioDeTrabajoDTO.h"
 
 const char *RUTA_EMPLEADO = "Empleado.data";
 

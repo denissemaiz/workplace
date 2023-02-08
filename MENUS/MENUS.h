@@ -9,5 +9,5 @@ void cuadroSeleccionarEspacio();
 void cuadroSeleccionarSector(int espacio);
 void cuadroSeleccionDia(int espacio);
 void cuadroConfirmacionReserva();
-
+void CuadroLimitarEspacio();
 #endif // MENUS_H_INCLUDED
