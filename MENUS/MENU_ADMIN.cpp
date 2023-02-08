@@ -130,7 +130,18 @@ void menuAdmin()
                 break;
 
             case 3:    ///LIMITAR ESPACIOS
+
                 system("cls");
+                 rectangulo (2, 2, 100, 26);
+                rlutil::setColor(rlutil::YELLOW);
+                mostrar_mensaje ("LIMITAR ESPACIOS", 40, 5);
+
+               //  MenuLimitarEspacios();//
+
+
+
+
+               // int Disponibilidad=LimitarEspacios(vec,4)
 
                 break;
 
