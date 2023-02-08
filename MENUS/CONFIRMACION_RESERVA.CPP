@@ -23,9 +23,6 @@ void cuadroSeleccionDia(int espacio)
 
     for(int i=1; i<15; i++)
     {
-        //rlutil::locate(25,7+i);
-        //cout <<"==> " <<endl;
-
         obj.operator++();
         vecFechas[i-1] = obj;
     }

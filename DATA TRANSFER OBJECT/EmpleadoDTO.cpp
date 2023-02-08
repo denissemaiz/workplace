@@ -67,6 +67,9 @@ void EmpleadoDTO::cargar(int dni){
     cout<<"5- DIRECCION";
     rlutil::  locate (28,14);
     cin>>_sector;
+    if(_sector>5 || _sector<1){
+        return;
+    }
 }
 
 void EmpleadoDTO::mostrar()

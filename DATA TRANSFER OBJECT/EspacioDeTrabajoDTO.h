@@ -5,25 +5,22 @@
 class EspacioDeTrabajoDTO
 {
 private:
-    char _nombre[30];
     int _tipo_espacio;
-    int _cant_puestos;
-    int _capacidad;
-    bool _estado;
+    int _cant_puestos;  ///total
+    int _disponibilidad;   ///lo que puede usar
+    bool _estado;   ///dar de baja un espacio
 
 public:
     EspacioDeTrabajoDTO();
 
-    void setNombre(char *nombre);
     void setTipo(int tipo);
     void setCantPuestos(int cantpuestos);
-    void setCapacidad(int cap);
+    void setDisponibilidad(int cap);
     void setEstado(int estado);
 
-    const char* getNombre();
     int getTipo();
     int getCantPuestos();
-    int getCapacidad();
+    int getDisponibilidad();
     bool getEstado();
 
     void cargar();
