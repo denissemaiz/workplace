@@ -74,3 +74,26 @@ int EspacioDeTrabajoDAL::cantidadEspacios()
     return cantidad;
 }
 
+bool EspacioDeTrabajoDAL::existeTipo(int tipo)
+{
+    bool encontro=false;
+    EspacioDeTrabajoDTO dto;
+    FILE *p;
+    p = fopen(RUTA_ESPACIO,"rb");
+    if (p!=NULL)
+    {
+        while(fread(&dto, sizeof (EspacioDeTrabajoDTO),1,p))
+        {
+            if(dto.getTipo()==tipo)
+            {
+                encontro=true;
+            }
+        }
+        if(!encontro)
+        {
+            encontro=false;
+        }
+    }
+    fclose (p);
+    return encontro;
+}
