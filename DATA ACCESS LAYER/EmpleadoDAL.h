@@ -11,7 +11,7 @@ public:
     bool agregar (EmpleadoDTO);
     bool modificar (EmpleadoDTO);
     bool eliminar (EmpleadoDTO);
-    int obtenerTamanio();
+    int obtenerTamanio(); /*es igual a cantidad empleados?*/ /**/
     EmpleadoDTO buscarRegistro(int,int);
     EmpleadoDTO obtenerPorDNI (int);
     int leerDeDisco(int pos);

@@ -14,7 +14,6 @@ using namespace std;
 #include "EspacioDeTrabajoDAL.h"
 
 
-
 int agregarEmpleado() ///cargar empleado
 {
     EmpleadoDAL regEmpleado;
@@ -26,17 +25,22 @@ int agregarEmpleado() ///cargar empleado
     rlutil::  locate (25,8);
     cin>>dni;
     bool encontro = regEmpleado.existeDNI(dni);
-    if (encontro) {
+    if (encontro)
+    {
         rlutil::  locate (20,10);
         cout<<"EL DNI YA EXISTE!";
         system("pause>null");
         return 0;
     }
     objEmpleado.cargar(dni);
-    if(objEmpleado.getSector() != 0){
+    if(objEmpleado.getSector() != 0)
+    {
         agrego = regEmpleado.agregar(objEmpleado);
     }
-    if (agrego){ return -1; }
+    if (agrego)
+    {
+        return -1;
+    }
     return 0;
 }
 
@@ -49,7 +53,8 @@ bool listarEmpleados()
     int cantidad=regEmpleado.cantidadEmpleados();
     EmpleadoDTO* vecEmpleados= new EmpleadoDTO[cantidad];
 
-    if (cantidad > 0) {
+    if (cantidad > 0)
+    {
         hayRegistros = true;
         regEmpleado.leerEmpleados(vecEmpleados, cantidad);
         for( int i=0; i<cantidad; i++)
@@ -62,12 +67,12 @@ bool listarEmpleados()
     return hayRegistros;
 }
 
-bool LimitarEspacios(int y){
+bool limitarEspacios(int espacio)
+{
 
     EspacioDeTrabajoDTO objEspacio;
     EspacioDeTrabajoDAL regEspacio;
-    int Disponibilidad;
-
+    int disponibilidad;
 
     int cantidad=regEspacio.cantidadEspacios();
     EspacioDeTrabajoDTO* vecEspacios= new EspacioDeTrabajoDTO[cantidad];
@@ -75,24 +80,32 @@ bool LimitarEspacios(int y){
     regEspacio.LeerEspaciodeTrabajo(vecEspacios,cantidad);
 
     cout<<"Ingrese la disponibilidad del espacio";
-    cin>>Disponibilidad;
+    cin>>disponibilidad;
 
-    vecEspacios[y].setDisponibilidad(Disponibilidad);
+    vecEspacios[espacio].setDisponibilidad(disponibilidad);
+    /*NO ESTAMOS MODIFICANDO EL ARCHIVO CON ESTE .SET; SOLO EL VECTOR*/
+}
 
+bool definirEspacios(int espacio)
+{
 
+    EspacioDeTrabajoDTO objEspacio;
+    EspacioDeTrabajoDAL regEspacio;
+    int cant_puestos;
+    bool agrego = false;
 
+    rectangulo (2, 2, 100, 26);
+    rlutil::setColor(rlutil::YELLOW);
+    mostrar_mensaje ("INGRESE LA CANTIDAD DE PUESTOS DEL ESPACIO: ", 29, 8);
 
+    cin>>cant_puestos;
 
+    objEspacio.setTipo(espacio);
+    objEspacio.setCantPuestos(cant_puestos);
+    objEspacio.setDisponibilidad(cant_puestos);
+    objEspacio.setEstado(true);
 
+    agrego = regEspacio.agregar(objEspacio);
 
-
-
-
-
-
-
-
-
-
-
+    return agrego;
 }

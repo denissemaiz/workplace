@@ -5,5 +5,7 @@
 
 int agregarEmpleado();
 bool listarEmpleados();
+bool limitarEspacios(int);
+bool definirEspacios(int);
 
 #endif // FUNCIONES_ADMIN_H_INCLUDED
