@@ -1,5 +1,5 @@
-#ifndef FUNCIONES_H_INCLUDED
-#define FUNCIONES_H_INCLUDED
+#ifndef FUNCIONES_FRONT_H_INCLUDED
+#define FUNCIONES_FRONT_H_INCLUDED
 
 void mostrar_mensaje(string texto, int x, int y);
 void rectangulo(int posx, int posy, int ancho, int alto);

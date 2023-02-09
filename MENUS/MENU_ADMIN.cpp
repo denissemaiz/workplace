@@ -8,43 +8,12 @@ using namespace std;
 #include "MENUS.h"
 #include "FUNCIONES_ADMIN.h"
 
-/*
 void menuAdmin()
 {
-    int op;
-    while(true)
-    {
-        system("cls");
-        rectangulo (2, 2, 100, 26);
-        rlutil::setColor(rlutil::YELLOW);
-
-        mostrar_mensaje (" ¿QUE DESEAS HACER?", 40, 5);
-        mostrar_mensaje ("_____________________", 40, 6);
-        mostrar_mensaje ("1-CARGAR EMPLEADO", 10, 8);
-        mostrar_mensaje ("2-DAR DE BAJA A UN EMPLEADO", 10, 9);
-        mostrar_mensaje ("3-REALIZAR UNA RESERVA", 10, 10);
-        mostrar_mensaje ("4-LIMITAR ESPACIOS", 10, 11);
-        mostrar_mensaje ("5-LISTAR EMPLEADOS", 10, 12);
-        mostrar_mensaje ("6-CONSULTA POR USUARIO", 10, 13);
-        mostrar_mensaje ("7-CONSULTA DE RESERVAS", 10, 14);
-        mostrar_mensaje ("8-IMFORMES", 10, 15);
-        mostrar_mensaje ("9-RESPALDOS", 10, 16);
-        mostrar_mensaje ("0-SALIR", 10, 17);  ///AGREGAR OPCIÓN "ATRÁS"?
-
-        mostrar_mensaje ("SELECCIONE UNA OPCION:", 20, 20);
-        rlutil::  locate (43,20);
-
-        cin>>op;
-        system("cls");
-*/
-///PANTALLA MENU ADMIN
-void menuAdmin()
-{
-
-    rectangulo (2, 2, 100, 20);
-    int n=10;
-    const char *opciones[] = {"CARGAR EMPLEADO","DAR DE BAJA EMPLEADO","REALIZAR UNA RESERVA", "DEFINIR ESPACIOS", "LIMITAR ESPACIOS", "LISTAR EMPLEADOS","CONSULTAS POR USUARIO","CONSULTAS DE RESERVAS","INFORMES","RESPALDOS","SALIR"};
-
+    const char *opciones[] = {"CARGAR EMPLEADO","DAR DE BAJA EMPLEADO", "LISTAR EMPLEADOS", "DEFINIR ESPACIOS",
+                              "LIMITAR ESPACIOS", "LISTAR ESPACIOS","CONSULTAS POR USUARIO", "REALIZAR UNA RESERVA",
+                              "CONSULTAS DE RESERVAS", "INFORMES","RESPALDOS","SALIR"
+                             };
     int op=1, y=0;
 
     rlutil::hidecursor();
@@ -55,6 +24,7 @@ void menuAdmin()
         mostrar_mensaje ("________________________________________", 40, 6);
 
         rlutil::saveDefaultColor();
+        rectangulo (2, 2, 100, 26);
         rlutil::setColor(rlutil::YELLOW);
 
         showItem (opciones[0],30,10,y==0);
@@ -120,12 +90,30 @@ void menuAdmin()
 
             case 1:     ///DAR DE BAJA EMPLEADO
                 system("cls");
-
                 break;
 
-            case 2:    ///REALIZAR UNA RESERVA
+            case 2:     ///LISTAR EMPLEADOS
                 system("cls");
 
+                rectangulo (2, 2, 100, 26);
+                rlutil::setColor(rlutil::YELLOW);
+                mostrar_mensaje ("LISTAR EMPLEADOS", 40, 5);
+                if(listarEmpleados())
+                {
+                    system("cls");
+                    rectangulo (2, 2, 100, 26);
+                    rlutil::setColor(rlutil::YELLOW);
+                    mostrar_mensaje ("FIN DEL LISTADO.", 26, 14);
+                    system("pause>nul");
+                    system("cls");
+                }
+                else
+                {
+                    rlutil::  locate (20,23);
+                    cout<<"NO EXISTEN REGISTROS DE EMPLEADOS.";
+                    system("pause>nul");
+                    system("cls");
+                }
                 break;
 
             case 3:     ///DEFINIR ESPACIOS
@@ -144,23 +132,27 @@ void menuAdmin()
                 cuadroLimitarEspacio(y);
                 break;
 
-            case 5:     ///LISTAR EMPLEADOS
+            case 5:     ///LISTAR ESPACIOS
                 system("cls");
 
                 rectangulo (2, 2, 100, 26);
                 rlutil::setColor(rlutil::YELLOW);
-                mostrar_mensaje ("LISTAR EMPLEADOS", 40, 5);
-                if(listarEmpleados())
+                mostrar_mensaje ("LISTAR ESPACIOS", 40, 5);
+                if(listarEspacios())
                 {
                     system("cls");
                     rectangulo (2, 2, 100, 26);
                     rlutil::setColor(rlutil::YELLOW);
                     mostrar_mensaje ("FIN DEL LISTADO.", 26, 14);
+                    system("pause>nul");
+                    system("cls");
                 }
                 else
                 {
                     rlutil::  locate (20,23);
-                    cout<<"NO EXISTEN REGISTROS DE EMPLEADOS.";
+                    cout<<"NO EXISTEN REGISTROS DE ESPACIOS.";
+                    system("pause>nul");
+                    system("cls");
                 }
                 break;
 
@@ -168,23 +160,27 @@ void menuAdmin()
                 system("cls");
 
                 break;
-
-            case 7:    ///CONSULTAS DE RESERVAS
+            case 7:     ///REALIZAR UNA RESERVA
                 system("cls");
 
                 break;
 
-            case 8:   ///INFORMES
+            case 8:    ///CONSULTAS DE RESERVAS
                 system("cls");
 
                 break;
 
-            case 9:    ///RESPALDOS
+            case 9:   ///INFORMES
                 system("cls");
 
                 break;
 
-            case 10:  ///SALIR
+            case 10:    ///RESPALDOS
+                system("cls");
+
+                break;
+
+            case 11:  ///SALIR
                 system("cls");
                 break;
             }

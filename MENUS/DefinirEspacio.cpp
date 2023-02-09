@@ -114,7 +114,7 @@ void cuadroLimitarEspacio(int opc)
                 system("cls");
                 if(opc==3)
                 {
-                    if ( definirEspacios(y))
+                    if (definirEspacios(y))
                     {
                         rlutil::  locate (20,23);
                         cout<<"ESPACIO DEFINIDO.";
