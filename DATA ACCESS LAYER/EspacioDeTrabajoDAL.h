@@ -12,6 +12,7 @@ public:
     bool eliminar (EspacioDeTrabajoDTO);
     int cantidadEspacios();
     void LeerEspaciodeTrabajo(EspacioDeTrabajoDTO VecEspacio[], int cant);
+    bool existeTipo(int tipo);
     //void PorcentajeOcupacionDiaria();
     //void CantidadReservasMensualesPorDepto();
 };

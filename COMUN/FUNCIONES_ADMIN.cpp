@@ -67,9 +67,34 @@ bool listarEmpleados()
     return hayRegistros;
 }
 
+bool definirEspacios(int espacio)
+{
+    EspacioDeTrabajoDTO objEspacio;
+    EspacioDeTrabajoDAL regEspacio;
+    int cant_puestos;
+    bool existe = false, agrego = false;
+
+    rectangulo (2, 2, 100, 26);
+    rlutil::setColor(rlutil::YELLOW);
+    mostrar_mensaje ("INGRESE LA CANTIDAD DE PUESTOS DEL ESPACIO: ", 29, 8);
+
+    existe = regEspacio.existeTipo(espacio);
+
+    cin>>cant_puestos;
+
+    objEspacio.setTipo(espacio);
+    objEspacio.setCantPuestos(cant_puestos);
+    objEspacio.setDisponibilidad(cant_puestos);
+    objEspacio.setEstado(true);
+
+    if (existe){ agrego = regEspacio.modificar(objEspacio); }
+    else { agrego = regEspacio.agregar(objEspacio); }
+
+    return agrego;
+}
+
 bool limitarEspacios(int espacio)
 {
-
     EspacioDeTrabajoDTO objEspacio;
     EspacioDeTrabajoDAL regEspacio;
     int disponibilidad;
@@ -86,26 +111,24 @@ bool limitarEspacios(int espacio)
     /*NO ESTAMOS MODIFICANDO EL ARCHIVO CON ESTE .SET; SOLO EL VECTOR*/
 }
 
-bool definirEspacios(int espacio)
+bool listarEspacios()
 {
-
-    EspacioDeTrabajoDTO objEspacio;
     EspacioDeTrabajoDAL regEspacio;
-    int cant_puestos;
-    bool agrego = false;
 
-    rectangulo (2, 2, 100, 26);
-    rlutil::setColor(rlutil::YELLOW);
-    mostrar_mensaje ("INGRESE LA CANTIDAD DE PUESTOS DEL ESPACIO: ", 29, 8);
+    bool hayRegistros = false;
+    int cantidad=regEspacio.cantidadEspacios();
+    EspacioDeTrabajoDTO* vecEspacios= new EspacioDeTrabajoDTO[cantidad];
 
-    cin>>cant_puestos;
-
-    objEspacio.setTipo(espacio);
-    objEspacio.setCantPuestos(cant_puestos);
-    objEspacio.setDisponibilidad(cant_puestos);
-    objEspacio.setEstado(true);
-
-    agrego = regEspacio.agregar(objEspacio);
-
-    return agrego;
+    if (cantidad > 0)
+    {
+        hayRegistros = true;
+        regEspacio.LeerEspaciodeTrabajo(vecEspacios, cantidad);
+        for( int i=0; i<cantidad; i++)
+        {
+            vecEspacios[i].mostrar();
+            rlutil::  locate (10,25);
+            system("pause");
+        }
+    }
+    return hayRegistros;
 }

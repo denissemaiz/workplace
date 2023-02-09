@@ -1,4 +1,11 @@
+#include <iostream>
+
+using namespace std;
+
 #include "EspacioDeTrabajoDTO.h"
+#include "FUNCIONES_FRONT.h"
+#include "rlutil.h"
+
 
 EspacioDeTrabajoDTO::EspacioDeTrabajoDTO(){
 
@@ -51,4 +58,37 @@ return _disponibilidad;
 bool EspacioDeTrabajoDTO::getEstado()
 {
 return _estado;
+}
+
+void EspacioDeTrabajoDTO::mostrar()
+{
+    if(_estado==true)
+    {
+        rlutil::  locate (20,13);
+        cout<<"TIPO DE ESPACIO: ";
+        rlutil::  locate (37,13);
+        switch(_tipo_espacio)
+        {
+        case 0:
+            cout<<"DESK";
+            break;
+        case 1:
+            cout<<"SALA DE REUNIONES";
+            break;
+        case 2:
+            cout<<"ESTACIONAMIENTO";
+            break;
+        case 3:
+            cout<<"COMEDOR";
+            break;
+        }
+        rlutil::  locate (20,14);
+        cout<<"CANTIDAD DE PUESTOS: ";
+        rlutil::  locate (41,14);
+        cout<<_cant_puestos;
+        rlutil::  locate (20,15);
+        cout<<"DISPONIBILIDAD: ";
+        rlutil::  locate (36,15);
+        cout<<_cant_puestos;
+    }
 }
