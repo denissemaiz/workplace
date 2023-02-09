@@ -14,7 +14,6 @@ using namespace std;
 #include "EspacioDeTrabajoDAL.h"
 
 
-
 int agregarEmpleado() ///cargar empleado
 {
     EmpleadoDAL regEmpleado;
@@ -62,12 +61,11 @@ bool listarEmpleados()
     return hayRegistros;
 }
 
-bool LimitarEspacios(int y){
+bool limitarEspacios(int espacio){
 
     EspacioDeTrabajoDTO objEspacio;
     EspacioDeTrabajoDAL regEspacio;
-    int Disponibilidad;
-
+    int disponibilidad;
 
     int cantidad=regEspacio.cantidadEspacios();
     EspacioDeTrabajoDTO* vecEspacios= new EspacioDeTrabajoDTO[cantidad];
@@ -75,24 +73,28 @@ bool LimitarEspacios(int y){
     regEspacio.LeerEspaciodeTrabajo(vecEspacios,cantidad);
 
     cout<<"Ingrese la disponibilidad del espacio";
-    cin>>Disponibilidad;
+    cin>>disponibilidad;
 
-    vecEspacios[y].setDisponibilidad(Disponibilidad);
+    vecEspacios[espacio].setDisponibilidad(disponibilidad);
+}
 
+bool definirEspacios(int espacio){
 
+    EspacioDeTrabajoDTO objEspacio;
+    EspacioDeTrabajoDAL regEspacio;
+    int cant_puestos;
+    bool agrego = false;
 
+    rlutil::  locate (20,8);
+    cout<<"INGRESE LA CANTIDAD DE PUESTOS DEL ESPACIO: ";
+    cin>>cant_puestos;
 
+    objEspacio.setTipo(espacio);
+    objEspacio.setCantPuestos(cant_puestos);
+    objEspacio.setDisponibilidad(cant_puestos);
+    objEspacio.setEstado(true);
 
+    agrego = regEspacio.agregar(objEspacio);
 
-
-
-
-
-
-
-
-
-
-
-
+    return agrego;
 }

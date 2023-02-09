@@ -7,19 +7,17 @@ using namespace std;
 #include "rlutil.h"
 #include "FUNCIONES_FRONT.h"
 #include "MENUS.h"
+#include "FUNCIONES_ADMIN.h"
 #include "Fecha.h"
 
 
-void CuadroLimitarEspacio()
+void cuadroLimitarEspacio(int opc)
 {
-    system("cls");
-    rectangulo (2, 2, 100, 20);
-
     int n=4;
     const char *opciones[] = {"DESK","SALA DE REUNIONES", "ESTACIONAMIENTO", "COMEDOR"};
 
     mostrar_mensaje ("___________________________________", 40, 3);
-    mostrar_mensaje ("* SELECCIONE UN ESPACIO A RESERVAR *", 40, 5);
+    mostrar_mensaje ("* SELECCIONE UN ESPACIO *", 40, 5);
     mostrar_mensaje ("__________________________________", 40, 6);
 
     int op=1, y=0;
@@ -68,18 +66,89 @@ void CuadroLimitarEspacio()
             switch(y)
             {
             case 0:      ///DESK
-                /*cout<< y;
-                system("pause>nul");*/
-                LimitarEspacios(y)
+                if(opc==3)
+                {
+                    if ( definirEspacios(y))
+                    {
+                        rlutil::  locate (20,23);
+                        cout<<"ESPACIO DEFINIDO.";
+                    }
+                    else
+                    {
+                        system("cls");
+                        rectangulo (2, 2, 100, 26);
+                        rlutil::setColor(rlutil::YELLOW);
+                        mostrar_mensaje ("UPS. ALGO SALIO MAL...", 20, 14);
+                    }
+                }
+                else if(opc==4)
+                {
+                    limitarEspacios(y);
+                }
                 break;
+
             case 1:       ///SALA DE REUNIONES
-               LimitarEspacios(y);
+                if(opc==3)
+                {
+                    if ( definirEspacios(y))
+                    {
+                        rlutil::  locate (20,23);
+                        cout<<"ESPACIO DEFINIDO.";
+                    }
+                    else
+                    {
+                        system("cls");
+                        rectangulo (2, 2, 100, 26);
+                        rlutil::setColor(rlutil::YELLOW);
+                        mostrar_mensaje ("UPS. ALGO SALIO MAL...", 20, 14);
+                    }
+                }
+                else if(opc==4)
+                {
+                    limitarEspacios(y);
+                }
                 break;
             case 2:       ///ESTACIONAMIENTO
-                LimitarEspacios(y);
+                if(opc==3)
+                {
+                    if ( definirEspacios(y))
+                    {
+                        rlutil::  locate (20,23);
+                        cout<<"ESPACIO DEFINIDO.";
+                    }
+                    else
+                    {
+                        system("cls");
+                        rectangulo (2, 2, 100, 26);
+                        rlutil::setColor(rlutil::YELLOW);
+                        mostrar_mensaje ("UPS. ALGO SALIO MAL...", 20, 14);
+                    }
+                }
+                else if(opc==4)
+                {
+                    limitarEspacios(y);
+                }
                 break;
             case 3:     ///COMEDOR
-                LimitarEspacios(y);
+                if(opc==3)
+                {
+                    if ( definirEspacios(y))
+                    {
+                        rlutil::  locate (20,23);
+                        cout<<"ESPACIO DEFINIDO.";
+                    }
+                    else
+                    {
+                        system("cls");
+                        rectangulo (2, 2, 100, 26);
+                        rlutil::setColor(rlutil::YELLOW);
+                        mostrar_mensaje ("UPS. ALGO SALIO MAL...", 20, 14);
+                    }
+                }
+                else if(opc==4)
+                {
+                    limitarEspacios(y);
+                }
                 break;
             }
         }

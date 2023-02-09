@@ -6,12 +6,14 @@
 
 class EspacioDeTrabajoDAL
 {
-    public:
-        void PorcentajeOcupacionDiaria();
-        void CantidadReservasMensualesPorDepto();
-        int cantidadEspacios();
-        void LeerEspaciodeTrabajo(EspacioDeTrabajoDTO VecEspacio[], int cant);
-
-        };
+public:
+    bool agregar (EspacioDeTrabajoDTO);
+    bool modificar (EspacioDeTrabajoDTO);
+    bool eliminar (EspacioDeTrabajoDTO);
+    int cantidadEspacios();
+    void LeerEspaciodeTrabajo(EspacioDeTrabajoDTO VecEspacio[], int cant);
+    //void PorcentajeOcupacionDiaria();
+    //void CantidadReservasMensualesPorDepto();
+};
 
 #endif // ESPACIODETRABAJODTO_H

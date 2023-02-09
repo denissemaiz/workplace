@@ -5,6 +5,7 @@ using namespace std;
 
 #include "rlutil.h"
 #include "FUNCIONES_FRONT.h"
+#include "MENUS.h"
 #include "FUNCIONES_ADMIN.h"
 
 /*
@@ -42,8 +43,7 @@ void menuAdmin()
 
     rectangulo (2, 2, 100, 20);
     int n=10;
-    const char *opciones[] = {"CARGAR EMPLEADO","DAR DE BAJA EMPLEADO", "REALIZAR UNA RESERVA", "LIMITAR ESPACIOS", "LISTAR EMPLEADOS","CONSULTAS POR USUARIO","CONSULTAS DE RESERVAS","INFORMES","RESPALDOS","SALIR"};
-
+    const char *opciones[] = {"CARGAR EMPLEADO","DAR DE BAJA EMPLEADO","REALIZAR UNA RESERVA", "DEFINIR ESPACIOS", "LIMITAR ESPACIOS", "LISTAR EMPLEADOS","CONSULTAS POR USUARIO","CONSULTAS DE RESERVAS","INFORMES","RESPALDOS","SALIR"};
 
     int op=1, y=0;
 
@@ -51,7 +51,7 @@ void menuAdmin()
 
     do
     {
-        mostrar_mensaje (" HOLA ADMIN!!!!  ESTAS SON TUS OPCIONES: ", 40, 5);
+        mostrar_mensaje ("HOLA, ADMIN!!!! ESTAS SON TUS OPCIONES: ", 40, 5);
         mostrar_mensaje ("________________________________________", 40, 6);
 
         rlutil::saveDefaultColor();
@@ -67,7 +67,6 @@ void menuAdmin()
         showItem (opciones[7],30,17,y==7);
         showItem (opciones[8],30,18,y==8);
         showItem (opciones[9],30,19,y==9);
-
 
         rlutil::locate(26,10+y);
         cout <<"==> " <<endl;
@@ -117,35 +116,34 @@ void menuAdmin()
                     rlutil::setColor(rlutil::YELLOW);
                     mostrar_mensaje ("NO SE PUDO AGREGAR EL REGISTRO.", 20, 14);
                 }
-
                 break;
+
             case 1:     ///DAR DE BAJA EMPLEADO
                 system("cls");
 
                 break;
 
-                case 2:    ///REALIZAR UNA RESERVA
+            case 2:    ///REALIZAR UNA RESERVA
                 system("cls");
 
                 break;
 
-            case 3:    ///LIMITAR ESPACIOS
+            case 3:     ///DEFINIR ESPACIOS
+                rectangulo (2, 2, 100, 26);
+                rlutil::setColor(rlutil::YELLOW);
+                mostrar_mensaje ("DEFINIR ESPACIOS", 40, 5);
+                cuadroLimitarEspacio(y);
+                break;
 
+            case 4:    ///LIMITAR ESPACIOS
                 system("cls");
-                 rectangulo (2, 2, 100, 26);
+                rectangulo (2, 2, 100, 26);
                 rlutil::setColor(rlutil::YELLOW);
                 mostrar_mensaje ("LIMITAR ESPACIOS", 40, 5);
-
-               //  MenuLimitarEspacios();//
-
-
-
-
-               // int Disponibilidad=LimitarEspacios(vec,4)
-
+                cuadroLimitarEspacio(y);
                 break;
 
-            case 4:     ///LISTAR EMPLEADOS
+            case 5:     ///LISTAR EMPLEADOS
                 system("cls");
 
                 rectangulo (2, 2, 100, 26);
@@ -157,44 +155,38 @@ void menuAdmin()
                     rectangulo (2, 2, 100, 26);
                     rlutil::setColor(rlutil::YELLOW);
                     mostrar_mensaje ("FIN DEL LISTADO.", 26, 14);
-
                 }
                 else
                 {
                     rlutil::  locate (20,23);
                     cout<<"NO EXISTEN REGISTROS DE EMPLEADOS.";
-
                 }
+                break;
+
+            case 6:     ///CONSULTAS POR USUARIO
+                system("cls");
 
                 break;
 
-            case 5:     ///CONSULTAS POR USUARIO
-                 system("cls");
+            case 7:    ///CONSULTAS DE RESERVAS
+                system("cls");
 
                 break;
 
-            case 6:    ///CONSULTAS DE RESERVAS
-                 system("cls");
+            case 8:   ///INFORMES
+                system("cls");
 
                 break;
 
-            case 7:   ///INFORMES
-                 system("cls");
+            case 9:    ///RESPALDOS
+                system("cls");
 
                 break;
 
-            case 8:    ///RESPALDOS
-                 system("cls");
-
+            case 10:  ///SALIR
+                system("cls");
                 break;
-
-            case 9:  ///SALIR
-                 system("cls");
-
-                break;
-
             }
-
         }
     }
     while(op!=0);
