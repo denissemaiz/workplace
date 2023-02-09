@@ -16,7 +16,7 @@ public:
     void setTipo(int tipo);
     void setCantPuestos(int cantpuestos);
     void setDisponibilidad(int cap);
-    void setEstado(int estado);
+    void setEstado(bool estado);
 
     int getTipo();
     int getCantPuestos();

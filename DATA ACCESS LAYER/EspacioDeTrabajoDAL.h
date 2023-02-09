@@ -1,5 +1,7 @@
-#ifndef ESPACIODETRABAJODTO_H
-#define ESPACIODETRABAJODTO_H
+#ifndef ESPACIODETRABAJODAL_H
+#define ESPACIODETRABAJODAL_H
+#include <cstdio>
+#include "EspacioDeTrabajoDTO.h"
 
 
 class EspacioDeTrabajoDAL
@@ -7,6 +9,9 @@ class EspacioDeTrabajoDAL
     public:
         void PorcentajeOcupacionDiaria();
         void CantidadReservasMensualesPorDepto();
-};
+        int cantidadEspacios();
+        void LeerEspaciodeTrabajo(EspacioDeTrabajoDTO VecEspacio[], int cant);
+
+        };
 
 #endif // ESPACIODETRABAJODTO_H
