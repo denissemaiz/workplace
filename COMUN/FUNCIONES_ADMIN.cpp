@@ -25,17 +25,22 @@ int agregarEmpleado() ///cargar empleado
     rlutil::  locate (25,8);
     cin>>dni;
     bool encontro = regEmpleado.existeDNI(dni);
-    if (encontro) {
+    if (encontro)
+    {
         rlutil::  locate (20,10);
         cout<<"EL DNI YA EXISTE!";
         system("pause>null");
         return 0;
     }
     objEmpleado.cargar(dni);
-    if(objEmpleado.getSector() != 0){
+    if(objEmpleado.getSector() != 0)
+    {
         agrego = regEmpleado.agregar(objEmpleado);
     }
-    if (agrego){ return -1; }
+    if (agrego)
+    {
+        return -1;
+    }
     return 0;
 }
 
@@ -48,7 +53,8 @@ bool listarEmpleados()
     int cantidad=regEmpleado.cantidadEmpleados();
     EmpleadoDTO* vecEmpleados= new EmpleadoDTO[cantidad];
 
-    if (cantidad > 0) {
+    if (cantidad > 0)
+    {
         hayRegistros = true;
         regEmpleado.leerEmpleados(vecEmpleados, cantidad);
         for( int i=0; i<cantidad; i++)
@@ -61,7 +67,8 @@ bool listarEmpleados()
     return hayRegistros;
 }
 
-bool limitarEspacios(int espacio){
+bool limitarEspacios(int espacio)
+{
 
     EspacioDeTrabajoDTO objEspacio;
     EspacioDeTrabajoDAL regEspacio;
@@ -76,17 +83,21 @@ bool limitarEspacios(int espacio){
     cin>>disponibilidad;
 
     vecEspacios[espacio].setDisponibilidad(disponibilidad);
+    /*NO ESTAMOS MODIFICANDO EL ARCHIVO CON ESTE .SET; SOLO EL VECTOR*/
 }
 
-bool definirEspacios(int espacio){
+bool definirEspacios(int espacio)
+{
 
     EspacioDeTrabajoDTO objEspacio;
     EspacioDeTrabajoDAL regEspacio;
     int cant_puestos;
     bool agrego = false;
 
-    rlutil::  locate (20,8);
-    cout<<"INGRESE LA CANTIDAD DE PUESTOS DEL ESPACIO: ";
+    rectangulo (2, 2, 100, 26);
+    rlutil::setColor(rlutil::YELLOW);
+    mostrar_mensaje ("INGRESE LA CANTIDAD DE PUESTOS DEL ESPACIO: ", 29, 8);
+
     cin>>cant_puestos;
 
     objEspacio.setTipo(espacio);

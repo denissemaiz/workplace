@@ -66,9 +66,10 @@ void cuadroLimitarEspacio(int opc)
             switch(y)
             {
             case 0:      ///DESK
+                system("cls");
                 if(opc==3)
                 {
-                    if ( definirEspacios(y))
+                    if (definirEspacios(y))
                     {
                         rlutil::  locate (20,23);
                         cout<<"ESPACIO DEFINIDO.";
@@ -88,6 +89,7 @@ void cuadroLimitarEspacio(int opc)
                 break;
 
             case 1:       ///SALA DE REUNIONES
+                system("cls");
                 if(opc==3)
                 {
                     if ( definirEspacios(y))
@@ -109,6 +111,7 @@ void cuadroLimitarEspacio(int opc)
                 }
                 break;
             case 2:       ///ESTACIONAMIENTO
+                system("cls");
                 if(opc==3)
                 {
                     if ( definirEspacios(y))
@@ -130,6 +133,7 @@ void cuadroLimitarEspacio(int opc)
                 }
                 break;
             case 3:     ///COMEDOR
+                system("cls");
                 if(opc==3)
                 {
                     if ( definirEspacios(y))

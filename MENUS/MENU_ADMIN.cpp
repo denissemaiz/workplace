@@ -129,6 +129,7 @@ void menuAdmin()
                 break;
 
             case 3:     ///DEFINIR ESPACIOS
+                system("cls");
                 rectangulo (2, 2, 100, 26);
                 rlutil::setColor(rlutil::YELLOW);
                 mostrar_mensaje ("DEFINIR ESPACIOS", 40, 5);
