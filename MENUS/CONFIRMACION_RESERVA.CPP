@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <rlutil.h>
 
 using namespace std;
 
@@ -13,13 +14,13 @@ using namespace std;
 void cuadroSeleccionDia(int espacio)
 {
     system("cls");
-    rectangulo (2, 2, 100, 20);
-
-    mostrar_mensaje (" POR FAVOR SELECCIONE EL DIA A RESERVAR:", 30, 5);
-    mostrar_mensaje ("----------------------------------------", 30, 6);
+    rectangulo (2, 2, 100, 25);
+    mostrar_mensaje ("** POR FAVOR SELECCIONE EL DIA A RESERVAR: ***", 30, 4);
+    mostrar_mensaje ("----------------------------------------------", 30, 5);
 
     Fecha obj;
-    Fecha vecFechas[14]={};
+    Fecha vecFechas[14]= {};
+    int select;
 
     for(int i=1; i<15; i++)
     {
@@ -27,20 +28,35 @@ void cuadroSeleccionDia(int espacio)
         vecFechas[i-1] = obj;
     }
 
-    for(int j=0; j<14; j++){
-        rlutil::locate(30,7+j);
+
+    for(int j=0; j<14; j++)
+    {
+        rlutil::locate(40,8+j);
         vecFechas[j].Mostrar();
+        rlutil::locate(36,8+j);
+        cout << j+1 <<"- ";
     }
+    mostrar_mensaje ("POR FAVOR INGRESE EL DIA A RESERVAR: ", 30, 25);
+    rlutil::locate(30,60);
+    cin >>select;
+    getch();
+    system("cls");
 }
 
 /**/
-void cuadroSeleccionarSector(int espacio)
+void CheckSelec()
 {
     system("cls");
     rectangulo (2, 2, 100, 20);
 
     mostrar_mensaje ("ESTAS POR RESERVAR UN ESPACIO EN: ", 49, 4);
     mostrar_mensaje ("DIA DE LA RESERVA: ", 49, 5);
+
+
+
+ //   consultarDisponibilidad();
+
+
 
     int n=5;
     const char *opciones[] = {"ADMINISTRACION Y RRHH","VENTAS Y MARKETING", "PRODUCCION", "CONTABILIDAD Y FINANZAS", "DIRECCION"};
@@ -115,6 +131,15 @@ void cuadroSeleccionarSector(int espacio)
     while(op!=0);
     system("pause>nul");
 }
+
+void consultarDisponibilidad(int espacio, int select){
+
+
+
+
+
+}
+
 
 void reciboConfirmacionReserva()
 {

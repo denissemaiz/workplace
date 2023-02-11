@@ -33,7 +33,7 @@ int agregarEmpleado() ///cargar empleado
         return 0;
     }
     objEmpleado.cargar(dni);
-    if(objEmpleado.getSector() != 0)
+        if(objEmpleado.getSector() != 0)
     {
         agrego = regEmpleado.agregar(objEmpleado);
     }
@@ -59,10 +59,16 @@ bool listarEmpleados()
         regEmpleado.leerEmpleados(vecEmpleados, cantidad);
         for( int i=0; i<cantidad; i++)
         {
+           system("cls");
+           rectangulo (2, 2, 100, 26);
+           mostrar_mensaje ("LISTADO DE EMPLEADOS", 40, 5);
+            mostrar_mensaje ("--------------------", 40, 6);
             vecEmpleados[i].mostrar();
-            rlutil::  locate (10,25);
-            system("pause");
+            mostrar_mensaje ("ENTER PARA CONTINUAR..", 60, 25);
+            getch();
+
         }
+
     }
     return hayRegistros;
 }
@@ -80,7 +86,12 @@ bool definirEspacios(int espacio)
 
     existe = regEspacio.existeTipo(espacio);
 
+    rlutil::setColor(rlutil::YELLOW);
+    rectangulo (45, 11, 4, 1);
+    rlutil::  locate (46,12);
     cin>>cant_puestos;
+
+
 
     objEspacio.setTipo(espacio);
     objEspacio.setCantPuestos(cant_puestos);
@@ -91,6 +102,7 @@ bool definirEspacios(int espacio)
     else { agrego = regEspacio.agregar(objEspacio); }
 
     return agrego;
+
 }
 
 bool limitarEspacios(int espacio)

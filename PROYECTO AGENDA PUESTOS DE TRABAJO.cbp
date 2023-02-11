@@ -50,6 +50,7 @@
 		<Unit filename="COMUN/Fecha.h" />
 		<Unit filename="COMUN/Hora.cpp" />
 		<Unit filename="COMUN/Hora.h" />
+		<Unit filename="COMUN/Ingresos.h" />
 		<Unit filename="COMUN/rlutil.h" />
 		<Unit filename="DATA ACCESS LAYER/EmpleadoDAL.cpp" />
 		<Unit filename="DATA ACCESS LAYER/EmpleadoDAL.h" />
@@ -68,6 +69,8 @@
 		<Unit filename="DATA TRANSFER OBJECT/ReservaDTO.cpp" />
 		<Unit filename="DATA TRANSFER OBJECT/ReservaDTO.h" />
 		<Unit filename="MENUS/ANULAR_RESERVA.CPP" />
+		<Unit filename="MENUS/CONFIRMACION_RESERVA.CPP" />
+		<Unit filename="MENUS/DefinirEspacio.cpp" />
 		<Unit filename="MENUS/HISTORIAL_RESERVAS.CPP" />
 		<Unit filename="MENUS/MENUS.h" />
 		<Unit filename="MENUS/MENU_ADMIN.cpp" />

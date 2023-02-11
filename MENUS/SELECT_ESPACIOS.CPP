@@ -68,8 +68,7 @@ void cuadroSeleccionarEspacio()
             switch(y)
             {
             case 0:      ///DESK
-                /*cout<< y;
-                system("pause>nul");*/
+                 system("cls");
                 cuadroSeleccionDia(y);
                 break;
             case 1:       ///SALA DE REUNIONES

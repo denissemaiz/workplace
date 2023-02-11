@@ -20,8 +20,9 @@ void menuAdmin()
 
     do
     {
-        mostrar_mensaje ("HOLA, ADMIN!!!! ESTAS SON TUS OPCIONES: ", 40, 5);
-        mostrar_mensaje ("________________________________________", 40, 6);
+        mostrar_mensaje ("*****  BIENVENIDO  ***** ", 41, 4);
+        mostrar_mensaje ( " ESTAS SON TUS OPCIONES:  ", 40, 6);
+        mostrar_mensaje ("-------------------------", 40, 7);
 
         rlutil::saveDefaultColor();
         rectangulo (2, 2, 100, 26);
@@ -73,11 +74,15 @@ void menuAdmin()
                 system("cls");
                 rectangulo (2, 2, 100, 26);
                 rlutil::setColor(rlutil::YELLOW);
-                mostrar_mensaje ("CARGAR UN EMPLEADO", 40, 5);
+                mostrar_mensaje ("*** CARGAR UN EMPLEADO ***", 40, 5);
+
                 if (agregarEmpleado()==-1)
                 {
-                    rlutil::  locate (20,23);
-                    cout<<"REGISTRO AGREGADO.";
+                     mostrar_mensaje ("*** REGISTRO AGREGADO ***", 40, 23);
+
+                    getch();
+                    system("cls");
+                    menuAdmin();
                 }
                 else
                 {
@@ -90,6 +95,8 @@ void menuAdmin()
 
             case 1:     ///DAR DE BAJA EMPLEADO
                 system("cls");
+
+
                 break;
 
             case 2:     ///LISTAR EMPLEADOS
@@ -103,7 +110,7 @@ void menuAdmin()
                     system("cls");
                     rectangulo (2, 2, 100, 26);
                     rlutil::setColor(rlutil::YELLOW);
-                    mostrar_mensaje ("FIN DEL LISTADO.", 26, 14);
+                    mostrar_mensaje ("****  FIN DEL LISTADO  *****", 26, 14);
                     system("pause>nul");
                     system("cls");
                 }

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <conio.h>
 
 using namespace std;
 
@@ -13,12 +14,17 @@ using namespace std;
 
 void cuadroLimitarEspacio(int opc)
 {
+    system("cls");
     int n=4;
     const char *opciones[] = {"DESK","SALA DE REUNIONES", "ESTACIONAMIENTO", "COMEDOR"};
 
     mostrar_mensaje ("___________________________________", 40, 3);
-    mostrar_mensaje ("* SELECCIONE UN ESPACIO *", 40, 5);
-    mostrar_mensaje ("__________________________________", 40, 6);
+    mostrar_mensaje ("* SELECCIONE EL ESPACIO A DEFINIR *", 40, 5);
+    mostrar_mensaje ("___________________________________", 40, 6);
+
+        rlutil::saveDefaultColor();
+        rectangulo (2, 2, 100, 26);
+        rlutil::setColor(rlutil::YELLOW);
 
     int op=1, y=0;
 
@@ -67,26 +73,35 @@ void cuadroLimitarEspacio(int opc)
             {
             case 0:      ///DESK
                 system("cls");
-                if(opc==3)
-                {
-                    if (definirEspacios(y))
-                    {
-                        rlutil::  locate (20,23);
-                        cout<<"ESPACIO DEFINIDO.";
-                    }
+
+            {
+                bool limito;
+
+                 limito=definirEspacios(y);
+
+                   if(limito==true){
+
+                mostrar_mensaje ("*** ESPACIO DEFINIDO *** ", 40, 20);
+                mostrar_mensaje (" MUCHAS GRACIAS  ", 44, 22);
+                getch();
+                system("cls");
+
+                menuAdmin();
+                   }
+
                     else
                     {
                         system("cls");
                         rectangulo (2, 2, 100, 26);
                         rlutil::setColor(rlutil::YELLOW);
                         mostrar_mensaje ("UPS. ALGO SALIO MAL...", 20, 14);
+                        getch();
+                        system("cls");
+
                     }
                 }
-                else if(opc==4)
-                {
-                    limitarEspacios(y);
-                }
-                break;
+
+             break;
 
             case 1:       ///SALA DE REUNIONES
                 system("cls");

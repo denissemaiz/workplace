@@ -24,7 +24,7 @@ bool EmpleadoDAL::agregar (EmpleadoDTO dto)
     p = fopen(RUTA_EMPLEADO,"ab");
     if (p!=NULL)
     {
-        fwrite(&dto, sizeof (EmpleadoDTO),1,p);
+        fwrite(this, sizeof (EmpleadoDTO),1,p);
         fclose (p);
         agregar = true;
     }
@@ -149,12 +149,12 @@ int EmpleadoDAL::leerDeDisco(int pos)
 bool EmpleadoDAL::existeDNI (int DNI)
 {
     bool encontro=false;
-    PersonaDTO dto;
+    EmpleadoDTO dto;
     FILE *p;
     p = fopen(RUTA_EMPLEADO,"rb");
     if (p!=NULL)
     {
-        while(fread(&dto, sizeof (PersonaDTO),1,p))
+        while(fread(&dto, sizeof (EmpleadoDTO),1,p))
         {
             if(dto.getDni()==DNI)
             {

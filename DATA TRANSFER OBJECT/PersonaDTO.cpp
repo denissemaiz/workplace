@@ -119,7 +119,7 @@ void PersonaDTO::cargar(int dni=0)
       rlutil::  locate (27,11);
     cin>>_email;
       rlutil::  locate (20,12);
-    cout<<"TELÉFONO: ";
+    cout<<"TELEFONO: ";
       rlutil::  locate (31,12);
     cin>>_telefono;
 }
@@ -135,5 +135,5 @@ void PersonaDTO::mostrar()
     rlutil::  locate (20,11);
     cout<<"EMAIL: "    <<_email;
     rlutil::  locate (20,12);
-    cout<<"TELÉFONO: " <<_telefono;
+    cout<<"TELEFONO: " <<_telefono;
 }
