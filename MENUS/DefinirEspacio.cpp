@@ -15,10 +15,9 @@ using namespace std;
 void cuadroLimitarEspacio(int opc)
 {
     system("cls");
-    int n=4;
-    const char *opciones[] = {"DESK","SALA DE REUNIONES", "ESTACIONAMIENTO", "COMEDOR"};
+    int n=5;
+    const char *opciones[] = {"DESK","SALA DE REUNIONES", "ESTACIONAMIENTO", "COMEDOR","VOLVER AL MENU PRINCIPAL"};
 
-    mostrar_mensaje ("___________________________________", 40, 3);
     mostrar_mensaje ("* SELECCIONE EL ESPACIO A DEFINIR *", 40, 5);
     mostrar_mensaje ("___________________________________", 40, 6);
 
@@ -39,6 +38,7 @@ void cuadroLimitarEspacio(int opc)
         showItem (opciones[1],30,11,y==1);
         showItem (opciones[2],30,12,y==2);
         showItem (opciones[3],30,13,y==3);
+        showItem (opciones[4],30,14,y==4);
 
         rlutil::locate(26,10+y);
         cout <<"==> " <<endl;
@@ -61,9 +61,9 @@ void cuadroLimitarEspacio(int opc)
             cout <<"   " <<endl;
             y++;
 
-            if (y>3)
+            if (y>4)
             {
-                y=3;
+                y=4;
             }
             break;
 
@@ -169,6 +169,14 @@ void cuadroLimitarEspacio(int opc)
                     limitarEspacios(y);
                 }
                 break;
+
+            case 4:     ///VOLVER A MENU PRINCIPAL
+                  system("cls");
+                {
+                    menuAdmin();
+                }
+
+                 break;
             }
         }
     }

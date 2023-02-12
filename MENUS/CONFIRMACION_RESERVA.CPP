@@ -15,8 +15,8 @@ void cuadroSeleccionDia(int espacio)
 {
     system("cls");
     rectangulo (2, 2, 100, 25);
-    mostrar_mensaje ("** POR FAVOR SELECCIONE EL DIA A RESERVAR: ***", 30, 4);
-    mostrar_mensaje ("----------------------------------------------", 30, 5);
+    mostrar_mensaje ("*** POR FAVOR SELECCIONE EL DIA A RESERVAR: ***", 30, 4);
+    mostrar_mensaje ("-----------------------------------------------", 30, 5);
 
     Fecha obj;
     Fecha vecFechas[14]= {};
@@ -43,94 +43,6 @@ void cuadroSeleccionDia(int espacio)
     system("cls");
 }
 
-/**/
-void CheckSelec()
-{
-    system("cls");
-    rectangulo (2, 2, 100, 20);
-
-    mostrar_mensaje ("ESTAS POR RESERVAR UN ESPACIO EN: ", 49, 4);
-    mostrar_mensaje ("DIA DE LA RESERVA: ", 49, 5);
-
-
-
- //   consultarDisponibilidad();
-
-
-
-    int n=5;
-    const char *opciones[] = {"ADMINISTRACION Y RRHH","VENTAS Y MARKETING", "PRODUCCION", "CONTABILIDAD Y FINANZAS", "DIRECCION"};
-
-    mostrar_mensaje ("-------------------------------------", 8, 8);
-    mostrar_mensaje ("AREA DONDE QUIERE RESERVAR: ", 8, 9);
-    mostrar_mensaje ("-------------------------------------", 8, 10);
-    int op=1, y=0;
-
-    rlutil::hidecursor();
-
-    do
-    {
-        rlutil::saveDefaultColor();
-        rlutil::setColor(rlutil::YELLOW);
-
-        showItem (opciones[0],10,12,y==0);
-        showItem (opciones[1],10,13,y==1);
-        showItem (opciones[2],10,14,y==2);
-        showItem (opciones[3],10,15,y==3);
-        showItem (opciones[4],10,16,y==4);
-
-        rlutil::locate(6,12+y);
-        cout <<"==> " <<endl;
-
-        switch(rlutil::getkey())
-        {
-        case 14: //UP
-            rlutil::locate(6,12+y);
-            cout <<"   " <<endl;
-            y--;
-
-            if (y<0)
-            {
-                y=0;
-            }
-            break;
-
-        case 15: //DOWN
-            rlutil::locate(6,12+y);
-            cout <<"   " <<endl;
-            y++;
-
-            if (y>4)
-            {
-                y=4;
-            }
-            break;
-
-        case 1:     /// OPCIONES AL INGRESAR ENTER (EL ENTER ES LA TECLA 1):
-
-            switch(y)
-            {
-            case 0:         ///ADMINISTRACION Y RRHH
-                reciboConfirmacionReserva();
-                break;
-            case 1:         ///VENTAS Y MARKETING
-                reciboConfirmacionReserva();
-                break;
-            case 2:         ///PRODUCCION
-                reciboConfirmacionReserva();
-                break;
-            case 3:         ///CONTABILIDAD Y FINANZAS
-                reciboConfirmacionReserva();
-                break;
-            case 4:        ///DIRECCION
-                reciboConfirmacionReserva();
-                break;
-            }
-        }
-    }
-    while(op!=0);
-    system("pause>nul");
-}
 
 void consultarDisponibilidad(int espacio, int select){
 

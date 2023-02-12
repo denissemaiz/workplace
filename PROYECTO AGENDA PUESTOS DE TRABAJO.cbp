@@ -70,6 +70,7 @@
 		<Unit filename="DATA TRANSFER OBJECT/ReservaDTO.h" />
 		<Unit filename="MENUS/ANULAR_RESERVA.CPP" />
 		<Unit filename="MENUS/CONFIRMACION_RESERVA.CPP" />
+		<Unit filename="MENUS/CONSULTAS.CPP" />
 		<Unit filename="MENUS/DefinirEspacio.cpp" />
 		<Unit filename="MENUS/HISTORIAL_RESERVAS.CPP" />
 		<Unit filename="MENUS/INFORMES.cpp" />
@@ -78,6 +79,7 @@
 		<Unit filename="MENUS/MENU_INICIO.CPP" />
 		<Unit filename="MENUS/MENU_USER.cpp" />
 		<Unit filename="MENUS/MODIFICARDATOS.CPP" />
+		<Unit filename="MENUS/RESPALDOS.CPP" />
 		<Unit filename="MENUS/SELECT_ESPACIOS.CPP" />
 		<Unit filename="MENUS/SELECT_FECHA.CPP" />
 		<Unit filename="main.cpp" />

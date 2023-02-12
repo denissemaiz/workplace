@@ -22,7 +22,7 @@ void menuAdmin()
 
     do
     {
-        mostrar_mensaje ("*****  BIENVENIDO  ***** ", 41, 4);
+        mostrar_mensaje ("*****  BIENVENIDO  A WORKPLACE ***** ", 36, 4);
         mostrar_mensaje ( " ESTAS SON TUS OPCIONES:  ", 40, 6);
         mostrar_mensaje ("-------------------------", 40, 7);
 
@@ -182,12 +182,17 @@ void menuAdmin()
 
             case 8:    ///INFORMES
                 system("cls");
+                    {
+                        Informes();
+                    }
 
                 break;
 
             case 9:   ///RESPALDOS
                 system("cls");
-
+                        {
+                        Respaldos();
+                }
                 break;
 
             case 10:    ///SALIR

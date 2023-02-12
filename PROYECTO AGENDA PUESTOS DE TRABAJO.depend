@@ -795,7 +795,7 @@
 
 1676089803 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\funciones_front.h
 
-1675810778 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\funciones_user.h
+1676155267 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\funciones_user.h
 
 1675911766 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\data access layer\empleadodal.h
 	<cstdio>
@@ -818,15 +818,16 @@
 	<cstdio>
 	"EspacioDeTrabajoDTO.h"
 
-1676087362 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\funciones_front.cpp
+1676161373 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\funciones_front.cpp
 	<iostream>
 	<iomanip>
 	<string>
 	"rlutil.h"
 	"FUNCIONES_FRONT.h"
 	"Fecha.h"
+	<cstring>
 
-1675810778 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\funciones_user.cpp
+1676156271 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\funciones_user.cpp
 	<iostream>
 	<iomanip>
 	<string>
@@ -840,7 +841,7 @@
 
 1675136100 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\hora.h
 
-1676083662 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\data access layer\empleadodal.cpp
+1676131392 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\data access layer\empleadodal.cpp
 	"EmpleadoDAL.h"
 	"EspacioDeTrabajoDTO.h"
 
@@ -897,9 +898,9 @@
 	"EspacioDeTrabajoDTO.h"
 	"ReservaDTO.h"
 
-1675911766 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\menus.h
+1676154569 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\menus.h
 
-1675485153 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\anular_reserva.cpp
+1676164966 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\anular_reserva.cpp
 	<iostream>
 	<iomanip>
 	<string>
@@ -908,20 +909,22 @@
 	"FUNCIONES_FRONT.h"
 	"FUNCIONES_USER.h"
 	"Fecha.h"
+	"MENUS.h"
 
-1675986607 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\funciones_admin.h
+1676241528 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\funciones_admin.h
 
-1675816345 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\confirmacion_reserva.cpp
+1676242555 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\confirmacion_reserva.cpp
 	<iostream>
 	<iomanip>
 	<string>
+	<rlutil.h>
 	"rlutil.h"
 	"FUNCIONES_USER.h"
 	"FUNCIONES_FRONT.h"
 	"MENUS.h"
 	"Fecha.h"
 
-1676077632 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\definirespacio.cpp
+1676242887 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\definirespacio.cpp
 	<iostream>
 	<iomanip>
 	<string>
@@ -932,7 +935,7 @@
 	"FUNCIONES_ADMIN.h"
 	"Fecha.h"
 
-1675217250 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\historial_reservas.cpp
+1676164735 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\historial_reservas.cpp
 	<iostream>
 	<iomanip>
 	<string>
@@ -941,16 +944,18 @@
 	"FUNCIONES_FRONT.h"
 	"FUNCIONES_USER.h"
 	"Fecha.h"
+	"MENUS.h"
 
-1676082123 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\menu_admin.cpp
+1676242976 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\menu_admin.cpp
 	"PersonaDAL.h"
 	"PersonaDTO.h"
 	"rlutil.h"
 	"FUNCIONES_FRONT.h"
+	"FUNCIONES_USER.h"
 	"MENUS.h"
 	"FUNCIONES_ADMIN.h"
 
-1675468581 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\menu_inicio.cpp
+1676154569 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\menu_inicio.cpp
 	<iostream>
 	<iomanip>
 	<string>
@@ -959,7 +964,7 @@
 	"MENUS.h"
 	"EmpleadoDAL.h"
 
-1675810778 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\menu_user.cpp
+1676164135 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\menu_user.cpp
 	<iostream>
 	<iomanip>
 	<string>
@@ -967,9 +972,10 @@
 	"MENUS.h"
 	"FUNCIONES_FRONT.h"
 	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_USER.h"
 	"Fecha.h"
 
-1676084389 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\select_espacios.cpp
+1676242289 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\select_espacios.cpp
 	<iostream>
 	<iomanip>
 	<string>
@@ -1214,6 +1220,50 @@
 	"Fecha.h"
 
 1676163725 source:c:\users\romina\documents\github\workplace3\workplace\menus\informes.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"MENUS.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+
+1676241871 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\informes.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"MENUS.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+
+1676163390 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\modificardatos.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"MENUS.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+
+1676237127 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\consultas.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"MENUS.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+
+1676237934 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\respaldos.cpp
 	<iostream>
 	<iomanip>
 	<string>
