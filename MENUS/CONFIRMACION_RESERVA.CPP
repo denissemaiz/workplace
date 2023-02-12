@@ -200,7 +200,7 @@ void reciboConfirmacionReserva()
             case 0:     /// SI CONFIRMA
                 break;
             case 1:      /// NO CONFIRMA
-                confirmacionAnulacion();
+
                 break;
             }
         }

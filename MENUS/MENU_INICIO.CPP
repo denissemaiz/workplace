@@ -30,11 +30,12 @@ void menuIncio()
 
     if (dni == 0000){ ///PONGO UN NUMERO QUE EQUIVALGA A ADMINISTRADOR (1234?)
         system("cls");
+
         menuAdmin();
     }
     else if (reg.existeDNI(dni)){
         system("cls");
-        menuUser();
+        menuUser(dni);
     } else {
         rlutil::  locate (28,16);
         cout<<"EL DNI INGRESADO NO EXISTE EN NUESTRA BASE DE DATOS.";

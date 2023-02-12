@@ -7,6 +7,7 @@ using namespace std;
 #include "rlutil.h"
 #include "FUNCIONES_FRONT.h"
 #include "Fecha.h"
+#include <cstring>
 
 void mostrar_mensaje (string texto, int x, int y)
 {

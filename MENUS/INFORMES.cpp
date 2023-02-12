@@ -5,22 +5,25 @@
 using namespace std;
 
 #include "rlutil.h"
-#include "FUNCIONES_FRONT.h"
 #include "MENUS.h"
+#include "FUNCIONES_ADMIN.h"
+#include "FUNCIONES_USER.h"
+#include "FUNCIONES_FRONT.h"
 #include "Fecha.h"
 
 
-void cuadroSeleccionarEspacio()
+void ConsultasReservas()
 {
     system("cls");
-    rectangulo (2, 2, 100, 20);
+    int n=6;
+    const char *opciones[] = {"DNI","LEGAJO", "SECTOR", "ESPACIO DE TRABAJO", "RESERVAS ANULADAS", "VOLVER AL MENU PRINCIPAL"};
 
-    int n=4;
-    const char *opciones[] = {"DESK","SALA DE REUNIONES", "ESTACIONAMIENTO", "COMEDOR"};
+        mostrar_mensaje ("**** OPCIONES DE CONSULTAS ****", 40, 5);
+        mostrar_mensaje ("-------------------------------", 40, 6);
 
-    mostrar_mensaje ("___________________________________", 30, 3);
-    mostrar_mensaje ("* SELECCIONE UN ESPACIO A RESERVAR *", 30, 5);
-    mostrar_mensaje ("__________________________________", 30, 6);
+        rlutil::saveDefaultColor();
+        rectangulo (2, 2, 100, 26);
+        rlutil::setColor(rlutil::YELLOW);
 
     int op=1, y=0;
 
@@ -35,6 +38,8 @@ void cuadroSeleccionarEspacio()
         showItem (opciones[1],30,11,y==1);
         showItem (opciones[2],30,12,y==2);
         showItem (opciones[3],30,13,y==3);
+        showItem (opciones[4],30,14,y==4);
+        showItem (opciones[5],30,15,y==5);
 
         rlutil::locate(26,10+y);
         cout <<"==> " <<endl;
@@ -57,9 +62,9 @@ void cuadroSeleccionarEspacio()
             cout <<"   " <<endl;
             y++;
 
-            if (y>3)
+            if (y>5)
             {
-                y=3;
+                y=5;
             }
             break;
 
@@ -67,19 +72,42 @@ void cuadroSeleccionarEspacio()
 
             switch(y)
             {
-            case 0:      ///DESK
-                 system("cls");
-                cuadroSeleccionDia(y);
+            case 0:      ///
+                system("cls");
+
+
+
+             break;
+
+            case 1:       ///
+                system("cls");
+
                 break;
-            case 1:       ///SALA DE REUNIONES
-                cuadroSeleccionDia(y);
+
+            case 2:       ///
+                system("cls");
+
                 break;
-            case 2:       ///ESTACIONAMIENTO
-                cuadroSeleccionDia(y);
+
+            case 3:     ///
+                system("cls");
+
+
                 break;
-            case 3:     ///COMEDOR
-                cuadroSeleccionDia(y);
+
+            case 4:     ///
+                system("cls");
+
+
                 break;
+                 case 5:     ///
+                system("cls");
+
+                            {
+                        menuAdmin();
+                                }
+                break;
+
             }
         }
     }

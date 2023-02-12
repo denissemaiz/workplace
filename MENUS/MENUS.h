@@ -3,7 +3,7 @@
 
 void menuIncio();
 void menuAdmin();
-void menuUser();
+void menuUser(int dni);
 void cuadroSeleccionarEspacio();
 void cuadroSeleccionarSector(int espacio);
 void cuadroSeleccionDia(int espacio);
