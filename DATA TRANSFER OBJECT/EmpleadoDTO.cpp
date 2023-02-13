@@ -88,7 +88,7 @@ void EmpleadoDTO::mostrar()
         switch(_sector)
         {
         case 1:
-            cout<<"ADMINISTRACION Y RRHH";
+           cout<<"ADMINISTRACION Y RRHH";
             break;
         case 2:
             cout<<"MARKETING Y VENTAS";

@@ -4,10 +4,11 @@
 
 void reciboConfirmacionReserva();
 void fechaNoDisponible();
-void anularReserva();
+void anularReserva(int dni);
 void confirmacionAnulacion();
-void historialReservas();
+void historialReservas(int dni);
 void SalirSistemaUser();
+
 
 
 #endif // FUNCIONES_USER_H_INCLUDED

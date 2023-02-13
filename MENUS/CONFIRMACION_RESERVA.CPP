@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <rlutil.h>
 
 using namespace std;
 
@@ -13,13 +14,13 @@ using namespace std;
 void cuadroSeleccionDia(int espacio)
 {
     system("cls");
-    rectangulo (2, 2, 100, 20);
-
-    mostrar_mensaje (" POR FAVOR SELECCIONE EL DIA A RESERVAR:", 30, 5);
-    mostrar_mensaje ("----------------------------------------", 30, 6);
+    rectangulo (2, 2, 100, 25);
+    mostrar_mensaje ("*** POR FAVOR SELECCIONE EL DIA A RESERVAR: ***", 30, 4);
+    mostrar_mensaje ("-----------------------------------------------", 30, 5);
 
     Fecha obj;
-    Fecha vecFechas[14]={};
+    Fecha vecFechas[14]= {};
+    int select;
 
     for(int i=1; i<15; i++)
     {
@@ -27,94 +28,30 @@ void cuadroSeleccionDia(int espacio)
         vecFechas[i-1] = obj;
     }
 
-    for(int j=0; j<14; j++){
-        rlutil::locate(30,7+j);
-        vecFechas[j].Mostrar();
-    }
-}
 
-/**/
-void cuadroSeleccionarSector(int espacio)
-{
-    system("cls");
-    rectangulo (2, 2, 100, 20);
-
-    mostrar_mensaje ("ESTAS POR RESERVAR UN ESPACIO EN: ", 49, 4);
-    mostrar_mensaje ("DIA DE LA RESERVA: ", 49, 5);
-
-    int n=5;
-    const char *opciones[] = {"ADMINISTRACION Y RRHH","VENTAS Y MARKETING", "PRODUCCION", "CONTABILIDAD Y FINANZAS", "DIRECCION"};
-
-    mostrar_mensaje ("-------------------------------------", 8, 8);
-    mostrar_mensaje ("AREA DONDE QUIERE RESERVAR: ", 8, 9);
-    mostrar_mensaje ("-------------------------------------", 8, 10);
-    int op=1, y=0;
-
-    rlutil::hidecursor();
-
-    do
+    for(int j=0; j<14; j++)
     {
-        rlutil::saveDefaultColor();
-        rlutil::setColor(rlutil::YELLOW);
-
-        showItem (opciones[0],10,12,y==0);
-        showItem (opciones[1],10,13,y==1);
-        showItem (opciones[2],10,14,y==2);
-        showItem (opciones[3],10,15,y==3);
-        showItem (opciones[4],10,16,y==4);
-
-        rlutil::locate(6,12+y);
-        cout <<"==> " <<endl;
-
-        switch(rlutil::getkey())
-        {
-        case 14: //UP
-            rlutil::locate(6,12+y);
-            cout <<"   " <<endl;
-            y--;
-
-            if (y<0)
-            {
-                y=0;
-            }
-            break;
-
-        case 15: //DOWN
-            rlutil::locate(6,12+y);
-            cout <<"   " <<endl;
-            y++;
-
-            if (y>4)
-            {
-                y=4;
-            }
-            break;
-
-        case 1:     /// OPCIONES AL INGRESAR ENTER (EL ENTER ES LA TECLA 1):
-
-            switch(y)
-            {
-            case 0:         ///ADMINISTRACION Y RRHH
-                reciboConfirmacionReserva();
-                break;
-            case 1:         ///VENTAS Y MARKETING
-                reciboConfirmacionReserva();
-                break;
-            case 2:         ///PRODUCCION
-                reciboConfirmacionReserva();
-                break;
-            case 3:         ///CONTABILIDAD Y FINANZAS
-                reciboConfirmacionReserva();
-                break;
-            case 4:        ///DIRECCION
-                reciboConfirmacionReserva();
-                break;
-            }
-        }
+        rlutil::locate(40,8+j);
+        vecFechas[j].Mostrar();
+        rlutil::locate(36,8+j);
+        cout << j+1 <<"- ";
     }
-    while(op!=0);
-    system("pause>nul");
+    mostrar_mensaje ("POR FAVOR INGRESE EL DIA A RESERVAR: ", 30, 25);
+    rlutil::locate(30,60);
+    cin >>select;
+    getch();
+    system("cls");
 }
+
+
+void consultarDisponibilidad(int espacio, int select){
+
+
+
+
+
+}
+
 
 void reciboConfirmacionReserva()
 {
@@ -175,7 +112,7 @@ void reciboConfirmacionReserva()
             case 0:     /// SI CONFIRMA
                 break;
             case 1:      /// NO CONFIRMA
-                confirmacionAnulacion();
+
                 break;
             }
         }

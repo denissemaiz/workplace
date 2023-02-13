@@ -7,6 +7,7 @@ using namespace std;
 #include "rlutil.h"
 #include "FUNCIONES_FRONT.h"
 #include "Fecha.h"
+#include <cstring>
 
 void mostrar_mensaje (string texto, int x, int y)
 {
@@ -70,6 +71,21 @@ void showItem (const char* text, int posx, int posy, bool selected)
     cout << text <<endl;
     rlutil::setBackgroundColor(rlutil::DARKGREY);
 }
-
-
-
+void showItemDia (const char* text, int posx, int posy, bool selected)
+{
+ /*  if (selected)
+    {
+        rlutil::setBackgroundColor(rlutil::CYAN);
+        rlutil::  locate (posx -3,posy);
+        cout <<"==>";
+    }
+    else
+    {
+        rlutil::setBackgroundColor(rlutil::DARKGREY);
+        rlutil::  locate (posx -3,posy);
+        cout <<"==>";
+    }*/
+    rlutil::locate(posx, posy);
+    cout << text <<endl;
+    rlutil::setBackgroundColor(rlutil::DARKGREY);
+}

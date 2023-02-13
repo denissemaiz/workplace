@@ -29,7 +29,7 @@ void SalirSistemaUser()
     rectangulo (2, 2, 100, 20);
 
     rlutil::setColor(rlutil::YELLOW);
-    mostrar_mensaje (" ----------------------------------------", 30, 15);
-    mostrar_mensaje (" MUCHAS GRACIAS POR VISITARNOS", 30, 15);
-    mostrar_mensaje (" ----------------------------------------", 30, 15);
+    mostrar_mensaje ("*****   MUCHAS GRACIAS POR USAR NUESTRO SISTEMA *****", 28, 10);
+    mostrar_mensaje ("By CIBERNAUTAS", 68, 20);
 }
+

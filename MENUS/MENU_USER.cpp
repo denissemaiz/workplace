@@ -8,19 +8,18 @@ using namespace std;
 #include "MENUS.h"
 #include"FUNCIONES_FRONT.h"
 #include"FUNCIONES_ADMIN.h"
+#include"FUNCIONES_USER.h"
 #include "Fecha.h"
 
 
 ///PANTALLA MENU
-void menuUser()
+void menuUser(int dni)
 {
-    rectangulo (2, 2, 100, 20);
+
     int n=4;
     const char *opciones[] = {"RESERVAR","ANULAR RESERVA", "MI HISTORIAL", "SALIR"};
 
-    mostrar_mensaje ("__________________________", 40, 3);
-    mostrar_mensaje ("* SELECCIONE UNA OPCION *", 40, 5);
-    mostrar_mensaje ("__________________________", 40, 6);
+
 
     int op=1, y=0;
 
@@ -30,6 +29,12 @@ void menuUser()
     {
         rlutil::saveDefaultColor();
         rlutil::setColor(rlutil::YELLOW);
+        rectangulo (2, 2, 100, 20);
+
+        mostrar_mensaje ("__________________________", 40, 3);
+        mostrar_mensaje ("* SELECCIONE UNA OPCION *", 40, 5);
+        mostrar_mensaje ("__________________________", 40, 6);
+
 
         showItem (opciones[0],30,10,y==0);
         showItem (opciones[1],30,11,y==1);
@@ -68,14 +73,32 @@ void menuUser()
             switch(y)
             {
             case 0:     /// RESERVAR
+                system("cls");
                 cuadroSeleccionarEspacio();
+
                 break;
             case 1:       ///ANULAR RESERVA
-                cout <<"anulando reserva";
+                system("cls");
+                anularReserva(dni);
+
                 break;
+
             case 2:     ///MI HISTORIAL
+                system("cls");
+                {
+                    historialReservas(dni);
+                }
+
                 break;
+
             case 3:     ///SALIR
+                system("cls");
+                {
+                    SalirSistemaUser();
+                    getch();
+
+                }
+            system("cls");
                 break;
             }
         }
@@ -83,5 +106,3 @@ void menuUser()
     while(op!=0);
     system("pause>nul");
 }
-
-

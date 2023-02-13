@@ -5,21 +5,25 @@
 using namespace std;
 
 #include "rlutil.h"
-#include "FUNCIONES_FRONT.h"
 #include "MENUS.h"
+#include "FUNCIONES_ADMIN.h"
+#include "FUNCIONES_USER.h"
+#include "FUNCIONES_FRONT.h"
 #include "Fecha.h"
 
 
-void cuadroSeleccionarEspacio()
+void Respaldos()
 {
     system("cls");
-    rectangulo (2, 2, 100, 20);
-
     int n=4;
-    const char *opciones[] = {"DESK","SALA DE REUNIONES", "ESTACIONAMIENTO", "COMEDOR"};
+    const char *opciones[] = {"RESERVAS","LISTADO DE EMPLEADOS", "LISTADO DE ESPACIOS", "VOLVER AL MENU PRINCIPAL"};
 
-    mostrar_mensaje ("* SELECCIONE UN ESPACIO A RESERVAR *", 30, 5);
-    mostrar_mensaje ("____________________________________", 30, 6);
+        mostrar_mensaje ("**** ARCHIVOS A RESPALDAR: ****", 40, 5);
+        mostrar_mensaje ("-------------------------------", 40, 6);
+
+        rlutil::saveDefaultColor();
+        rectangulo (2, 2, 100, 26);
+        rlutil::setColor(rlutil::YELLOW);
 
     int op=1, y=0;
 
@@ -56,9 +60,9 @@ void cuadroSeleccionarEspacio()
             cout <<"   " <<endl;
             y++;
 
-            if (y>3)
+            if (y>4)
             {
-                y=3;
+                y=4;
             }
             break;
 
@@ -66,18 +70,29 @@ void cuadroSeleccionarEspacio()
 
             switch(y)
             {
-            case 0:      ///DESK
-                 system("cls");
-                cuadroSeleccionDia(y);
+            case 0:      /// RESERVAS
+                system("cls");
+
+
+
+             break;
+
+            case 1:       /// LISTADO DE EMPLEADOS
+                system("cls");
+
                 break;
-            case 1:       ///SALA DE REUNIONES
-                cuadroSeleccionDia(y);
+
+            case 2:       /// LISTADOS DE ESPACIOS
+                system("cls");
+
                 break;
-            case 2:       ///ESTACIONAMIENTO
-                cuadroSeleccionDia(y);
-                break;
-            case 3:     ///COMEDOR
-                cuadroSeleccionDia(y);
+
+            case 3:     /// VOLVER AL MENU PRINCIPAL
+                system("cls");
+                        {
+                        menuAdmin();
+                                }
+
                 break;
             }
         }

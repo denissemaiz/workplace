@@ -275,5 +275,1002 @@
 	"PersonaDTO.h"
 	"PersonaDAL.h"
 
+1675136100 ated upstream
+	"FUNCIONES_USER.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+	"FUNCIONES_ADMIN.h"
+
 1675168780 c:\users\user\documents\denisse\facultad\programación\utn\2022\lab. de comp. ii\turno noche\parcial2\proyecto agenda puestos de trabajo\comun\funciones_admin.h
+
+1675485469 shed changes
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"cstring"
+	"Fecha.h"
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<windows.h>
+	<conio.h>
+	"PersonaDTO.h"
+	"PersonaDAL.h"
+	"EmpleadoDTO.h"
+	"EmpleadoDAL.h"
+	"FUNCIONES_FRONT.h"
+	"MENUS/MENUS.h"
+	"rlutil.h"
+	"EspacioDeTrabajoDTO.h"
+	"ReservaDTO.h"
+	"PersonaDAL.h"
+	"PersonaDTO.h"
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+
+1675136100 source:c:\users\romina\documents\github\workplace2\workplace\comun\fecha.cpp
+	"Fecha.h"
+	<ctime>
+	<cstring>
+	<iostream>
+
+1675136100 c:\users\romina\documents\github\workplace2\workplace\comun\fecha.h
+	<cstring>
+	<iostream>
+
+1675136100 source:c:\users\romina\documents\github\workplace2\workplace\comun\funciones_front.cpp
+
+1675468581 source:c:\users\romina\documents\github\workplace2\workplace\comun\funciones_admin.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_USER.h"
+	"EmpleadoDAL.h"
+	"EmpleadoDTO.h"
+	"PersonaDAL.h"
+
+1675136100 c:\users\romina\documents\github\workplace2\workplace\comun\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1675136100 c:\users\romina\documents\github\workplace2\workplace\comun\funciones_front.h
+
+1675136100 source:c:\users\romina\documents\github\workplace2\workplace\comun\funciones_user.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+
+1675480781 c:\users\romina\documents\github\workplace2\workplace\comun\funciones_user.h
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+
+1675136100 source:c:\users\romina\documents\github\workplace2\workplace\comun\hora.cpp
+	"Hora.h"
+
+1675136100 c:\users\romina\documents\github\workplace2\workplace\comun\hora.h
+
+1675136100 source:c:\users\romina\documents\github\workplace2\workplace\data access layer\empleadodal.cpp
+	"EmpleadoDAL.h"
+	"EmpleadoDAL.h"
+
+1675136100 c:\users\romina\documents\github\workplace2\workplace\data access layer\empleadodal.h
+	<cstdio>
+	"../DATA TRANSFER OBJECT/EmpleadoDTO.h"
+	<cstdio>
+	"../DATA TRANSFER OBJECT/EmpleadoDTO.h"
+
+1675136100 c:\users\romina\documents\github\workplace2\workplace\data transfer object\empleadodto.h
+	"PersonaDTO.h"
+	"PersonaDTO.h"
+
+1675136100 c:\users\romina\documents\github\workplace2\workplace\data transfer object\personadto.h
+
+1675136100 source:c:\users\romina\documents\github\workplace2\workplace\data access layer\espaciodetrabajodal.cpp
+	"EspacioDeTrabajoDAL.h"
+
+1675136100 c:\users\romina\documents\github\workplace2\workplace\data access layer\espaciodetrabajodal.h
+
+1675468581 source:c:\users\romina\documents\github\workplace2\workplace\data access layer\personadal.cpp
+	"PersonaDAL.h"
+	"PersonaDAL.h"
+
+1675468581 c:\users\romina\documents\github\workplace2\workplace\data access layer\personadal.h
+	<cstdio>
+	"../DATA TRANSFER OBJECT/PersonaDTO.h"
+	<cstdio>
+	"../DATA TRANSFER OBJECT/PersonaDTO.h"
+
+1675136100 source:c:\users\romina\documents\github\workplace2\workplace\data access layer\reservasdal.cpp
+	"ReservasDAL.h"
+
+1675136100 c:\users\romina\documents\github\workplace2\workplace\data access layer\reservasdal.h
+
+1675468581 source:c:\users\romina\documents\github\workplace2\workplace\data transfer object\empleadodto.cpp
+	<iostream>
+	"EmpleadoDTO.h"
+	<iostream>
+	"EmpleadoDTO.h"
+	"FUNCIONES_FRONT.h"
+	"rlutil.h"
+
+1675136100 source:c:\users\romina\documents\github\workplace2\workplace\data transfer object\espaciodetrabajodto.cpp
+	"EspacioDeTrabajoDTO.h"
+
+1675136100 c:\users\romina\documents\github\workplace2\workplace\data transfer object\espaciodetrabajodto.h
+
+1675468581 source:c:\users\romina\documents\github\workplace2\workplace\data transfer object\personadto.cpp
+	<iostream>
+	<windows.h>
+	"PersonaDTO.h"
+	"rlutil.h"
+	<iostream>
+	<windows.h>
+	"PersonaDTO.h"
+	"rlutil.h"
+
+1675136100 source:c:\users\romina\documents\github\workplace2\workplace\data transfer object\reservadto.cpp
+	"ReservaDTO.h"
+
+1675136100 c:\users\romina\documents\github\workplace2\workplace\data transfer object\reservadto.h
+	"Fecha.h"
+	"Hora.h"
+
+1675136100 source:c:\users\romina\documents\github\workplace2\workplace\main.cpp
+
+1675136100 c:\users\romina\documents\github\workplace2\workplace\menus\menus.h
+
+1675480872 source:c:\users\romina\documents\github\workplace2\workplace\menus\menu_user.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_ADMIN.h"
+	"Fecha.h"
+
+1675136100 source:c:\users\romina\documents\github\workplace2\workplace\menus\menu_admin.cpp
+
+1675292551 c:\users\romina\documents\github\workplace2\workplace\comun\funciones_admin.h
+
+1675468581 source:c:\users\romina\documents\github\workplace2\workplace\menus\menu_inicio.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"MENUS.h"
+	"EmpleadoDAL.h"
+
+1675485153 source:c:\users\romina\documents\github\workplace2\workplace\menus\anular_reserva.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_USER.h"
+	"Fecha.h"
+
+1675217250 source:c:\users\romina\documents\github\workplace2\workplace\menus\historial_reservas.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_USER.h"
+	"Fecha.h"
+
+1675483746 source:c:\users\romina\documents\github\workplace2\workplace\menus\select_espacios.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_USER.h"
+	"Fecha.h"
+
+1675468581 source:c:\users\romina\documents\github\workplace2\workplace\menus\select_fecha.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"Fecha.h"
+
+1675485469 source:c:\users\romina\documents\github\workplace2\workplace\menus\confirmacion_reserva.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_ADMIN.h"
+	"Fecha.h"
+
+1675485469 
+
+1675810778 source:c:\users\romina\documents\github\workplace3\workplace\comun\fecha.cpp
+	"Fecha.h"
+	<ctime>
+	<cstring>
+	<iostream>
+
+1675810778 c:\users\romina\documents\github\workplace3\workplace\comun\fecha.h
+	<cstring>
+	<iostream>
+
+1676083312 source:c:\users\romina\documents\github\workplace3\workplace\comun\funciones_admin.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_USER.h"
+	"EmpleadoDAL.h"
+	"EmpleadoDTO.h"
+	"PersonaDAL.h"
+	"EspacioDeTrabajoDTO.h"
+	"EspacioDeTrabajoDAL.h"
+
+1675136100 c:\users\romina\documents\github\workplace3\workplace\comun\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1676089803 c:\users\romina\documents\github\workplace3\workplace\comun\funciones_front.h
+
+1676155267 c:\users\romina\documents\github\workplace3\workplace\comun\funciones_user.h
+
+1675911766 c:\users\romina\documents\github\workplace3\workplace\data access layer\empleadodal.h
+	<cstdio>
+	"../DATA TRANSFER OBJECT/EmpleadoDTO.h"
+
+1675468581 c:\users\romina\documents\github\workplace3\workplace\data transfer object\empleadodto.h
+	"PersonaDTO.h"
+
+1675216829 c:\users\romina\documents\github\workplace3\workplace\data transfer object\personadto.h
+	"cstring"
+	"Fecha.h"
+
+1675468581 c:\users\romina\documents\github\workplace3\workplace\data access layer\personadal.h
+	<cstdio>
+	"../DATA TRANSFER OBJECT/PersonaDTO.h"
+
+1676161373 source:c:\users\romina\documents\github\workplace3\workplace\comun\funciones_front.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+	<cstring>
+
+1676156271 source:c:\users\romina\documents\github\workplace3\workplace\comun\funciones_user.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+
+1675136100 source:c:\users\romina\documents\github\workplace3\workplace\comun\hora.cpp
+	"Hora.h"
+
+1675136100 c:\users\romina\documents\github\workplace3\workplace\comun\hora.h
+
+1676131392 source:c:\users\romina\documents\github\workplace3\workplace\data access layer\empleadodal.cpp
+	"EmpleadoDAL.h"
+	"EspacioDeTrabajoDTO.h"
+
+1675986607 source:c:\users\romina\documents\github\workplace3\workplace\data access layer\espaciodetrabajodal.cpp
+	"EspacioDeTrabajoDAL.h"
+	<cstdio>
+
+1675986607 c:\users\romina\documents\github\workplace3\workplace\data access layer\espaciodetrabajodal.h
+	<cstdio>
+	"EspacioDeTrabajoDTO.h"
+
+1675468581 source:c:\users\romina\documents\github\workplace3\workplace\data access layer\personadal.cpp
+	"PersonaDAL.h"
+
+1675136100 source:c:\users\romina\documents\github\workplace3\workplace\data access layer\reservasdal.cpp
+	"ReservasDAL.h"
+
+1675136100 c:\users\romina\documents\github\workplace3\workplace\data access layer\reservasdal.h
+
+1676080482 source:c:\users\romina\documents\github\workplace3\workplace\data transfer object\empleadodto.cpp
+	<iostream>
+	"EmpleadoDTO.h"
+	"FUNCIONES_FRONT.h"
+	"rlutil.h"
+
+1675986607 source:c:\users\romina\documents\github\workplace3\workplace\data transfer object\espaciodetrabajodto.cpp
+	<iostream>
+	"EspacioDeTrabajoDTO.h"
+	"FUNCIONES_FRONT.h"
+	"rlutil.h"
+
+1675901328 c:\users\romina\documents\github\workplace3\workplace\data transfer object\espaciodetrabajodto.h
+
+1676079959 source:c:\users\romina\documents\github\workplace3\workplace\data transfer object\personadto.cpp
+	<iostream>
+	<windows.h>
+	"PersonaDTO.h"
+	"rlutil.h"
+
+1675136100 source:c:\users\romina\documents\github\workplace3\workplace\data transfer object\reservadto.cpp
+	"ReservaDTO.h"
+
+1675136100 c:\users\romina\documents\github\workplace3\workplace\data transfer object\reservadto.h
+	"Fecha.h"
+	"Hora.h"
+
+1675485066 source:c:\users\romina\documents\github\workplace3\workplace\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<windows.h>
+	<conio.h>
+	"PersonaDTO.h"
+	"PersonaDAL.h"
+	"EmpleadoDTO.h"
+	"EmpleadoDAL.h"
+	"FUNCIONES_FRONT.h"
+	"MENUS/MENUS.h"
+	"rlutil.h"
+	"EspacioDeTrabajoDTO.h"
+	"ReservaDTO.h"
+
+1676154569 c:\users\romina\documents\github\workplace3\workplace\menus\menus.h
+
+1676164735 source:c:\users\romina\documents\github\workplace3\workplace\menus\anular_reserva.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_USER.h"
+	"Fecha.h"
+	"MENUS.h"
+
+1676163585 c:\users\romina\documents\github\workplace3\workplace\comun\funciones_admin.h
+
+1676164735 source:c:\users\romina\documents\github\workplace3\workplace\menus\historial_reservas.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_USER.h"
+	"Fecha.h"
+	"MENUS.h"
+
+1676164135 source:c:\users\romina\documents\github\workplace3\workplace\menus\menu_admin.cpp
+	"PersonaDAL.h"
+	"PersonaDTO.h"
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_USER.h"
+	"MENUS.h"
+	"FUNCIONES_ADMIN.h"
+
+1676154569 source:c:\users\romina\documents\github\workplace3\workplace\menus\menu_inicio.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"MENUS.h"
+	"EmpleadoDAL.h"
+
+1676164135 source:c:\users\romina\documents\github\workplace3\workplace\menus\menu_user.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"MENUS.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_USER.h"
+	"Fecha.h"
+
+1676164790 source:c:\users\romina\documents\github\workplace3\workplace\menus\select_espacios.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"MENUS.h"
+	"Fecha.h"
+
+1675468581 source:c:\users\romina\documents\github\workplace3\workplace\menus\select_fecha.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"Fecha.h"
+
+1676155500 source:c:\users\romina\documents\github\workplace3\workplace\menus\confirmacion_reserva.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	<rlutil.h>
+	"rlutil.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"MENUS.h"
+	"Fecha.h"
+
+1675997302 source:c:\users\romina\documents\github\workplace3\workplace\data transfer object\invitadodto.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"InvitadoDTO.h"
+
+1675136100 c:\users\romina\documents\github\workplace3\workplace\data transfer object\invitadodto.h
+	"PersonaDTO.h"
+
+1676158369 source:c:\users\romina\documents\github\workplace3\workplace\menus\definirespacio.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	<conio.h>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"MENUS.h"
+	"FUNCIONES_ADMIN.h"
+	"Fecha.h"
+
+1675810778 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\fecha.cpp
+	"Fecha.h"
+	<ctime>
+	<cstring>
+	<iostream>
+
+1675810778 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\fecha.h
+	<cstring>
+	<iostream>
+
+1676083312 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\funciones_admin.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_USER.h"
+	"EmpleadoDAL.h"
+	"EmpleadoDTO.h"
+	"PersonaDAL.h"
+	"EspacioDeTrabajoDTO.h"
+	"EspacioDeTrabajoDAL.h"
+
+1675136100 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1676089803 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\funciones_front.h
+
+1676155267 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\funciones_user.h
+
+1675911766 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\data access layer\empleadodal.h
+	<cstdio>
+	"../DATA TRANSFER OBJECT/EmpleadoDTO.h"
+
+1675468581 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\data transfer object\empleadodto.h
+	"PersonaDTO.h"
+
+1675216829 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\data transfer object\personadto.h
+	"cstring"
+	"Fecha.h"
+
+1675468581 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\data access layer\personadal.h
+	<cstdio>
+	"../DATA TRANSFER OBJECT/PersonaDTO.h"
+
+1675901328 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\data transfer object\espaciodetrabajodto.h
+
+1675986607 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\data access layer\espaciodetrabajodal.h
+	<cstdio>
+	"EspacioDeTrabajoDTO.h"
+
+1676161373 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\funciones_front.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+	<cstring>
+
+1676156271 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\funciones_user.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+
+1675136100 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\hora.cpp
+	"Hora.h"
+
+1675136100 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\hora.h
+
+1676131392 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\data access layer\empleadodal.cpp
+	"EmpleadoDAL.h"
+	"EspacioDeTrabajoDTO.h"
+
+1675986607 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\data access layer\espaciodetrabajodal.cpp
+	"EspacioDeTrabajoDAL.h"
+	<cstdio>
+
+1675468581 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\data access layer\personadal.cpp
+	"PersonaDAL.h"
+
+1675136100 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\data access layer\reservasdal.cpp
+	"ReservasDAL.h"
+
+1675136100 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\data access layer\reservasdal.h
+
+1676080482 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\data transfer object\empleadodto.cpp
+	<iostream>
+	"EmpleadoDTO.h"
+	"FUNCIONES_FRONT.h"
+	"rlutil.h"
+
+1675986607 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\data transfer object\espaciodetrabajodto.cpp
+	<iostream>
+	"EspacioDeTrabajoDTO.h"
+	"FUNCIONES_FRONT.h"
+	"rlutil.h"
+
+1676079959 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\data transfer object\personadto.cpp
+	<iostream>
+	<windows.h>
+	"PersonaDTO.h"
+	"rlutil.h"
+
+1675136100 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\data transfer object\reservadto.cpp
+	"ReservaDTO.h"
+
+1675136100 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\data transfer object\reservadto.h
+	"Fecha.h"
+	"Hora.h"
+
+1675485066 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<windows.h>
+	<conio.h>
+	"PersonaDTO.h"
+	"PersonaDAL.h"
+	"EmpleadoDTO.h"
+	"EmpleadoDAL.h"
+	"FUNCIONES_FRONT.h"
+	"MENUS/MENUS.h"
+	"rlutil.h"
+	"EspacioDeTrabajoDTO.h"
+	"ReservaDTO.h"
+
+1676154569 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\menus.h
+
+1676164966 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\anular_reserva.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_USER.h"
+	"Fecha.h"
+	"MENUS.h"
+
+1676241528 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\comun\funciones_admin.h
+
+1676242555 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\confirmacion_reserva.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	<rlutil.h>
+	"rlutil.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"MENUS.h"
+	"Fecha.h"
+
+1676242887 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\definirespacio.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	<conio.h>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"MENUS.h"
+	"FUNCIONES_ADMIN.h"
+	"Fecha.h"
+
+1676164735 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\historial_reservas.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_USER.h"
+	"Fecha.h"
+	"MENUS.h"
+
+1676242976 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\menu_admin.cpp
+	"PersonaDAL.h"
+	"PersonaDTO.h"
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_USER.h"
+	"MENUS.h"
+	"FUNCIONES_ADMIN.h"
+
+1676154569 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\menu_inicio.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"MENUS.h"
+	"EmpleadoDAL.h"
+
+1676164135 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\menu_user.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"MENUS.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_USER.h"
+	"Fecha.h"
+
+1676242289 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\select_espacios.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"MENUS.h"
+	"Fecha.h"
+
+1675468581 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\select_fecha.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"Fecha.h"
+
+1675810778 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\comun\fecha.cpp
+	"Fecha.h"
+	<ctime>
+	<cstring>
+	<iostream>
+
+1675810778 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\comun\fecha.h
+	<cstring>
+	<iostream>
+
+1676083312 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\comun\funciones_admin.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_USER.h"
+	"EmpleadoDAL.h"
+	"EmpleadoDTO.h"
+	"PersonaDAL.h"
+	"EspacioDeTrabajoDTO.h"
+	"EspacioDeTrabajoDAL.h"
+
+1675136100 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\comun\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1676089803 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\comun\funciones_front.h
+
+1675810778 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\comun\funciones_user.h
+
+1675911766 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\data access layer\empleadodal.h
+	<cstdio>
+	"../DATA TRANSFER OBJECT/EmpleadoDTO.h"
+
+1675468581 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\data transfer object\empleadodto.h
+	"PersonaDTO.h"
+
+1675216829 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\data transfer object\personadto.h
+	"cstring"
+	"Fecha.h"
+
+1675468581 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\data access layer\personadal.h
+	<cstdio>
+	"../DATA TRANSFER OBJECT/PersonaDTO.h"
+
+1675901328 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\data transfer object\espaciodetrabajodto.h
+
+1675986607 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\data access layer\espaciodetrabajodal.h
+	<cstdio>
+	"EspacioDeTrabajoDTO.h"
+
+1676087362 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\comun\funciones_front.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+
+1675810778 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\comun\funciones_user.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+
+1675136100 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\comun\hora.cpp
+	"Hora.h"
+
+1675136100 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\comun\hora.h
+
+1676083662 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\data access layer\empleadodal.cpp
+	"EmpleadoDAL.h"
+	"EspacioDeTrabajoDTO.h"
+
+1675986607 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\data access layer\espaciodetrabajodal.cpp
+	"EspacioDeTrabajoDAL.h"
+	<cstdio>
+
+1675468581 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\data access layer\personadal.cpp
+	"PersonaDAL.h"
+
+1675136100 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\data access layer\reservasdal.cpp
+	"ReservasDAL.h"
+
+1675136100 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\data access layer\reservasdal.h
+
+1676080482 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\data transfer object\empleadodto.cpp
+	<iostream>
+	"EmpleadoDTO.h"
+	"FUNCIONES_FRONT.h"
+	"rlutil.h"
+
+1675986607 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\data transfer object\espaciodetrabajodto.cpp
+	<iostream>
+	"EspacioDeTrabajoDTO.h"
+	"FUNCIONES_FRONT.h"
+	"rlutil.h"
+
+1676079959 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\data transfer object\personadto.cpp
+	<iostream>
+	<windows.h>
+	"PersonaDTO.h"
+	"rlutil.h"
+
+1675136100 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\data transfer object\reservadto.cpp
+	"ReservaDTO.h"
+
+1675136100 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\data transfer object\reservadto.h
+	"Fecha.h"
+	"Hora.h"
+
+1675485066 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<windows.h>
+	<conio.h>
+	"PersonaDTO.h"
+	"PersonaDAL.h"
+	"EmpleadoDTO.h"
+	"EmpleadoDAL.h"
+	"FUNCIONES_FRONT.h"
+	"MENUS/MENUS.h"
+	"rlutil.h"
+	"EspacioDeTrabajoDTO.h"
+	"ReservaDTO.h"
+
+1675911766 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\menus\menus.h
+
+1675485153 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\menus\anular_reserva.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_USER.h"
+	"Fecha.h"
+
+1675986607 c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\comun\funciones_admin.h
+
+1676077632 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\menus\definirespacio.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	<conio.h>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"MENUS.h"
+	"FUNCIONES_ADMIN.h"
+	"Fecha.h"
+
+1675217250 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\menus\historial_reservas.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_USER.h"
+	"Fecha.h"
+
+1676082123 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\menus\menu_admin.cpp
+	"PersonaDAL.h"
+	"PersonaDTO.h"
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"MENUS.h"
+	"FUNCIONES_ADMIN.h"
+
+1675468581 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\menus\menu_inicio.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"MENUS.h"
+	"EmpleadoDAL.h"
+
+1675810778 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\menus\menu_user.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"MENUS.h"
+	"FUNCIONES_FRONT.h"
+	"FUNCIONES_ADMIN.h"
+	"Fecha.h"
+
+1676084389 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\menus\select_espacios.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"FUNCIONES_FRONT.h"
+	"MENUS.h"
+	"Fecha.h"
+
+1675468581 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace prueba romi\menus\select_fecha.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	"Fecha.h"
+
+1676163390 source:c:\users\romina\documents\github\workplace3\workplace\menus\modificardatos.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"MENUS.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+
+1676163725 source:c:\users\romina\documents\github\workplace3\workplace\menus\informes.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"MENUS.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+
+1676241871 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\informes.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"MENUS.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+
+1676163390 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\modificardatos.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"MENUS.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+
+1676237127 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\consultas.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"MENUS.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
+
+1676237934 source:c:\users\romina\desktop\utn programacion\utn 2 cuatrimestre\3-laboratorio ii\05-workplace\workplace3\workplace\menus\respaldos.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	"rlutil.h"
+	"MENUS.h"
+	"FUNCIONES_ADMIN.h"
+	"FUNCIONES_USER.h"
+	"FUNCIONES_FRONT.h"
+	"Fecha.h"
 
