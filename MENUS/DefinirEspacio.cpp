@@ -86,7 +86,7 @@ void cuadroLimitarEspacio(int opc)
                 system("cls");
                 llamarDefinirEspacio(y);
                 break;
-            case 4:     ///VOLVER A MENU PRINCIPAL
+            case 4:     ///VOLVER A MENU ADMIN
                 system("cls");
                 menuAdmin();
                 break;

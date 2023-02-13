@@ -33,7 +33,7 @@ int agregarEmpleado() ///cargar empleado
         return 0;
     }
     objEmpleado.cargar(dni);
-        if(objEmpleado.getSector() != 0)
+    if(objEmpleado.getSector() != 0)
     {
         agrego = regEmpleado.agregar(objEmpleado);
     }
@@ -59,16 +59,14 @@ bool listarEmpleados()
         regEmpleado.leerEmpleados(vecEmpleados, cantidad);
         for( int i=0; i<cantidad; i++)
         {
-           system("cls");
-           rectangulo (2, 2, 100, 26);
-           mostrar_mensaje ("LISTADO DE EMPLEADOS", 40, 5);
+            system("cls");
+            rectangulo (2, 2, 100, 26);
+            mostrar_mensaje ("LISTADO DE EMPLEADOS", 40, 5);
             mostrar_mensaje ("--------------------", 40, 6);
             vecEmpleados[i].mostrar();
             mostrar_mensaje ("ENTER PARA CONTINUAR..", 60, 25);
             getch();
-
         }
-
     }
     return hayRegistros;
 }
@@ -77,32 +75,33 @@ bool definirEspacios(int espacio)
 {
     EspacioDeTrabajoDTO objEspacio;
     EspacioDeTrabajoDAL regEspacio;
-    int cant_puestos;
-    bool existe = false, agrego = false;
+    int cant_puestos, nroRegistro;
+    bool guardo = false;
 
     rectangulo (2, 2, 100, 26);
     rlutil::setColor(rlutil::YELLOW);
     mostrar_mensaje ("INGRESE LA CANTIDAD DE PUESTOS DEL ESPACIO: ", 29, 8);
-
-    existe = regEspacio.existeTipo(espacio);
-
     rlutil::setColor(rlutil::YELLOW);
     rectangulo (45, 11, 4, 1);
     rlutil::  locate (46,12);
     cin>>cant_puestos;
-
-
 
     objEspacio.setTipo(espacio);
     objEspacio.setCantPuestos(cant_puestos);
     objEspacio.setDisponibilidad(cant_puestos);
     objEspacio.setEstado(true);
 
-    if (existe){ agrego = regEspacio.modificar(objEspacio); }
-    else { agrego = regEspacio.agregar(objEspacio); }
+    nroRegistro = regEspacio.buscar(espacio);
 
-    return agrego;
-
+    if (nroRegistro!=-1)   //el espacio ya existe -> lo modificamos
+    {
+        guardo = regEspacio.modificar(objEspacio, nroRegistro);
+    }
+    else     //el espacio no existe -> lo agregamos
+    {
+        guardo = regEspacio.agregar(objEspacio);
+    }
+    return guardo;
 }
 
 bool limitarEspacios(int espacio)
@@ -111,10 +110,10 @@ bool limitarEspacios(int espacio)
     EspacioDeTrabajoDAL regEspacio;
     int disponibilidad;
 
-    int cantidad=regEspacio.cantidadEspacios();
+    int cantidad=regEspacio.getCantidad();
     EspacioDeTrabajoDTO* vecEspacios= new EspacioDeTrabajoDTO[cantidad];
 
-    regEspacio.LeerEspaciodeTrabajo(vecEspacios,cantidad);
+    regEspacio.leerTodos(vecEspacios,cantidad);
 
     cout<<"Ingrese la disponibilidad del espacio";
     cin>>disponibilidad;
@@ -128,18 +127,21 @@ bool listarEspacios()
     EspacioDeTrabajoDAL regEspacio;
 
     bool hayRegistros = false;
-    int cantidad=regEspacio.cantidadEspacios();
+    int cantidad=regEspacio.getCantidad();
     EspacioDeTrabajoDTO* vecEspacios= new EspacioDeTrabajoDTO[cantidad];
 
     if (cantidad > 0)
     {
         hayRegistros = true;
-        regEspacio.LeerEspaciodeTrabajo(vecEspacios, cantidad);
+        regEspacio.leerTodos(vecEspacios, cantidad);
         for( int i=0; i<cantidad; i++)
         {
+            rectangulo (2, 2, 100, 26);
+            rlutil::setColor(rlutil::YELLOW);
             vecEspacios[i].mostrar();
             rlutil::  locate (10,25);
             system("pause");
+            system("cls");
         }
     }
     return hayRegistros;

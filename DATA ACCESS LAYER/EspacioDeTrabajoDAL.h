@@ -7,14 +7,15 @@
 class EspacioDeTrabajoDAL
 {
 public:
-    bool agregar (EspacioDeTrabajoDTO);
-    bool modificar (EspacioDeTrabajoDTO);
     bool eliminar (EspacioDeTrabajoDTO);
-    int cantidadEspacios();
-    void LeerEspaciodeTrabajo(EspacioDeTrabajoDTO VecEspacio[], int cant);
-    bool existeTipo(int tipo);
     //void PorcentajeOcupacionDiaria();
     //void CantidadReservasMensualesPorDepto();
+    EspacioDeTrabajoDTO leer(int nroRegistro);
+    bool leerTodos(EspacioDeTrabajoDTO registros[], int cantidad);
+    bool agregar(EspacioDeTrabajoDTO registro);
+    bool modificar(EspacioDeTrabajoDTO registro, int nroRegistro);
+    int getCantidad();
+    int buscar(int tipoEspacio);
 };
 
 #endif // ESPACIODETRABAJODTO_H

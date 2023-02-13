@@ -7,57 +7,58 @@ using namespace std;
 #include "rlutil.h"
 
 
-EspacioDeTrabajoDTO::EspacioDeTrabajoDTO(){
+EspacioDeTrabajoDTO::EspacioDeTrabajoDTO()
+{
 
- _tipo_espacio=-1;  ///contador?
- _cant_puestos=0;
- _disponibilidad=0;
- _estado=false;
+    _tipo_espacio=-1;  ///contador?
+    _cant_puestos=0;
+    _disponibilidad=0;
+    _estado=false;
 
 }
 
 
 void EspacioDeTrabajoDTO::setTipo(int tipoespacio)
 {
-_tipo_espacio=tipoespacio;
+    _tipo_espacio=tipoespacio;
 
 }
 
 void EspacioDeTrabajoDTO::setCantPuestos(int cantidadpuestos)
 {
-_cant_puestos=cantidadpuestos;
+    _cant_puestos=cantidadpuestos;
 
 }
 void EspacioDeTrabajoDTO::setDisponibilidad(int disponibilidad)
 {
-_disponibilidad=disponibilidad;
+    _disponibilidad=disponibilidad;
 
 }
 
 void EspacioDeTrabajoDTO::setEstado(bool estado)
 {
-_estado=estado;
+    _estado=estado;
 
 }
 
 int EspacioDeTrabajoDTO::getTipo()
 {
-return _tipo_espacio;
+    return _tipo_espacio;
 }
 
 int EspacioDeTrabajoDTO::getCantPuestos()
 {
-return _cant_puestos;
+    return _cant_puestos;
 }
 
 int EspacioDeTrabajoDTO::getDisponibilidad()
 {
-return _disponibilidad;
+    return _disponibilidad;
 }
 
 bool EspacioDeTrabajoDTO::getEstado()
 {
-return _estado;
+    return _estado;
 }
 
 void EspacioDeTrabajoDTO::mostrar()

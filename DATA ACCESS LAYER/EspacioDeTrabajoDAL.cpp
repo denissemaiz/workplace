@@ -1,99 +1,88 @@
 #include "EspacioDeTrabajoDAL.h"
 #include <cstdio>
 
-const char * RUTA_ESPACIO="Espacio.data";
+const char *RUTA_ESPACIO = "Espacio.data";
 
 
-bool EspacioDeTrabajoDAL::agregar (EspacioDeTrabajoDTO dto)
+EspacioDeTrabajoDTO EspacioDeTrabajoDAL::leer(int nroRegistro)
 {
-    bool agregar = false;
-    FILE *p;
-    p = fopen(RUTA_ESPACIO,"ab");
-    if (p!=NULL)
+    EspacioDeTrabajoDTO registro;
+    FILE* pFile = fopen(RUTA_ESPACIO, "rb");
+    if (pFile != NULL)
     {
-        fwrite(&dto, sizeof (EspacioDeTrabajoDTO),1,p);
-        fclose (p);
-        agregar = true;
+        fseek(pFile, nroRegistro * sizeof(EspacioDeTrabajoDTO), SEEK_SET);
+        fread(&registro, sizeof(EspacioDeTrabajoDTO), 1, pFile);
+        fclose(pFile);
     }
-    return agregar;
+    return registro;
 }
 
-bool EspacioDeTrabajoDAL::modificar(EspacioDeTrabajoDTO dto)
+bool EspacioDeTrabajoDAL::leerTodos(EspacioDeTrabajoDTO registros[], int cantidad)
 {
-    EspacioDeTrabajoDTO aux;
-    bool modificar = false;
-    FILE *p;
-    p = fopen(RUTA_ESPACIO,"rb+");
-    if (p!=NULL)
-    {
-        while(fread(&aux, sizeof (EspacioDeTrabajoDTO),1,p))
-        {
-            if(dto.getTipo()==aux.getTipo())
-            {
-                fseek(p,sizeof dto*(dto.getTipo()-1),SEEK_SET);
-                fwrite(&dto, sizeof (EspacioDeTrabajoDTO),1,p);
-                fclose (p);
-                modificar = true;
-            }
-        }
-    }
-    return modificar;
+  bool ok = false;
+  FILE* pFile = fopen(RUTA_ESPACIO, "rb");
+  if (pFile != NULL)
+  {
+    fread(registros, sizeof(EspacioDeTrabajoDTO), cantidad, pFile);
+    fclose(pFile);
+    ok = true;
+  }
+  return ok;
 }
 
-
-void EspacioDeTrabajoDAL::LeerEspaciodeTrabajo(EspacioDeTrabajoDTO VecEspacio[], int cant)
+bool EspacioDeTrabajoDAL::agregar(EspacioDeTrabajoDTO registro)
 {
-
-    FILE* p;
-    p= fopen(RUTA_ESPACIO,"rb");
-
-    if(p==nullptr)
+    bool ok = false;
+    FILE* pFile = fopen(RUTA_ESPACIO, "ab");
+    if (pFile != NULL)
     {
-        return;
+        fwrite(&registro, sizeof(EspacioDeTrabajoDTO), 1, pFile);
+        fclose(pFile);
+        ok = true;
     }
-
-    fread(VecEspacio, sizeof(EspacioDeTrabajoDTO),cant,p);
-    fclose(p);
+    return ok;
 }
 
-int EspacioDeTrabajoDAL::cantidadEspacios()
+bool EspacioDeTrabajoDAL::modificar(EspacioDeTrabajoDTO registro, int nroRegistro)
 {
-    FILE *p;
-    int cantidad=0;
-    EspacioDeTrabajoDTO espacio;
-    p=fopen(RUTA_ESPACIO,"rb");
-
-    if (p==nullptr)
+    bool ok = false;
+    FILE* pFile = fopen(RUTA_ESPACIO, "rb+");
+    if (pFile != NULL)
     {
-        return 0;
+        fseek(pFile, nroRegistro * sizeof(EspacioDeTrabajoDTO), SEEK_SET);
+        fwrite(&registro, sizeof(EspacioDeTrabajoDTO), 1, pFile);
+        fclose(pFile);
+        ok = true;
     }
-    fseek(p,0,SEEK_END);
-    cantidad=ftell(p)/sizeof(EspacioDeTrabajoDTO);
-    fclose (p);
+    return ok;
+}
 
+int EspacioDeTrabajoDAL::getCantidad()
+{
+    int cantidad = 0;
+    FILE* pFile = fopen(RUTA_ESPACIO, "rb");
+    if (pFile != NULL)
+    {
+        fseek(pFile, 0, SEEK_END);
+        cantidad = ftell(pFile) / sizeof(EspacioDeTrabajoDTO);
+        fclose(pFile);
+    }
     return cantidad;
 }
 
-bool EspacioDeTrabajoDAL::existeTipo(int tipo)
+int EspacioDeTrabajoDAL::buscar(int tipoEspacio)
 {
-    bool encontro=false;
-    EspacioDeTrabajoDTO dto;
-    FILE *p;
-    p = fopen(RUTA_ESPACIO,"rb");
-    if (p!=NULL)
+    int nroRegistro = -1;
+    int cantidad = getCantidad();
+    EspacioDeTrabajoDTO registro;
+    for (int i = 0; i < cantidad; i++)
     {
-        while(fread(&dto, sizeof (EspacioDeTrabajoDTO),1,p))
+        registro = leer(i);
+        if (registro.getTipo() == tipoEspacio)
         {
-            if(dto.getTipo()==tipo)
-            {
-                encontro=true;
-            }
-        }
-        if(!encontro)
-        {
-            encontro=false;
+            nroRegistro = i;
+            break;
         }
     }
-    fclose (p);
-    return encontro;
+    return nroRegistro;
 }
