@@ -9,8 +9,8 @@ using namespace std;
 #include "FUNCIONES_FRONT.h"
 #include "MENUS.h"
 #include "FUNCIONES_ADMIN.h"
-#include "Fecha.h"
 
+void llamarDefinirEspacio(int tipoEspacio);
 
 void cuadroLimitarEspacio(int opc)
 {
@@ -21,9 +21,9 @@ void cuadroLimitarEspacio(int opc)
     mostrar_mensaje ("* SELECCIONE EL ESPACIO A DEFINIR *", 40, 5);
     mostrar_mensaje ("___________________________________", 40, 6);
 
-        rlutil::saveDefaultColor();
-        rectangulo (2, 2, 100, 26);
-        rlutil::setColor(rlutil::YELLOW);
+    rlutil::saveDefaultColor();
+    rectangulo (2, 2, 100, 26);
+    rlutil::setColor(rlutil::YELLOW);
 
     int op=1, y=0;
 
@@ -68,119 +68,56 @@ void cuadroLimitarEspacio(int opc)
             break;
 
         case 1:   /// OPCIONES AL INGRESAR ENTER (EL ENTER ES LA TECLA 1):
-
             switch(y)
             {
             case 0:      ///DESK
                 system("cls");
-
-            {
-                bool limito;
-
-                 limito=definirEspacios(y);
-
-                   if(limito==true){
-
-                mostrar_mensaje ("*** ESPACIO DEFINIDO *** ", 40, 20);
-                mostrar_mensaje (" MUCHAS GRACIAS  ", 44, 22);
-                getch();
-                system("cls");
-
-                menuAdmin();
-                   }
-
-                    else
-                    {
-                        system("cls");
-                        rectangulo (2, 2, 100, 26);
-                        rlutil::setColor(rlutil::YELLOW);
-                        mostrar_mensaje ("UPS. ALGO SALIO MAL...", 20, 14);
-                        getch();
-                        system("cls");
-
-                    }
-                }
-
-             break;
-
+                llamarDefinirEspacio(y);
+                break;
             case 1:       ///SALA DE REUNIONES
                 system("cls");
-                if(opc==3)
-                {
-                    if ( definirEspacios(y))
-                    {
-                        rlutil::  locate (20,23);
-                        cout<<"ESPACIO DEFINIDO.";
-                    }
-                    else
-                    {
-                        system("cls");
-                        rectangulo (2, 2, 100, 26);
-                        rlutil::setColor(rlutil::YELLOW);
-                        mostrar_mensaje ("UPS. ALGO SALIO MAL...", 20, 14);
-                    }
-                }
-                else if(opc==4)
-                {
-                    limitarEspacios(y);
-                }
+                llamarDefinirEspacio(y);
                 break;
             case 2:       ///ESTACIONAMIENTO
                 system("cls");
-                if(opc==3)
-                {
-                    if (definirEspacios(y))
-                    {
-                        rlutil::  locate (20,23);
-                        cout<<"ESPACIO DEFINIDO.";
-                    }
-                    else
-                    {
-                        system("cls");
-                        rectangulo (2, 2, 100, 26);
-                        rlutil::setColor(rlutil::YELLOW);
-                        mostrar_mensaje ("UPS. ALGO SALIO MAL...", 20, 14);
-                    }
-                }
-                else if(opc==4)
-                {
-                    limitarEspacios(y);
-                }
+                llamarDefinirEspacio(y);
                 break;
             case 3:     ///COMEDOR
                 system("cls");
-                if(opc==3)
-                {
-                    if ( definirEspacios(y))
-                    {
-                        rlutil::  locate (20,23);
-                        cout<<"ESPACIO DEFINIDO.";
-                    }
-                    else
-                    {
-                        system("cls");
-                        rectangulo (2, 2, 100, 26);
-                        rlutil::setColor(rlutil::YELLOW);
-                        mostrar_mensaje ("UPS. ALGO SALIO MAL...", 20, 14);
-                    }
-                }
-                else if(opc==4)
-                {
-                    limitarEspacios(y);
-                }
+                llamarDefinirEspacio(y);
                 break;
-
             case 4:     ///VOLVER A MENU PRINCIPAL
-                  system("cls");
-                {
-                    menuAdmin();
-                }
-
-                 break;
+                system("cls");
+                menuAdmin();
+                break;
             }
+            break;
         }
     }
-
     while(op!=0);
+
     system("pause>nul");
+    return;
+}
+
+void llamarDefinirEspacio(int tipoEspacio)
+{
+    if(definirEspacios(tipoEspacio))
+    {
+        mostrar_mensaje ("*** ESPACIO DEFINIDO *** ", 40, 20);
+        mostrar_mensaje (" MUCHAS GRACIAS  ", 44, 22);
+        getch();
+        system("cls");
+        menuAdmin();
+    }
+    else
+    {
+        system("cls");
+        rectangulo (2, 2, 100, 26);
+        rlutil::setColor(rlutil::YELLOW);
+        mostrar_mensaje ("UPS. ALGO SALIO MAL...", 20, 14);
+        getch();
+        system("cls");
+        menuAdmin();
+    }
 }

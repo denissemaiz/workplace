@@ -93,6 +93,8 @@ void menuAdmin()
                     rectangulo (2, 2, 100, 26);
                     rlutil::setColor(rlutil::YELLOW);
                     mostrar_mensaje ("NO SE PUDO AGREGAR EL REGISTRO.", 20, 14);
+                    system("pause>nul");
+                    system("cls");
                 }
                 break;
 
@@ -182,16 +184,16 @@ void menuAdmin()
 
             case 8:    ///INFORMES
                 system("cls");
-                    {
-                        Informes();
-                    }
+                {
+                    Informes();
+                }
 
                 break;
 
             case 9:   ///RESPALDOS
                 system("cls");
-                        {
-                        Respaldos();
+                {
+                    Respaldos();
                 }
                 break;
 
@@ -203,7 +205,6 @@ void menuAdmin()
                 system("cls");
 
                 break;
-
             }
         }
     }
