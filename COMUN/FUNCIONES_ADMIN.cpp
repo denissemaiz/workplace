@@ -9,23 +9,27 @@ using namespace std;
 #include "FUNCIONES_USER.h"
 #include "EmpleadoDAL.h"
 #include "EmpleadoDTO.h"
-#include "PersonaDAL.h"
 #include "EspacioDeTrabajoDTO.h"
 #include "EspacioDeTrabajoDAL.h"
 
+
+///EMPLEADOS
 
 int agregarEmpleado() ///cargar empleado
 {
     EmpleadoDAL regEmpleado;
     EmpleadoDTO objEmpleado;
-    int dni;
+    int dni, nroRegistro;
     bool agrego = false;
+
     rlutil::  locate (20,8);
     cout<<"DNI: ";
     rlutil::  locate (25,8);
     cin>>dni;
-    bool encontro = regEmpleado.existeDNI(dni);
-    if (encontro)
+
+    nroRegistro = regEmpleado.buscar(dni);
+
+    if (nroRegistro!=-1)
     {
         rlutil::  locate (20,10);
         cout<<"EL DNI YA EXISTE!";
@@ -33,11 +37,11 @@ int agregarEmpleado() ///cargar empleado
         return 0;
     }
     objEmpleado.cargar(dni);
-    if(objEmpleado.getSector() != 0)
+    if(objEmpleado.getSector() == 1 || 2 || 3 || 4)
     {
         agrego = regEmpleado.agregar(objEmpleado);
     }
-    if (agrego)
+    if (agrego == false)
     {
         return -1;
     }
@@ -48,15 +52,15 @@ bool listarEmpleados()
 {
     EmpleadoDAL regEmpleado;
     EmpleadoDTO objEmpleado;
-    //int pos=0;
+
     bool hayRegistros = false;
-    int cantidad=regEmpleado.cantidadEmpleados();
+    int cantidad=regEmpleado.getCantidad();
     EmpleadoDTO* vecEmpleados= new EmpleadoDTO[cantidad];
 
     if (cantidad > 0)
     {
         hayRegistros = true;
-        regEmpleado.leerEmpleados(vecEmpleados, cantidad);
+        regEmpleado.leerTodos(vecEmpleados, cantidad);
         for( int i=0; i<cantidad; i++)
         {
             system("cls");
@@ -70,6 +74,9 @@ bool listarEmpleados()
     }
     return hayRegistros;
 }
+
+
+///ESPACIOS
 
 bool definirEspacios(int espacio)
 {
@@ -104,24 +111,6 @@ bool definirEspacios(int espacio)
     return guardo;
 }
 
-bool limitarEspacios(int espacio)
-{
-    EspacioDeTrabajoDTO objEspacio;
-    EspacioDeTrabajoDAL regEspacio;
-    int disponibilidad;
-
-    int cantidad=regEspacio.getCantidad();
-    EspacioDeTrabajoDTO* vecEspacios= new EspacioDeTrabajoDTO[cantidad];
-
-    regEspacio.leerTodos(vecEspacios,cantidad);
-
-    cout<<"Ingrese la disponibilidad del espacio";
-    cin>>disponibilidad;
-
-    vecEspacios[espacio].setDisponibilidad(disponibilidad);
-    /*NO ESTAMOS MODIFICANDO EL ARCHIVO CON ESTE .SET; SOLO EL VECTOR*/
-}
-
 bool listarEspacios()
 {
     EspacioDeTrabajoDAL regEspacio;
@@ -146,3 +135,22 @@ bool listarEspacios()
     }
     return hayRegistros;
 }
+
+/**/
+/* bool limitarEspacios(int espacio)
+{
+    EspacioDeTrabajoDTO objEspacio;
+    EspacioDeTrabajoDAL regEspacio;
+    int disponibilidad;
+
+    int cantidad=regEspacio.getCantidad();
+    EspacioDeTrabajoDTO* vecEspacios= new EspacioDeTrabajoDTO[cantidad];
+
+    regEspacio.leerTodos(vecEspacios,cantidad);
+
+    cout<<"Ingrese la disponibilidad del espacio";
+    cin>>disponibilidad;
+
+    vecEspacios[espacio].setDisponibilidad(disponibilidad);
+    ///NO ESTAMOS MODIFICANDO EL ARCHIVO CON ESTE .SET; SOLO EL VECTOR
+}*/

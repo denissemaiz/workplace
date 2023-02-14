@@ -16,11 +16,11 @@ void menuIncio()
     rectangulo (2, 2, 100, 20);
 
     mostrar_mensaje ("___________________________", 40, 3);
-    mostrar_mensaje ("* BIENVENIDO A WORKPLACE *" ,40, 5);
+    mostrar_mensaje ("* BIENVENIDO A WORKPLACE *",40, 5);
     mostrar_mensaje ("___________________________", 40, 6);
 
     EmpleadoDAL reg;
-    int dni;
+    int dni, nroRegistro;
 
     rlutil::  locate (36,12);
     cout <<"INGRESE SU DNI: ";
@@ -28,15 +28,20 @@ void menuIncio()
     rlutil::  locate (53,12);
     cin >>dni;
 
-    if (dni == 0000){ ///PONGO UN NUMERO QUE EQUIVALGA A ADMINISTRADOR (1234?)
-        system("cls");
+    nroRegistro = reg.buscar(dni);
 
+    if (dni == 0000)  ///PONGO UN NUMERO QUE EQUIVALGA A ADMINISTRADOR (1234?)
+    {
+        system("cls");
         menuAdmin();
     }
-    else if (reg.existeDNI(dni)){
+    else if (nroRegistro != -1)
+    {
         system("cls");
         menuUser(dni);
-    } else {
+    }
+    else
+    {
         rlutil::  locate (28,16);
         cout<<"EL DNI INGRESADO NO EXISTE EN NUESTRA BASE DE DATOS.";
         rlutil::  locate (60,21);

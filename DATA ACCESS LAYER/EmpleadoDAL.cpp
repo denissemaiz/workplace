@@ -17,71 +17,6 @@ bool EmpleadoDAL::existe (const char* R)
     return existe;
 }
 
-bool EmpleadoDAL::agregar (EmpleadoDTO dto)
-{
-    bool agregar = false;
-    FILE *p;
-    p = fopen(RUTA_EMPLEADO,"ab");
-    if (p!=NULL)
-    {
-        fwrite(this, sizeof (EmpleadoDTO),1,p);
-        fclose (p);
-        agregar = true;
-    }
-    return agregar;
-}
-
-bool EmpleadoDAL::modificar(EmpleadoDTO dto)
-{
-    EmpleadoDTO aux;
-    bool modificar = false;
-    FILE *p;
-    p = fopen(RUTA_EMPLEADO,"rb+");
-    if (p!=NULL)
-    {
-        while(fread(&aux, sizeof (EmpleadoDTO),1,p))
-        {
-            if(dto.getLegajo()==aux.getLegajo())
-            {
-                fseek(p,sizeof dto*(dto.getLegajo()-1),SEEK_SET);
-                fwrite(&dto, sizeof (EmpleadoDTO),1,p);
-                fclose (p);
-                modificar = true;
-            }
-        }
-    }
-    return modificar;
-}
-
-int EmpleadoDAL::obtenerTamanio()
-{
-    int Resultado=0;
-    int CantBytes=0;
-    FILE *p;
-    p = fopen(RUTA_EMPLEADO,"rb");
-    if (p!=NULL)
-    {
-        fseek(p,0,SEEK_END);
-        CantBytes=ftell(p);
-        Resultado=CantBytes/sizeof (EmpleadoDTO);
-        fclose(p);
-    }
-    return Resultado;
-}
-
-EmpleadoDTO EmpleadoDAL::buscarRegistro(int a,int b) /*?*/
-{
-    EmpleadoDTO dto;
-    FILE *p;
-    p = fopen(RUTA_EMPLEADO,"rb");
-    if (p!=NULL)
-    {
-        fseek(p,-1*sizeof (EmpleadoDTO),b);
-        fread(&dto,sizeof (EmpleadoDTO),1,p);
-        fclose (p);
-    }
-    return dto;
-}
 
 EmpleadoDTO EmpleadoDAL::obtenerPorDNI (int DNI)
 {
@@ -134,18 +69,6 @@ bool EmpleadoDAL::eliminar(EmpleadoDTO dto)
     return eliminar;
 }
 
-int EmpleadoDAL::leerDeDisco(int pos)
-{
-    FILE *p;
-    int leyo=0;
-    p=fopen(RUTA_EMPLEADO, "rb");
-    if(p==NULL)return -1;
-    fseek(p, sizeof(EmpleadoDAL)*pos, 0);
-    leyo=fread(this, sizeof(EmpleadoDAL),1, p);
-    fclose(p);
-    return leyo;
-}
-
 bool EmpleadoDAL::existeDNI (int DNI)
 {
     bool encontro=false;
@@ -170,36 +93,86 @@ bool EmpleadoDAL::existeDNI (int DNI)
     return encontro;
 }
 
-void EmpleadoDAL::leerEmpleados(EmpleadoDTO vecEmpleados[], int cant)
+/**/
+
+EmpleadoDTO EmpleadoDAL::leer(int nroRegistro)
 {
-    FILE* p;
-    p= fopen(RUTA_EMPLEADO,"rb");
-
-    if(p==nullptr)
+    EmpleadoDTO registro;
+    FILE* pFile = fopen(RUTA_EMPLEADO, "rb");
+    if (pFile != NULL)
     {
-        return;
+        fseek(pFile, nroRegistro * sizeof(EmpleadoDTO), SEEK_SET);
+        fread(&registro, sizeof(EmpleadoDTO), 1, pFile);
+        fclose(pFile);
     }
-
-    fread(vecEmpleados, sizeof(EmpleadoDTO),cant,p);
-    fclose(p);
+    return registro;
 }
 
-int EmpleadoDAL::cantidadEmpleados()
+bool EmpleadoDAL::leerTodos(EmpleadoDTO registros[], int cantidad)
 {
-    FILE *p;
-    int cantidad=0;
-    EmpleadoDTO empleado;
-    p=fopen(RUTA_EMPLEADO,"rb");
-
-    if (p==nullptr)
+    bool ok = false;
+    FILE* pFile = fopen(RUTA_EMPLEADO, "rb");
+    if (pFile != NULL)
     {
-        return 0;
+        fread(registros, sizeof(EmpleadoDTO), cantidad, pFile);
+        fclose(pFile);
+        ok = true;
     }
+    return ok;
+}
 
-    fseek(p,0,SEEK_END);
-    cantidad=ftell(p)/sizeof(EmpleadoDTO);
-    fclose (p);
+bool EmpleadoDAL::agregar(EmpleadoDTO registro)
+{
+    bool ok = false;
+    FILE* pFile = fopen(RUTA_EMPLEADO, "ab");
+    if (pFile != NULL)
+    {
+        fwrite(&registro, sizeof(EmpleadoDTO), 1, pFile);
+        fclose(pFile);
+        ok = true;
+    }
+    return ok;
+}
 
-    return cantidad;
+bool EmpleadoDAL::modificar(EmpleadoDTO registro, int nroRegistro)
+{
+    bool ok = false;
+    FILE* pFile = fopen(RUTA_EMPLEADO, "rb+");
+    if (pFile != NULL)
+    {
+        fseek(pFile, nroRegistro * sizeof(EmpleadoDTO), SEEK_SET);
+        fwrite(&registro, sizeof(EmpleadoDTO), 1, pFile);
+        fclose(pFile);
+        ok = true;
+    }
+    return ok;
+}
+
+int EmpleadoDAL::getCantidad(){
+  int cantidad = 0;
+  FILE* pFile = fopen(RUTA_EMPLEADO, "rb");
+  if (pFile != NULL)
+  {
+    fseek(pFile, 0, SEEK_END);
+    cantidad = ftell(pFile) / sizeof(EmpleadoDTO);
+    fclose(pFile);
+  }
+  return cantidad;
+}
+
+int EmpleadoDAL::buscar(int dni){
+  int nroRegistro = -1;
+  int cantidad = getCantidad();
+  EmpleadoDTO registro;
+  for (int i = 0; i < cantidad; i++)
+  {
+    registro = leer(i);
+    if (registro.getDni() == dni)
+    {
+      nroRegistro = i;
+      break;
+    }
+  }
+  return nroRegistro;
 }
 

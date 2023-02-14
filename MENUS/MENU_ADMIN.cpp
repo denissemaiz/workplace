@@ -79,7 +79,7 @@ void menuAdmin()
                 rlutil::setColor(rlutil::YELLOW);
                 mostrar_mensaje ("*** CARGAR UN EMPLEADO ***", 40, 5);
 
-                if (agregarEmpleado()==-1)
+                if (agregarEmpleado()!=-1)
                 {
                     mostrar_mensaje ("*** REGISTRO AGREGADO ***", 40, 23);
 

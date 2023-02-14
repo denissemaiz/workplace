@@ -6,18 +6,19 @@
 class EmpleadoDAL
 {
 public:
-    // METODOS:
     bool existe(const char*);
-    bool agregar (EmpleadoDTO);
-    bool modificar (EmpleadoDTO);
     bool eliminar (EmpleadoDTO);
-    int obtenerTamanio(); /*es igual a cantidad empleados?*/ /**/
     EmpleadoDTO buscarRegistro(int,int);
     EmpleadoDTO obtenerPorDNI (int);
-    int leerDeDisco(int pos);
     bool existeDNI(int);
-    int cantidadEmpleados();
-    void leerEmpleados(EmpleadoDTO empleados[], int cant);
+
+    /**/
+    EmpleadoDTO leer(int nroRegistro);
+    bool leerTodos(EmpleadoDTO registros[], int cantidad);
+    bool agregar(EmpleadoDTO registro);
+    bool modificar(EmpleadoDTO registro, int nroRegistro);
+    int getCantidad();
+    int buscar(int dni);
 };
 
 #endif // EMPLEADODAL_H
