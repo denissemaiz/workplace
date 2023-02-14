@@ -21,7 +21,7 @@ void ReservaDTO::setFecha(Fecha fecha)
     _fecha=fecha;
 }
 
-void ReservaDTO::setHoraIngreso(Hora horaingreso)
+/*void ReservaDTO::setHoraIngreso(Hora horaingreso)
 {
     _hora_ingreso=horaingreso;
 }
@@ -29,7 +29,7 @@ void ReservaDTO::setHoraIngreso(Hora horaingreso)
 void ReservaDTO::setHoraEgreso(Hora horaegreso)
 {
     _hora_egreso=horaegreso;
-}
+}*/
 
 void ReservaDTO::setEstado(bool estadoturno)
 {
@@ -57,7 +57,7 @@ Fecha ReservaDTO::getFecha()
     return _fecha;
 }
 
-Hora ReservaDTO::getHoraIngreso()
+/*Hora ReservaDTO::getHoraIngreso()
 {
     return _hora_ingreso;
 }
@@ -65,7 +65,7 @@ Hora ReservaDTO::getHoraIngreso()
 Hora ReservaDTO::getHoraEgreso()
 {
     return _hora_ingreso;
-}
+}*/
 
 bool ReservaDTO::getEstado()
 {
