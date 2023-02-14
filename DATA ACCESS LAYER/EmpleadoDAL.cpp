@@ -3,49 +3,6 @@
 
 const char *RUTA_EMPLEADO = "Empleado.data";
 
-// METODOS:
-bool EmpleadoDAL::existe (const char* R)
-{
-    bool existe = false;
-    FILE *p;
-    p = fopen(R,"rb");
-    if (p!=NULL)
-    {
-        fclose (p);
-        existe = true;
-    }
-    return existe;
-}
-
-
-EmpleadoDTO EmpleadoDAL::obtenerPorDNI (int DNI)
-{
-    bool encontro=false;
-    EmpleadoDTO dto;
-    FILE *p;
-    p = fopen(RUTA_EMPLEADO,"rb");
-    if (p!=NULL)
-    {
-        while(fread(&dto, sizeof (EmpleadoDTO),1,p))
-        {
-            if(dto.getDni()==DNI)
-            {
-                encontro=true;
-                break;
-            }
-        }
-        if(!encontro)
-        {
-            dto.setDni(-1);
-        }
-    }
-    else
-    {
-        dto.setDni(-1);
-    }
-    fclose (p);
-    return dto;
-}
 
 bool EmpleadoDAL::eliminar(EmpleadoDTO dto)
 {
@@ -67,30 +24,6 @@ bool EmpleadoDAL::eliminar(EmpleadoDTO dto)
         }
     }
     return eliminar;
-}
-
-bool EmpleadoDAL::existeDNI (int DNI)
-{
-    bool encontro=false;
-    EmpleadoDTO dto;
-    FILE *p;
-    p = fopen(RUTA_EMPLEADO,"rb");
-    if (p!=NULL)
-    {
-        while(fread(&dto, sizeof (EmpleadoDTO),1,p))
-        {
-            if(dto.getDni()==DNI)
-            {
-                encontro=true;
-            }
-        }
-        if(!encontro)
-        {
-            encontro=false;
-        }
-    }
-    fclose (p);
-    return encontro;
 }
 
 /**/

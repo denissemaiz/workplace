@@ -6,12 +6,7 @@
 class EmpleadoDAL
 {
 public:
-    bool existe(const char*);
     bool eliminar (EmpleadoDTO);
-    EmpleadoDTO buscarRegistro(int,int);
-    EmpleadoDTO obtenerPorDNI (int);
-    bool existeDNI(int);
-
     /**/
     EmpleadoDTO leer(int nroRegistro);
     bool leerTodos(EmpleadoDTO registros[], int cantidad);
