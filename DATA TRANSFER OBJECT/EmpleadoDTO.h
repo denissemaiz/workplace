@@ -23,8 +23,8 @@ public:
     int getSector();
     bool getEstado();
 
-    void cargar(int);
-    void mostrar();
+    void cargar(int dni=0);
+    void mostrar(int dni=0);
 };
 
 #endif // EMPLEADODTO_H

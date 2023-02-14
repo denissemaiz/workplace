@@ -8,7 +8,7 @@ bool listarEmpleados();
 bool limitarEspacios(int);
 bool definirEspacios(int);
 bool listarEspacios();
-void ModificarDatos();
+bool modificarEmpleado();
 void ConsultasReservas();
 void Informes();
 void Respaldos();

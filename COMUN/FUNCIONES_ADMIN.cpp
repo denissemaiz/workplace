@@ -7,6 +7,7 @@ using namespace std;
 #include "rlutil.h"
 #include "FUNCIONES_FRONT.h"
 #include "FUNCIONES_USER.h"
+#include "../MENUS/MENUS.h"
 #include "EmpleadoDAL.h"
 #include "EmpleadoDTO.h"
 #include "EspacioDeTrabajoDTO.h"
@@ -48,10 +49,42 @@ int agregarEmpleado() ///cargar empleado
     return 0;
 }
 
-bool listarEmpleados()
+bool modificarEmpleado()
 {
     EmpleadoDAL regEmpleado;
     EmpleadoDTO objEmpleado;
+    int dni, nroRegistro;
+    bool modifico = false;
+
+    int cantidad=regEmpleado.getCantidad();
+    EmpleadoDTO* vecEmpleados= new EmpleadoDTO[cantidad];
+
+    regEmpleado.leerTodos(vecEmpleados, cantidad);
+
+    rlutil::  locate (20,8);
+    cout<<"DNI: ";
+    rlutil::  locate (25,8);
+    cin>>dni;
+
+    nroRegistro = regEmpleado.buscar(dni);
+
+    if (nroRegistro==-1)
+    {
+        mostrar_mensaje ("* EL DNI INGRESADO NO EXISTE EN NUESTRA BASE DE DATOS *", 20, 10);
+        system("pause>null");
+    }
+    else
+    {
+        vecEmpleados[nroRegistro].mostrar(dni);
+        getch();
+        modifico = menuModificarDatos(nroRegistro);
+    }
+    return modifico;
+}
+
+bool listarEmpleados()
+{
+    EmpleadoDAL regEmpleado;
 
     bool hayRegistros = false;
     int cantidad=regEmpleado.getCantidad();

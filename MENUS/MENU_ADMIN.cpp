@@ -11,9 +11,9 @@ using namespace std;
 
 void menuAdmin()
 {
-    const char *opciones[] = {"CARGAR EMPLEADO","MODIFICAR DATOS DEL EMPLEADO", "LISTAR EMPLEADOS", "DEFINIR ESPACIOS",
-                              "LISTAR ESPACIOS","REALIZAR UNA RESERVA EXTERNA",  "CONSULTAS DE RESERVAS",
-                              "INFORMES","RESPALDOS","SALIR"
+    const char *opciones[] = {"CARGAR EMPLEADO", "MODIFICAR DATOS DEL EMPLEADO", "LISTAR EMPLEADOS", "DEFINIR ESPACIOS",
+                              "LISTAR ESPACIOS", "REALIZAR UNA RESERVA EXTERNA",  "CONSULTAS DE RESERVAS",
+                              "INFORMES", "RESPALDOS", "SALIR"
                              };
 
     int op=1, y=0;
@@ -81,10 +81,8 @@ void menuAdmin()
                 if (agregarEmpleado()!=-1)
                 {
                     mostrar_mensaje ("*** REGISTRO AGREGADO ***", 40, 23);
-
                     getch();
                     system("cls");
-                    menuAdmin();
                 }
                 else
                 {
@@ -99,18 +97,26 @@ void menuAdmin()
 
             case 1:     ///MODIFICAR DATOS EMPLEADO
                 system("cls");
-                {
-                    ModificarDatos();
-                }
+                rectangulo (2, 2, 100, 26);
+                rlutil::setColor(rlutil::YELLOW);
+                mostrar_mensaje ("* INGRESE EL DNI DEL EMPLEADO QUE DESEA MODIFICAR *", 25, 5);
 
+                if(modificarEmpleado()){  ///si la función devuelve true
+                    mostrar_mensaje ("*** REGISTRO MODIFICADO ***", 40, 23);
+                    getch();
+                    system("cls");
+                }
+                else{
+                    system("cls");
+                    rectangulo (2, 2, 100, 26);
+                    rlutil::setColor(rlutil::YELLOW);
+                    mostrar_mensaje ("NO SE PUDO MODIFICAR EL REGISTRO.", 20, 14);
+                    system("pause>nul");
+                    system("cls");
+                }
                 break;
 
             case 2:     ///LISTAR EMPLEADOS
-                system("cls");
-
-                rectangulo (2, 2, 100, 26);
-                rlutil::setColor(rlutil::YELLOW);
-                mostrar_mensaje ("LISTAR EMPLEADOS", 40, 5);
                 if(listarEmpleados())
                 {
                     system("cls");

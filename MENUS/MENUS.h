@@ -9,5 +9,6 @@ void cuadroSeleccionarSector(int espacio);
 void cuadroSeleccionDia(int espacio);
 void cuadroConfirmacionReserva();
 void cuadroLimitarEspacio(int);
+bool menuModificarDatos(int nroRegistro);
 
 #endif // MENUS_H_INCLUDED

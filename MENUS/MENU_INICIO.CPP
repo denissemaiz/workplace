@@ -30,7 +30,7 @@ void menuIncio()
 
     nroRegistro = reg.buscar(dni);
 
-    if (dni == 0000)  ///PONGO UN NUMERO QUE EQUIVALGA A ADMINISTRADOR (1234?)
+    if (dni == 0000)  ///PONGO UN NUMERO QUE EQUIVALGA A ADMINISTRADOR (1234?)  /**/
     {
         system("cls");
         menuAdmin();

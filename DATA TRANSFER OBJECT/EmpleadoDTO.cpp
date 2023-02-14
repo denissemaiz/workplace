@@ -46,7 +46,8 @@ bool EmpleadoDTO::getEstado()
 }
 
 
-void EmpleadoDTO::cargar(int dni){
+void EmpleadoDTO::cargar(int dni)
+{
     _estado=true;
     PersonaDTO::cargar(dni);
     rlutil::  locate (20,13);
@@ -64,31 +65,32 @@ void EmpleadoDTO::cargar(int dni){
     rlutil::  locate (21,19);
     cout<<"4- CONTABILIDAD Y FINANZAS";
     rlutil::  locate (21,20);
-    cout<<"5- DIRECCION";
+    cout<<"5- GERENCIA Y DIRECCION";
     rlutil::  locate (28,14);
     cin>>_sector;
-    if(_sector<1 || _sector>5){
+    if(_sector<1 || _sector>5)
+    {
         return;
     }
 }
 
-void EmpleadoDTO::mostrar()
+void EmpleadoDTO::mostrar(int dni)
 {
     if(_estado==true)
     {
-        PersonaDTO::mostrar();
-        rlutil::  locate (20,13);
+        PersonaDTO::mostrar(dni);
+        rlutil::  locate (20,15);
         cout<<"LEGAJO: ";
-        rlutil::  locate (28,13);
+        rlutil::  locate (28,15);
         cout<<_legajo;
         /**/
-        rlutil::  locate (20,14);
+        rlutil::  locate (20,16);
         cout<<"SECTOR: ";
-        rlutil::  locate (28,14);
+        rlutil::  locate (28,16);
         switch(_sector)
         {
         case 1:
-           cout<<"ADMINISTRACION Y RRHH";
+            cout<<"ADMINISTRACION Y RRHH";
             break;
         case 2:
             cout<<"MARKETING Y VENTAS";
@@ -100,8 +102,12 @@ void EmpleadoDTO::mostrar()
             cout<<"CONTABILIDAD Y FINANZAS";
             break;
         case 5:
-            cout<<"DIRECCION";
+            cout<<"GERENCIA Y DIRECCION";
             break;
         }
+    }
+    else
+    {
+        return;
     }
 }
