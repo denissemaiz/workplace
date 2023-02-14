@@ -75,30 +75,23 @@ void menuUser(int dni)
             case 0:     /// RESERVAR
                 system("cls");
                 cuadroSeleccionarEspacio();
-
                 break;
+
             case 1:       ///ANULAR RESERVA
                 system("cls");
                 anularReserva(dni);
-
                 break;
 
             case 2:     ///MI HISTORIAL
                 system("cls");
-                {
-                    historialReservas(dni);
-                }
-
+                historialReservas(dni);
                 break;
 
             case 3:     ///SALIR
                 system("cls");
-                {
-                    SalirSistemaUser();
-                    getch();
-
-                }
-            system("cls");
+                SalirSistemaUser();
+                getch();
+                return;
                 break;
             }
         }
