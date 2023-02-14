@@ -94,7 +94,7 @@ void menuUser(int dni)
             case 3:     ///SALIR
                 system("cls");
                 {
-                    SalirSistemaUser();
+                    SalirSistemaUser();  /**/  //se queda en un loop
                     getch();
 
                 }
