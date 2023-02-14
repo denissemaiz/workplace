@@ -128,8 +128,10 @@ void menuAdmin()
                 }
                 else
                 {
-                    rlutil::  locate (20,23);
-                    cout<<"NO EXISTEN REGISTROS DE EMPLEADOS.";
+                    system("cls");
+                    rectangulo (2, 2, 100, 26);
+                    rlutil::setColor(rlutil::YELLOW);
+                    mostrar_mensaje ("****  NO EXISTEN REGISTROS DE EMPLEADOS ****", 26, 14);
                     system("pause>nul");
                     system("cls");
                 }

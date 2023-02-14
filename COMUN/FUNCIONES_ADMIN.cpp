@@ -92,17 +92,20 @@ bool listarEmpleados()
 
     if (cantidad > 0)
     {
-        hayRegistros = true;
         regEmpleado.leerTodos(vecEmpleados, cantidad);
-        for( int i=0; i<cantidad; i++)
+        for(int i=0; i<cantidad; i++)
         {
-            system("cls");
-            rectangulo (2, 2, 100, 26);
-            mostrar_mensaje ("LISTADO DE EMPLEADOS", 40, 5);
-            mostrar_mensaje ("--------------------", 40, 6);
-            vecEmpleados[i].mostrar();
-            mostrar_mensaje ("ENTER PARA CONTINUAR..", 60, 25);
-            getch();
+            if(vecEmpleados[i].getEstado()==true)
+            {
+                hayRegistros = true;
+                system("cls");
+                rectangulo (2, 2, 100, 26);
+                mostrar_mensaje ("LISTADO DE EMPLEADOS", 40, 5);
+                mostrar_mensaje ("--------------------", 40, 6);
+                vecEmpleados[i].mostrar();
+                mostrar_mensaje ("ENTER PARA CONTINUAR..", 60, 25);
+                getch();
+            }
         }
     }
     return hayRegistros;

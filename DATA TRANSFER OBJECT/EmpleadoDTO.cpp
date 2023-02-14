@@ -76,38 +76,31 @@ void EmpleadoDTO::cargar(int dni)
 
 void EmpleadoDTO::mostrar(int dni)
 {
-    if(_estado==true)
+    PersonaDTO::mostrar(dni);
+    rlutil::  locate (20,15);
+    cout<<"LEGAJO: ";
+    rlutil::  locate (28,15);
+    cout<<_legajo;
+    /**/
+    rlutil::  locate (20,16);
+    cout<<"SECTOR: ";
+    rlutil::  locate (28,16);
+    switch(_sector)
     {
-        PersonaDTO::mostrar(dni);
-        rlutil::  locate (20,15);
-        cout<<"LEGAJO: ";
-        rlutil::  locate (28,15);
-        cout<<_legajo;
-        /**/
-        rlutil::  locate (20,16);
-        cout<<"SECTOR: ";
-        rlutil::  locate (28,16);
-        switch(_sector)
-        {
-        case 1:
-            cout<<"ADMINISTRACION Y RRHH";
-            break;
-        case 2:
-            cout<<"MARKETING Y VENTAS";
-            break;
-        case 3:
-            cout<<"PRODUCCION Y SISTEMAS";
-            break;
-        case 4:
-            cout<<"CONTABILIDAD Y FINANZAS";
-            break;
-        case 5:
-            cout<<"GERENCIA Y DIRECCION";
-            break;
-        }
-    }
-    else
-    {
-        return;
+    case 1:
+        cout<<"ADMINISTRACION Y RRHH";
+        break;
+    case 2:
+        cout<<"MARKETING Y VENTAS";
+        break;
+    case 3:
+        cout<<"PRODUCCION Y SISTEMAS";
+        break;
+    case 4:
+        cout<<"CONTABILIDAD Y FINANZAS";
+        break;
+    case 5:
+        cout<<"GERENCIA Y DIRECCION";
+        break;
     }
 }
