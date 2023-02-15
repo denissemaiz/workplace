@@ -14,6 +14,7 @@ void cuadroConfirmacionReserva();
 void cuadroLimitarEspacio(int);
 bool menuModificarDatos(int nroRegistro);
 void fechaNoDisponible(int dni, int espacio);
+void confirmacionReserva(int dni, int espacio, Fecha fecha);
 
 
 #endif // MENUS_H_INCLUDED

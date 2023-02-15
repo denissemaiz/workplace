@@ -4,12 +4,13 @@
 #include "Fecha.h"
 
 int contarReservas(int espacio, Fecha fecha);
-void reciboConfirmacionReserva(int espacio, Fecha fecha);
+bool reciboConfirmacionReserva(int espacio, Fecha fecha);
 void fechaNoDisponible();
 void anularReserva(int dni);
 void confirmacionAnulacion();
 void historialReservas(int dni);
 void SalirSistemaUser();
+int incrementarNroReserva();
 
 
 

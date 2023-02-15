@@ -20,7 +20,6 @@ void cuadroSeleccionDia(int dni, int espacio)
     Fecha obj;
     Fecha vecFechas[14]= {};
     int select;
-    bool disponibilidad=false;
 
     for(int i=0; i<14; i++)
     {
@@ -48,13 +47,5 @@ void cuadroSeleccionDia(int dni, int espacio)
         system("pause>nul");
         menuUser(dni);
     }
-    disponibilidad = consultarDisponibilidad(espacio, vecFechas[select-1]);
-    if(!disponibilidad)
-    {
-        fechaNoDisponible(dni, espacio);
-    }
-    else
-    {
-        reciboConfirmacionReserva(espacio, vecFechas[select-1]);
-    }
+    confirmacionReserva(dni, espacio, vecFechas[select-1]);
 }

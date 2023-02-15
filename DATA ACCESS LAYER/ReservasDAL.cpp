@@ -50,7 +50,7 @@ bool ReservasDAL::leerTodos(ReservaDTO registros[], int cantidad)
   return ok;
 }
 
-bool ReservasDAL::guardar(ReservaDTO registro)
+bool ReservasDAL::agregar(ReservaDTO registro)
 {
   bool ok = false;
   FILE* pFile = fopen(RUTA_RESERVA, "ab");
@@ -63,7 +63,7 @@ bool ReservasDAL::guardar(ReservaDTO registro)
   return ok;
 }
 
-bool ReservasDAL::guardar(ReservaDTO registro, int nroRegistro)
+bool ReservasDAL::modificar(ReservaDTO registro, int nroRegistro)
 {
   bool ok = false;
   FILE* pFile = fopen(RUTA_RESERVA, "rb+");
