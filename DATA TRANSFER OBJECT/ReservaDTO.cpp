@@ -71,9 +71,3 @@ bool ReservaDTO::getEstado()
 {
     return _estado;
 }
-
-
-void ReservaDTO::turno()
-{
-
-}

@@ -31,7 +31,6 @@ class ReservaDTO
     Hora getHoraEgreso();*/
     bool getEstado();
 
-    void turno();
     void cargar();
     void mostrar();
 };

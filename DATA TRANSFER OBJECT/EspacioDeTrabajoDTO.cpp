@@ -9,12 +9,10 @@ using namespace std;
 
 EspacioDeTrabajoDTO::EspacioDeTrabajoDTO()
 {
-
     _tipo_espacio=-1;  ///contador?
     _cant_puestos=0;
     _disponibilidad=0;
     _estado=false;
-
 }
 
 

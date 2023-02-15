@@ -8,7 +8,7 @@ private:
     int _tipo_espacio;
     int _cant_puestos;  ///total
     int _disponibilidad;   ///lo que puede usar
-    bool _estado;   ///dar de baja un espacio
+    bool _estado;  /**/ ///dar de baja un espacio
 
 public:
     EspacioDeTrabajoDTO();

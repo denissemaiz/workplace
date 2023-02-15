@@ -32,7 +32,6 @@ void anularReserva(int dni)
 
     mostrar_mensaje (" CONFIRMAS LA ANULACION (S/N): ", 40, 18);
 
-    int n=2;
     const char *opciones[] = {"SI","NO"};
     int op=1, y=0;
 

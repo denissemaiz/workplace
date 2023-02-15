@@ -15,7 +15,6 @@ using namespace std;
 void Respaldos()
 {
     system("cls");
-    int n=4;
     const char *opciones[] = {"RESERVAS","LISTADO DE EMPLEADOS", "LISTADO DE ESPACIOS", "VOLVER AL MENU PRINCIPAL"};
 
         mostrar_mensaje ("**** ARCHIVOS A RESPALDAR: ****", 40, 5);

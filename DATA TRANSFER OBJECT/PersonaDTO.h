@@ -1,6 +1,5 @@
 #ifndef PERSONADTO_H
 #define PERSONADTO_H
-#include "cstring"
 
 #include "Fecha.h"
 

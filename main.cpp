@@ -19,15 +19,10 @@ using namespace std;
 
 int main()
 {
-system("color 8F");
+    system("color 8F");
 
-///PANTALLA INICIO
+    menuIncio();
 
-menuIncio();
-
-
-_getch();
-system("cls");
-
+    system("cls");
     return 0;
 }

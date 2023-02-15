@@ -21,7 +21,7 @@ void historialReservas(int dni)
 
     mostrar_mensaje ("**** ESTAS CONSULTANDO TUS RESERVAS ****", 33, 5);
     mostrar_mensaje ("-------------------------------------", 33, 6);
-    int n=4, op=-1, y=0;
+    int op=-1, y=0;
 
     const char *opciones[] = {"RESERVAS PASADAS","RESERVAS FUTURAS","RESERVAS ANULADAS","VOLVER AL MENU PRINCIPAL"};
 

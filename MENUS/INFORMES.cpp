@@ -15,7 +15,6 @@ using namespace std;
 void Informes()
 {
     system("cls");
-    int n=5;
     const char *opciones[] = {"DESK","SALA DE REUNIONES", "ESTACIONAMIENTO", "COMEDOR","VOLVER AL MENU PRINCIPAL"};
 
     mostrar_mensaje ("**** OPCIONES DE INFORMES ****", 40, 5);

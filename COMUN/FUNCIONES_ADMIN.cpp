@@ -52,7 +52,6 @@ int agregarEmpleado() ///cargar empleado
 bool modificarEmpleado()
 {
     EmpleadoDAL regEmpleado;
-    EmpleadoDTO objEmpleado;
     int dni, nroRegistro;
     bool modifico = false;
 

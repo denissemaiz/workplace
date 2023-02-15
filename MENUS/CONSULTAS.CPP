@@ -15,7 +15,6 @@ using namespace std;
 void ConsultasReservas()
 {
     system("cls");
-    int n=6;
     const char *opciones[] = {"DNI","LEGAJO", "SECTOR", "ESPACIO DE TRABAJO", "RESERVAS ANULADAS", "VOLVER AL MENU PRINCIPAL"};
 
         mostrar_mensaje ("**** OPCIONES DE CONSULTAS ****", 40, 5);
