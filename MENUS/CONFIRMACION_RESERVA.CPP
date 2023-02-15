@@ -181,3 +181,66 @@ void fechaNoDisponible(int dni, int espacio)
     while(op!=0);
     system("pause>nul");
 }
+
+void ConfirmacionReserva(){
+
+//EspacioDeTrabajoDAL regEspacio;
+//ReservasDAL regReservas;
+//
+//    int CantidadEspacios=regEspacio.cantidadEspacios();
+//    int CantidadReservas=regReservas.cantidadReservas();
+//    int DisponibilidadReal=0;
+//    int EspacioSelec=0;
+//    EspacioDeTrabajoDTO* Espacios=new EspacioDeTrabajoDTO[CantidadEspacios];
+//
+//    for(int i=0;i<CantidadEspacios;i++){
+//
+//       Espacios[i]=regEspacio.LeerEspaciodeTrabajo(i);
+//    }
+//    ReservaDTO* Reservas= new ReservaDTO [CantidadReservas];
+//
+//    for(int j=0;j<CantidadReservas;i++){
+//        Reservas[i]=regReservas.LeerReservas(i);
+//    }
+//
+//    for(int i=0;i<CantidadEspacios;i++){
+//        if(regEspacio.getTipo()==espacio)
+//            {
+//            EspacioSelec=regEspacio.getTipo();
+//            DisponibilidadReal=regEspacio.getDisponibilidad();
+//            }
+//
+//            int Cont=0;
+//
+//         for(int j=0;j<CantidadReservas;i++){
+//
+//
+//            if(regReservas.getEspacio()==EspacioSelec&&
+//            regReservas.getFecha().getDia()==select){
+//
+//            DisponibilidadReal=regEspacio.getDisponibilidad();
+//            Cont++;
+//            }
+//
+//
+//         }
+//    }
+//}
+//
+//          if(Cont<=DisponibilidadReal)
+//{
+//    ReservaDTO.setNumero(dni);
+//    ReservaDTO.setLegajo(Legajo);
+//    ReservaDTO.setEspacioTrabajo(espacio);
+//    ReservaDTO.setFecha(Fecha);
+//    ReservaDTO.setEstado(true);
+//
+//FUNCION GUARDAR EN EL ARCHIVO//
+//
+//}
+
+
+
+
+
+}
