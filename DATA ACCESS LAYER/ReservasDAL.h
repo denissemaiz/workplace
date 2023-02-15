@@ -12,8 +12,8 @@ public:
     /**/
     ReservaDTO leer(int nroRegistro);
     bool leerTodos(ReservaDTO registros[], int cantidad);
-    bool guardar(ReservaDTO registro);
-    bool guardar(ReservaDTO registro, int nroRegistro);
+    bool agregar(ReservaDTO registro);
+    bool modificar(ReservaDTO registro, int nroRegistro);
     int getCantidad();
     int buscar(int nroReserva);
 };

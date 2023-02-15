@@ -9,7 +9,46 @@ using namespace std;
 #include "MENUS.h"
 #include "EspacioDeTrabajoDAL.h"
 #include "EspacioDeTrabajoDTO.h"
+#include "ReservasDAL.h"
+#include "ReservaDTO.h"
+#include "EmpleadoDAL.h"
+#include "EmpleadoDTO.h"
+
 #include "Fecha.h"
+
+void confirmacionReserva(int dni, int espacio, Fecha fecha)
+{
+    EmpleadoDTO objEmpleado;
+    EmpleadoDAL regEmpleado;
+    ReservaDTO objReserva;
+    ReservasDAL regReserva;
+    int nroEmpleado, nroReserva, legajo;
+    bool disponibilidad=false;
+
+    disponibilidad = consultarDisponibilidad(espacio, fecha);
+
+    if(!disponibilidad)
+    {
+        fechaNoDisponible(dni, espacio);
+    }
+    if(!reciboConfirmacionReserva(espacio, fecha))
+    {
+        SalirSistemaUser(); /**/// o vuelve a menuUser?
+    }
+
+    nroEmpleado = regEmpleado.buscar(dni);
+    objEmpleado = regEmpleado.leer(nroEmpleado);
+    legajo = objEmpleado.getLegajo();
+    nroReserva = incrementarNroReserva();
+
+    objReserva.setNumero(nroReserva);
+    objReserva.setLegajo(legajo);
+    objReserva.setEspacioTrabajo(espacio);
+    objReserva.setFecha(fecha);
+    objReserva.setEstado(true);
+
+    regReserva.agregar(objReserva);
+}
 
 bool consultarDisponibilidad(int espacio, Fecha fecha)
 {
@@ -31,7 +70,7 @@ bool consultarDisponibilidad(int espacio, Fecha fecha)
 }
 
 
-void reciboConfirmacionReserva(int espacio, Fecha fecha)
+bool reciboConfirmacionReserva(int espacio, Fecha fecha)
 {
     system("cls");
     rectangulo (2, 2, 100, 20);
@@ -55,8 +94,6 @@ void reciboConfirmacionReserva(int espacio, Fecha fecha)
     }
     mostrar_mensaje ("DIA: ", 20, 9);
     fecha.Mostrar();
-    //mostrar_mensaje ("DESDE LAS: ", 20, 10);
-    //mostrar_mensaje ("HASTA LAS: ", 20, 11);
     mostrar_mensaje ("CONFIRMA LA RESERVA: ", 40, 18);
 
     int op=1, y=0;
@@ -103,17 +140,17 @@ void reciboConfirmacionReserva(int espacio, Fecha fecha)
             switch(y)
             {
             case 0:     /// SI CONFIRMA
-                //guardar la reserva
-                //descontar espacios
+                return true;
                 break;
             case 1:      /// NO CONFIRMA
-                SalirSistemaUser(); /**/// o vuelve a menuUser?
+                return false;
                 break;
             }
         }
     }
     while(op!=0);
     system("pause>nul");
+    return false;
 }
 
 void fechaNoDisponible(int dni, int espacio)
@@ -177,12 +214,11 @@ void fechaNoDisponible(int dni, int espacio)
             }
         }
     }
-
     while(op!=0);
     system("pause>nul");
 }
 
-void ConfirmacionReserva(){
+
 
 //EspacioDeTrabajoDAL regEspacio;
 //ReservasDAL regReservas;
@@ -238,9 +274,3 @@ void ConfirmacionReserva(){
 //FUNCION GUARDAR EN EL ARCHIVO//
 //
 //}
-
-
-
-
-
-}
