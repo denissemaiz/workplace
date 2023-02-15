@@ -5,6 +5,7 @@
 using namespace std;
 
 #include "FUNCIONES_FRONT.h"
+#include "FUNCIONES_USER.h"
 #include "MENUS.h"
 #include "Fecha.h"
 
@@ -47,7 +48,13 @@ void cuadroSeleccionDia(int dni, int espacio)
         system("pause>nul");
         menuUser(dni);
     }
-    ///funcion reservar;
     disponibilidad = consultarDisponibilidad(espacio, vecFechas[select-1]);
-
+    if(!disponibilidad)
+    {
+        fechaNoDisponible(dni, espacio);
+    }
+    else
+    {
+        reciboConfirmacionReserva(espacio, vecFechas[select-1]);
+    }
 }

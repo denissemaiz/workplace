@@ -1,37 +1,65 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
-#include <rlutil.h>
 
 using namespace std;
 
-#include "FUNCIONES_USER.h"
 #include "FUNCIONES_FRONT.h"
+#include "FUNCIONES_USER.h"
 #include "MENUS.h"
+#include "EspacioDeTrabajoDAL.h"
+#include "EspacioDeTrabajoDTO.h"
 #include "Fecha.h"
 
-bool consultarDisponibilidad(int espacio, Fecha fecha){
+bool consultarDisponibilidad(int espacio, Fecha fecha)
+{
+    EspacioDeTrabajoDAL regEspacio;
+    EspacioDeTrabajoDTO objEspacio;
+    int nroRegEspacio, cantidadNoDisponible;
+    bool disponible=false;
 
+    cantidadNoDisponible = contarReservas(espacio, fecha);
 
+    nroRegEspacio = regEspacio.buscar(espacio);
+    objEspacio = regEspacio.leer(nroRegEspacio);
 
-
+    if(objEspacio.getCantPuestos()>cantidadNoDisponible)
+    {
+        disponible = true;
+    }
+    return disponible;
 }
 
 
-void reciboConfirmacionReserva()
+void reciboConfirmacionReserva(int espacio, Fecha fecha)
 {
     system("cls");
     rectangulo (2, 2, 100, 20);
 
     mostrar_mensaje ("USTED RESERVO:  ", 40, 4);
     mostrar_mensaje ("ESPACIO: ", 20, 7);
-    mostrar_mensaje ("SECTOR: ", 20, 8);
+    switch(espacio)
+    {
+    case 0:
+        cout<<"DESK";
+        break;
+    case 1:
+        cout<<"SALA DE REUNIONES";
+        break;
+    case 2:
+        cout<<"ESTACIONAMIENTO";
+        break;
+    case 3:
+        cout<<"COMEDOR";
+        break;
+    }
     mostrar_mensaje ("DIA: ", 20, 9);
-    mostrar_mensaje ("DESDE LAS: ", 20, 10);
-    mostrar_mensaje ("HASTA LAS: ", 20, 11);
+    fecha.Mostrar();
+    //mostrar_mensaje ("DESDE LAS: ", 20, 10);
+    //mostrar_mensaje ("HASTA LAS: ", 20, 11);
     mostrar_mensaje ("CONFIRMA LA RESERVA: ", 40, 18);
 
-    int n=2, op=1, y=0;
+    int op=1, y=0;
     const char *opciones[] = {"SI","NO"};
 
     rlutil::hidecursor();
@@ -75,9 +103,11 @@ void reciboConfirmacionReserva()
             switch(y)
             {
             case 0:     /// SI CONFIRMA
+                //guardar la reserva
+                //descontar espacios
                 break;
             case 1:      /// NO CONFIRMA
-
+                SalirSistemaUser(); /**/// o vuelve a menuUser?
                 break;
             }
         }
@@ -86,7 +116,7 @@ void reciboConfirmacionReserva()
     system("pause>nul");
 }
 
-void fechaNoDisponible()
+void fechaNoDisponible(int dni, int espacio)
 {
     system("cls");
     rectangulo (2, 2, 100, 20);
@@ -94,7 +124,7 @@ void fechaNoDisponible()
     rlutil::setColor(rlutil::RED);
     mostrar_mensaje ("**   LO SENTIMOS NO HAY MAS DISPONIBILIDAD PARA LA FECHA SELECCIONADA  **  ", 19, 6);
 
-    int n=2, op=1, y=0;;
+    int op=1, y=0;;
     const char *opciones[] = {"VOLVER A CALENDARIO","VOLVER AL MENU PRINCIPAL"};
 
     rlutil::hidecursor();
@@ -134,14 +164,15 @@ void fechaNoDisponible()
             }
             break;
 
-        case 1:            /// OPCIONES AL INGRESAR ENTER (EL ENTER ES LA TECLA 1)
+        case 1:        /// OPCIONES AL INGRESAR ENTER (EL ENTER ES LA TECLA 1)
 
             switch(y)
             {
             case 0:     ///VOLVER A CALENDARIO
+                cuadroSeleccionDia(dni, espacio);
                 break;
             case 1:     ///MENU PRINCIPAL
-                //  menuUser();
+                menuUser(dni);
                 break;
             }
         }

@@ -7,9 +7,31 @@ using namespace std;
 #include "rlutil.h"
 #include "FUNCIONES_USER.h"
 #include "FUNCIONES_FRONT.h"
+#include "ReservasDAL.h"
+#include "ReservaDTO.h"
 #include "Fecha.h"
 
-void cuadroConfirmacionReserva()
+int contarReservas(int espacio, Fecha fecha) ///cuenta reservas de x dia en x espacio
+{
+    ReservasDAL regReserva;
+    int cantReservas=0;
+
+    int tamReservas=regReserva.getCantidad();
+    ReservaDTO* vecReservas= new ReservaDTO[tamReservas];
+
+    regReserva.leerTodos(vecReservas, tamReservas);
+
+    for(int i=0;i<tamReservas;i++){
+        if(vecReservas[i].getEspacioTrabajo()==espacio
+           && vecReservas[i].getFecha().operator==(fecha)){
+                cantReservas++;
+           }
+    }
+
+    return cantReservas;
+}
+
+/*void cuadroConfirmacionReserva()
 {
     rectangulo (2, 2, 100, 20);
 
@@ -22,7 +44,7 @@ void cuadroConfirmacionReserva()
     mostrar_mensaje (" HORARIO DE EGRESO:", 10, 14);
     mostrar_mensaje (" PISO/SECTOR DONDE SE REALIZO LA RESERVA:", 10, 16);
     mostrar_mensaje (" ¿CONFIRMA LA RESERVA? :", 10, 18);
-}
+}*/
 
 void SalirSistemaUser()
 {

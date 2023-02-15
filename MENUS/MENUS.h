@@ -13,6 +13,7 @@ bool consultarDisponibilidad(int espacio, Fecha fecha);
 void cuadroConfirmacionReserva();
 void cuadroLimitarEspacio(int);
 bool menuModificarDatos(int nroRegistro);
+void fechaNoDisponible(int dni, int espacio);
 
 
 #endif // MENUS_H_INCLUDED

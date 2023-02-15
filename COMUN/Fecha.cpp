@@ -121,3 +121,19 @@ void Fecha::operator++()
     _anio=anio;
 }
 
+bool Fecha::operator==(Fecha aux)
+{
+    if(_dia!=aux.getDia())
+    {
+        return false;
+    }
+    if(_mes!=aux.getMes())
+    {
+        return false;
+    }
+    if(_anio!=aux.getAnio())
+    {
+        return false;
+    }
+    return true;
+}
