@@ -1,5 +1,5 @@
 #include "ReservaDTO.h"
-//sets
+
 
 void ReservaDTO::setNumero(int numero)
 {

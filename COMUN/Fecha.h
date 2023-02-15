@@ -20,7 +20,7 @@ class Fecha{
         void Mostrar();
         void Cargar();
 
-        Fecha operator++();
+        void operator++();
 };
 
 

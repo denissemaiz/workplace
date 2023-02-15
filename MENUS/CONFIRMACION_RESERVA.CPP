@@ -5,47 +5,12 @@
 
 using namespace std;
 
-#include "rlutil.h"
 #include "FUNCIONES_USER.h"
 #include "FUNCIONES_FRONT.h"
 #include "MENUS.h"
 #include "Fecha.h"
 
-void cuadroSeleccionDia(int espacio)
-{
-    system("cls");
-    rectangulo (2, 2, 100, 25);
-    mostrar_mensaje ("*** POR FAVOR SELECCIONE EL DIA A RESERVAR: ***", 30, 4);
-    mostrar_mensaje ("-----------------------------------------------", 30, 5);
-
-    Fecha obj;
-    Fecha vecFechas[14]= {};
-    int select;
-
-    for(int i=1; i<15; i++)
-    {
-        obj.operator++();
-        vecFechas[i-1] = obj;
-    }
-
-
-    for(int j=0; j<14; j++)
-    {
-        rlutil::locate(40,8+j);
-        vecFechas[j].Mostrar();
-        rlutil::locate(36,8+j);
-        cout << j+1 <<"- ";
-    }
-    mostrar_mensaje ("POR FAVOR INGRESE EL DIA A RESERVAR: ", 30, 25);
-    rlutil::locate(30,60);
-    cin >>select;
-    getch();
-    system("cls");
-}
-
-
-void consultarDisponibilidad(int espacio, int select){
-
+bool consultarDisponibilidad(int espacio, Fecha fecha){
 
 
 

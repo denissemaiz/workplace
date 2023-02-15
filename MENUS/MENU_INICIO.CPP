@@ -4,11 +4,9 @@
 
 using namespace std;
 
-#include "rlutil.h"
 #include "FUNCIONES_FRONT.h"
 #include "MENUS.h"
 #include "EmpleadoDAL.h"
-
 
 void menuIncio()
 {

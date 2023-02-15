@@ -101,7 +101,7 @@ void menuAdmin()
                 rlutil::setColor(rlutil::YELLOW);
                 mostrar_mensaje ("* INGRESE EL DNI DEL EMPLEADO QUE DESEA MODIFICAR *", 25, 5);
 
-                if(modificarEmpleado()){  ///si la función devuelve true
+                if(modificarEmpleado()){             ///si la función devuelve true
                     mostrar_mensaje ("*** REGISTRO MODIFICADO ***", 40, 23);
                     getch();
                     system("cls");

@@ -4,22 +4,17 @@
 
 using namespace std;
 
-#include "rlutil.h"
 #include "MENUS.h"
 #include"FUNCIONES_FRONT.h"
 #include"FUNCIONES_ADMIN.h"
 #include"FUNCIONES_USER.h"
-#include "Fecha.h"
-
 
 ///PANTALLA MENU
 void menuUser(int dni)
 {
+    system("cls");
 
-    int n=4;
     const char *opciones[] = {"RESERVAR","ANULAR RESERVA", "MI HISTORIAL", "SALIR"};
-
-
 
     int op=1, y=0;
 
@@ -74,7 +69,7 @@ void menuUser(int dni)
             {
             case 0:     /// RESERVAR
                 system("cls");
-                cuadroSeleccionarEspacio();
+                cuadroSeleccionarEspacio(dni);
                 break;
 
             case 1:       ///ANULAR RESERVA
