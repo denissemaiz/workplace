@@ -21,7 +21,8 @@ class Fecha{
         void Cargar();
 
         void operator++();
-        bool operator==(Fecha aux);
+        bool operator==(Fecha &aux); /**/
+        bool operator>=(Fecha &aux);
 };
 
 

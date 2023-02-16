@@ -53,32 +53,35 @@ bool ReservaDTO::getEstado()
 
 void ReservaDTO::mostrar()
 {
-    if(_estado==true)
+    rlutil::  locate (20,12);
+    cout<<"NRO. DE RESERVA: "  <<_numero;
+    rlutil::  locate (20,13);
+    cout<<"LEGAJO: "   <<_legajo;
+    rlutil::  locate (20,13);
+    cout<<"ESPACIO DE TRABAJO: ";
+    rlutil::  locate (40,13);
+    switch(_espacio_trabajo)
     {
-        rlutil::  locate (20,10);
-        cout<<"NRO. DE RESERVA: "  <<_numero;
-        rlutil::  locate (20,11);
-        cout<<"LEGAJO: "   <<_legajo;
-        rlutil::  locate (20,12);
-        cout<<"ESPACIO DE TRABAJO: ";
-        rlutil::  locate (40,12);
-        switch(_espacio_trabajo)
-        {
-        case 0:
-            cout<<"DESK";
-            break;
-        case 1:
-            cout<<"SALA DE REUNIONES";
-            break;
-        case 2:
-            cout<<"ESTACIONAMIENTO";
-            break;
-        case 3:
-            cout<<"COMEDOR";
-            break;
-        }
-        rlutil::  locate (20,13);
-        cout<<"FECHA: ";
-        _fecha.Mostrar();
+    case 0:
+        cout<<"DESK";
+        break;
+    case 1:
+        cout<<"SALA DE REUNIONES";
+        break;
+    case 2:
+        cout<<"ESTACIONAMIENTO";
+        break;
+    case 3:
+        cout<<"COMEDOR";
+        break;
+    }
+    rlutil::  locate (20,14);
+    cout<<"FECHA: ";
+    _fecha.Mostrar();
+
+    if(_estado==false)
+    {
+        rlutil::  locate (20,16);
+        cout<<"** RESERVA ANULADA **";
     }
 }

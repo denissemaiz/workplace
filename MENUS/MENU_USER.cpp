@@ -60,22 +60,23 @@ void menuUser(int dni)
 
             switch(y)
             {
-            case 0:     /// RESERVAR
+            case 0:
                 system("cls");
                 menuSeleccionarEspacio(dni);
                 break;
 
-            case 1:       ///ANULAR RESERVA
+            case 1:       ///ANULAR RESERVA    /**/
                 system("cls");
-                anularReserva(dni); /**/
+                anularReserva(dni);
                 break;
 
-            case 2:     ///MI HISTORIAL
+            case 2:
                 system("cls");
-                historialReservas(dni);  /**/
+                listarHistorialReservas(dni);
+                system("cls");
                 break;
 
-            case 3:     ///SALIR
+            case 3:
                 system("cls");
                 salirSistemaUser();
                 getch();

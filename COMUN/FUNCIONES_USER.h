@@ -5,6 +5,7 @@
 
 bool validarDni(int dni);
 void salirSistemaUser();
-
+int listarReservasFuturas(int dni);
+int listarHistorialReservas(int dni);
 
 #endif // FUNCIONES_USER_H_INCLUDED

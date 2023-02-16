@@ -1,3 +1,4 @@
+#include "../MENUS/MENUS.h"
 #include "FUNCIONES_FRONT.h"
 #include "FUNCIONES_USER.h"
 #include "FUNCIONES_RESERVAS.h"
@@ -106,4 +107,29 @@ bool consultarDisponibilidad(int espacio, Fecha fecha)
         disponible = true;
     }
     return disponible;
+}
+
+bool chequearNroReserva(int nroReserva, int dni)
+{
+    ReservasDAL regReserva;
+    ReservaDTO objReserva;
+    EmpleadoDAL regEmpleado;
+    EmpleadoDTO objEmpleado;
+
+    int nroEmpleado, nroRegReserva, legajo;
+    bool existe = false;
+
+    nroEmpleado = regEmpleado.buscar(dni);
+    objEmpleado = regEmpleado.leer(nroEmpleado);
+    legajo = objEmpleado.getLegajo();
+    nroRegReserva = regReserva.buscar(nroReserva);
+    objReserva = regReserva.leer(nroRegReserva);
+
+    if(nroRegReserva != -1
+       && objReserva.getLegajo() == legajo
+       && objReserva.getEstado() == true)
+    {
+        existe = true;
+    }
+    return existe;
 }

@@ -13,6 +13,7 @@ public:
     bool modificar(EmpleadoDTO registro, int nroRegistro);
     int getCantidad();
     int buscar(int dni);
+    int buscarLegajo(int dni);
 };
 
 #endif // EMPLEADODAL_H

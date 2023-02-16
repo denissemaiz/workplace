@@ -121,7 +121,7 @@ void Fecha::operator++()
     _anio=anio;
 }
 
-bool Fecha::operator==(Fecha aux)
+bool Fecha::operator==(Fecha &aux)
 {
     if(_dia!=aux.getDia())
     {
@@ -132,6 +132,23 @@ bool Fecha::operator==(Fecha aux)
         return false;
     }
     if(_anio!=aux.getAnio())
+    {
+        return false;
+    }
+    return true;
+}
+
+bool Fecha::operator>=(Fecha &aux)
+{
+    if(_dia<aux.getDia())
+    {
+        return false;
+    }
+    if(_mes<aux.getMes())
+    {
+        return false;
+    }
+    if(_anio<aux.getAnio())
     {
         return false;
     }

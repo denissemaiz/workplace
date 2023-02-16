@@ -9,9 +9,9 @@ int contarReservas(int espacio, Fecha fecha);
 int incrementarNroReserva();
 bool consultarDisponibilidad(int espacio, Fecha fecha);
 void confirmacionReserva(int dni, int espacio, Fecha fecha);
+bool chequearNroReserva(int nroReserva, int dni);
 /**/  //FALTAN:
 void anularReserva(int dni);
 void confirmacionAnulacion();
-void historialReservas(int dni);
 
 #endif // FUNCIONES_RESERVAS_H_INCLUDED

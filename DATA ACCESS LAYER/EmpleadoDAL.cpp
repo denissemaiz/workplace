@@ -24,6 +24,8 @@ bool EmpleadoDAL::eliminar(EmpleadoDTO dto)
     }
     return eliminar;
 }
+ /**/
+
 
 EmpleadoDTO EmpleadoDAL::leer(int nroRegistro)
 {
@@ -106,4 +108,21 @@ int EmpleadoDAL::buscar(int dni)
         }
     }
     return nroRegistro;
+}
+
+int EmpleadoDAL::buscarLegajo(int dni)
+{
+    int legajo = -1;
+    int cantidad = getCantidad();
+    EmpleadoDTO registro;
+    for (int i = 0; i < cantidad; i++)
+    {
+        registro = leer(i);
+        if (registro.getDni() == dni)
+        {
+            legajo = registro.getLegajo();
+            break;
+        }
+    }
+    return legajo;
 }
