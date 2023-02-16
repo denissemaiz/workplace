@@ -1,6 +1,6 @@
 #include "MENUS.h"
 #include "FUNCIONES_FRONT.h"
-#include "EmpleadoDAL.h"
+#include "FUNCIONES_USER.h"
 
 void menuIncio()
 {
@@ -12,8 +12,8 @@ void menuIncio()
     mostrar_mensaje ("* BIENVENIDO A WORKPLACE *",40, 5);
     mostrar_mensaje ("___________________________", 40, 6);
 
-    EmpleadoDAL reg;
-    int dni, nroRegistro;
+    int dni;
+    bool usuario = false;
 
     rlutil::  locate (36,12);
     cout <<"INGRESE SU DNI: ";
@@ -21,14 +21,14 @@ void menuIncio()
     rlutil::  locate (53,12);
     cin >>dni;
 
-    nroRegistro = reg.buscar(dni);
+    usuario = chequearEmpleado(dni);
 
     if (dni == 1234)  ///PONGO UN NUMERO QUE EQUIVALGA A ADMINISTRADOR
     {
         system("cls");
         menuAdmin();
     }
-    else if (nroRegistro != -1)
+    else if (usuario)
     {
         system("cls");
         menuUser(dni);

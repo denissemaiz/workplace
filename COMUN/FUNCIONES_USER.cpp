@@ -115,3 +115,23 @@ int listarHistorialReservas(int dni)
     }
     return contador;
 }
+
+bool chequearEmpleado(int dni)
+{
+    EmpleadoDAL regEmpleado;
+    EmpleadoDTO objEmpleado;
+
+    int nroEmpleado;
+    bool existe = false;
+
+    nroEmpleado = regEmpleado.buscar(dni);
+    objEmpleado = regEmpleado.leer(nroEmpleado);
+
+    if(nroEmpleado != -1
+       && objEmpleado.getEstado() == true)
+    {
+        existe = true;
+    }
+    return existe;
+}
+
