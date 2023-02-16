@@ -3,6 +3,7 @@
 
 #include "Fecha.h"
 
+bool validarDni(int dni);
 int contarReservas(int espacio, Fecha fecha);
 bool reciboConfirmacionReserva(int espacio, Fecha fecha);
 void fechaNoDisponible();

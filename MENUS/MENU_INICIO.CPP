@@ -5,6 +5,7 @@
 using namespace std;
 
 #include "FUNCIONES_FRONT.h"
+#include "FUNCIONES_USER.h"
 #include "MENUS.h"
 #include "EmpleadoDAL.h"
 
@@ -28,7 +29,7 @@ void menuIncio()
 
     nroRegistro = reg.buscar(dni);
 
-    if (dni == 0000)  ///PONGO UN NUMERO QUE EQUIVALGA A ADMINISTRADOR (1234?)  /**/
+    if (dni == 1234)  ///PONGO UN NUMERO QUE EQUIVALGA A ADMINISTRADOR
     {
         system("cls");
         menuAdmin();
@@ -38,10 +39,17 @@ void menuIncio()
         system("cls");
         menuUser(dni);
     }
+    else if (validarDni(dni))
+    {
+        mostrar_mensaje ("EL DNI INGRESADO NO EXISTE EN NUESTRA BASE DE DATOS.", 28, 16);
+        rlutil::  locate (60,21);
+        system("pause");
+        system("cls");
+        menuIncio();
+    }
     else
     {
-        rlutil::  locate (28,16);
-        cout<<"EL DNI INGRESADO NO EXISTE EN NUESTRA BASE DE DATOS.";
+        mostrar_mensaje ("EL DNI INGRESADO NO ES VALIDO.", 35, 17);
         rlutil::  locate (60,21);
         system("pause");
         system("cls");
