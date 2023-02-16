@@ -1,8 +1,6 @@
 #ifndef PERSONADTO_H
 #define PERSONADTO_H
 
-#include "Fecha.h"
-
 class PersonaDTO
 {
 protected:
@@ -32,4 +30,3 @@ public:
 };
 
 #endif // PERSONADTO_H
-

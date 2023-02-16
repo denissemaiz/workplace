@@ -3,7 +3,6 @@
 
 const char *RUTA_EMPLEADO = "Empleado.data";
 
-
 bool EmpleadoDAL::eliminar(EmpleadoDTO dto)
 {
     EmpleadoDTO aux;
@@ -25,8 +24,6 @@ bool EmpleadoDAL::eliminar(EmpleadoDTO dto)
     }
     return eliminar;
 }
-
-/**/
 
 EmpleadoDTO EmpleadoDAL::leer(int nroRegistro)
 {
@@ -81,31 +78,32 @@ bool EmpleadoDAL::modificar(EmpleadoDTO registro, int nroRegistro)
     return ok;
 }
 
-int EmpleadoDAL::getCantidad(){
-  int cantidad = 0;
-  FILE* pFile = fopen(RUTA_EMPLEADO, "rb");
-  if (pFile != NULL)
-  {
-    fseek(pFile, 0, SEEK_END);
-    cantidad = ftell(pFile) / sizeof(EmpleadoDTO);
-    fclose(pFile);
-  }
-  return cantidad;
-}
-
-int EmpleadoDAL::buscar(int dni){
-  int nroRegistro = -1;
-  int cantidad = getCantidad();
-  EmpleadoDTO registro;
-  for (int i = 0; i < cantidad; i++)
-  {
-    registro = leer(i);
-    if (registro.getDni() == dni)
+int EmpleadoDAL::getCantidad()
+{
+    int cantidad = 0;
+    FILE* pFile = fopen(RUTA_EMPLEADO, "rb");
+    if (pFile != NULL)
     {
-      nroRegistro = i;
-      break;
+        fseek(pFile, 0, SEEK_END);
+        cantidad = ftell(pFile) / sizeof(EmpleadoDTO);
+        fclose(pFile);
     }
-  }
-  return nroRegistro;
+    return cantidad;
 }
 
+int EmpleadoDAL::buscar(int dni)
+{
+    int nroRegistro = -1;
+    int cantidad = getCantidad();
+    EmpleadoDTO registro;
+    for (int i = 0; i < cantidad; i++)
+    {
+        registro = leer(i);
+        if (registro.getDni() == dni)
+        {
+            nroRegistro = i;
+            break;
+        }
+    }
+    return nroRegistro;
+}

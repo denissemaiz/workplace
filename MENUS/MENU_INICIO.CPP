@@ -1,16 +1,10 @@
-#include <iostream>
-#include <iomanip>
-#include <string>
-
-using namespace std;
-
-#include "FUNCIONES_FRONT.h"
-#include "FUNCIONES_USER.h"
 #include "MENUS.h"
+#include "FUNCIONES_FRONT.h"
 #include "EmpleadoDAL.h"
 
 void menuIncio()
 {
+    system("cls");
     rlutil::setColor(rlutil::YELLOW);
     rectangulo (2, 2, 100, 20);
 

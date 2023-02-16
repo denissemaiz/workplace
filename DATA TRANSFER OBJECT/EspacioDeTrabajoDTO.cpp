@@ -6,15 +6,12 @@ using namespace std;
 #include "FUNCIONES_FRONT.h"
 #include "rlutil.h"
 
-
 EspacioDeTrabajoDTO::EspacioDeTrabajoDTO()
 {
-    _tipo_espacio=-1;  ///contador?
+    _tipo_espacio=-1;
     _cant_puestos=0;
-    _disponibilidad=0;
     _estado=false;
 }
-
 
 void EspacioDeTrabajoDTO::setTipo(int tipoespacio)
 {
@@ -25,11 +22,6 @@ void EspacioDeTrabajoDTO::setTipo(int tipoespacio)
 void EspacioDeTrabajoDTO::setCantPuestos(int cantidadpuestos)
 {
     _cant_puestos=cantidadpuestos;
-
-}
-void EspacioDeTrabajoDTO::setDisponibilidad(int disponibilidad)
-{
-    _disponibilidad=disponibilidad;
 
 }
 
@@ -47,11 +39,6 @@ int EspacioDeTrabajoDTO::getTipo()
 int EspacioDeTrabajoDTO::getCantPuestos()
 {
     return _cant_puestos;
-}
-
-int EspacioDeTrabajoDTO::getDisponibilidad()
-{
-    return _disponibilidad;
 }
 
 bool EspacioDeTrabajoDTO::getEstado()

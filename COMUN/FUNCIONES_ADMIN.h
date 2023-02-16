@@ -1,13 +1,15 @@
 #ifndef FUNCIONES_ADMIN_H_INCLUDED
 #define FUNCIONES_ADMIN_H_INCLUDED
 
+#include "../MENUS/MENUS.h"
+#include "FUNCIONES_FRONT.h"
 
 int agregarEmpleado();
-bool listarEmpleados();
-bool limitarEspacios(int);
-bool definirEspacios(int);
-bool listarEspacios();
 bool modificarEmpleado();
+bool listarEmpleados();
+bool definirEspacios(int espacio);
+bool listarEspacios();
+/**/ //FALTAN:
 void ConsultasReservas();
 void Informes();
 void Respaldos();

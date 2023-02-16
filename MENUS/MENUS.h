@@ -1,20 +1,22 @@
 #ifndef MENUS_H_INCLUDED
 #define MENUS_H_INCLUDED
 
+#include "FUNCIONES_FRONT.h"
+#include "FUNCIONES_USER.h"
+#include "FUNCIONES_ADMIN.h"
+
 #include "Fecha.h"
 
 void menuIncio();
 void menuAdmin();
 void menuUser(int dni);
-void cuadroSeleccionarEspacio(int dni);
-void cuadroSeleccionarSector(int espacio);
-void cuadroSeleccionDia(int dni, int espacio);
-bool consultarDisponibilidad(int espacio, Fecha fecha);
-void cuadroConfirmacionReserva();
-void cuadroLimitarEspacio(int);
+void menuSeleccionarEspacio(int dni);
+void menuSeleccionarDia(int dni, int espacio);
+bool menuConfirmarReserva(int espacio, Fecha fecha);
+/*void cuadroConfirmacionReserva();*/  /**/
+void menuLimitarEspacio(int);
 bool menuModificarDatos(int nroRegistro);
-void fechaNoDisponible(int dni, int espacio);
-void confirmacionReserva(int dni, int espacio, Fecha fecha);
+void menuFechaNoDisponible(int dni, int espacio);
 
 
 #endif // MENUS_H_INCLUDED

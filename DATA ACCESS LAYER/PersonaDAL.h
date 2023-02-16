@@ -1,7 +1,9 @@
 #ifndef PERSONADAL_H
 #define PERSONADAL_H
-#include <cstdio>
-#include "../DATA TRANSFER OBJECT/PersonaDTO.h"
+
+/*
+#include "FUNCIONES_FRONT.h"
+#include "PersonaDTO.h"
 
 const char RUTA_PERSONA [] = "Persona.data";
 
@@ -20,6 +22,6 @@ public:
     PersonaDTO buscarRegistro(int, int);
     PersonaDTO obtenerPorDNI (int);
     int leerDeDisco(int pos);
-};
+};*/
 
 #endif // PERSONADAL_H

@@ -1,10 +1,3 @@
-#include <iostream>
-#include <iomanip>
-#include <string>
-
-using namespace std;
-
-#include "rlutil.h"
 #include "MENUS.h"
 #include "FUNCIONES_ADMIN.h"
 #include "FUNCIONES_USER.h"

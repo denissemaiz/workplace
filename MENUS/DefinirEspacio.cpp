@@ -1,18 +1,11 @@
-#include <iostream>
-#include <iomanip>
-#include <string>
-#include <conio.h>
-
-using namespace std;
-
-#include "rlutil.h"
 #include "FUNCIONES_FRONT.h"
 #include "MENUS.h"
-#include "FUNCIONES_ADMIN.h"
+//#include "FUNCIONES_ADMIN.h"
+/**/
 
 void llamarDefinirEspacio(int tipoEspacio);
 
-void cuadroLimitarEspacio(int opc)
+void menuLimitarEspacio(int opc)
 {
     system("cls");
     const char *opciones[] = {"DESK","SALA DE REUNIONES", "ESTACIONAMIENTO", "COMEDOR","VOLVER AL MENU PRINCIPAL"};

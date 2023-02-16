@@ -1,13 +1,5 @@
-#include <iostream>
-#include <iomanip>
-#include <string>
+#include "FUNCIONES_ADMIN.h"
 
-using namespace std;
-
-#include "rlutil.h"
-#include "FUNCIONES_FRONT.h"
-#include "FUNCIONES_USER.h"
-#include "../MENUS/MENUS.h"
 #include "EmpleadoDAL.h"
 #include "EmpleadoDTO.h"
 #include "EspacioDeTrabajoDTO.h"
@@ -16,7 +8,7 @@ using namespace std;
 
 ///EMPLEADOS
 
-int agregarEmpleado() ///cargar empleado
+int agregarEmpleado()
 {
     EmpleadoDAL regEmpleado;
     EmpleadoDTO objEmpleado;
@@ -130,7 +122,6 @@ bool definirEspacios(int espacio)
 
     objEspacio.setTipo(espacio);
     objEspacio.setCantPuestos(cant_puestos);
-    objEspacio.setDisponibilidad(cant_puestos);
     objEspacio.setEstado(true);
 
     nroRegistro = regEspacio.buscar(espacio);
@@ -170,22 +161,3 @@ bool listarEspacios()
     }
     return hayRegistros;
 }
-
-/**/
-/* bool limitarEspacios(int espacio)
-{
-    EspacioDeTrabajoDTO objEspacio;
-    EspacioDeTrabajoDAL regEspacio;
-    int disponibilidad;
-
-    int cantidad=regEspacio.getCantidad();
-    EspacioDeTrabajoDTO* vecEspacios= new EspacioDeTrabajoDTO[cantidad];
-
-    regEspacio.leerTodos(vecEspacios,cantidad);
-
-    cout<<"Ingrese la disponibilidad del espacio";
-    cin>>disponibilidad;
-
-    vecEspacios[espacio].setDisponibilidad(disponibilidad);
-    ///NO ESTAMOS MODIFICANDO EL ARCHIVO CON ESTE .SET; SOLO EL VECTOR
-}*/

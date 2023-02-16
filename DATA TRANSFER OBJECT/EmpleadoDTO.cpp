@@ -1,9 +1,8 @@
 #include <iostream>
-using namespace std;
-#include "EmpleadoDTO.h"
-#include "FUNCIONES_FRONT.h"
-#include "rlutil.h"
 
+using namespace std;
+
+#include "EmpleadoDTO.h"
 
 EmpleadoDTO::EmpleadoDTO()
 {
@@ -11,12 +10,10 @@ EmpleadoDTO::EmpleadoDTO()
     _sector=0;
 }
 
-
 void EmpleadoDTO::setLegajo(int legajo)
 {
     _legajo = legajo;
 }
-
 
 void EmpleadoDTO::setSector(int sector)
 {
@@ -28,12 +25,10 @@ void EmpleadoDTO::setEstado(bool estado)
     _estado = estado;
 }
 
-
 int EmpleadoDTO::getLegajo()
 {
     return _legajo;
 }
-
 
 int EmpleadoDTO::getSector()
 {
@@ -44,7 +39,6 @@ bool EmpleadoDTO::getEstado()
 {
     return _estado;
 }
-
 
 void EmpleadoDTO::cargar(int dni)
 {

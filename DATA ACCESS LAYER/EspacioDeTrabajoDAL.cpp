@@ -1,8 +1,6 @@
 #include "EspacioDeTrabajoDAL.h"
-#include <cstdio>
 
 const char *RUTA_ESPACIO = "Espacio.data";
-
 
 EspacioDeTrabajoDTO EspacioDeTrabajoDAL::leer(int nroRegistro)
 {
@@ -19,15 +17,15 @@ EspacioDeTrabajoDTO EspacioDeTrabajoDAL::leer(int nroRegistro)
 
 bool EspacioDeTrabajoDAL::leerTodos(EspacioDeTrabajoDTO registros[], int cantidad)
 {
-  bool ok = false;
-  FILE* pFile = fopen(RUTA_ESPACIO, "rb");
-  if (pFile != NULL)
-  {
-    fread(registros, sizeof(EspacioDeTrabajoDTO), cantidad, pFile);
-    fclose(pFile);
-    ok = true;
-  }
-  return ok;
+    bool ok = false;
+    FILE* pFile = fopen(RUTA_ESPACIO, "rb");
+    if (pFile != NULL)
+    {
+        fread(registros, sizeof(EspacioDeTrabajoDTO), cantidad, pFile);
+        fclose(pFile);
+        ok = true;
+    }
+    return ok;
 }
 
 bool EspacioDeTrabajoDAL::agregar(EspacioDeTrabajoDTO registro)

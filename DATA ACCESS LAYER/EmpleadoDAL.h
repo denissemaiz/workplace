@@ -1,13 +1,12 @@
 #ifndef EMPLEADODAL_H
 #define EMPLEADODAL_H
-#include <cstdio>
-#include "../DATA TRANSFER OBJECT/EmpleadoDTO.h"
+
+#include "EmpleadoDTO.h"
 
 class EmpleadoDAL
 {
 public:
-    bool eliminar (EmpleadoDTO);
-    /**/
+    bool eliminar (EmpleadoDTO);  /**/
     EmpleadoDTO leer(int nroRegistro);
     bool leerTodos(EmpleadoDTO registros[], int cantidad);
     bool agregar(EmpleadoDTO registro);

@@ -4,10 +4,9 @@
 using namespace std;
 
 #include "PersonaDTO.h"
-#include "rlutil.h"
+#include "FUNCIONES_FRONT.h"
 
 char vacio[50] {"vacio"};
-
 
 PersonaDTO::PersonaDTO()
 {
@@ -17,7 +16,6 @@ PersonaDTO::PersonaDTO()
     strcpy(vacio,_email);
     _telefono=0;
 }
-
 
 void PersonaDTO::setDni(int val)
 {
@@ -44,7 +42,6 @@ void PersonaDTO::setTelefono(int telefono)
     _telefono = telefono;
 }
 
-
 int PersonaDTO::getDni()
 {
     return _dni;
@@ -70,18 +67,6 @@ int PersonaDTO::getTelefono()
     return _telefono;
 }
 
-/*
-void PersonaDTO::Copy(PersonaDTO persona)
-{
-    dni=persona.dni;
-    strcpy(nombre,persona.nombre);
-    strcpy(apellido,persona.apellido);
-    strcpy(email,persona.email);
-    strcpy(domicilio,persona.domicilio);
-    telefono=persona.telefono;
-}*/
-
-
 void PersonaDTO::cargar(int dni)
 {
     rlutil::setColor(rlutil::YELLOW);
@@ -91,7 +76,6 @@ void PersonaDTO::cargar(int dni)
     }
     else
     {
-        /**/
         rlutil::  locate (20,8);
         cout<<"DNI: ";
         rlutil::  locate (25,8);

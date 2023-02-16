@@ -1,15 +1,13 @@
 #ifndef ESPACIODETRABAJODAL_H
 #define ESPACIODETRABAJODAL_H
-#include <cstdio>
-#include "EspacioDeTrabajoDTO.h"
 
+#include "EspacioDeTrabajoDTO.h"
+#include <cstdio>
 
 class EspacioDeTrabajoDAL
 {
 public:
-    bool eliminar (EspacioDeTrabajoDTO);
-    //void PorcentajeOcupacionDiaria();
-    //void CantidadReservasMensualesPorDepto();
+    /*bool eliminar (EspacioDeTrabajoDTO);*/ /**/
     EspacioDeTrabajoDTO leer(int nroRegistro);
     bool leerTodos(EspacioDeTrabajoDTO registros[], int cantidad);
     bool agregar(EspacioDeTrabajoDTO registro);

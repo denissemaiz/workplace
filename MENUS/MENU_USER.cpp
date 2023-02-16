@@ -1,15 +1,8 @@
-#include <iostream>
-#include <iomanip>
-#include <string>
-
-using namespace std;
-
 #include "MENUS.h"
-#include"FUNCIONES_FRONT.h"
-#include"FUNCIONES_ADMIN.h"
-#include"FUNCIONES_USER.h"
+#include "FUNCIONES_FRONT.h"
+#include "FUNCIONES_USER.h"
+#include "FUNCIONES_RESERVAS.h"
 
-///PANTALLA MENU
 void menuUser(int dni)
 {
     system("cls");
@@ -69,24 +62,24 @@ void menuUser(int dni)
             {
             case 0:     /// RESERVAR
                 system("cls");
-                cuadroSeleccionarEspacio(dni);
+                menuSeleccionarEspacio(dni);
                 break;
 
             case 1:       ///ANULAR RESERVA
                 system("cls");
-                anularReserva(dni);
+                anularReserva(dni); /**/
                 break;
 
             case 2:     ///MI HISTORIAL
                 system("cls");
-                historialReservas(dni);
+                historialReservas(dni);  /**/
                 break;
 
             case 3:     ///SALIR
                 system("cls");
-                SalirSistemaUser();
+                salirSistemaUser();
                 getch();
-                return;
+                menuIncio();
                 break;
             }
         }

@@ -1,16 +1,7 @@
-#include <iostream>
-#include <iomanip>
-#include <string>
-
-using namespace std;
-
-#include "rlutil.h"
 #include "FUNCIONES_FRONT.h"
 #include "MENUS.h"
-#include "Fecha.h"
 
-
-void cuadroSeleccionarEspacio(int dni)
+void menuSeleccionarEspacio(int dni)
 {
     system("cls");
     rectangulo (2, 2, 100, 20);
@@ -66,16 +57,16 @@ void cuadroSeleccionarEspacio(int dni)
             switch(y)
             {
             case 0:      ///DESK
-                cuadroSeleccionDia(dni, y);
+                menuSeleccionarDia(dni, y);
                 break;
             case 1:       ///SALA DE REUNIONES
-                cuadroSeleccionDia(dni, y);
+                menuSeleccionarDia(dni, y);
                 break;
             case 2:       ///ESTACIONAMIENTO
-                cuadroSeleccionDia(dni, y);
+                menuSeleccionarDia(dni, y);
                 break;
             case 3:     ///COMEDOR
-                cuadroSeleccionDia(dni, y);
+                menuSeleccionarDia(dni, y);
                 break;
             }
         }

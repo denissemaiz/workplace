@@ -1,7 +1,7 @@
 #include "PersonaDAL.h"
 using namespace std;
 
-
+/*
 void PersonaDAL::leerEmpleados(PersonaDTO empleados[], int cantidad)
 {
     FILE* p;
@@ -201,3 +201,4 @@ bool PersonaDAL::eliminar(PersonaDTO dto)
     return eliminar;
 }
 
+*/

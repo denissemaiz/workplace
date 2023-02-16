@@ -1,12 +1,5 @@
-#include "PersonaDAL.h"
-#include "PersonaDTO.h"
-
-using namespace std;
-
-#include "rlutil.h"
-#include "FUNCIONES_FRONT.h"
-#include "FUNCIONES_USER.h"
 #include "MENUS.h"
+#include "FUNCIONES_FRONT.h"
 #include "FUNCIONES_ADMIN.h"
 
 void menuAdmin()
@@ -15,7 +8,6 @@ void menuAdmin()
                               "LISTAR ESPACIOS", "REALIZAR UNA RESERVA EXTERNA",  "CONSULTAS DE RESERVAS",
                               "INFORMES", "RESPALDOS", "SALIR"
                              };
-
     int op=1, y=0;
 
     rlutil::hidecursor();
@@ -101,12 +93,14 @@ void menuAdmin()
                 rlutil::setColor(rlutil::YELLOW);
                 mostrar_mensaje ("* INGRESE EL DNI DEL EMPLEADO QUE DESEA MODIFICAR *", 25, 5);
 
-                if(modificarEmpleado()){             ///si la función devuelve true
+                if(modificarEmpleado())              ///si la función devuelve true
+                {
                     mostrar_mensaje ("*** REGISTRO MODIFICADO ***", 40, 23);
                     getch();
                     system("cls");
                 }
-                else{
+                else
+                {
                     system("cls");
                     rectangulo (2, 2, 100, 26);
                     rlutil::setColor(rlutil::YELLOW);
@@ -142,7 +136,7 @@ void menuAdmin()
                 rectangulo (2, 2, 100, 26);
                 rlutil::setColor(rlutil::YELLOW);
                 mostrar_mensaje ("DEFINIR ESPACIOS", 40, 5);
-                cuadroLimitarEspacio(y);
+                menuLimitarEspacio(y);
                 break;
 
             case 4:     ///LISTAR ESPACIOS
@@ -190,7 +184,7 @@ void menuAdmin()
 
             case 9:    ///SALIR
                 system("cls");
-                SalirSistemaUser();
+                salirSistemaUser();
                 getch();
                 return;
                 break;

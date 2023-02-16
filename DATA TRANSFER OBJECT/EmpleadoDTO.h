@@ -2,6 +2,7 @@
 #define EMPLEADODTO_H
 
 #include "PersonaDTO.h"
+#include "FUNCIONES_FRONT.h"
 
 class EmpleadoDTO : public PersonaDTO
 {
@@ -23,7 +24,7 @@ public:
     int getSector();
     bool getEstado();
 
-    void cargar(int dni=0);
+    void cargar(int dni=0);  //si el dni es 0, lo carga; sino ya viene el dato, no lo pide
     void mostrar(int dni=0);
 };
 

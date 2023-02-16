@@ -1,15 +1,9 @@
-#include <iostream>
-#include <iomanip>
-#include <string>
-
-using namespace std;
-
 #include "FUNCIONES_FRONT.h"
 #include "FUNCIONES_USER.h"
+#include "FUNCIONES_RESERVAS.h"
 #include "MENUS.h"
-#include "Fecha.h"
 
-void cuadroSeleccionDia(int dni, int espacio)
+void menuSeleccionarDia(int dni, int espacio)
 {
     system("cls");
     rectangulo (2, 2, 100, 25);
