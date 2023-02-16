@@ -15,6 +15,7 @@ int agregarEmpleado()
     int dni, nroRegistro;
     bool agrego = false;
 
+    mostrar_mensaje ("INGRESE LOS SIGUIENTES DATOS: ", 29, 8);
     rlutil::  locate (20,8);
     cout<<"DNI: ";
     rlutil::  locate (25,8);
@@ -52,22 +53,24 @@ bool modificarEmpleado()
 
     regEmpleado.leerTodos(vecEmpleados, cantidad);
 
-    rlutil::  locate (20,8);
+    rlutil::  locate (20,9);
     cout<<"DNI: ";
-    rlutil::  locate (25,8);
+    rlutil::  locate (25,9);
     cin>>dni;
 
     nroRegistro = regEmpleado.buscar(dni);
 
     if (nroRegistro==-1)
     {
-        mostrar_mensaje ("* EL DNI INGRESADO NO EXISTE EN NUESTRA BASE DE DATOS *", 20, 10);
-        system("pause>null");
+        mostrar_mensaje ("* EL DNI INGRESADO NO EXISTE EN NUESTRA BASE DE DATOS *", 23, 15);
+        rlutil::  locate (61,21);
+        system("pause");
     }
     else
     {
         vecEmpleados[nroRegistro].mostrar(dni);
-        getch();
+        rlutil::  locate (61,21);
+        system("pause");
         modifico = menuModificarDatos(nroRegistro);
     }
     return modifico;
@@ -90,12 +93,12 @@ bool listarEmpleados()
             {
                 hayRegistros = true;
                 system("cls");
-                rectangulo (2, 2, 100, 26);
+                rectangulo (2, 2, 100, 20);
                 mostrar_mensaje ("LISTADO DE EMPLEADOS", 40, 5);
                 mostrar_mensaje ("--------------------", 40, 6);
                 vecEmpleados[i].mostrar();
-                mostrar_mensaje ("ENTER PARA CONTINUAR..", 60, 25);
-                getch();
+                rlutil::  locate (61,21);
+                system("pause");
             }
         }
     }
@@ -113,7 +116,6 @@ bool definirEspacios(int espacio)
     bool guardo = false;
 
     rectangulo (2, 2, 100, 26);
-    rlutil::setColor(rlutil::YELLOW);
     mostrar_mensaje ("INGRESE LA CANTIDAD DE PUESTOS DEL ESPACIO: ", 29, 8);
     rlutil::setColor(rlutil::YELLOW);
     rectangulo (45, 11, 4, 1);
@@ -151,10 +153,11 @@ bool listarEspacios()
         regEspacio.leerTodos(vecEspacios, cantidad);
         for( int i=0; i<cantidad; i++)
         {
-            rectangulo (2, 2, 100, 26);
-            rlutil::setColor(rlutil::YELLOW);
+            rectangulo (2, 2, 100, 20);
+            mostrar_mensaje ("LISTADO DE ESPACIOS", 40, 5);
+            mostrar_mensaje ("--------------------", 40, 6);
             vecEspacios[i].mostrar();
-            rlutil::  locate (10,25);
+            rlutil::  locate (61,21);
             system("pause");
             system("cls");
         }

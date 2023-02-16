@@ -5,11 +5,6 @@
 class ReservasDAL
 {
 public:
-    void reservasDiarias();
-    void reservasQuincenales();
-    void listadoPorDptoTrabajo();
-    void listadoOcupacionPorEmpleado();
-    /**/
     ReservaDTO leer(int nroRegistro);
     bool leerTodos(ReservaDTO registros[], int cantidad);
     bool agregar(ReservaDTO registro);

@@ -5,16 +5,16 @@
 
 void llamarDefinirEspacio(int tipoEspacio);
 
-void menuLimitarEspacio(int opc)
+void menuLimitarEspacio()
 {
     system("cls");
     const char *opciones[] = {"DESK","SALA DE REUNIONES", "ESTACIONAMIENTO", "COMEDOR","VOLVER AL MENU PRINCIPAL"};
 
-    mostrar_mensaje ("* SELECCIONE EL ESPACIO A DEFINIR *", 40, 5);
-    mostrar_mensaje ("___________________________________", 40, 6);
+    mostrar_mensaje ("* SELECCIONE EL ESPACIO A DEFINIR *", 39, 5);
+    mostrar_mensaje ("___________________________________", 39, 6);
 
     rlutil::saveDefaultColor();
-    rectangulo (2, 2, 100, 26);
+    rectangulo (2, 2, 100, 20);
     rlutil::setColor(rlutil::YELLOW);
 
     int op=1, y=0;

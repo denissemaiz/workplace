@@ -5,21 +5,18 @@
 void menuAdmin()
 {
     const char *opciones[] = {"CARGAR EMPLEADO", "MODIFICAR DATOS DEL EMPLEADO", "LISTAR EMPLEADOS", "DEFINIR ESPACIOS",
-                              "LISTAR ESPACIOS", "REALIZAR UNA RESERVA EXTERNA",  "CONSULTAS DE RESERVAS",
-                              "INFORMES", "RESPALDOS", "SALIR"
-                             };
+                              "LISTAR ESPACIOS", "CONSULTAS DE RESERVAS", "INFORMES", "RESPALDOS", "SALIR" };
     int op=1, y=0;
 
     rlutil::hidecursor();
 
     do
     {
-        mostrar_mensaje ("*****  BIENVENIDO  A WORKPLACE ***** ", 36, 4);
         mostrar_mensaje ( " ESTAS SON TUS OPCIONES:  ", 40, 6);
         mostrar_mensaje ("-------------------------", 40, 7);
 
         rlutil::saveDefaultColor();
-        rectangulo (2, 2, 100, 26);
+        rectangulo (2, 2, 100, 25);
         rlutil::setColor(rlutil::YELLOW);
 
         showItem (opciones[0],30,10,y==0);
@@ -31,7 +28,6 @@ void menuAdmin()
         showItem (opciones[6],30,16,y==6);
         showItem (opciones[7],30,17,y==7);
         showItem (opciones[8],30,18,y==8);
-        showItem (opciones[9],30,19,y==9);
 
         rlutil::locate(26,10+y);
         cout <<"==> " <<endl;
@@ -54,9 +50,9 @@ void menuAdmin()
             cout <<"   " <<endl;
             y++;
 
-            if (y>10)
+            if (y>8)
             {
-                y=10;
+                y=8;
             }
             break;
 
@@ -67,7 +63,6 @@ void menuAdmin()
             case 0:     ///CARGAR EMPLEADO
                 system("cls");
                 rectangulo (2, 2, 100, 26);
-                rlutil::setColor(rlutil::YELLOW);
                 mostrar_mensaje ("*** CARGAR UN EMPLEADO ***", 40, 5);
 
                 if (agregarEmpleado()!=-1)
@@ -79,9 +74,8 @@ void menuAdmin()
                 else
                 {
                     system("cls");
-                    rectangulo (2, 2, 100, 26);
-                    rlutil::setColor(rlutil::YELLOW);
-                    mostrar_mensaje ("NO SE PUDO AGREGAR EL REGISTRO.", 20, 14);
+                    rectangulo (2, 2, 100, 20);
+                    mostrar_mensaje ("*** NO SE PUDO AGREGAR EL REGISTRO ***", 33, 11);
                     system("pause>nul");
                     system("cls");
                 }
@@ -89,22 +83,21 @@ void menuAdmin()
 
             case 1:     ///MODIFICAR DATOS EMPLEADO
                 system("cls");
-                rectangulo (2, 2, 100, 26);
+                rectangulo (2, 2, 100, 20);
                 rlutil::setColor(rlutil::YELLOW);
-                mostrar_mensaje ("* INGRESE EL DNI DEL EMPLEADO QUE DESEA MODIFICAR *", 25, 5);
+                mostrar_mensaje ("INGRESE EL DNI DEL EMPLEADO QUE DESEA MODIFICAR: ", 20, 6);
 
-                if(modificarEmpleado())              ///si la función devuelve true
+                if(modificarEmpleado())
                 {
-                    mostrar_mensaje ("*** REGISTRO MODIFICADO ***", 40, 23);
+                    mostrar_mensaje ("*** REGISTRO MODIFICADO ***", 40, 17);
                     getch();
                     system("cls");
                 }
                 else
                 {
                     system("cls");
-                    rectangulo (2, 2, 100, 26);
-                    rlutil::setColor(rlutil::YELLOW);
-                    mostrar_mensaje ("NO SE PUDO MODIFICAR EL REGISTRO.", 20, 14);
+                    rectangulo (2, 2, 100, 20);
+                    mostrar_mensaje ("*** NO SE PUDO MODIFICAR EL REGISTRO ***", 33, 11);
                     system("pause>nul");
                     system("cls");
                 }
@@ -114,18 +107,17 @@ void menuAdmin()
                 if(listarEmpleados())
                 {
                     system("cls");
-                    rectangulo (2, 2, 100, 26);
+                    rectangulo (2, 2, 100, 20);
                     rlutil::setColor(rlutil::YELLOW);
-                    mostrar_mensaje ("****  FIN DEL LISTADO  *****", 26, 14);
+                    mostrar_mensaje ("***  FIN DEL LISTADO  ***", 40, 11);
                     system("pause>nul");
                     system("cls");
                 }
                 else
                 {
                     system("cls");
-                    rectangulo (2, 2, 100, 26);
-                    rlutil::setColor(rlutil::YELLOW);
-                    mostrar_mensaje ("****  NO EXISTEN REGISTROS DE EMPLEADOS ****", 26, 14);
+                    rectangulo (2, 2, 100, 20);
+                    mostrar_mensaje ("***  NO EXISTEN REGISTROS DE EMPLEADOS ***", 33, 11);
                     system("pause>nul");
                     system("cls");
                 }
@@ -133,56 +125,45 @@ void menuAdmin()
 
             case 3:     ///DEFINIR ESPACIOS
                 system("cls");
-                rectangulo (2, 2, 100, 26);
-                rlutil::setColor(rlutil::YELLOW);
-                mostrar_mensaje ("DEFINIR ESPACIOS", 40, 5);
-                menuLimitarEspacio(y);
+                menuLimitarEspacio();
                 break;
 
             case 4:     ///LISTAR ESPACIOS
                 system("cls");
-
-                rectangulo (2, 2, 100, 26);
-                rlutil::setColor(rlutil::YELLOW);
-                mostrar_mensaje ("LISTAR ESPACIOS", 40, 5);
                 if(listarEspacios())
                 {
                     system("cls");
-                    rectangulo (2, 2, 100, 26);
-                    rlutil::setColor(rlutil::YELLOW);
-                    mostrar_mensaje ("FIN DEL LISTADO.", 26, 14);
+                    rectangulo (2, 2, 100, 20);
+                    mostrar_mensaje ("***  FIN DEL LISTADO  ***", 40, 11);
                     system("pause>nul");
                     system("cls");
                 }
                 else
                 {
-                    rlutil::  locate (20,23);
-                    cout<<"NO EXISTEN REGISTROS DE ESPACIOS.";
+                    system("cls");
+                    rectangulo (2, 2, 100, 20);
+                    mostrar_mensaje ("***  NO EXISTEN REGISTROS DE ESPACIOS ***", 30, 11);
                     system("pause>nul");
                     system("cls");
                 }
                 break;
 
-            case 5:     ///REALIZAR UNA RESERVA EXTERNA
-                system("cls");
-                break;
-
-            case 6:     ///CONSULTAS DE RESERVAS
+            case 5:    ///CONSULTAS DE RESERVAS  /**/??
                 system("cls");
                 ConsultasReservas();
                 break;
 
-            case 7:    ///INFORMES
+            case 6:    ///INFORMES  /**/
                 system("cls");
                 Informes();
                 break;
 
-            case 8:   ///RESPALDOS
+            case 7:   ///RESPALDOS  /**/
                 system("cls");
                 Respaldos();
                 break;
 
-            case 9:    ///SALIR
+            case 8:    ///SALIR   /**/
                 system("cls");
                 salirSistemaUser();
                 getch();

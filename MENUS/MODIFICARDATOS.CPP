@@ -82,9 +82,9 @@ bool menuModificarDatos(int nroRegistro)
             {
             case 0:      /// SETEAR DNI
                 system("cls");
-                rlutil::  locate (20,9);
-                cout<<"DNI: ";
-                rlutil::  locate (25,9);
+                rectangulo (2, 2, 100, 20);
+                mostrar_mensaje ("INGRESE EL DNI NUEVO: ", 20, 6);
+                mostrar_mensaje ("DNI: ", 20, 9);
                 cin>>_dni;
                 vecEmpleados[nroRegistro].setDni(_dni);
                 modifico = regEmpleado.modificar(vecEmpleados[nroRegistro], nroRegistro);
@@ -92,9 +92,9 @@ bool menuModificarDatos(int nroRegistro)
 
             case 1:   /// SETEAR NOMBRE
                 system("cls");
-                rlutil::  locate (20,9);
-                cout<<"NOMBRE: ";
-                rlutil::  locate (28,9);
+                rectangulo (2, 2, 100, 20);
+                mostrar_mensaje ("INGRESE EL NOMBRE NUEVO: ", 20, 6);
+                mostrar_mensaje ("NOMBRE: ", 20, 9);
                 cin>>_nombre;
                 vecEmpleados[nroRegistro].setNombre(_nombre);
                 modifico = regEmpleado.modificar(vecEmpleados[nroRegistro], nroRegistro);
@@ -102,19 +102,19 @@ bool menuModificarDatos(int nroRegistro)
 
             case 2:          /// SETEAR APELLIDO
                 system("cls");
-                rlutil::  locate (20,9);
-                cout<<"APELLIDO: ";
-                rlutil::  locate (30,9);
+                rectangulo (2, 2, 100, 20);
+                mostrar_mensaje ("INGRESE EL APELLIDO NUEVO: ", 20, 6);
+                mostrar_mensaje ("APELLIDO: ", 20, 9);
                 cin>>_apellido;
                 vecEmpleados[nroRegistro].setApellido(_apellido);
                 modifico = regEmpleado.modificar(vecEmpleados[nroRegistro], nroRegistro);
                 break;
 
-            case 3:     /// SETEAR MAIL
+            case 3:     /// SETEAR EMAIL
                 system("cls");
-                rlutil::  locate (20,9);
-                cout<<"EMAIL: ";
-                rlutil::  locate (27,9);
+                rectangulo (2, 2, 100, 20);
+                mostrar_mensaje ("INGRESE EL EMAIL NUEVO: ", 20, 6);
+                mostrar_mensaje ("EMAIL: ", 20, 9);
                 cin>>_email;
                 vecEmpleados[nroRegistro].setEmail(_email);
                 modifico = regEmpleado.modificar(vecEmpleados[nroRegistro], nroRegistro);
@@ -122,9 +122,9 @@ bool menuModificarDatos(int nroRegistro)
 
             case 4:     /// SETEAR TELEFONO
                 system("cls");
-                rlutil::  locate (20,9);
-                cout<<"TELEFONO: ";
-                rlutil::  locate (31,9);
+                rectangulo (2, 2, 100, 20);
+                mostrar_mensaje ("INGRESE EL TELEFONO NUEVO: ", 20, 6);
+                mostrar_mensaje ("TELEFONO: ", 20, 9);
                 cin>>_telefono;
                 vecEmpleados[nroRegistro].setTelefono(_telefono);
                 modifico = regEmpleado.modificar(vecEmpleados[nroRegistro], nroRegistro);
@@ -132,9 +132,9 @@ bool menuModificarDatos(int nroRegistro)
 
             case 5:     /// SETEAR LEGAJO
                 system("cls");
-                rlutil::  locate (20,9);
-                cout<<"LEGAJO: ";
-                rlutil::  locate (28,9);
+                rectangulo (2, 2, 100, 20);
+                mostrar_mensaje ("INGRESE EL LEGAJO NUEVO: ", 20, 6);
+                mostrar_mensaje ("LEGAJO: ", 20, 9);
                 cin>>_legajo;
                 vecEmpleados[nroRegistro].setLegajo(_legajo);
                 modifico = regEmpleado.modificar(vecEmpleados[nroRegistro], nroRegistro);
@@ -142,8 +142,9 @@ bool menuModificarDatos(int nroRegistro)
 
             case 6:     /// SETEAR SECTOR
                 system("cls");
-                rlutil::  locate (20,9);
-                cout<<"SECTOR: ";
+                rectangulo (2, 2, 100, 20);
+                mostrar_mensaje ("INGRESE EL SECTOR NUEVO: ", 20, 6);
+                mostrar_mensaje ("SECTOR: ", 20, 9);
                 rlutil::  locate (21,11);
                 cout<<"1- ADMINISTRACION Y RRHH";
                 rlutil::  locate (21,12);
@@ -169,6 +170,7 @@ bool menuModificarDatos(int nroRegistro)
 
             case 7:     /// SETEAR DAR DE BAJA
                 system("cls");
+                rectangulo (2, 2, 100, 20);
                 rlutil::  locate (20,9);
                 cout<<"QUE DESEA HACER?: ";
                 rlutil::  locate (21,11);

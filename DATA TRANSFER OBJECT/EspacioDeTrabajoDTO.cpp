@@ -50,9 +50,9 @@ void EspacioDeTrabajoDTO::mostrar()
 {
     if(_estado==true)
     {
-        rlutil::  locate (20,13);
+        rlutil::  locate (20,10);
         cout<<"TIPO DE ESPACIO: ";
-        rlutil::  locate (37,13);
+        rlutil::  locate (37,10);
         switch(_tipo_espacio)
         {
         case 0:
@@ -68,13 +68,9 @@ void EspacioDeTrabajoDTO::mostrar()
             cout<<"COMEDOR";
             break;
         }
-        rlutil::  locate (20,14);
+        rlutil::  locate (20,11);
         cout<<"CANTIDAD DE PUESTOS: ";
-        rlutil::  locate (41,14);
-        cout<<_cant_puestos;
-        rlutil::  locate (20,15);
-        cout<<"DISPONIBILIDAD: ";
-        rlutil::  locate (36,15);
+        rlutil::  locate (41,11);
         cout<<_cant_puestos;
     }
 }

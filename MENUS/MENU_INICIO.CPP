@@ -43,7 +43,7 @@ void menuIncio()
     }
     else
     {
-        mostrar_mensaje ("EL DNI INGRESADO NO ES VALIDO.", 35, 17);
+        mostrar_mensaje ("** EL DNI INGRESADO NO ES VALIDO **", 35, 17);
         rlutil::  locate (60,21);
         system("pause");
         system("cls");

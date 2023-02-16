@@ -30,7 +30,7 @@ void anularReserva(int dni)
 
     nroReserva = ingresarNroReserva();
 
-    while(!chequearNroReserva(nroReserva, dni)) /********/
+    while(!chequearNroReserva(nroReserva, dni))
     {
         system("cls");
         rectangulo (2, 2, 100, 26);

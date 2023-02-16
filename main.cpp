@@ -17,3 +17,8 @@ int main()
     system("cls");
     return 0;
 }
+
+/*
+rlutil::  locate (61,21);
+system("pause");
+*/

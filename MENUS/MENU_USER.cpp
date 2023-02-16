@@ -65,7 +65,7 @@ void menuUser(int dni)
                 menuSeleccionarEspacio(dni);
                 break;
 
-            case 1:       ///ANULAR RESERVA    /**/
+            case 1:
                 system("cls");
                 anularReserva(dni);
                 break;
