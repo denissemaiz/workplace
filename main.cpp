@@ -6,15 +6,7 @@
 
 using namespace std;
 
-#include "PersonaDTO.h"
-#include "PersonaDAL.h"
-#include "EmpleadoDTO.h"
-#include "EmpleadoDAL.h"
-#include "FUNCIONES_FRONT.h"
 #include "MENUS/MENUS.h"
-#include "rlutil.h"
-#include "EspacioDeTrabajoDTO.h"
-#include "ReservaDTO.h"
 
 
 int main()

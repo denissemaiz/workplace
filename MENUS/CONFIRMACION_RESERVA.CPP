@@ -32,7 +32,8 @@ void confirmacionReserva(int dni, int espacio, Fecha fecha)
     }
     if(!reciboConfirmacionReserva(espacio, fecha))
     {
-        SalirSistemaUser(); /**/// o vuelve a menuUser?
+        system("cls");
+        menuUser(dni);
     }
     else
     {

@@ -8,8 +8,6 @@ class EspacioDeTrabajoDAL
 {
 public:
     bool eliminar (EspacioDeTrabajoDTO);
-    //void PorcentajeOcupacionDiaria();
-    //void CantidadReservasMensualesPorDepto();
     EspacioDeTrabajoDTO leer(int nroRegistro);
     bool leerTodos(EspacioDeTrabajoDTO registros[], int cantidad);
     bool agregar(EspacioDeTrabajoDTO registro);
