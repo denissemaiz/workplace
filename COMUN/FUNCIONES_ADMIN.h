@@ -10,7 +10,7 @@ bool listarEmpleados();
 bool definirEspacios(int espacio);
 bool listarEspacios();
 /**/ //FALTAN:
-void ConsultasReservas();
+void consultasReservas();
 void Informes();
 void Respaldos();
 void InformePlantilla();

@@ -14,6 +14,7 @@ public:
     int getCantidad();
     int buscar(int dni);
     int buscarLegajo(int dni);
+    int buscarPorLegajo(int legajo);
 };
 
 #endif // EMPLEADODAL_H

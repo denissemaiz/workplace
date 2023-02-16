@@ -126,3 +126,20 @@ int EmpleadoDAL::buscarLegajo(int dni)
     }
     return legajo;
 }
+
+int EmpleadoDAL::buscarPorLegajo(int legajo)
+{
+    int nroRegistro = -1;
+    int cantidad = getCantidad();
+    EmpleadoDTO registro;
+    for (int i = 0; i < cantidad; i++)
+    {
+        registro = leer(i);
+        if (registro.getLegajo() == legajo)
+        {
+            nroRegistro = registro.getLegajo();
+            break;
+        }
+    }
+    return nroRegistro;
+}

@@ -2,28 +2,6 @@
 
 const char *RUTA_RESERVA = "Reserva.data";
 
-void ReservasDAL::reservasDiarias()
-{
-
-}
-
-void ReservasDAL::reservasQuincenales()
-{
-
-}
-
-void ReservasDAL::listadoPorDptoTrabajo()
-{
-
-}
-
-void ReservasDAL::listadoOcupacionPorEmpleado()
-{
-
-}
-
-/**/
-
 ReservaDTO ReservasDAL::leer(int nroRegistro)
 {
   ReservaDTO registro;

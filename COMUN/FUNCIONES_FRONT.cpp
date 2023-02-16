@@ -1,13 +1,5 @@
-#include <iostream>
-#include <iomanip>
-#include <string>
-
-using namespace std;
-
-#include "rlutil.h"
+#include "../MENUS/MENUS.h"
 #include "FUNCIONES_FRONT.h"
-#include "Fecha.h"
-#include <cstring>
 
 void mostrar_mensaje (string texto, int x, int y)
 {
@@ -136,4 +128,13 @@ bool seleccionarSiNo()
     while(op!=0);
     system("pause>nul");
     return false;
+}
+
+void salirSistemaUser()
+{
+    rectangulo (2, 2, 100, 20);
+    mostrar_mensaje ("*****   MUCHAS GRACIAS POR USAR NUESTRO SISTEMA *****", 28, 10);
+    mostrar_mensaje ("By CIBERNAUTAS", 68, 20);
+    getch();
+    menuIncio();
 }

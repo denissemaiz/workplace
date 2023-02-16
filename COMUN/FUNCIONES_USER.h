@@ -4,7 +4,6 @@
 #include "FUNCIONES_FRONT.h"
 
 bool validarDni(int dni);
-void salirSistemaUser();
 int listarReservasFuturas(int dni);
 int listarHistorialReservas(int dni);
 bool chequearEmpleado(int dni);

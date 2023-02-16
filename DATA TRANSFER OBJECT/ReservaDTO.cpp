@@ -57,9 +57,9 @@ void ReservaDTO::mostrar()
     cout<<"NRO. DE RESERVA: "  <<_numero;
     rlutil::  locate (20,13);
     cout<<"LEGAJO: "   <<_legajo;
-    rlutil::  locate (20,13);
+    rlutil::  locate (20,14);
     cout<<"ESPACIO DE TRABAJO: ";
-    rlutil::  locate (40,13);
+    rlutil::  locate (40,14);
     switch(_espacio_trabajo)
     {
     case 0:
@@ -75,13 +75,13 @@ void ReservaDTO::mostrar()
         cout<<"COMEDOR";
         break;
     }
-    rlutil::  locate (20,14);
+    rlutil::  locate (20,15);
     cout<<"FECHA: ";
     _fecha.Mostrar();
 
     if(_estado==false)
     {
-        rlutil::  locate (20,16);
+        rlutil::  locate (20,17);
         cout<<"** RESERVA ANULADA **";
     }
 }

@@ -1,10 +1,5 @@
-#include <iostream>
-
-using namespace std;
-
 #include "EspacioDeTrabajoDTO.h"
 #include "FUNCIONES_FRONT.h"
-#include "rlutil.h"
 
 EspacioDeTrabajoDTO::EspacioDeTrabajoDTO()
 {

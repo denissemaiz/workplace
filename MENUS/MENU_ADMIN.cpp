@@ -108,7 +108,6 @@ void menuAdmin()
                 {
                     system("cls");
                     rectangulo (2, 2, 100, 20);
-                    rlutil::setColor(rlutil::YELLOW);
                     mostrar_mensaje ("***  FIN DEL LISTADO  ***", 40, 11);
                     system("pause>nul");
                     system("cls");
@@ -148,9 +147,9 @@ void menuAdmin()
                 }
                 break;
 
-            case 5:    ///CONSULTAS DE RESERVAS  /**/??
+            case 5:
                 system("cls");
-                ConsultasReservas();
+                consultasReservas();
                 break;
 
             case 6:    ///INFORMES  /**/

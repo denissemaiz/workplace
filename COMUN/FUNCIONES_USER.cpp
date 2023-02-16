@@ -1,5 +1,5 @@
 #include "FUNCIONES_USER.h"
-
+#include "../MENUS/MENUS.h"
 #include "ReservaDTO.h"
 #include "ReservasDAL.h"
 #include "EmpleadoDAL.h"
@@ -22,15 +22,6 @@ bool validarDni(int dni)
     {
         return false;
     }
-}
-
-void salirSistemaUser()
-{
-    rectangulo (2, 2, 100, 20);
-
-    rlutil::setColor(rlutil::YELLOW);
-    mostrar_mensaje ("*****   MUCHAS GRACIAS POR USAR NUESTRO SISTEMA *****", 28, 10);
-    mostrar_mensaje ("By CIBERNAUTAS", 68, 20);
 }
 
 int listarReservasFuturas(int dni)

@@ -84,8 +84,6 @@ void confirmacionReserva(int dni, int espacio, Fecha fecha)
         mostrar_mensaje ("*** SU RESERVA FUE REGISTRADA ***", 35, 20);
         getch();
         system("cls");
-
-        system("cls");
         menuUser(dni);
     }
 }
@@ -116,20 +114,161 @@ bool chequearNroReserva(int nroReserva, int dni)
     EmpleadoDAL regEmpleado;
     EmpleadoDTO objEmpleado;
 
-    int nroEmpleado, nroRegReserva, legajo;
+    int nroRegEmpleado, nroRegReserva, legajo;
     bool existe = false;
 
-    nroEmpleado = regEmpleado.buscar(dni);
-    objEmpleado = regEmpleado.leer(nroEmpleado);
+    nroRegEmpleado = regEmpleado.buscar(dni);
+    objEmpleado = regEmpleado.leer(nroRegEmpleado);
     legajo = objEmpleado.getLegajo();
     nroRegReserva = regReserva.buscar(nroReserva);
     objReserva = regReserva.leer(nroRegReserva);
 
     if(nroRegReserva != -1
-       && objReserva.getLegajo() == legajo
-       && objReserva.getEstado() == true)
+            && objReserva.getLegajo() == legajo
+            && objReserva.getEstado() == true)
     {
         existe = true;
     }
     return existe;
+}
+
+int listarPorDni()
+{
+    EmpleadoDAL regEmpleado;
+    EmpleadoDTO objEmpleado;
+    ReservasDAL regReserva;
+
+    int dni, nroRegEmpleado, nroRegReserva, legajo, hayRegistros = 0;
+
+    mostrar_mensaje ("INGRESE EL DNI DEL EMPLEADO: ", 29, 8);
+    mostrar_mensaje ("DNI: ", 29, 10);
+    cin>>dni;
+
+    int tamReservas=regReserva.getCantidad();
+    ReservaDTO* vecReservas= new ReservaDTO[tamReservas];
+
+    regReserva.leerTodos(vecReservas, tamReservas);
+
+    nroRegEmpleado = regEmpleado.buscar(dni);
+    if (nroRegEmpleado == -1)
+    {
+        return nroRegEmpleado;
+    }
+    objEmpleado = regEmpleado.leer(nroRegEmpleado);
+    legajo = objEmpleado.getLegajo();
+
+    for(int i=0; i<tamReservas; i++)
+    {
+        if(vecReservas[i].getLegajo()==legajo)
+        {
+            hayRegistros = 1;
+            system("cls");
+            rectangulo (2, 2, 100, 20);
+            mostrar_mensaje ("DNI: ", 20, 10);
+            cout<<dni;
+            vecReservas[i].mostrar();
+            rlutil::  locate (61,21);
+            system("pause");
+        }
+    }
+    return hayRegistros;
+}
+
+int listarPorLegajo()
+{
+    EmpleadoDAL regEmpleado;
+    EmpleadoDTO objEmpleado;
+    ReservasDAL regReserva;
+
+    int nroRegEmpleado, legajo, hayRegistros = 0;
+
+    mostrar_mensaje ("INGRESE EL LEGAJO DEL EMPLEADO: ", 29, 8);
+    mostrar_mensaje ("LEGAJO: ", 29, 10);
+    cin>>legajo;
+
+    int tamReservas=regReserva.getCantidad();
+    ReservaDTO* vecReservas= new ReservaDTO[tamReservas];
+
+    regReserva.leerTodos(vecReservas, tamReservas);
+
+    nroRegEmpleado = regEmpleado.buscarPorLegajo(legajo);
+    if (nroRegEmpleado == -1)
+    {
+        return nroRegEmpleado;
+    }
+
+    for(int i=0; i<tamReservas; i++)
+    {
+        if(vecReservas[i].getLegajo()==legajo)
+        {
+            hayRegistros = 1;
+            system("cls");
+            rectangulo (2, 2, 100, 20);
+            mostrar_mensaje ("LEGAJO: ", 20, 10);
+            cout<<legajo;
+            vecReservas[i].mostrar();
+            rlutil::  locate (61,21);
+            system("pause");
+        }
+    }
+    return hayRegistros;
+}
+
+int listarPorEspacio()
+{
+    ReservasDAL regReserva;
+
+    int espacio, hayRegistros = 0;
+
+    mostrar_mensaje ("INGRESE EL ESPACIO DE TRABAJO: ", 29, 8);
+    mostrar_mensaje ("TIPO DE ESPACIO: ", 29, 10);
+    mostrar_mensaje ("1- DESK ", 37, 12);
+    mostrar_mensaje ("2- SALA DE REUNIONES ", 37, 13);
+    mostrar_mensaje ("3- ESTACIONAMIENTO ", 37, 14);
+    mostrar_mensaje ("4- COMEDOR ", 37, 15);
+    rlutil::  locate (46,10);
+    cin>>espacio;
+
+    if(espacio<1 || espacio>5)
+    {
+        hayRegistros = -1;
+        return hayRegistros;
+    }
+
+    int tamReservas=regReserva.getCantidad();
+    ReservaDTO* vecReservas= new ReservaDTO[tamReservas];
+
+    regReserva.leerTodos(vecReservas, tamReservas);
+
+    for(int i=0; i<tamReservas; i++)
+    {
+        if(vecReservas[i].getEspacioTrabajo()== espacio-1)
+        {
+            hayRegistros = 1;
+            system("cls");
+            rectangulo (2, 2, 100, 20);
+            rlutil::  locate (20,8);
+            cout<<"RESERVAS ";
+            rlutil::  locate (30,8);
+            switch(espacio-1)
+            {
+            case 0:
+                cout<<"DESK";
+                break;
+            case 1:
+                cout<<"SALA DE REUNIONES";
+                break;
+            case 2:
+                cout<<"ESTACIONAMIENTO";
+                break;
+            case 3:
+                cout<<"COMEDOR";
+                break;
+            }
+            vecReservas[i].mostrar();
+            rlutil:: locate (61,21);
+            system("pause");
+        }
+    }
+    return hayRegistros;
 }
