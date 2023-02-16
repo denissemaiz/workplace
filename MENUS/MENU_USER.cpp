@@ -71,9 +71,28 @@ void menuUser(int dni)
                 break;
 
             case 2:
+                {
                 system("cls");
-                listarHistorialReservas(dni);
-                system("cls");
+                int respuesta = listarHistorialReservas(dni);
+                if(respuesta == 0)
+                {
+                    system("cls");
+                    rectangulo (2, 2, 100, 20);
+                    mostrar_mensaje ("***  NO EXISTEN REGISTROS DE RESERVAS ***", 31, 11);
+                    system("pause>nul");
+                    system("cls");
+                    menuUser(dni);
+                }
+                else
+                {
+                    system("cls");
+                    rectangulo (2, 2, 100, 20);
+                    mostrar_mensaje ("***  FIN DEL LISTADO  ***", 40, 11);
+                    system("pause>nul");
+                    system("cls");
+                    menuUser(dni);
+                }
+                }
                 break;
 
             case 3:
@@ -88,3 +107,5 @@ void menuUser(int dni)
     while(op!=0);
     system("pause>nul");
 }
+
+

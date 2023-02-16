@@ -21,8 +21,7 @@ void anularReserva(int dni)
     {
         system("cls");
         rectangulo (2, 2, 100, 26);
-        rlutil::setColor(rlutil::YELLOW);
-        mostrar_mensaje ("NO HAY REGISTRO DE RESERVAS FUTURAS", 20, 14);
+        mostrar_mensaje ("***  NO HAY REGISTRO DE RESERVAS FUTURAS ***", 31, 11);
         system("pause>nul");
         system("cls");
         menuUser(dni);

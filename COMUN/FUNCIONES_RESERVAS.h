@@ -15,7 +15,6 @@ int listarPorEspacio();
 int totalReservasUltMes();
 int totalReservasAnuladasUltMes();
 float porcentajeReservasAnuladas();
-void anularReserva(int dni);  /**///esta aparte
 int totalReservasAdmRRHH();
 int totalReservasMarkVentas();
 int totalReservasProdSist();
