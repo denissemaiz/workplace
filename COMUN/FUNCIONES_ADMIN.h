@@ -9,9 +9,9 @@ bool modificarEmpleado();
 bool listarEmpleados();
 bool definirEspacios(int espacio);
 bool listarEspacios();
-/**/ //FALTAN:
 void consultasReservas();
-void Informes();
+
+/**/
 void Respaldos();
 void InformePlantilla();
 void InformeDesk();

@@ -5,7 +5,7 @@
 void menuAdmin()
 {
     const char *opciones[] = {"CARGAR EMPLEADO", "MODIFICAR DATOS DEL EMPLEADO", "LISTAR EMPLEADOS", "DEFINIR ESPACIOS",
-                              "LISTAR ESPACIOS", "CONSULTAS DE RESERVAS", "INFORMES", "RESPALDOS", "SALIR" };
+                              "LISTAR ESPACIOS", "CONSULTAS DE RESERVAS", "INFORMES", "SALIR" };
     int op=1, y=0;
 
     rlutil::hidecursor();
@@ -27,7 +27,6 @@ void menuAdmin()
         showItem (opciones[5],30,15,y==5);
         showItem (opciones[6],30,16,y==6);
         showItem (opciones[7],30,17,y==7);
-        showItem (opciones[8],30,18,y==8);
 
         rlutil::locate(26,10+y);
         cout <<"==> " <<endl;
@@ -50,9 +49,9 @@ void menuAdmin()
             cout <<"   " <<endl;
             y++;
 
-            if (y>8)
+            if (y>7)
             {
-                y=8;
+                y=7;
             }
             break;
 
@@ -154,15 +153,10 @@ void menuAdmin()
 
             case 6:    ///INFORMES  /**/
                 system("cls");
-                Informes();
+                menuInformes();
                 break;
 
-            case 7:   ///RESPALDOS  /**/
-                system("cls");
-                Respaldos();
-                break;
-
-            case 8:    ///SALIR   /**/
+            case 7:   ///SALIR   /**/
                 system("cls");
                 salirSistemaUser();
                 getch();

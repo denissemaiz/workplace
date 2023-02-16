@@ -77,7 +77,6 @@ int ingresarNroReserva()
 {
     int nroReserva;
     system("cls");
-    rlutil::setColor(rlutil::YELLOW);
     rectangulo (2, 2, 100, 20);
     mostrar_mensaje ("***   ANULANDO RESERVAS   ***", 38, 4);
     mostrar_mensaje ("     --------------------  ", 38, 5);

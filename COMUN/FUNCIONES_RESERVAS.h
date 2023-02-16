@@ -12,8 +12,14 @@ bool chequearNroReserva(int nroReserva, int dni);
 int listarPorDni();
 int listarPorLegajo();
 int listarPorEspacio();
-/**/  //FALTAN:
-void anularReserva(int dni);
-void confirmacionAnulacion();
+int totalReservasUltMes();
+int totalReservasAnuladasUltMes();
+float porcentajeReservasAnuladas();
+void anularReserva(int dni);  /**///esta aparte
+int totalReservasAdmRRHH();
+int totalReservasMarkVentas();
+int totalReservasProdSist();
+int totalReservasContabFinanzas();
+int totalReservasGerenDirecc();
 
 #endif // FUNCIONES_RESERVAS_H_INCLUDED

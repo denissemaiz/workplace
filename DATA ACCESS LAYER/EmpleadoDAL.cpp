@@ -3,30 +3,6 @@
 
 const char *RUTA_EMPLEADO = "Empleado.data";
 
-bool EmpleadoDAL::eliminar(EmpleadoDTO dto)
-{
-    EmpleadoDTO aux;
-    bool eliminar = false;
-    FILE *p;
-    p = fopen(RUTA_EMPLEADO,"rb+");
-    if (p!=NULL)
-    {
-        while(fread(&dto, sizeof (EmpleadoDTO),1,p))
-        {
-            if(dto.getDni()==aux.getDni())
-            {
-                fseek(p,sizeof dto*(dto.getLegajo()-1),SEEK_SET);
-                fwrite(&dto, sizeof (EmpleadoDTO),1,p);
-                fclose (p);
-                eliminar = true;
-            }
-        }
-    }
-    return eliminar;
-}
- /**/
-
-
 EmpleadoDTO EmpleadoDAL::leer(int nroRegistro)
 {
     EmpleadoDTO registro;

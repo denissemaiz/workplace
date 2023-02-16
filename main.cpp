@@ -7,6 +7,8 @@
 using namespace std;
 
 #include "MENUS/MENUS.h"
+#include "FUNCIONES_RESERVAS.h"
+
 
 int main()
 {

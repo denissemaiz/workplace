@@ -138,7 +138,7 @@ int listarPorDni()
     EmpleadoDTO objEmpleado;
     ReservasDAL regReserva;
 
-    int dni, nroRegEmpleado, nroRegReserva, legajo, hayRegistros = 0;
+    int dni, nroRegEmpleado, legajo, hayRegistros = 0;
 
     mostrar_mensaje ("INGRESE EL DNI DEL EMPLEADO: ", 29, 8);
     mostrar_mensaje ("DNI: ", 29, 10);
@@ -272,3 +272,192 @@ int listarPorEspacio()
     }
     return hayRegistros;
 }
+
+int totalReservasUltMes()
+{
+    ReservasDAL regReserva;
+    Fecha fechaHoy;
+    int mesPasado, contador = 0;
+
+    mesPasado = fechaHoy.getMes()-1;
+
+    int tamReservas=regReserva.getCantidad();
+    ReservaDTO* vecReservas= new ReservaDTO[tamReservas];
+
+    regReserva.leerTodos(vecReservas, tamReservas);
+
+    for(int i=0; i<tamReservas; i++)
+    {
+        if(vecReservas[i].getFecha().getMes() == mesPasado)
+        {
+            contador++;
+        }
+    }
+    return contador;
+}
+
+int totalReservasAnuladasUltMes()
+{
+    ReservasDAL regReserva;
+    Fecha fechaHoy;
+    int mesPasado, contador = 0;
+
+    mesPasado = fechaHoy.getMes()-1;
+
+    int tamReservas=regReserva.getCantidad();
+    ReservaDTO* vecReservas= new ReservaDTO[tamReservas];
+
+    regReserva.leerTodos(vecReservas, tamReservas);
+
+    for(int i=0; i<tamReservas; i++)
+    {
+        if(vecReservas[i].getFecha().getMes() == mesPasado
+                && vecReservas[i].getEstado()== false)
+        {
+            contador++;
+        }
+    }
+    return contador;
+}
+
+float porcentajeReservasAnuladas()
+{
+    int totalRes=0, totalAnul=0;
+    float porcentaje=0;
+
+    totalAnul = totalReservasAnuladasUltMes();
+    totalRes = totalReservasUltMes();
+
+    if(totalRes != 0)
+    {
+        porcentaje = (((float)totalAnul)*100)/((float)totalRes);
+    }
+
+    return porcentaje;
+}
+
+int totalReservasAdmRRHH()
+{
+    ReservasDAL regReserva;
+    Fecha fechaHoy;
+    int mesPasado, contador = 0;
+
+    mesPasado = fechaHoy.getMes()-1;  /**/
+
+    int tamReservas=regReserva.getCantidad();
+    ReservaDTO* vecReservas= new ReservaDTO[tamReservas];
+
+    regReserva.leerTodos(vecReservas, tamReservas);
+
+    for(int i=0; i<tamReservas; i++)
+    {
+        if(vecReservas[i].getFecha().getMes() == mesPasado
+                && vecReservas[i].getEspacioTrabajo()== 0
+                && vecReservas[i].getEstado()==true)
+        {
+            contador++;
+        }
+    }
+    return contador;
+}
+
+int totalReservasMarkVentas()
+{
+    ReservasDAL regReserva;
+    Fecha fechaHoy;
+    int mesPasado, contador = 0;
+
+    mesPasado = fechaHoy.getMes()-1;  /**/
+
+    int tamReservas=regReserva.getCantidad();
+    ReservaDTO* vecReservas= new ReservaDTO[tamReservas];
+
+    regReserva.leerTodos(vecReservas, tamReservas);
+
+    for(int i=0; i<tamReservas; i++)
+    {
+        if(vecReservas[i].getFecha().getMes() == mesPasado
+                && vecReservas[i].getEspacioTrabajo()== 1
+                && vecReservas[i].getEstado()==true)
+        {
+            contador++;
+        }
+    }
+    return contador;
+}
+
+int totalReservasProdSist()
+{
+    ReservasDAL regReserva;
+    Fecha fechaHoy;
+    int mesPasado, contador = 0;
+
+    mesPasado = fechaHoy.getMes()-1;
+
+    int tamReservas=regReserva.getCantidad();
+    ReservaDTO* vecReservas= new ReservaDTO[tamReservas];
+
+    regReserva.leerTodos(vecReservas, tamReservas);
+
+    for(int i=0; i<tamReservas; i++)
+    {
+        if(vecReservas[i].getFecha().getMes() == mesPasado
+                && vecReservas[i].getEspacioTrabajo()== 2
+                && vecReservas[i].getEstado()==true)
+        {
+            contador++;
+        }
+    }
+    return contador;
+}
+
+int totalReservasContabFinanzas()
+{
+    ReservasDAL regReserva;
+    Fecha fechaHoy;
+    int mesPasado, contador = 0;
+
+    mesPasado = fechaHoy.getMes()-1;
+
+    int tamReservas=regReserva.getCantidad();
+    ReservaDTO* vecReservas= new ReservaDTO[tamReservas];
+
+    regReserva.leerTodos(vecReservas, tamReservas);
+
+    for(int i=0; i<tamReservas; i++)
+    {
+        if(vecReservas[i].getFecha().getMes() == mesPasado
+                && vecReservas[i].getEspacioTrabajo()== 3
+                && vecReservas[i].getEstado()==true)
+        {
+            contador++;
+        }
+    }
+    return contador;
+}
+
+int totalReservasGerenDirecc()
+{
+    ReservasDAL regReserva;
+    Fecha fechaHoy;
+    int mesPasado, contador = 0;
+
+    mesPasado = fechaHoy.getMes()-1;
+
+    int tamReservas=regReserva.getCantidad();
+    ReservaDTO* vecReservas= new ReservaDTO[tamReservas];
+
+    regReserva.leerTodos(vecReservas, tamReservas);
+
+    for(int i=0; i<tamReservas; i++)
+    {
+        if(vecReservas[i].getFecha().getMes() == mesPasado
+                && vecReservas[i].getEspacioTrabajo()== 3
+                && vecReservas[i].getEstado()==true)
+        {
+            contador++;
+        }
+    }
+    return contador;
+}
+
